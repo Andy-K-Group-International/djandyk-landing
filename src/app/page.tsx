@@ -6,7 +6,7 @@ import FaqSection from "@/components/FaqSection";
 import RoadmapSection from "@/components/RoadmapSection";
 import TestimonialPair from "@/components/TestimonialPair";
 import PricingSection from "@/components/PricingSection";
-import CaseStudyCards from "@/components/CaseStudyCards";
+import FeaturedAlbums from "@/components/FeaturedAlbums";
 import LovedBySection from "@/components/LovedBySection";
 import IntegrationsSection from "@/components/IntegrationsSection";
 import ContactForm from "@/components/ContactForm";
@@ -78,7 +78,7 @@ export default function Home() {
       <FaqSection />
 
       {/* Featured Releases */}
-      <CaseStudyCards />
+      <FeaturedAlbums />
 
       <TronDivider />
 
