@@ -1,0 +1,241 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: #01011b;
+  --color-eggplant: #31263b;
+  --color-muted: #525a70;
+  --color-muted-2: #8b93a8;
+  --color-highlight: #C9707D;
+  --color-rose: #F5C0C0;
+  --color-rose-dark: #cda0a5;
+  --color-grid-300: #f5f5f7;
+  --color-grid-500: #e2e4ea;
+  --color-grid-700: #c4c8d4;
+  --color-bg-light: #faf9fb;
+  --font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-muted);
+  background: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== BACKGROUND STRUCTURES ===== */
+
+/* Cartesian dot grid - 16x16 spacing */
+.cartesian-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgba(49, 38, 59, 0.12) 1px, transparent 1px);
+  background-size: 16px 16px;
+  z-index: 0;
+}
+
+/* Radial highlight glow behind grid */
+.cartesian-grid-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(201, 112, 125, 0.05) 50%,
+    rgba(201, 112, 125, 0.12) 100%
+  );
+  opacity: 0.5;
+}
+
+/* Dot grid mask pattern - 6x6px */
+.dot-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mask-image: radial-gradient(white, white 1px, transparent 1px, transparent);
+  mask-size: 6px 6px;
+  background: rgba(49, 38, 59, 0.06);
+  z-index: 0;
+}
+
+/* Hero radial gradient - light pink */
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(at 0% 0%, #FFFCFC 48%, #ffecec);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Perlin noise texture overlay */
+@keyframes noise {
+  from { background-position: -1024px -1024px; }
+  to { background-position: 0px 0px; }
+}
+
+.noise-texture {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  animation: noise 8s linear infinite;
+}
+
+/* Noise overlay - eggplant tint */
+.noise-eggplant {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 128 128' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' fill='%2331263b'/%3E%3C/svg%3E");
+  background-size: 128px 128px;
+}
+
+/* Hero perlin noise - fades to top */
+.hero-noise-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 800px;
+  pointer-events: none;
+  opacity: 0.8;
+  mask-image: linear-gradient(to top, transparent, black 100%);
+}
+
+/* Section background with subtle grid */
+.section-bg-grid {
+  position: relative;
+}
+
+.section-bg-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgba(49, 38, 59, 0.08) 1px, transparent 1px);
+  background-size: 16px 16px;
+  z-index: 0;
+}
+
+/* Full-width line grid (Hex-style) */
+.line-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(to right, rgba(226, 228, 234, 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(226, 228, 234, 0.5) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.line-grid-fade {
+  mask-image: linear-gradient(to bottom, transparent, black 3%, black 97%, transparent);
+}
+
+/* Feature card glassmorphism */
+.glass-card {
+  background: linear-gradient(105deg, rgba(245,192,192,0) 10.56%, rgba(245,192,192,0.02) 108.41%), rgba(253,253,253,0.4);
+  box-shadow: 0 0 11px 0 rgba(0,0,0,0.05) inset, 0 0 0 1px rgba(0,0,0,0.06), 0 16px 24px -8px rgba(0,0,0,0.05), 0 8px 12px -4px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.05);
+  backdrop-filter: blur(7.5px);
+}
+
+/* Section radial gradient background */
+.section-radial-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-image: radial-gradient(circle at 66.66% 50%, #fff 0%, #f8f6fa 80%);
+  box-shadow: 0 0 24px 0px rgba(228, 225, 232, 0.5) inset;
+  z-index: -1;
+}
+
+/* Fade mask for gradual section transitions */
+.fade-mask-bottom {
+  mask-image: linear-gradient(to bottom, black 70%, transparent);
+}
+
+.fade-mask-top {
+  mask-image: linear-gradient(to top, black 70%, transparent);
+}
+
+/* ===== SCROLLING BANNER ===== */
+@keyframes scroll-banner {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll-banner {
+  animation: scroll-banner 30s linear infinite;
+}
+
+/* ===== GRADIENT TEXT ===== */
+.gradient-text {
+  background: linear-gradient(90deg, var(--color-eggplant), var(--color-foreground));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== BUTTON PRIMARY ===== */
+.btn-primary-gradient {
+  background: linear-gradient(to right, #fff, #fff), linear-gradient(45deg, var(--color-rose-dark), var(--color-eggplant));
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  border: 1px solid transparent;
+}
+
+.btn-primary-gradient::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: linear-gradient(135deg, rgba(245,192,192,0.23), rgba(245,192,192,0.12)), #fff;
+  box-shadow: inset 0 0 0 1px rgba(69,11,11,0.15);
+  transition: opacity 0.25s ease;
+  z-index: 0;
+}
+
+.btn-primary-gradient:hover::after {
+  opacity: 0.3;
+}
+
+/* Button secondary - outlined variant */
+.btn-secondary {
+  position: relative;
+  border: 1px solid var(--color-grid-500);
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-rose-dark);
+  background: rgba(245, 192, 192, 0.06);
+}
+
+/* ===== TRON DIVIDER ===== */
+.tron-line {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--color-grid-700), var(--color-grid-500) 50%, var(--color-grid-700));
+}
+
+/* ===== FAQ ===== */
+.faq-open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-open .faq-answer {
+  max-height: 500px;
+}

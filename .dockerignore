@@ -1,0 +1,11 @@
+Dockerfile
+.dockerignore
+node_modules
+.next
+.git
+README.md
+CLAUDE.md
+DESIGN.md
+docs
+tests
+playwright.config.ts
