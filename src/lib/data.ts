@@ -26,6 +26,14 @@ export const COMPANY = {
   quoteSubtitle: "\u2014 DJ Andy\u2019K",
 };
 
+export const LATEST_RELEASE = {
+  title: "Paraller Stories",
+  artist: "DJ Andy\u2019K",
+  type: "Single" as const,
+  coverUrl: "/albums/paraller-stories.jpg",
+  spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+};
+
 export const STREAMING_PLATFORMS = [
   {
     name: "Spotify",
