@@ -1,2379 +1,618 @@
-/**
- * Multi-language translations for Andy'K Group landing page
- *
- * Supported languages:
- * - en: English (default)
- * - es: Spanish (formal - usted)
- * - sk: Slovak
- * - nl: Dutch
- * - pt: Portuguese
- * - de: German (formal - Sie)
- *
- * Brand names remain unchanged: Andy'K Group International LTD, A.D.A.M., E.V.A.
- */
+export type Locale = "en" | "es" | "sk";
 
-export type Locale = "en" | "es" | "sk" | "nl" | "pt" | "de";
-
-// English translations (source of truth)
 const en = {
-  // Company information
   company: {
-    name: "Andy'K Group International LTD",
-    tagline: "End-to-End Business Development & Growth Architecture",
-    subtitle: "Integrated B2B, B2G & IT Services",
-    subtitleLine2: "Powered by A.D.A.M. — Guided by E.V.A.",
-    description: "Andy'K Group International LTD is a UK-based innovation company, combining business intelligence, automation, and strategic outreach.",
-    descriptionExtra: "With clients across Europe and Latin America, we build structured growth environments where strategy, operations, and technology move in one direction.",
-    descriptionSystems: "Strategic services combining business development, operational architecture, and technology — helping startups, SMEs, and public institutions scale with structure.",
-    quote: "One structure. One flow. One system.",
-    quoteSubtitle: "Built for growth.",
-    location: "London, UK",
-    ukCompany: "UK Limited Company",
+    name: "DJ Andy\u2019K",
+    tagline: "Music is your passion.",
+    label: "ANDY\u2019K GROUP INTERNATIONAL LTD",
+    location: "United Kingdom",
+    genre: "Progressive House \u00B7 Trance \u00B7 Deep Melodic \u00B7 EDM",
   },
 
-  // Hero section
   hero: {
-    ctaPrimary: "Tell Us About You",
-    ctaSecondary: "Learn How We Work",
-    emailPlaceholder: "Your email address",
-    getInContact: "Get in Contact",
+    eyebrow: "DJ Andy\u2019K",
+    title: "Music is your",
+    titleItalic: "passion.",
+    subtitle: "Producer of progressive house, trance, deep melodic sounds, and EDM.",
+    subtitleLine2: "Every track built as a journey \u2014 mixing emotion, energy, and storytelling.",
+    ctaPrimary: "Listen Across Platforms",
+    ctaSecondary: "More About",
   },
 
-  // Top banner
   banner: {
-    b2bLead: "B2B Lead Generation:",
-    b2bText: "targeted outreach & pipeline management",
-    adamSystem: "A.D.A.M. System:",
-    adamText: "automated documents, proposals & client lifecycle",
-    b2gTender: "B2G Tender Strategy:",
-    b2gText: "public procurement & bid preparation",
-    trusted: "Trusted across:",
-    trustedText: "LATAM, Benelux, DACH & US",
-  },
-
-  // Services section (Our Services grid)
-  services: {
-    heading: "Our",
-    headingItalic: "services",
-    subtitle: "Strategic services combining business development, operational architecture, and technology.",
     items: [
-      {
-        title: "End-to-End",
-        description: "Strategic business development & growth architecture",
-      },
-      {
-        title: "B2B",
-        description: "Lead generation, outreach campaigns & pipeline management",
-      },
-      {
-        title: "B2G",
-        description: "Public sector strategy, tender advisory & procurement",
-      },
-      {
-        title: "IT Services",
-        description: "System architecture, platform development & automation",
-      },
+      "Progressive house, trance & deep melodic EDM",
+      "Every track built as a journey",
+      "Based in the UK, sharing music worldwide",
+      "Spotify \u00B7 Apple Music \u00B7 YouTube \u00B7 SoundCloud \u00B7 TIDAL",
+      "New release: Paraller Stories \u2014 out now",
     ],
   },
 
-  // End-to-End section
-  endToEnd: {
-    heading: "End-to-End",
-    headingItalic: "Business Development",
-    description: "We design, restructure, and architect businesses from foundation to scalable growth. Powered using A.D.A.M. Structural transformation — aligning strategy, revenue, operations, positioning, and execution into one system.",
-    bullets: [
-      { title: "Structural clarity", description: "Defining organizational hierarchy, roles, and accountability across every business layer." },
-      { title: "Revenue architecture", description: "Designing pricing, monetization, and revenue flow systems built for sustainable growth." },
-      { title: "Market positioning", description: "Refining your brand, value proposition, and competitive advantage in your target market." },
-      { title: "Operational redesign", description: "Restructuring internal workflows, processes, and team coordination for maximum efficiency." },
-      { title: "System integration", description: "Connecting tools, platforms, and data flows into one unified operational ecosystem." },
-      { title: "Expansion & growth control", description: "Building scalable expansion strategy with long-term positioning and controlled execution." },
-    ],
-  },
-
-  // Loved By / About section
-  lovedBy: {
-    headingBold: "Built on",
-    headingItalic: "trust.",
-    headingLine2: "Driven by results.",
-    paragraph1: "Andy'K Group International LTD is a UK-based innovation company delivering End-to-End Business Development & Growth Architecture across B2B, B2G, and technology-driven environments.",
-    paragraph2: "We align positioning, revenue design, operations, and execution into one structured growth system.",
-    paragraph3: "Powered by A.D.A.M. and guided by E.V.A., we build scalable ecosystems designed for long-term performance.",
-    quote: "One structure. One flow. One system.",
-    tagline: "BUILT FOR GROWTH.",
-  },
-
-  // Case Studies section
-  caseStudies: {
-    heading: "Case",
-    headingItalic: "studies",
-    cards: [
-      {
-        shortTitle: "Hospitality Operating System",
-        title: "How we solved fragmented hotel operations using our services",
-        description: "Built a full digital operating system for a hospitality group — from strategy to execution.",
-        link: "Learn More",
-      },
-      {
-        shortTitle: "Healthcare Digitalization",
-        title: "How we solved clinical workflow chaos using our services",
-        description: "Designed a structured operations system for a physiotherapy clinic, integrating A.D.A.M. Healthcare.",
-        link: "Learn More",
-      },
-      {
-        shortTitle: "Consulting Professionalization",
-        title: "How we solved inconsistent consulting delivery using our services",
-        description: "Transformed an emotional consulting practice into a structured, scalable professional service.",
-        link: "Learn More",
-      },
-    ],
-  },
-
-  // Roadmap section (A.D.A.M.)
-  roadmap: {
-    heading: "How A.D.A.M.",
-    headingItalic: "Works",
-    subtitle: "From first contact to project launch in six structured steps.",
-    steps: [
-      {
-        title: "Questionnaire",
-        description: "Complete our structured intake form. We learn about your business, goals, and requirements.",
-      },
-      {
-        title: "Proposal",
-        description: "We craft a tailored proposal based on your needs. Review it in your personal dashboard.",
-      },
-      {
-        title: "Contract",
-        description: "Review, comment, and digitally sign your contract. Full transparency, no surprises.",
-      },
-      {
-        title: "Strategy",
-        description: "Together we define the strategy and timeline. Every detail aligned before we start.",
-      },
-      {
-        title: "Invoice",
-        description: "Automated invoicing with clear payment terms. Everything tracked in one place.",
-      },
-      {
-        title: "Onboarding",
-        description: "Project launches. Real-time updates, document sharing, and ongoing support through A.D.A.M.",
-      },
-    ],
-    statusBadge: "A.D.A.M. is live and processing clients",
-    stepLabel: "Step",
-  },
-
-  // Pricing section
-  pricing: {
-    heading: "Plans for",
-    headingItalic: "every stage",
-    subtitle: "Structured advisory and business development — combining strategy, public sector expertise, and technology infrastructure to help you scale.",
-    eyebrow: "Transparent pricing",
-    tabB2B: "B2B Business Development",
-    tabB2G: "B2G Public Sector",
-    tabTech: "Technology / CTO",
-    commitment: "Starting from 3 months",
-    popular: "Popular",
-    from: "from",
-    perMonth: "/ month",
-    perHour: "/ hour",
-    getStarted: "Get Started",
-    customQuote: "Need something custom? We tailor packages to your exact requirements.",
-    requestCustomQuote: "Request a Custom Quote",
-    billingBasis: "Billed monthly",
-    billingMinimum: "Initial commitment of 3\u201312 months",
-    billingRenewal: "Transitions to rolling monthly subscription after delivery",
-    billingCancellation: "15-day cancellation notice",
-
-    // B2B Plans
-    b2bCore: {
-      name: "CORE",
-      features: [
-        "40 qualified leads per month",
-        "1 market / 1 target persona",
-        "Email outreach + cold calling",
-        "Monthly reporting",
-        "Onboarding strategy session",
-      ],
-    },
-    b2bAdvance: {
-      name: "ADVANCE",
-      features: [
-        "60 qualified leads per month",
-        "2 markets coverage",
-        "Multi-touch outreach campaigns",
-        "Performance optimization",
-        "Monthly strategy review",
-      ],
-    },
-    b2bVanguard: {
-      name: "VANGUARD",
-      features: [
-        "80 qualified leads per month",
-        "Multi-market campaigns",
-        "CRM pipeline setup",
-        "Lead scoring system",
-        "Strategic outreach architecture",
-      ],
-    },
-    b2bPrestige: {
-      name: "PRESTIGE",
-      features: [
-        "120+ qualified leads",
-        "Branded outreach campaigns",
-        "Custom call & email scripts",
-        "Strategic business development consulting",
-        "Executive-level reporting",
-      ],
-    },
-
-    // B2G Plans
-    b2gStarter: {
-      name: "GovStarter",
-      features: [
-        "5 verified public tenders per month",
-        "Eligibility review",
-        "Basic bid advisory",
-        "Monthly consultation",
-      ],
-    },
-    b2gExpand: {
-      name: "GovExpand",
-      features: [
-        "10 verified tenders",
-        "Pre-bid checklist",
-        "Strategy consultation",
-        "Tender pipeline building",
-      ],
-    },
-    b2gElite: {
-      name: "GovElite",
-      features: [
-        "1 full proposal draft per month",
-        "Tender roadmap development",
-        "Consortium matchmaking",
-        "Priority advisory support",
-      ],
-    },
-
-    // Tech Plans
-    techArchitecture: {
-      name: "System Architecture Consulting",
-      features: [
-        "Business system architecture design",
-        "Infrastructure planning",
-        "Automation architecture strategy",
-      ],
-    },
-    techPlatforms: {
-      name: "Business Platforms Development",
-      features: [
-        "Internal portals",
-        "Operational dashboards",
-        "Custom company systems",
-      ],
-    },
-    techAutomation: {
-      name: "Automation & Integrations",
-      features: [
-        "CRM / ERP integrations",
-        "API automation",
-        "Workflow automation systems",
-      ],
-    },
-    techAudit: {
-      name: "Technical System Audit",
-      features: [
-        "Infrastructure audit",
-        "Scalability assessment",
-        "Security baseline review",
-      ],
-    },
-    techCTO: {
-      name: "CTO-as-a-Service",
-      features: [
-        "Technical involvement",
-        "Architecture supervision",
-        "Vendor and infrastructure selection",
-        "Scaling strategy consulting",
-        "Minimum 1-month contract — limited spots",
-      ],
-    },
-  },
-
-  // CTA Section
-  cta: {
-    eyebrow: "Get in touch",
-    heading: "Let's build something",
-    headingItalic: "together.",
-    subtitle: "Whether you need consulting, technology solutions, or a strategic partner for international expansion — we're ready to talk.",
-    ctaPrimary: "Tell Us About You",
-    ctaSecondary: "Request a Custom Quote",
-    followLinkedIn: "Follow us on LinkedIn",
-  },
-
-  // Contact form
-  contact: {
-    heading: "Send Us a Message",
-    subtitle: "Fill out the form below and we'll get back to you as soon as possible.",
-    labelName: "Full Name",
-    labelEmail: "Email Address",
-    labelCompany: "Company Name",
-    labelMessage: "Message",
-    required: "*",
-    placeholderName: "Your full name",
-    placeholderEmail: "your@email.com",
-    placeholderCompany: "Your company name",
-    placeholderMessage: "Tell us about your business goals and how we can help...",
-    buttonSend: "Send Message",
-    privacyText: "By submitting this form, you agree to our terms of service and privacy policy.",
-    successHeading: "Message prepared",
-    successText: "Your email client should have opened. If not, email us directly at info@andykgroupinternational.com",
-  },
-
-  // Footer
-  footer: {
-    copyright: "© 2026",
-    linkHome: "Home",
-    linkSystems: "A.D.A.M. & E.V.A.",
-    linkPricing: "Pricing",
-    linkContact: "Contact",
-    linkPrivacy: "Privacy Policy",
-    linkCookies: "Cookies Policy",
-    linkTerms: "Terms of Use",
-    linkDisclaimer: "Website Disclaimer",
-    linkLegalNotice: "Legal Notice",
-    linkClientPortal: "Client Portal",
-    selectLanguage: "Language",
-    selectCurrency: "Currency",
-  },
-
-  // Navigation
   nav: {
     about: "About",
-    caseStudies: "Case Studies",
-    pricing: "Pricing",
+    music: "Music",
+    albums: "Albums",
     contact: "Contact",
-    services: "Services",
-    groupSystems: "Systems",
-    groupBusiness: "Business Services",
-    groupIT: "IT Services",
-    adamDesc: "Automated Document & Account Manager",
-    endToEnd: "End-to-End",
-    endToEndDesc: "Strategic business development & growth architecture",
-    b2bDev: "B2B Development",
-    b2bDevDesc: "Lead generation & outreach campaigns",
-    b2gPublic: "B2G Public Sector",
-    b2gPublicDesc: "Government tenders & procurement",
-    sysArch: "System Architecture",
-    sysArchDesc: "Business system design & planning",
-    platformDev: "Platform Development",
-    platformDevDesc: "Portals, dashboards & custom systems",
-    automation: "Automation & Integrations",
-    automationDesc: "CRM, ERP & workflow automation",
-    cto: "CTO-as-a-Service",
-    ctoDesc: "Technical leadership on demand",
+    listenNow: "Listen Now",
   },
 
-  // Founders section
-  founders: {
-    eyebrow: "The people behind it",
-    heading: "Meet the",
-    headingItalic: "founders",
-    connect: "Connect",
-    roles: [
-      "Founder & Strategic Business Developer",
-      "Co-Founder & CTO",
-    ],
-    bios: [
-      "Fifteen+ years of leadership in sales, hospitality, business development, and operational strategy. Andrej specializes in scalable growth systems for B2B, B2G, and international client relations.",
-      "The technical architect behind A.D.A.M., Kobe leverages his extensive expertise to transform any idea into reality.",
-    ],
-    quotes: [
-      "My focus is building business systems that are not only profitable — but sustainable, secure, and designed to scale.",
-      "",
-    ],
-    locations: [
-      "Born in Austria",
-      "Born in Belgium",
+  sound: {
+    label: "Sound Philosophy",
+    heading: "Crafting the",
+    headingItalic: "Sound",
+    description: "Every release is built on a foundation of distinct sonic pillars \u2014 each one a lens through which DJ Andy\u2019K approaches production.",
+    items: [
+      {
+        title: "Progressive House",
+        description: "Layered builds, melodic drops, and hypnotic progressions that carry listeners through evolving emotional landscapes.",
+      },
+      {
+        title: "Trance",
+        description: "Euphoric synth lines and driving rhythms that create states of pure immersion and transcendence.",
+      },
+      {
+        title: "Deep Melodic",
+        description: "Introspective textures and warm harmonics \u2014 music that speaks directly to the subconscious.",
+      },
+      {
+        title: "Cinematic EDM",
+        description: "Orchestral elements fused with electronic production \u2014 tracks built like film scores for the dancefloor.",
+      },
+      {
+        title: "Emotional Storytelling",
+        description: "Every release follows a narrative arc. From tension to release, the journey is always intentional.",
+      },
+      {
+        title: "Studio Craft",
+        description: "From composition to mastering, each detail is considered. Sound design, mix balance, and sonic identity refined to the last millisecond.",
+      },
     ],
   },
 
-  // Case study pages
-  caseStudyPages: {
-    nextCaseStudy: "Next case study",
-    problem: "Problem",
-    solution: "Solution",
-    outcome: "Outcome",
-    hospitality: {
-      title: "Hospitality Operating System",
-      problem: "A growing hospitality group with multiple properties was running on disconnected tools, manual processes, and inconsistent guest experiences. Revenue management, staff coordination, and guest communication were fragmented across spreadsheets and ad-hoc solutions.",
-      solution: "We designed and implemented a full digital operating system — integrating reservation management, staff scheduling, guest communication, and financial oversight into one structured platform. The strategy covered operational redesign, technology selection, and team onboarding.",
-      outcome: "Unified operations across all properties. Staff efficiency improved, guest satisfaction scores increased, and the group gained clear visibility into performance metrics — all running through one system.",
+  music: {
+    label: "Music",
+    heading: "Where the",
+    headingItalic: "music lives",
+    description: "Stream DJ Andy\u2019K across all major platforms. Follow for new releases, updates, and the full discography.",
+    listenOn: "Listen on",
+    follow: "Follow",
+    streamNow: "Stream Now",
+  },
+
+  albums: {
+    label: "Discography",
+    heading: "The",
+    headingItalic: "releases",
+    description: "Albums, EPs, singles, and the Piano Series \u2014 every release is a chapter.",
+    tabs: {
+      albums: "Albums 2026",
+      singles: "EPs & Singles",
+      piano: "Piano Series",
     },
-    healthcare: {
-      title: "Healthcare Digitalization",
-      problem: "A physiotherapy clinic was struggling with clinical workflow chaos — patient scheduling, treatment records, billing, and communication all handled through separate, disconnected systems. Staff spent more time on admin than patient care.",
-      solution: "We designed a structured operations system for the clinic, integrating patient management, appointment scheduling, treatment documentation, and billing into a cohesive digital workflow — with A.D.A.M. Healthcare handling the document and account management layer.",
-      outcome: "Admin time reduced significantly. Patient throughput improved. The clinic now operates with a clear, structured digital workflow that keeps clinical staff focused on care, not paperwork.",
-    },
-    consulting: {
-      title: "Consulting Professionalization",
-      problem: "A consulting practice was delivering value but inconsistently — proposals were ad-hoc, project management was reactive, and client communication depended entirely on the founder's personal relationships. The business couldn't scale without structural change.",
-      solution: "We transformed the consulting practice from an emotionally-driven operation into a structured, professional service. This included standardized proposal templates, project management workflows, client onboarding processes, and a clear service delivery framework.",
-      outcome: "The practice now delivers consistent, professional service regardless of which team member is leading. Client retention improved, referral rates increased, and the business is positioned for scalable growth.",
-    },
+    listenOn: "Listen",
+    bpm: "BPM",
+    latestRelease: "Latest release",
   },
 
-  // Common/Shared
-  common: {
-    getStarted: "Get Started",
-    learnMore: "Learn More",
-    contactUs: "Contact Us",
-    readMore: "Read More",
+  about: {
+    label: "About",
+    heading: "The story behind the",
+    headingItalic: "sound",
+    bio: "UK-based music producer Andrej Kneisl crafts progressive house, trance, and deep melodic soundscapes under the name DJ Andy\u2019K. With releases spanning albums, EPs, and a dedicated Piano Series, his music bridges the emotional and the euphoric.",
+    quote: "\u201CI don\u2019t know anymore if music lives for me, or if I live for it. But I accept both.\u201D",
+    quoteAttribution: "\u2014 DJ Andy\u2019K",
+    tagline: "MUSIC IS YOUR PASSION.",
   },
 
-  // Language names
-  languages: {
-    en: "English",
-    es: "Español",
-    sk: "Slovenčina",
-    nl: "Nederlands",
-    pt: "Português",
-    de: "Deutsch",
+  featured: {
+    label: "Featured Releases",
+    heading: "Latest",
+    headingItalic: "albums",
+    description: "Three releases defining the sound of DJ Andy\u2019K in 2026.",
+    cards: [
+      {
+        shortTitle: "When Later Becomes Never",
+        title: "Progressive house with cinematic scope \u2014 the flagship album of 2026",
+        description: "A multi-track journey through melodic builds, emotional drops, and deep atmospheric textures. 120\u2013124 BPM.",
+        link: "Listen Now",
+      },
+      {
+        shortTitle: "Human Stories",
+        title: "Emotional piano melodies woven into melodic electronic production",
+        description: "Where classical sensibility meets modern electronic sound design. A deeply personal album.",
+        link: "Listen Now",
+      },
+      {
+        shortTitle: "Four Elements",
+        title: "An EP exploring the four fundamental forces through sound",
+        description: "Earth, water, fire, and air \u2014 four distinct sonic landscapes united by a single vision.",
+        link: "Listen Now",
+      },
+    ],
+  },
+
+  flagship: {
+    headingBold: "When Later",
+    headingItalic: "Becomes Never",
+    subheading: "Progressive House / Cinematic \u00B7 2026",
+    label: "Flagship Album",
+    listenNow: "Listen on Spotify",
+    pianoLabel: "Piano Series",
+    pianoHeading: "Human Stories",
+    pianoSubheading: "Piano \u00B7 2026",
+    pianoListen: "Listen on Spotify",
+  },
+
+  journey: {
+    label: "The Process",
+    heading: "The journey of a",
+    headingItalic: "track",
+    description: "From the first spark of an idea to the moment a listener presses play \u2014 six stages that shape every release.",
+    steps: [
+      { title: "Inspiration", description: "A feeling, a memory, or a moment captured \u2014 the seed of every track starts with something real." },
+      { title: "Composition", description: "Melodies and harmonies take shape. Chord progressions laid down, the emotional arc defined." },
+      { title: "Production", description: "Layers built in the studio \u2014 synths, drums, basslines, textures. The track comes alive." },
+      { title: "Mastering", description: "Final polish and loudness optimised. The track prepared for every streaming platform." },
+      { title: "Release", description: "Published across Spotify, Apple Music, TIDAL, SoundCloud, YouTube and more." },
+      { title: "Connection", description: "The music reaches listeners. The journey completes \u2014 until the next one begins." },
+    ],
+  },
+
+  contact: {
+    label: "Contact",
+    heading: "Let\u2019s build the next",
+    headingItalic: "sound chapter.",
+    description: "Got a question, a collaboration idea, or just want to say hello? Send a message.",
+    labelName: "Name",
+    labelEmail: "Email",
+    labelMessage: "Message",
+    placeholderName: "Your name",
+    placeholderEmail: "your@email.com",
+    placeholderMessage: "Your message\u2026",
+    required: "*",
+    submit: "Send Message",
+    sending: "Sending\u2026",
+    success: "Message sent! Thank you.",
+    error: "Something went wrong. Please try again.",
+  },
+
+  cta: {
+    eyebrow: "DJ Andy\u2019K",
+    heading: "Music is your",
+    headingItalic: "passion.",
+    subtitle: "Follow DJ Andy\u2019K across streaming platforms and stay connected to every new release.",
+    ctaPrimary: "Listen Across Platforms",
+    ctaSecondary: "hyperfollow.com/djandyk",
+    followInstagram: "Follow on Instagram",
+  },
+
+  footer: {
+    tagline: "Music is your passion.",
+    label: "\u2117 & \u00A9 ANDY\u2019K GROUP INTERNATIONAL LTD",
+    copyright: "\u00A9 2026 DJ Andy\u2019K",
+    links: "Links",
+    home: "Home",
+    labelWebsite: "andykgroupinternational.com",
+  },
+
+  cookie: {
+    message: "We use cookies to improve your experience.",
+    accept: "Accept",
+    decline: "Decline",
   },
 };
 
-// Spanish translations (formal - usted)
 const es: typeof en = {
   company: {
-    name: "Andy'K Group International LTD",
-    tagline: "Desarrollo Empresarial Integral y Arquitectura de Crecimiento",
-    subtitle: "Servicios Integrados B2B, B2G y TI",
-    subtitleLine2: "Impulsado por A.D.A.M. — Guiado por E.V.A.",
-    description: "Andy'K Group International LTD es una empresa de innovación con sede en el Reino Unido que combina inteligencia empresarial, automatización y divulgación estratégica.",
-    descriptionExtra: "Con clientes en toda Europa y América Latina, construimos entornos de crecimiento estructurados donde la estrategia, las operaciones y la tecnología avanzan en una sola dirección.",
-    descriptionSystems: "Servicios estratégicos que combinan desarrollo empresarial, arquitectura operativa y tecnología — ayudando a startups, PYMEs e instituciones públicas a escalar con estructura.",
-    quote: "Una estructura. Un flujo. Un sistema.",
-    quoteSubtitle: "Construido para crecer.",
-    location: "Londres, Reino Unido",
-    ukCompany: "Empresa Limitada del Reino Unido",
+    name: "DJ Andy\u2019K",
+    tagline: "La m\u00fasica es tu pasi\u00f3n.",
+    label: "ANDY\u2019K GROUP INTERNATIONAL LTD",
+    location: "Reino Unido",
+    genre: "Progressive House \u00B7 Trance \u00B7 Deep Mel\u00f3dico \u00B7 EDM",
   },
 
   hero: {
-    ctaPrimary: "Cuéntenos sobre usted",
-    ctaSecondary: "Descubra cómo trabajamos",
-    emailPlaceholder: "Su dirección de correo electrónico",
-    getInContact: "Contáctenos",
+    eyebrow: "DJ Andy\u2019K",
+    title: "La m\u00fasica es tu",
+    titleItalic: "pasi\u00f3n.",
+    subtitle: "Productor de progressive house, trance, sonidos mel\u00f3dicos profundos y EDM.",
+    subtitleLine2: "Cada tema construido como un viaje \u2014 mezclando emoci\u00f3n, energ\u00eda y narrativa.",
+    ctaPrimary: "Escuchar en Plataformas",
+    ctaSecondary: "M\u00e1s Info",
   },
 
   banner: {
-    b2bLead: "Generación de leads B2B:",
-    b2bText: "divulgación dirigida y gestión de pipeline",
-    adamSystem: "Sistema A.D.A.M.:",
-    adamText: "documentos automatizados, propuestas y ciclo de vida del cliente",
-    b2gTender: "Estrategia de licitación B2G:",
-    b2gText: "contratación pública y preparación de ofertas",
-    trusted: "Confianza en:",
-    trustedText: "LATAM, Benelux, DACH y EE.UU.",
-  },
-
-  services: {
-    heading: "Nuestros",
-    headingItalic: "servicios",
-    subtitle: "Servicios estratégicos que combinan desarrollo empresarial, arquitectura operativa y tecnología.",
     items: [
-      { title: "End-to-End", description: "Desarrollo empresarial estratégico y arquitectura de crecimiento" },
-      { title: "B2B", description: "Generación de leads, campañas de divulgación y gestión de pipeline" },
-      { title: "B2G", description: "Estrategia del sector público, asesoramiento en licitaciones y contratación" },
-      { title: "IT Services", description: "Arquitectura de sistemas, desarrollo de plataformas y automatización" },
-    ],
-  },
-
-  endToEnd: {
-    heading: "End-to-End",
-    headingItalic: "Desarrollo Empresarial",
-    description: "Diseñamos, reestructuramos y arquitectamos negocios desde los cimientos hasta el crecimiento escalable. Impulsado por A.D.A.M. Transformación estructural — alineando estrategia, ingresos, operaciones, posicionamiento y ejecución en un solo sistema.",
-    bullets: [
-      { title: "Claridad estructural", description: "Definición de jerarquía organizativa, roles y responsabilidad en cada capa del negocio." },
-      { title: "Arquitectura de ingresos", description: "Diseño de sistemas de precios, monetización y flujo de ingresos para un crecimiento sostenible." },
-      { title: "Posicionamiento de mercado", description: "Refinamiento de marca, propuesta de valor y ventaja competitiva en su mercado objetivo." },
-      { title: "Rediseño operativo", description: "Reestructuración de flujos internos, procesos y coordinación de equipos para máxima eficiencia." },
-      { title: "Integración de sistemas", description: "Conexión de herramientas, plataformas y flujos de datos en un ecosistema operativo unificado." },
-      { title: "Expansión y control de crecimiento", description: "Estrategia de expansión escalable con posicionamiento a largo plazo y ejecución controlada." },
-    ],
-  },
-
-  roadmap: {
-    heading: "Cómo funciona",
-    headingItalic: "A.D.A.M.",
-    subtitle: "Del primer contacto al lanzamiento del proyecto en seis pasos estructurados.",
-    steps: [
-      {
-        title: "Cuestionario",
-        description: "Complete nuestro formulario de admisión estructurado. Conocemos su empresa, objetivos y requisitos.",
-      },
-      {
-        title: "Propuesta",
-        description: "Elaboramos una propuesta a medida basada en sus necesidades. Revísela en su panel personal.",
-      },
-      {
-        title: "Contrato",
-        description: "Revise, comente y firme digitalmente su contrato. Total transparencia, sin sorpresas.",
-      },
-      {
-        title: "Estrategia",
-        description: "Juntos definimos la estrategia y el cronograma. Cada detalle alineado antes de comenzar.",
-      },
-      {
-        title: "Factura",
-        description: "Facturación automatizada con condiciones de pago claras. Todo rastreado en un solo lugar.",
-      },
-      {
-        title: "Incorporación",
-        description: "El proyecto se lanza. Actualizaciones en tiempo real, intercambio de documentos y soporte continuo a través de A.D.A.M.",
-      },
-    ],
-    statusBadge: "A.D.A.M. está activo y procesando clientes",
-    stepLabel: "Paso",
-  },
-
-  pricing: {
-    heading: "Planes para",
-    headingItalic: "cada etapa",
-    subtitle: "Asesoramiento estructurado y desarrollo empresarial — combinando estrategia, experiencia en el sector público e infraestructura tecnológica para ayudarle a escalar.",
-    eyebrow: "Precios transparentes",
-    tabB2B: "Desarrollo Empresarial B2B",
-    tabB2G: "Sector Público B2G",
-    tabTech: "Tecnología / CTO",
-    commitment: "Desde 3 meses",
-    popular: "Popular",
-    from: "desde",
-    perMonth: "/ mes",
-    perHour: "/ hora",
-    getStarted: "Comenzar",
-    customQuote: "¿Necesita algo personalizado? Adaptamos paquetes a sus requisitos exactos.",
-    requestCustomQuote: "Solicitar presupuesto personalizado",
-    billingBasis: "Facturación mensual",
-    billingMinimum: "Compromiso inicial de 3\u201312 meses",
-    billingRenewal: "Transición a suscripción mensual continua tras la entrega",
-    billingCancellation: "Aviso de cancelación de 15 días",
-
-    b2bCore: {
-      name: "CORE",
-      features: [
-        "40 leads cualificados por mes",
-        "1 mercado / 1 persona objetivo",
-        "Divulgación por correo electrónico + llamadas en frío",
-        "Informes mensuales",
-        "Sesión de estrategia de incorporación",
-      ],
-    },
-    b2bAdvance: {
-      name: "ADVANCE",
-      features: [
-        "60 leads cualificados por mes",
-        "Cobertura de 2 mercados",
-        "Campañas de divulgación multitáctil",
-        "Optimización de rendimiento",
-        "Revisión de estrategia mensual",
-      ],
-    },
-    b2bVanguard: {
-      name: "VANGUARD",
-      features: [
-        "80 leads cualificados por mes",
-        "Campañas multimercado",
-        "Configuración de pipeline CRM",
-        "Sistema de puntuación de leads",
-        "Arquitectura de divulgación estratégica",
-      ],
-    },
-    b2bPrestige: {
-      name: "PRESTIGE",
-      features: [
-        "120+ leads cualificados",
-        "Campañas de divulgación de marca",
-        "Scripts personalizados de llamadas y correos electrónicos",
-        "Consultoría estratégica de desarrollo empresarial",
-        "Informes a nivel ejecutivo",
-      ],
-    },
-
-    b2gStarter: {
-      name: "GovStarter",
-      features: [
-        "5 licitaciones públicas verificadas por mes",
-        "Revisión de elegibilidad",
-        "Asesoramiento básico de oferta",
-        "Consulta mensual",
-      ],
-    },
-    b2gExpand: {
-      name: "GovExpand",
-      features: [
-        "10 licitaciones verificadas",
-        "Lista de verificación previa a la oferta",
-        "Consulta de estrategia",
-        "Construcción de pipeline de licitaciones",
-      ],
-    },
-    b2gElite: {
-      name: "GovElite",
-      features: [
-        "1 borrador de propuesta completo por mes",
-        "Desarrollo de hoja de ruta de licitaciones",
-        "Emparejamiento de consorcios",
-        "Soporte de asesoramiento prioritario",
-      ],
-    },
-
-    techArchitecture: {
-      name: "Consultoría de Arquitectura de Sistemas",
-      features: [
-        "Diseño de arquitectura de sistemas empresariales",
-        "Planificación de infraestructura",
-        "Estrategia de arquitectura de automatización",
-      ],
-    },
-    techPlatforms: {
-      name: "Desarrollo de Plataformas Empresariales",
-      features: [
-        "Portales internos",
-        "Paneles operativos",
-        "Sistemas empresariales personalizados",
-      ],
-    },
-    techAutomation: {
-      name: "Automatización e Integraciones",
-      features: [
-        "Integraciones CRM / ERP",
-        "Automatización de API",
-        "Sistemas de automatización de flujo de trabajo",
-      ],
-    },
-    techAudit: {
-      name: "Auditoría de Sistemas Técnicos",
-      features: [
-        "Auditoría de infraestructura",
-        "Evaluación de escalabilidad",
-        "Revisión de línea base de seguridad",
-      ],
-    },
-    techCTO: {
-      name: "CTO-como-Servicio",
-      features: [
-        "Participación técnica",
-        "Supervisión de arquitectura",
-        "Selección de proveedores e infraestructura",
-        "Consultoría de estrategia de escalado",
-        "Contrato mínimo de 1 mes — plazas limitadas",
-      ],
-    },
-  },
-
-  cta: {
-    eyebrow: "Póngase en contacto",
-    heading: "Construyamos algo",
-    headingItalic: "juntos.",
-    subtitle: "Ya sea que necesite consultoría, soluciones tecnológicas o un socio estratégico para expansión internacional — estamos listos para hablar.",
-    ctaPrimary: "Cuéntenos sobre usted",
-    ctaSecondary: "Solicitar presupuesto personalizado",
-    followLinkedIn: "Síguenos en LinkedIn",
-  },
-
-  contact: {
-    heading: "Envíenos un mensaje",
-    subtitle: "Complete el formulario a continuación y nos pondremos en contacto lo antes posible.",
-    labelName: "Nombre completo",
-    labelEmail: "Dirección de correo electrónico",
-    labelCompany: "Nombre de la empresa",
-    labelMessage: "Mensaje",
-    required: "*",
-    placeholderName: "Su nombre completo",
-    placeholderEmail: "su@email.com",
-    placeholderCompany: "El nombre de su empresa",
-    placeholderMessage: "Cuéntenos sobre sus objetivos comerciales y cómo podemos ayudarle...",
-    buttonSend: "Enviar mensaje",
-    privacyText: "Al enviar este formulario, acepta nuestros términos de servicio y política de privacidad.",
-    successHeading: "Mensaje preparado",
-    successText: "Su cliente de correo electrónico debería haberse abierto. Si no, envíenos un correo electrónico directamente a info@andykgroupinternational.com",
-  },
-
-  footer: {
-    copyright: "© 2026",
-    linkHome: "Inicio",
-    linkSystems: "A.D.A.M. & E.V.A.",
-    linkPricing: "Precios",
-    linkContact: "Contacto",
-    linkPrivacy: "Política de privacidad",
-    linkCookies: "Política de cookies",
-    linkTerms: "Condiciones de uso",
-    linkDisclaimer: "Aviso legal del sitio",
-    linkLegalNotice: "Aviso legal",
-    linkClientPortal: "Portal del cliente",
-    selectLanguage: "Idioma",
-    selectCurrency: "Moneda",
-  },
-
-  common: {
-    getStarted: "Comenzar",
-    learnMore: "Más información",
-    contactUs: "Contáctenos",
-    readMore: "Leer más",
-  },
-
-  lovedBy: {
-    headingBold: "Construido sobre",
-    headingItalic: "confianza.",
-    headingLine2: "Impulsado por resultados.",
-    paragraph1: "Andy'K Group International LTD es una empresa de innovación con sede en el Reino Unido que ofrece Desarrollo Empresarial End-to-End y Arquitectura de Crecimiento en entornos B2B, B2G y tecnológicos.",
-    paragraph2: "Alineamos posicionamiento, diseño de ingresos, operaciones y ejecución en un sistema de crecimiento estructurado.",
-    paragraph3: "Impulsado por A.D.A.M. y guiado por E.V.A., construimos ecosistemas escalables diseñados para el rendimiento a largo plazo.",
-    quote: "Una estructura. Un flujo. Un sistema.",
-    tagline: "CONSTRUIDO PARA CRECER.",
-  },
-
-  caseStudies: {
-    heading: "Casos de",
-    headingItalic: "estudio",
-    cards: [
-      { shortTitle: "Sistema Operativo Hotelero", title: "Cómo resolvimos la fragmentación operativa hotelera con nuestros servicios", description: "Construimos un sistema operativo digital completo para un grupo hotelero — de la estrategia a la ejecución.", link: "Más información" },
-      { shortTitle: "Digitalización Sanitaria", title: "Cómo resolvimos el caos clínico con nuestros servicios", description: "Diseñamos un sistema de operaciones estructurado para una clínica de fisioterapia, integrando A.D.A.M. Healthcare.", link: "Más información" },
-      { shortTitle: "Profesionalización de Consultoría", title: "Cómo resolvimos la inconsistencia en consultoría con nuestros servicios", description: "Transformamos una práctica de consultoría emocional en un servicio profesional estructurado y escalable.", link: "Más información" },
+      "Progressive house, trance y EDM mel\u00f3dico profundo",
+      "Cada tema construido como un viaje",
+      "Desde el Reino Unido, compartiendo m\u00fasica con el mundo",
+      "Spotify \u00B7 Apple Music \u00B7 YouTube \u00B7 SoundCloud \u00B7 TIDAL",
+      "Nuevo lanzamiento: Paraller Stories \u2014 disponible ahora",
     ],
   },
 
   nav: {
     about: "Acerca de",
-    caseStudies: "Casos de estudio",
-    pricing: "Precios",
+    music: "M\u00fasica",
+    albums: "\u00c1lbumes",
     contact: "Contacto",
-    services: "Servicios",
-    groupSystems: "Sistemas",
-    groupBusiness: "Servicios empresariales",
-    groupIT: "Servicios TI",
-    adamDesc: "Gestor Automatizado de Documentos y Cuentas",
-    endToEnd: "End-to-End",
-    endToEndDesc: "Desarrollo empresarial estratégico y arquitectura de crecimiento",
-    b2bDev: "Desarrollo B2B",
-    b2bDevDesc: "Generación de leads y campañas de divulgación",
-    b2gPublic: "Sector Público B2G",
-    b2gPublicDesc: "Licitaciones gubernamentales y contratación pública",
-    sysArch: "Arquitectura de sistemas",
-    sysArchDesc: "Diseño y planificación de sistemas empresariales",
-    platformDev: "Desarrollo de plataformas",
-    platformDevDesc: "Portales, paneles y sistemas personalizados",
-    automation: "Automatización e integraciones",
-    automationDesc: "Automatización de CRM, ERP y flujos de trabajo",
-    cto: "CTO-as-a-Service",
-    ctoDesc: "Liderazgo técnico bajo demanda",
+    listenNow: "Escuchar Ahora",
   },
 
-  founders: {
-    eyebrow: "Las personas detrás",
-    heading: "Conozca a los",
-    headingItalic: "fundadores",
-    connect: "Conectar",
-    roles: [
-      "Fundador y Desarrollador Empresarial Estratégico",
-      "Cofundador y CTO",
-    ],
-    bios: [
-      "Más de quince años de liderazgo en ventas, hostelería, desarrollo empresarial y estrategia operativa. Andrej se especializa en sistemas de crecimiento escalable para B2B, B2G y relaciones internacionales con clientes.",
-      "El arquitecto técnico detrás de A.D.A.M., Kobe aprovecha su amplia experiencia para transformar cualquier idea en realidad.",
-    ],
-    quotes: [
-      "Mi enfoque es construir sistemas empresariales que no solo sean rentables, sino sostenibles, seguros y diseñados para escalar.",
-      "",
-    ],
-    locations: [
-      "Nacido en Austria",
-      "Nacido en Bélgica",
+  sound: {
+    label: "Filosof\u00eda Sonora",
+    heading: "Construyendo el",
+    headingItalic: "Sonido",
+    description: "Cada lanzamiento se construye sobre pilares s\u00f3nicos distintos \u2014 cada uno es una perspectiva desde la cual DJ Andy\u2019K aborda la producci\u00f3n.",
+    items: [
+      {
+        title: "Progressive House",
+        description: "Builds en capas, drops mel\u00f3dicos y progresiones hipn\u00f3ticas que llevan al oyente a trav\u00e9s de paisajes emocionales en evoluci\u00f3n.",
+      },
+      {
+        title: "Trance",
+        description: "L\u00edneas de sintetizadores ef\u00f3ricos y ritmos envolventes que crean estados de pura inmersi\u00f3n y trascendencia.",
+      },
+      {
+        title: "Deep Mel\u00f3dico",
+        description: "Texturas introspectivas y arm\u00f3nicos c\u00e1lidos \u2014 m\u00fasica que habla directamente al subconsciente.",
+      },
+      {
+        title: "EDM Cinem\u00e1tico",
+        description: "Elementos orquestales fusionados con producci\u00f3n electr\u00f3nica \u2014 temas construidos como bandas sonoras para la pista de baile.",
+      },
+      {
+        title: "Narrativa Emocional",
+        description: "Cada lanzamiento sigue un arco narrativo. De la tensi\u00f3n al alivio, el viaje siempre es intencional.",
+      },
+      {
+        title: "Arte en el Estudio",
+        description: "Desde la composici\u00f3n hasta el mastering, cada detalle est\u00e1 considerado. Dise\u00f1o de sonido, balance de mezcla e identidad s\u00f3nica refinados al \u00faltimo milisegundo.",
+      },
     ],
   },
 
-  caseStudyPages: {
-    nextCaseStudy: "Siguiente caso de estudio",
-    problem: "Problema",
-    solution: "Solución",
-    outcome: "Resultado",
-    hospitality: {
-      title: "Sistema operativo hotelero",
-      problem: "Un grupo hotelero en crecimiento con múltiples propiedades funcionaba con herramientas desconectadas, procesos manuales y experiencias de huéspedes inconsistentes. La gestión de ingresos, la coordinación del personal y la comunicación con los huéspedes estaban fragmentadas entre hojas de cálculo y soluciones improvisadas.",
-      solution: "Diseñamos e implementamos un sistema operativo digital completo — integrando la gestión de reservas, la programación del personal, la comunicación con los huéspedes y la supervisión financiera en una plataforma estructurada. La estrategia cubrió el rediseño operativo, la selección de tecnología y la incorporación del equipo.",
-      outcome: "Operaciones unificadas en todas las propiedades. La eficiencia del personal mejoró, las puntuaciones de satisfacción de los huéspedes aumentaron y el grupo obtuvo una visibilidad clara de las métricas de rendimiento — todo funcionando a través de un solo sistema.",
-    },
-    healthcare: {
-      title: "Digitalización sanitaria",
-      problem: "Una clínica de fisioterapia luchaba contra el caos en los flujos de trabajo clínicos — la programación de pacientes, los registros de tratamiento, la facturación y la comunicación se manejaban a través de sistemas separados y desconectados. El personal dedicaba más tiempo a la administración que a la atención al paciente.",
-      solution: "Diseñamos un sistema de operaciones estructurado para la clínica, integrando la gestión de pacientes, la programación de citas, la documentación de tratamientos y la facturación en un flujo de trabajo digital cohesivo — con A.D.A.M. Healthcare manejando la capa de gestión de documentos y cuentas.",
-      outcome: "El tiempo administrativo se redujo significativamente. El rendimiento de pacientes mejoró. La clínica ahora opera con un flujo de trabajo digital claro y estructurado que mantiene al personal clínico enfocado en la atención, no en el papeleo.",
-    },
-    consulting: {
-      title: "Profesionalización de consultoría",
-      problem: "Una práctica de consultoría entregaba valor pero de manera inconsistente — las propuestas eran improvisadas, la gestión de proyectos era reactiva y la comunicación con los clientes dependía enteramente de las relaciones personales del fundador. El negocio no podía escalar sin un cambio estructural.",
-      solution: "Transformamos la práctica de consultoría de una operación impulsada por emociones a un servicio profesional estructurado. Esto incluyó plantillas de propuestas estandarizadas, flujos de trabajo de gestión de proyectos, procesos de incorporación de clientes y un marco claro de entrega de servicios.",
-      outcome: "La práctica ahora entrega un servicio profesional consistente independientemente de qué miembro del equipo lidere. La retención de clientes mejoró, las tasas de referencia aumentaron y el negocio está posicionado para un crecimiento escalable.",
-    },
+  music: {
+    label: "M\u00fasica",
+    heading: "Donde vive la",
+    headingItalic: "m\u00fasica",
+    description: "Escucha a DJ Andy\u2019K en todas las principales plataformas. S\u00edguelo para nuevos lanzamientos, novedades y la discograf\u00eda completa.",
+    listenOn: "Escuchar en",
+    follow: "Seguir",
+    streamNow: "Escuchar Ahora",
   },
 
-  languages: {
-    en: "English",
-    es: "Español",
-    sk: "Slovenčina",
-    nl: "Nederlands",
-    pt: "Português",
-    de: "Deutsch",
+  albums: {
+    label: "Discograf\u00eda",
+    heading: "Los",
+    headingItalic: "lanzamientos",
+    description: "\u00c1lbumes, EPs, singles y la Piano Series \u2014 cada lanzamiento es un cap\u00edtulo.",
+    tabs: {
+      albums: "\u00c1lbumes 2026",
+      singles: "EPs & Singles",
+      piano: "Piano Series",
+    },
+    listenOn: "Escuchar",
+    bpm: "BPM",
+    latestRelease: "\u00daltimo lanzamiento",
+  },
+
+  about: {
+    label: "Acerca de",
+    heading: "La historia detr\u00e1s del",
+    headingItalic: "sonido",
+    bio: "El productor musical brit\u00e1nico Andrej Kneisl crea paisajes sonoros de progressive house, trance y melodic profundo bajo el nombre DJ Andy\u2019K. Con lanzamientos que abarcan \u00e1lbumes, EPs y una dedicada Piano Series, su m\u00fasica une lo emocional con lo euf\u00f3rico.",
+    quote: "\u201CYa no s\u00e9 si la m\u00fasica vive para m\u00ed, o si yo vivo para ella. Pero acepto ambas.\u201D",
+    quoteAttribution: "\u2014 DJ Andy\u2019K",
+    tagline: "LA M\u00daSICA ES TU PASI\u00d3N.",
+  },
+
+  featured: {
+    label: "Lanzamientos Destacados",
+    heading: "\u00daltimos",
+    headingItalic: "\u00e1lbumes",
+    description: "Tres lanzamientos que definen el sonido de DJ Andy\u2019K en 2026.",
+    cards: [
+      {
+        shortTitle: "When Later Becomes Never",
+        title: "Progressive house con alcance cinem\u00e1tico \u2014 el \u00e1lbum insignia de 2026",
+        description: "Un viaje de m\u00faltiples temas a trav\u00e9s de builds mel\u00f3dicos, drops emocionales y texturas atmosf\u00e9ricas profundas. 120\u2013124 BPM.",
+        link: "Escuchar Ahora",
+      },
+      {
+        shortTitle: "Human Stories",
+        title: "Melod\u00edas de piano emocionales tejidas en producci\u00f3n electr\u00f3nica mel\u00f3dica",
+        description: "Donde la sensibilidad cl\u00e1sica se encuentra con el dise\u00f1o de sonido electr\u00f3nico moderno. Un \u00e1lbum profundamente personal.",
+        link: "Escuchar Ahora",
+      },
+      {
+        shortTitle: "Four Elements",
+        title: "Un EP que explora las cuatro fuerzas fundamentales a trav\u00e9s del sonido",
+        description: "Tierra, agua, fuego y aire \u2014 cuatro paisajes s\u00f3nicos distintos unidos por una sola visi\u00f3n.",
+        link: "Escuchar Ahora",
+      },
+    ],
+  },
+
+  flagship: {
+    headingBold: "When Later",
+    headingItalic: "Becomes Never",
+    subheading: "Progressive House / Cinem\u00e1tico \u00B7 2026",
+    label: "\u00c1lbum Insignia",
+    listenNow: "Escuchar en Spotify",
+    pianoLabel: "Piano Series",
+    pianoHeading: "Human Stories",
+    pianoSubheading: "Piano \u00B7 2026",
+    pianoListen: "Escuchar en Spotify",
+  },
+
+  journey: {
+    label: "El Proceso",
+    heading: "El viaje de un",
+    headingItalic: "tema",
+    description: "Desde la primera chispa de una idea hasta el momento en que un oyente le da play \u2014 seis etapas que dan forma a cada lanzamiento.",
+    steps: [
+      { title: "Inspiraci\u00f3n", description: "Un sentimiento, un recuerdo, o un momento capturado \u2014 la semilla de cada tema comienza con algo real." },
+      { title: "Composici\u00f3n", description: "Las melod\u00edas y armon\u00edas toman forma. Las progresiones de acordes se establecen, el arco emocional se define." },
+      { title: "Producci\u00f3n", description: "Capas construidas en el estudio \u2014 sintetizadores, bater\u00eda, bajos, texturas. El tema cobra vida." },
+      { title: "Mastering", description: "Pulido final y volumen optimizado. El tema preparado para cada plataforma de streaming." },
+      { title: "Lanzamiento", description: "Publicado en Spotify, Apple Music, TIDAL, SoundCloud, YouTube y m\u00e1s." },
+      { title: "Conexi\u00f3n", description: "La m\u00fasica llega a los oyentes. El viaje se completa \u2014 hasta que comience el siguiente." },
+    ],
+  },
+
+  contact: {
+    label: "Contacto",
+    heading: "Construyamos el pr\u00f3ximo",
+    headingItalic: "cap\u00edtulo sonoro.",
+    description: "\u00bfTienes una pregunta, una idea de colaboraci\u00f3n, o simplemente quieres saludar? Env\u00eda un mensaje.",
+    labelName: "Nombre",
+    labelEmail: "Correo electr\u00f3nico",
+    labelMessage: "Mensaje",
+    placeholderName: "Tu nombre",
+    placeholderEmail: "tu@correo.com",
+    placeholderMessage: "Tu mensaje\u2026",
+    required: "*",
+    submit: "Enviar Mensaje",
+    sending: "Enviando\u2026",
+    success: "\u00a1Mensaje enviado! Gracias.",
+    error: "Algo sali\u00f3 mal. Por favor int\u00e9ntalo de nuevo.",
+  },
+
+  cta: {
+    eyebrow: "DJ Andy\u2019K",
+    heading: "La m\u00fasica es tu",
+    headingItalic: "pasi\u00f3n.",
+    subtitle: "Sigue a DJ Andy\u2019K en las plataformas de streaming y mant\u00e9nte conectado con cada nuevo lanzamiento.",
+    ctaPrimary: "Escuchar en Plataformas",
+    ctaSecondary: "hyperfollow.com/djandyk",
+    followInstagram: "Seguir en Instagram",
+  },
+
+  footer: {
+    tagline: "La m\u00fasica es tu pasi\u00f3n.",
+    label: "\u2117 & \u00A9 ANDY\u2019K GROUP INTERNATIONAL LTD",
+    copyright: "\u00A9 2026 DJ Andy\u2019K",
+    links: "Enlaces",
+    home: "Inicio",
+    labelWebsite: "andykgroupinternational.com",
+  },
+
+  cookie: {
+    message: "Usamos cookies para mejorar tu experiencia.",
+    accept: "Aceptar",
+    decline: "Rechazar",
   },
 };
 
-// Slovak translations
 const sk: typeof en = {
   company: {
-    name: "Andy'K Group International LTD",
-    tagline: "Komplexný Rozvoj Podnikania a Architektúra Rastu",
-    subtitle: "Integrované Služby B2B, B2G a IT",
-    subtitleLine2: "Poháňané systémom A.D.A.M. — Vedené systémom E.V.A.",
-    description: "Andy'K Group International LTD je inovačná spoločnosť so sídlom vo Veľkej Británii, ktorá kombinuje obchodnú inteligenciu, automatizáciu a strategické oslovovanie.",
-    descriptionExtra: "S klientmi po celej Európe a Latinskej Amerike budujeme štruktúrované prostredia rastu, kde stratégia, prevádzka a technológia smerujú jedným smerom.",
-    descriptionSystems: "Strategické služby kombinujúce obchodný rozvoj, prevádzkovú architektúru a technológiu — pomáhajúce startupom, malým a stredným podnikom a verejným inštitúciám škálovať so štruktúrou.",
-    quote: "Jedna štruktúra. Jeden tok. Jeden systém.",
-    quoteSubtitle: "Vytvorené pre rast.",
-    location: "Londýn, Veľká Británia",
-    ukCompany: "Spoločnosť s ručením obmedzeným Veľkej Británie",
+    name: "DJ Andy\u2019K",
+    tagline: "Hudba je tvoja vášeň.",
+    label: "ANDY\u2019K GROUP INTERNATIONAL LTD",
+    location: "Veľká Británia",
+    genre: "Progressive House \u00B7 Trance \u00B7 Deep Mel\u00f3dic \u00B7 EDM",
   },
 
   hero: {
-    ctaPrimary: "Povedzte nám o sebe",
-    ctaSecondary: "Zistite, ako pracujeme",
-    emailPlaceholder: "Vaša e-mailová adresa",
-    getInContact: "Kontaktujte nás",
+    eyebrow: "DJ Andy\u2019K",
+    title: "Hudba je tvoja",
+    titleItalic: "vá\u0161e\u0148.",
+    subtitle: "Producent progressive house, trance, deep mel\u00f3dickych zvukov a EDM.",
+    subtitleLine2: "Ka\u017ed\u00e1 skladba postaven\u00e1 ako cesta \u2014 mixuj\u00fac emócie, energiu a pr\u00edbehy.",
+    ctaPrimary: "Po\u010du\u0165 na platformách",
+    ctaSecondary: "Viac o mne",
   },
 
   banner: {
-    b2bLead: "Generovanie B2B leadov:",
-    b2bText: "cielené oslovenie a správa pipeline",
-    adamSystem: "Systém A.D.A.M.:",
-    adamText: "automatizované dokumenty, návrhy a životný cyklus klienta",
-    b2gTender: "Stratégia B2G tenderov:",
-    b2gText: "verejné obstarávanie a príprava ponúk",
-    trusted: "Dôveryhodné naprieč:",
-    trustedText: "LATAM, Benelux, DACH a USA",
-  },
-
-  services: {
-    heading: "Naše",
-    headingItalic: "služby",
-    subtitle: "Strategické služby kombinujúce obchodný rozvoj, prevádzkovú architektúru a technológiu.",
     items: [
-      { title: "End-to-End", description: "Strategický obchodný rozvoj a architektúra rastu" },
-      { title: "B2B", description: "Generovanie leadov, kampane oslovenia a správa pipeline" },
-      { title: "B2G", description: "Stratégia verejného sektora, poradenstvo k tenderom a obstarávanie" },
-      { title: "IT Services", description: "Architektúra systémov, vývoj platforiem a automatizácia" },
+      "Progressive house, trance & deep mel\u00f3dick\u00e9 EDM",
+      "Ka\u017ed\u00e1 skladba postaven\u00e1 ako cesta",
+      "Zo Spojeného kr\u00e1\u013eovstva, zdie\u013eam hudbu so svetom",
+      "Spotify \u00B7 Apple Music \u00B7 YouTube \u00B7 SoundCloud \u00B7 TIDAL",
+      "Nov\u00e1 skladba: Paraller Stories \u2014 u\u017e vonku",
     ],
   },
 
-  endToEnd: {
-    heading: "End-to-End",
-    headingItalic: "Obchodný Rozvoj",
-    description: "Navrhujeme, reštrukturalizujeme a budujeme podnikateľskú architektúru od základov po škálovateľný rast. Poháňané systémom A.D.A.M. Štrukturálna transformácia — zosúladenie stratégie, príjmov, prevádzky, pozicionovania a realizácie do jedného systému.",
-    bullets: [
-      { title: "Štrukturálna jasnosť", description: "Definovanie organizačnej hierarchie, rolí a zodpovednosti naprieč každou vrstvou podnikania." },
-      { title: "Architektúra príjmov", description: "Navrhovanie cenových, monetizačných a príjmových systémov pre udržateľný rast." },
-      { title: "Pozicionovanie na trhu", description: "Zdokonaľovanie značky, hodnotovej ponuky a konkurenčnej výhody na cieľovom trhu." },
-      { title: "Prevádzkový redizajn", description: "Reštrukturalizácia interných procesov, pracovných postupov a koordinácie tímov pre maximálnu efektivitu." },
-      { title: "Systémová integrácia", description: "Prepojenie nástrojov, platforiem a dátových tokov do jedného prevádzkovéo ekosystému." },
-      { title: "Expanzia a kontrola rastu", description: "Budovanie škálovateľnej expanznej stratégie s dlhodobým pozicionovaním a kontrolovanou realizáciou." },
+  nav: {
+    about: "O mne",
+    music: "Hudba",
+    albums: "Albumy",
+    contact: "Kontakt",
+    listenNow: "Po\u010du\u0165 teraz",
+  },
+
+  sound: {
+    label: "Zvuková filozofia",
+    heading: "Tvorba",
+    headingItalic: "zvuku",
+    description: "Ka\u017ed\u00e9 vydanie je postaven\u00e9 na z\u00e1klade distinktn\u00fdch zvukov\u00fdch pil\u00edrov \u2014 ka\u017ed\u00fd z nich je objektív, cez ktor\u00fd DJ Andy\u2019K pristupuje k produkcii.",
+    items: [
+      {
+        title: "Progressive House",
+        description: "Vrstven\u00e9 buildy, mel\u00f3dick\u00e9 dropy a hypnotick\u00e9 progresie, ktor\u00e9 n\u00e1s nesú cez vyvíjaj\u00face sa emocionálne krajiny.",
+      },
+      {
+        title: "Trance",
+        description: "Euf\u00f3rick\u00e9 syntetiz\u00e9torov\u00e9 l\u00ednie a hn\u00facie rytmy, ktor\u00e9 vytv\u00e1raj\u00fa stavy \u010dist\u00e9ho ponorenia a transcendencie.",
+      },
+      {
+        title: "Deep Mel\u00f3dický",
+        description: "Introspektion\u00e9 text\u00fary a tep\u013e\u00e9 harmoniky \u2014 hudba, ktor\u00e1 hovor\u00ed priamo k podvedomiu.",
+      },
+      {
+        title: "Cinematick\u00e9 EDM",
+        description: "Orchestr\u00e1lne prvky spl\u00faven\u00e9 s elektronickou produkciou \u2014 skladby postaven\u00e9 ako filmov\u00e9 soundtracky pre tanec.",
+      },
+      {
+        title: "Emocionálne rozpr\u00e1vanie",
+        description: "Ka\u017ed\u00e9 vydanie sa riadi naratívnym oblúkom. Od napätia po uvo\u013enenie, cesta je v\u017edy zámerná.",
+      },
+      {
+        title: "Štúdiové remeslo",
+        description: "Od kompozície po mastering, každý detail je premyslený. Zvukový dizajn, mixovacia rovnováha a sonicka identita doladená do poslednej milisekundy.",
+      },
     ],
   },
 
-  lovedBy: {
-    headingBold: "Postavené na",
-    headingItalic: "dôvere.",
-    headingLine2: "Poháňané výsledkami.",
-    paragraph1: "Andy'K Group International LTD je inovačná spoločnosť so sídlom vo Veľkej Británii, ktorá poskytuje End-to-End obchodný rozvoj a architektúru rastu v prostrediach B2B, B2G a technologicky orientovaných odvetviach.",
-    paragraph2: "Zosúlaďujeme pozicionovanie, dizajn príjmov, prevádzku a realizáciu do jedného štruktúrovaného systému rastu.",
-    paragraph3: "Poháňané systémom A.D.A.M. a vedené systémom E.V.A., budujeme škálovateľné ekosystémy navrhnuté pre dlhodobý výkon.",
-    quote: "Jedna štruktúra. Jeden tok. Jeden systém.",
-    tagline: "VYTVORENÉ PRE RAST.",
+  music: {
+    label: "Hudba",
+    heading: "Kde \u017eije",
+    headingItalic: "hudba",
+    description: "Po\u010d\u00favajte DJ Andy\u2019K na v\u0161etk\u00fdch hlavn\u00fdch platform\u00e1ch. Sledujte pre nov\u00e9 vydania, aktuality a celú diskografiu.",
+    listenOn: "Po\u010du\u0165 na",
+    follow: "Sledova\u0165",
+    streamNow: "Po\u010du\u0165 teraz",
   },
 
-  caseStudies: {
-    heading: "Prípadové",
-    headingItalic: "štúdie",
+  albums: {
+    label: "Diskografia",
+    heading: "Vydané",
+    headingItalic: "albumy",
+    description: "Albumy, EPčky, singly a Piano Series \u2014 každé vydanie je jedna kapitola.",
+    tabs: {
+      albums: "Albumy 2026",
+      singles: "EP & Singly",
+      piano: "Piano Series",
+    },
+    listenOn: "Po\u010du\u0165",
+    bpm: "BPM",
+    latestRelease: "Posledné vydanie",
+  },
+
+  about: {
+    label: "O mne",
+    heading: "Pr\u00edbe h za",
+    headingItalic: "zvukom",
+    bio: "Brit\u00e1nsky hudobn\u00fd producent Andrej Kneisl tvor\u00ed progressive house, trance a deep mel\u00f3dick\u00e9 zvukov\u00e9 kr\u00e1jiny pod menom DJ Andy\u2019K. S vydaniami pokr\u00fdvaj\u00facimi albumy, EPčky a dedikovan\u00fa Piano Series, jeho hudba sp\u00e1ja emocionálne s euf\u00f3rickym.",
+    quote: "\u201CU\u017e neviem, \u010di hudba \u017eije pre m\u0148a, alebo ja \u017eijem pre \u0148u. Ale oboje prij\u00edmam.\u201D",
+    quoteAttribution: "\u2014 DJ Andy\u2019K",
+    tagline: "HUDBA JE TVOJA VÁŠEň.",
+  },
+
+  featured: {
+    label: "Vybrané vydania",
+    heading: "Najnov\u0161ie",
+    headingItalic: "albumy",
+    description: "Tri vydania definuj\u00face zvuk DJ Andy\u2019K v roku 2026.",
     cards: [
-      { shortTitle: "Hotelový operačný systém", title: "Ako sme vyriešili fragmentované hotelové operácie pomocou našich služieb", description: "Vybudovali sme kompletný digitálny operačný systém pre hoteliersku skupinu — od stratégie po realizáciu.", link: "Dozvedieť sa viac" },
-      { shortTitle: "Digitalizácia zdravotníctva", title: "Ako sme vyriešili chaos v klinických procesoch pomocou našich služieb", description: "Navrhli sme štruktúrovaný operačný systém pre fyzioterapeutickú kliniku s integráciou A.D.A.M. Healthcare.", link: "Dozvedieť sa viac" },
-      { shortTitle: "Profesionalizácia poradenstva", title: "Ako sme vyriešili nekonzistentné poradenstvo pomocou našich služieb", description: "Transformovali sme emocionálnu poradenskú prax na štruktúrovanú, škálovateľnú profesionálnu službu.", link: "Dozvedieť sa viac" },
+      {
+        shortTitle: "When Later Becomes Never",
+        title: "Progressive house s cinematick\u00fdm dosahem \u2014 vlajkov\u00fd album roku 2026",
+        description: "Viacpiesňov\u00e1 cesta cez mel\u00f3dick\u00e9 buildy, emocionálne dropy a hlbok\u00e9 atmosf\u00e9rick\u00e9 text\u00fary. 120\u2013124 BPM.",
+        link: "Po\u010du\u0165 teraz",
+      },
+      {
+        shortTitle: "Human Stories",
+        title: "Emocionálne klavírne mel\u00f3die vplet\u00e9 do mel\u00f3dickej elektronickej produkcie",
+        description: "Kde sa klasick\u00e1 citlivos\u0165 stret\u00e1va s modern\u00fdm elektronick\u00fdm zvukov\u00fdm dizajnom. Hlboko osobn\u00fd album.",
+        link: "Po\u010du\u0165 teraz",
+      },
+      {
+        shortTitle: "Four Elements",
+        title: "EP sk\u00famaj\u00face \u0161tyri základné sily prostredn\u00edctvom zvuku",
+        description: "Zem, voda, ohe\u0148 a vzduch \u2014 \u0161tyri distinktn\u00e9 zvukov\u00e9 krajiny zjednotené jednou víziou.",
+        link: "Po\u010du\u0165 teraz",
+      },
     ],
   },
 
-  roadmap: {
-    heading: "Ako funguje",
-    headingItalic: "A.D.A.M.",
-    subtitle: "Od prvého kontaktu po spustenie projektu v šiestich štruktúrovaných krokoch.",
+  flagship: {
+    headingBold: "When Later",
+    headingItalic: "Becomes Never",
+    subheading: "Progressive House / Cinematick\u00fd \u00B7 2026",
+    label: "Vlajkov\u00fd album",
+    listenNow: "Po\u010du\u0165 na Spotify",
+    pianoLabel: "Piano Series",
+    pianoHeading: "Human Stories",
+    pianoSubheading: "Piano \u00B7 2026",
+    pianoListen: "Po\u010du\u0165 na Spotify",
+  },
+
+  journey: {
+    label: "Proces",
+    heading: "Cesta jednej",
+    headingItalic: "skladby",
+    description: "Od prvej iskry n\u00e1padu až po okamih, ke\u010f posluch\u00e1\u010d stla\u010d\u00ed play \u2014 \u0161es\u0165 et\u00e1p, ktor\u00e9 formuj\u00fa každé vydanie.",
     steps: [
-      {
-        title: "Dotazník",
-        description: "Vyplňte náš štruktúrovaný formulár. Spoznáme vašu firmu, ciele a požiadavky.",
-      },
-      {
-        title: "Návrh",
-        description: "Vytvoríme návrh na mieru podľa vašich potrieb. Skontrolujte ho vo vašom osobnom paneli.",
-      },
-      {
-        title: "Zmluva",
-        description: "Skontrolujte, komentujte a digitálne podpíšte zmluvu. Úplná transparentnosť, žiadne prekvapenia.",
-      },
-      {
-        title: "Stratégia",
-        description: "Spoločne definujeme stratégiu a časový plán. Každý detail zladený pred začiatkom.",
-      },
-      {
-        title: "Faktúra",
-        description: "Automatizovaná fakturácia s jasnými platobnými podmienkami. Všetko sledované na jednom mieste.",
-      },
-      {
-        title: "Onboarding",
-        description: "Projekt sa spúšťa. Aktualizácie v reálnom čase, zdieľanie dokumentov a priebežná podpora cez A.D.A.M.",
-      },
+      { title: "Inšpirácia", description: "Pocit, spomienka alebo zachyten\u00fd moment \u2014 semeno každej skladby za\u010d\u00edna nie\u010d\u00edm skuto\u010dn\u00fdm." },
+      { title: "Kompozícia", description: "Mel\u00f3die a harm\u00f3nie naberaj\u00fa tvar. Akkordov\u00e9 progresie s\u00fa stanoven\u00e9, emocionálny oblúk definovan\u00fd." },
+      { title: "Produkcia", description: "Vrstvy budovan\u00e9 v štúdiu \u2014 syntez\u00e1tory, bici, basy, text\u00fary. Skladba o\u017eiváva." },
+      { title: "Mastering", description: "Finálny le\u0161t a hlasitos\u0165 optimalizovan\u00e1. Skladba pripravená pre každ\u00fa streamingov\u00fa platformu." },
+      { title: "Vydanie", description: "Publikovan\u00e9 na Spotify, Apple Music, TIDAL, SoundCloud, YouTube a ďalších." },
+      { title: "Spojenie", description: "Hudba sa dostane k posluch\u00e1\u010dom. Cesta sa dokon\u010d\u00ed \u2014 k\u00fdm sa nezačne ďalšia." },
     ],
-    statusBadge: "A.D.A.M. je aktívny a spracováva klientov",
-    stepLabel: "Krok",
-  },
-
-  pricing: {
-    heading: "Plány pre",
-    headingItalic: "každú fázu",
-    subtitle: "Štruktúrované poradenstvo a obchodný rozvoj — kombinujúce stratégiu, odbornosť vo verejnom sektore a technologickú infraštruktúru, aby ste mohli škálovať.",
-    eyebrow: "Transparentné ceny",
-    tabB2B: "B2B obchodný rozvoj",
-    tabB2G: "B2G verejný sektor",
-    tabTech: "Technológia / CTO",
-    commitment: "Od 3 mesiacov",
-    popular: "Populárne",
-    from: "od",
-    perMonth: "/ mesiac",
-    perHour: "/ hodina",
-    getStarted: "Začať",
-    customQuote: "Potrebujete niečo na mieru? Prispôsobujeme balíčky presne vašim požiadavkám.",
-    requestCustomQuote: "Požiadať o cenovú ponuku na mieru",
-    billingBasis: "Mesačná fakturácia",
-    billingMinimum: "Počiatočný záväzok 3\u201312 mesiacov",
-    billingRenewal: "Po dodaní prechod na priebežné mesačné predplatné",
-    billingCancellation: "15-dňová výpovedná lehota",
-
-    b2bCore: {
-      name: "CORE",
-      features: [
-        "40 kvalifikovaných leadov mesačne",
-        "1 trh / 1 cieľová osoba",
-        "E-mailové oslovenie + studené volanie",
-        "Mesačné vykazovanie",
-        "Začlenenie strategickej relácie",
-      ],
-    },
-    b2bAdvance: {
-      name: "ADVANCE",
-      features: [
-        "60 kvalifikovaných leadov mesačne",
-        "Pokrytie 2 trhov",
-        "Viacdotykové kampane oslovenia",
-        "Optimalizácia výkonu",
-        "Mesačná kontrola stratégie",
-      ],
-    },
-    b2bVanguard: {
-      name: "VANGUARD",
-      features: [
-        "80 kvalifikovaných leadov mesačne",
-        "Viac trhové kampane",
-        "Nastavenie CRM pipeline",
-        "Systém hodnotenia leadov",
-        "Strategická architektúra oslovenia",
-      ],
-    },
-    b2bPrestige: {
-      name: "PRESTIGE",
-      features: [
-        "120+ kvalifikovaných leadov",
-        "Značkové kampane oslovenia",
-        "Vlastné skripty hovorov a e-mailov",
-        "Strategické obchodné rozvojové poradenstvo",
-        "Vykazovanie na úrovni vedenia",
-      ],
-    },
-
-    b2gStarter: {
-      name: "GovStarter",
-      features: [
-        "5 overených verejných tenderov mesačne",
-        "Kontrola oprávnenosti",
-        "Základné poradenstvo k ponuke",
-        "Mesačná konzultácia",
-      ],
-    },
-    b2gExpand: {
-      name: "GovExpand",
-      features: [
-        "10 overených tenderov",
-        "Zoznam kontrol pred ponukou",
-        "Strategická konzultácia",
-        "Budovanie pipeline tenderov",
-      ],
-    },
-    b2gElite: {
-      name: "GovElite",
-      features: [
-        "1 kompletný návrh návrhu mesačne",
-        "Vývoj cestovnej mapy tenderov",
-        "Spárenie konzorcia",
-        "Prioritná poradenská podpora",
-      ],
-    },
-
-    techArchitecture: {
-      name: "Poradenstvo architektúry systémov",
-      features: [
-        "Dizajn architektúry obchodných systémov",
-        "Plánovanie infraštruktúry",
-        "Stratégia architektúry automatizácie",
-      ],
-    },
-    techPlatforms: {
-      name: "Vývoj obchodných platforiem",
-      features: [
-        "Interné portály",
-        "Prevádzkové dashboardy",
-        "Vlastné firemné systémy",
-      ],
-    },
-    techAutomation: {
-      name: "Automatizácia a integrácie",
-      features: [
-        "CRM / ERP integrácie",
-        "API automatizácia",
-        "Systémy automatizácie pracovných postupov",
-      ],
-    },
-    techAudit: {
-      name: "Audit technických systémov",
-      features: [
-        "Audit infraštruktúry",
-        "Posúdenie škálovateľnosti",
-        "Kontrola základnej bezpečnosti",
-      ],
-    },
-    techCTO: {
-      name: "CTO-ako-služba",
-      features: [
-        "Technické zapojenie",
-        "Dohľad nad architektúrou",
-        "Výber dodávateľov a infraštruktúry",
-        "Poradenstvo stratégie škálovania",
-        "Minimálna zmluva na 1 mesiac — obmedzené miesta",
-      ],
-    },
-  },
-
-  cta: {
-    eyebrow: "Kontaktujte nás",
-    heading: "Postavme niečo",
-    headingItalic: "spoločne.",
-    subtitle: "Či už potrebujete poradenstvo, technologické riešenia alebo strategického partnera pre medzinárodnú expanziu — sme pripravení hovoriť.",
-    ctaPrimary: "Povedzte nám o sebe",
-    ctaSecondary: "Požiadať o cenovú ponuku na mieru",
-    followLinkedIn: "Sledujte nás na LinkedIn",
   },
 
   contact: {
-    heading: "Pošlite nám správu",
-    subtitle: "Vyplňte formulár nižšie a ozveme sa vám čo najskôr.",
-    labelName: "Celé meno",
-    labelEmail: "E-mailová adresa",
-    labelCompany: "Názov spoločnosti",
+    label: "Kontakt",
+    heading: "Vytvorme ďalšiu",
+    headingItalic: "hudobn\u00fa kapitolu.",
+    description: "M\u00e1\u0161 otázku, n\u00e1pad na spoluprácu alebo chceš jednoducho pozdraviť? Pošli správu.",
+    labelName: "Meno",
+    labelEmail: "E-mail",
     labelMessage: "Správa",
+    placeholderName: "Tvoje meno",
+    placeholderEmail: "ty@email.sk",
+    placeholderMessage: "Tvoja správa\u2026",
     required: "*",
-    placeholderName: "Vaše celé meno",
-    placeholderEmail: "vas@email.com",
-    placeholderCompany: "Názov vašej spoločnosti",
-    placeholderMessage: "Povedzte nám o vašich obchodných cieľoch a ako vám môžeme pomôcť...",
-    buttonSend: "Odoslať správu",
-    privacyText: "Odoslaním tohto formulára súhlasíte s našimi podmienkami služby a zásadami ochrany osobných údajov.",
-    successHeading: "Správa pripravená",
-    successText: "Váš e-mailový klient by sa mal otvoriť. Ak nie, napíšte nám priamo na info@andykgroupinternational.com",
-  },
-
-  footer: {
-    copyright: "© 2026",
-    linkHome: "Domov",
-    linkSystems: "A.D.A.M. & E.V.A.",
-    linkPricing: "Ceny",
-    linkContact: "Kontakt",
-    linkPrivacy: "Zásady ochrany osobných údajov",
-    linkCookies: "Zásady používania cookies",
-    linkTerms: "Podmienky používania",
-    linkDisclaimer: "Vyhlásenie o odmietnutí zodpovednosti",
-    linkLegalNotice: "Právne upozornenie",
-    linkClientPortal: "Klientsky portál",
-    selectLanguage: "Jazyk",
-    selectCurrency: "Mena",
-  },
-
-  common: {
-    getStarted: "Začať",
-    learnMore: "Dozvedieť sa viac",
-    contactUs: "Kontaktujte nás",
-    readMore: "Čítať viac",
-  },
-
-  nav: {
-    about: "O nás",
-    caseStudies: "Prípadové štúdie",
-    pricing: "Ceny",
-    contact: "Kontakt",
-    services: "Služby",
-    groupSystems: "Systémy",
-    groupBusiness: "Obchodné služby",
-    groupIT: "IT služby",
-    adamDesc: "Automatizovaný správca dokumentov a účtov",
-    endToEnd: "End-to-End",
-    endToEndDesc: "Strategický rozvoj podnikania a architektúra rastu",
-    b2bDev: "B2B rozvoj",
-    b2bDevDesc: "Generovanie leadov a kampane oslovovania",
-    b2gPublic: "B2G Verejný sektor",
-    b2gPublicDesc: "Verejné súťaže a obstarávanie",
-    sysArch: "Architektúra systémov",
-    sysArchDesc: "Návrh a plánovanie podnikových systémov",
-    platformDev: "Vývoj platforiem",
-    platformDevDesc: "Portály, dashboardy a vlastné systémy",
-    automation: "Automatizácia a integrácie",
-    automationDesc: "Automatizácia CRM, ERP a pracovných procesov",
-    cto: "CTO-as-a-Service",
-    ctoDesc: "Technické vedenie na požiadanie",
-  },
-
-  founders: {
-    eyebrow: "Ľudia za tým",
-    heading: "Spoznajte",
-    headingItalic: "zakladateľov",
-    connect: "Spojiť sa",
-    roles: [
-      "Zakladateľ a strategický obchodný developer",
-      "Spoluzakladateľ a CTO",
-    ],
-    bios: [
-      "Viac ako pätnásť rokov skúseností v predaji, pohostinstve, rozvoji podnikania a operačnej stratégii. Andrej sa špecializuje na škálovateľné rastové systémy pre B2B, B2G a medzinárodné vzťahy s klientmi.",
-      "Technický architekt za A.D.A.M., Kobe využíva svoje rozsiahle odborné znalosti na premenu akejkoľvek myšlienky na realitu.",
-    ],
-    quotes: [
-      "Môj cieľ je budovať obchodné systémy, ktoré sú nielen ziskové — ale udržateľné, bezpečné a navrhnuté na škálovanie.",
-      "",
-    ],
-    locations: [
-      "Narodený v Rakúsku",
-      "Narodený v Belgicku",
-    ],
-  },
-
-  caseStudyPages: {
-    nextCaseStudy: "Ďalšia prípadová štúdia",
-    problem: "Problém",
-    solution: "Riešenie",
-    outcome: "Výsledok",
-    hospitality: {
-      title: "Hotelový operačný systém",
-      problem: "Rastúca hotelová skupina s viacerými nehnuteľnosťami fungovala na odpojených nástrojoch, manuálnych procesoch a nekonzistentných zážitkoch hostí. Riadenie príjmov, koordinácia personálu a komunikácia s hosťami boli fragmentované medzi tabuľkami a improvizovanými riešeniami.",
-      solution: "Navrhli a implementovali sme kompletný digitálny operačný systém — integráciou správy rezervácií, plánovania personálu, komunikácie s hosťami a finančného dohľadu do jednej štruktúrovanej platformy. Stratégia pokrývala operačný redizajn, výber technológií a onboarding tímu.",
-      outcome: "Zjednotené operácie naprieč všetkými nehnuteľnosťami. Efektivita personálu sa zlepšila, skóre spokojnosti hostí vzrástlo a skupina získala jasnú viditeľnosť do výkonnostných metrík — všetko bežiace cez jeden systém.",
-    },
-    healthcare: {
-      title: "Digitalizácia zdravotníctva",
-      problem: "Fyzioterapeutická klinika zápasila s chaosom v klinických pracovných procesoch — plánovanie pacientov, záznamy o liečbe, fakturácia a komunikácia boli riadené cez oddelené, neprepojené systémy. Personál trávil viac času administratívou než starostlivosťou o pacientov.",
-      solution: "Navrhli sme štruktúrovaný operačný systém pre kliniku, integrujúci správu pacientov, plánovanie termínov, dokumentáciu liečby a fakturáciu do súdržného digitálneho pracovného procesu — s A.D.A.M. Healthcare riadiacim vrstvu správy dokumentov a účtov.",
-      outcome: "Administratívny čas sa výrazne znížil. Priepustnosť pacientov sa zlepšila. Klinika teraz funguje s jasným, štruktúrovaným digitálnym pracovným procesom, ktorý udržuje klinický personál zameraný na starostlivosť, nie na papierovanie.",
-    },
-    consulting: {
-      title: "Profesionalizácia poradenstva",
-      problem: "Poradenská prax dodávala hodnotu, ale nekonzistentne — návrhy boli improvizované, riadenie projektov bolo reaktívne a komunikácia s klientmi závisela výlučne od osobných vzťahov zakladateľa. Firma nemohla rásť bez štrukturálnej zmeny.",
-      solution: "Transformovali sme poradenskú prax z emocionálne riadenej prevádzky na štruktúrovanú profesionálnu službu. To zahŕňalo štandardizované šablóny návrhov, pracovné procesy riadenia projektov, procesy onboardingu klientov a jasný rámec poskytovania služieb.",
-      outcome: "Prax teraz dodáva konzistentný profesionálny servis bez ohľadu na to, ktorý člen tímu vedie. Retencia klientov sa zlepšila, miera odporúčaní vzrástla a firma je pozicionovaná pre škálovateľný rast.",
-    },
-  },
-
-  languages: {
-    en: "English",
-    es: "Español",
-    sk: "Slovenčina",
-    nl: "Nederlands",
-    pt: "Português",
-    de: "Deutsch",
-  },
-};
-
-// Dutch translations
-const nl: typeof en = {
-  company: {
-    name: "Andy'K Group International LTD",
-    tagline: "End-to-End Bedrijfsontwikkeling & Groeiarchitectuur",
-    subtitle: "Geïntegreerde B2B, B2G & IT-Diensten",
-    subtitleLine2: "Aangedreven door A.D.A.M. — Geleid door E.V.A.",
-    description: "Andy'K Group International LTD is een in het VK gevestigd innovatiebedrijf dat business intelligence, automatisering en strategische outreach combineert.",
-    descriptionExtra: "Met klanten in heel Europa en Latijns-Amerika bouwen we gestructureerde groeiomgevingen waar strategie, operaties en technologie in één richting bewegen.",
-    descriptionSystems: "Strategische diensten die bedrijfsontwikkeling, operationele architectuur en technologie combineren — startups, MKB-bedrijven en publieke instellingen helpen schalen met structuur.",
-    quote: "Eén structuur. Eén stroom. Eén systeem.",
-    quoteSubtitle: "Gebouwd voor groei.",
-    location: "Londen, VK",
-    ukCompany: "VK Limited Company",
-  },
-
-  hero: {
-    ctaPrimary: "Vertel ons over uzelf",
-    ctaSecondary: "Ontdek hoe wij werken",
-    emailPlaceholder: "Uw e-mailadres",
-    getInContact: "Neem contact op",
-  },
-
-  banner: {
-    b2bLead: "B2B leadgeneratie:",
-    b2bText: "gerichte outreach en pipelinebeheer",
-    adamSystem: "A.D.A.M. Systeem:",
-    adamText: "geautomatiseerde documenten, voorstellen en klantlevenscyclus",
-    b2gTender: "B2G aanbestedingsstrategie:",
-    b2gText: "openbare aanbesteding en voorbereiding van offertes",
-    trusted: "Vertrouwd in:",
-    trustedText: "LATAM, Benelux, DACH en VS",
-  },
-
-  services: {
-    heading: "Onze",
-    headingItalic: "diensten",
-    subtitle: "Strategische diensten die bedrijfsontwikkeling, operationele architectuur en technologie combineren.",
-    items: [
-      { title: "End-to-End", description: "Strategische bedrijfsontwikkeling en groeiarchitectuur" },
-      { title: "B2B", description: "Leadgeneratie, outreach-campagnes en pipelinebeheer" },
-      { title: "B2G", description: "Publieke sectorstrategie, aanbestedingsadvies en inkoop" },
-      { title: "IT Services", description: "Systeemarchitectuur, platformontwikkeling en automatisering" },
-    ],
-  },
-
-  endToEnd: {
-    heading: "End-to-End",
-    headingItalic: "Bedrijfsontwikkeling",
-    description: "Wij ontwerpen, herstructureren en bouwen bedrijfsarchitectuur van basis tot schaalbare groei. Aangedreven door A.D.A.M. Structurele transformatie — strategie, omzet, operaties, positionering en uitvoering in één systeem.",
-    bullets: [
-      { title: "Structurele helderheid", description: "Organisatiehiërarchie, rollen en verantwoordelijkheden definiëren binnen elke bedrijfslaag." },
-      { title: "Omzetarchitectuur", description: "Prijsstelling, monetisatie en omzetstroomsystemen ontwerpen voor duurzame groei." },
-      { title: "Marktpositionering", description: "Merk, waardepropositie en concurrentievoordeel verfijnen in uw doelmarkt." },
-      { title: "Operationeel herontwerp", description: "Interne workflows, processen en teamcoördinatie herstructureren voor maximale efficiëntie." },
-      { title: "Systeemintegratie", description: "Tools, platforms en datastromen verbinden tot één uniform operationeel ecosysteem." },
-      { title: "Expansie en groeicontrole", description: "Schaalbare expansiestrategie bouwen met langetermijnpositionering en gecontroleerde uitvoering." },
-    ],
-  },
-
-  lovedBy: {
-    headingBold: "Gebouwd op",
-    headingItalic: "vertrouwen.",
-    headingLine2: "Gedreven door resultaten.",
-    paragraph1: "Andy'K Group International LTD is een in het VK gevestigd innovatiebedrijf dat End-to-End bedrijfsontwikkeling en groeiarchitectuur levert in B2B, B2G en technologiegedreven omgevingen.",
-    paragraph2: "Wij stemmen positionering, omzetontwerp, operaties en uitvoering af in één gestructureerd groeisysteem.",
-    paragraph3: "Aangedreven door A.D.A.M. en geleid door E.V.A., bouwen we schaalbare ecosystemen ontworpen voor langetermijnprestaties.",
-    quote: "Eén structuur. Eén stroom. Eén systeem.",
-    tagline: "GEBOUWD VOOR GROEI.",
-  },
-
-  caseStudies: {
-    heading: "Case",
-    headingItalic: "studies",
-    cards: [
-      { shortTitle: "Hotel besturingssysteem", title: "Hoe wij gefragmenteerde hoteloperaties oplosten met onze diensten", description: "Een volledig digitaal besturingssysteem gebouwd voor een hotelgroep — van strategie tot uitvoering.", link: "Meer informatie" },
-      { shortTitle: "Digitalisering gezondheidszorg", title: "Hoe wij klinische werkstroomchaos oplosten met onze diensten", description: "Een gestructureerd operatiesysteem ontworpen voor een fysiotherapiekliniek, met A.D.A.M. Healthcare-integratie.", link: "Meer informatie" },
-      { shortTitle: "Professionalisering consultancy", title: "Hoe wij inconsistente adviesverlening oplosten met onze diensten", description: "Een emotionele adviespraktijk getransformeerd tot een gestructureerde, schaalbare professionele dienst.", link: "Meer informatie" },
-    ],
-  },
-
-  roadmap: {
-    heading: "Hoe A.D.A.M.",
-    headingItalic: "werkt",
-    subtitle: "Van eerste contact tot projectlancering in zes gestructureerde stappen.",
-    steps: [
-      {
-        title: "Vragenlijst",
-        description: "Vul ons gestructureerde intakeformulier in. We leren uw bedrijf, doelen en vereisten kennen.",
-      },
-      {
-        title: "Voorstel",
-        description: "We stellen een voorstel op maat op basis van uw behoeften. Bekijk het in uw persoonlijke dashboard.",
-      },
-      {
-        title: "Contract",
-        description: "Bekijk, becommentarieer en onderteken uw contract digitaal. Volledige transparantie, geen verrassingen.",
-      },
-      {
-        title: "Strategie",
-        description: "Samen definiëren we de strategie en tijdlijn. Elk detail afgestemd voordat we beginnen.",
-      },
-      {
-        title: "Factuur",
-        description: "Geautomatiseerde facturering met duidelijke betalingsvoorwaarden. Alles bijgehouden op één plek.",
-      },
-      {
-        title: "Onboarding",
-        description: "Het project start. Realtime updates, documentdeling en doorlopende ondersteuning via A.D.A.M.",
-      },
-    ],
-    statusBadge: "A.D.A.M. is actief en verwerkt klanten",
-    stepLabel: "Stap",
-  },
-
-  pricing: {
-    heading: "Plannen voor",
-    headingItalic: "elke fase",
-    subtitle: "Gestructureerd advies en bedrijfsontwikkeling — een combinatie van strategie, expertise in de publieke sector en technologische infrastructuur om u te helpen schalen.",
-    eyebrow: "Transparante prijzen",
-    tabB2B: "B2B bedrijfsontwikkeling",
-    tabB2G: "B2G publieke sector",
-    tabTech: "Technologie / CTO",
-    commitment: "Vanaf 3 maanden",
-    popular: "Populair",
-    from: "vanaf",
-    perMonth: "/ maand",
-    perHour: "/ uur",
-    getStarted: "Begin",
-    customQuote: "Heeft u iets op maat nodig? We passen pakketten aan uw exacte vereisten aan.",
-    requestCustomQuote: "Vraag een offerte op maat aan",
-    billingBasis: "Maandelijks gefactureerd",
-    billingMinimum: "Initiële verbintenis van 3\u201312 maanden",
-    billingRenewal: "Gaat over naar doorlopend maandabonnement na oplevering",
-    billingCancellation: "15 dagen opzegtermijn",
-
-    b2bCore: {
-      name: "CORE",
-      features: [
-        "40 gekwalificeerde leads per maand",
-        "1 markt / 1 doelpersona",
-        "E-mail outreach + cold calling",
-        "Maandelijkse rapportage",
-        "Onboarding strategiesessie",
-      ],
-    },
-    b2bAdvance: {
-      name: "ADVANCE",
-      features: [
-        "60 gekwalificeerde leads per maand",
-        "2 markten dekking",
-        "Multi-touch outreach campagnes",
-        "Prestatie-optimalisatie",
-        "Maandelijkse strategiebeoordeling",
-      ],
-    },
-    b2bVanguard: {
-      name: "VANGUARD",
-      features: [
-        "80 gekwalificeerde leads per maand",
-        "Multi-markt campagnes",
-        "CRM pipeline opzet",
-        "Lead scoring systeem",
-        "Strategische outreach architectuur",
-      ],
-    },
-    b2bPrestige: {
-      name: "PRESTIGE",
-      features: [
-        "120+ gekwalificeerde leads",
-        "Merk outreach campagnes",
-        "Aangepaste bel- en e-mailscripts",
-        "Strategisch bedrijfsontwikkelingsadvies",
-        "Rapportage op directieniveau",
-      ],
-    },
-
-    b2gStarter: {
-      name: "GovStarter",
-      features: [
-        "5 geverifieerde openbare aanbestedingen per maand",
-        "Geschiktheidsbeoordeling",
-        "Basis biedadvies",
-        "Maandelijkse consultatie",
-      ],
-    },
-    b2gExpand: {
-      name: "GovExpand",
-      features: [
-        "10 geverifieerde aanbestedingen",
-        "Pre-bid checklist",
-        "Strategie consultatie",
-        "Aanbestedingspipeline opbouw",
-      ],
-    },
-    b2gElite: {
-      name: "GovElite",
-      features: [
-        "1 volledig voorstelconcept per maand",
-        "Aanbestedingsroadmap ontwikkeling",
-        "Consortium matchmaking",
-        "Prioritaire adviesondersteuning",
-      ],
-    },
-
-    techArchitecture: {
-      name: "Systeemarchitectuur consultancy",
-      features: [
-        "Bedrijfssysteemarchitectuur ontwerp",
-        "Infrastructuurplanning",
-        "Automatiseringsarchitectuur strategie",
-      ],
-    },
-    techPlatforms: {
-      name: "Bedrijfsplatform ontwikkeling",
-      features: [
-        "Interne portalen",
-        "Operationele dashboards",
-        "Aangepaste bedrijfssystemen",
-      ],
-    },
-    techAutomation: {
-      name: "Automatisering & integraties",
-      features: [
-        "CRM / ERP integraties",
-        "API automatisering",
-        "Workflow automatiseringssystemen",
-      ],
-    },
-    techAudit: {
-      name: "Technische systeemaudit",
-      features: [
-        "Infrastructuur audit",
-        "Schaalbaarheids beoordeling",
-        "Beveiligingsbasislijn beoordeling",
-      ],
-    },
-    techCTO: {
-      name: "CTO-als-dienst",
-      features: [
-        "Technische betrokkenheid",
-        "Architectuur supervisie",
-        "Leveranciers- en infrastructuurselectie",
-        "Schaalstrategie consultancy",
-        "Minimaal 1-maands contract — beperkte plekken",
-      ],
-    },
+    submit: "Odosla\u0165 správu",
+    sending: "Odosiela sa\u2026",
+    success: "Správa odoslaná! Ďakujeme.",
+    error: "Nie\u010do sa pokazilo. Skús to znova.",
   },
 
   cta: {
-    eyebrow: "Neem contact op",
-    heading: "Laten we iets",
-    headingItalic: "samen bouwen.",
-    subtitle: "Of u nu advies nodig heeft, technologische oplossingen of een strategische partner voor internationale expansie — we staan klaar om te praten.",
-    ctaPrimary: "Vertel ons over uzelf",
-    ctaSecondary: "Vraag een offerte op maat aan",
-    followLinkedIn: "Volg ons op LinkedIn",
-  },
-
-  contact: {
-    heading: "Stuur ons een bericht",
-    subtitle: "Vul het onderstaande formulier in en we nemen zo snel mogelijk contact met u op.",
-    labelName: "Volledige naam",
-    labelEmail: "E-mailadres",
-    labelCompany: "Bedrijfsnaam",
-    labelMessage: "Bericht",
-    required: "*",
-    placeholderName: "Uw volledige naam",
-    placeholderEmail: "uw@email.com",
-    placeholderCompany: "Uw bedrijfsnaam",
-    placeholderMessage: "Vertel ons over uw zakelijke doelen en hoe we kunnen helpen...",
-    buttonSend: "Bericht verzenden",
-    privacyText: "Door dit formulier in te dienen, gaat u akkoord met onze servicevoorwaarden en privacybeleid.",
-    successHeading: "Bericht voorbereid",
-    successText: "Uw e-mailclient zou moeten zijn geopend. Zo niet, stuur ons dan rechtstreeks een e-mail naar info@andykgroupinternational.com",
+    eyebrow: "DJ Andy\u2019K",
+    heading: "Hudba je tvoja",
+    headingItalic: "vá\u0161e\u0148.",
+    subtitle: "Sledujte DJ Andy\u2019K na streamingov\u00fdch platform\u00e1ch a bu\u010fte v spojení s ka\u017ed\u00fdm nov\u00fdm vydaním.",
+    ctaPrimary: "Po\u010du\u0165 na platformách",
+    ctaSecondary: "hyperfollow.com/djandyk",
+    followInstagram: "Sledova\u0165 na Instagrame",
   },
 
   footer: {
-    copyright: "© 2026",
-    linkHome: "Home",
-    linkSystems: "A.D.A.M. & E.V.A.",
-    linkPricing: "Prijzen",
-    linkContact: "Contact",
-    linkPrivacy: "Privacybeleid",
-    linkCookies: "Cookiebeleid",
-    linkTerms: "Gebruiksvoorwaarden",
-    linkDisclaimer: "Website disclaimer",
-    linkLegalNotice: "Juridische kennisgeving",
-    linkClientPortal: "Klantportaal",
-    selectLanguage: "Taal",
-    selectCurrency: "Valuta",
+    tagline: "Hudba je tvoja vá\u0161e\u0148.",
+    label: "\u2117 & \u00A9 ANDY\u2019K GROUP INTERNATIONAL LTD",
+    copyright: "\u00A9 2026 DJ Andy\u2019K",
+    links: "Odkazy",
+    home: "Domov",
+    labelWebsite: "andykgroupinternational.com",
   },
 
-  common: {
-    getStarted: "Begin",
-    learnMore: "Meer informatie",
-    contactUs: "Neem contact op",
-    readMore: "Lees meer",
-  },
-
-  nav: {
-    about: "Over ons",
-    caseStudies: "Casestudies",
-    pricing: "Tarieven",
-    contact: "Contact",
-    services: "Diensten",
-    groupSystems: "Systemen",
-    groupBusiness: "Zakelijke diensten",
-    groupIT: "IT-diensten",
-    adamDesc: "Geautomatiseerde Document- & Accountmanager",
-    endToEnd: "End-to-End",
-    endToEndDesc: "Strategische bedrijfsontwikkeling en groeiarchitectuur",
-    b2bDev: "B2B-ontwikkeling",
-    b2bDevDesc: "Leadgeneratie en outreachcampagnes",
-    b2gPublic: "B2G Publieke sector",
-    b2gPublicDesc: "Overheidsopdrachten en aanbestedingen",
-    sysArch: "Systeemarchitectuur",
-    sysArchDesc: "Ontwerp en planning van bedrijfssystemen",
-    platformDev: "Platformontwikkeling",
-    platformDevDesc: "Portalen, dashboards en maatwerkoplossingen",
-    automation: "Automatisering & integraties",
-    automationDesc: "CRM-, ERP- en workflowautomatisering",
-    cto: "CTO-as-a-Service",
-    ctoDesc: "Technisch leiderschap op aanvraag",
-  },
-
-  founders: {
-    eyebrow: "De mensen erachter",
-    heading: "Ontmoet de",
-    headingItalic: "oprichters",
-    connect: "Verbinden",
-    roles: [
-      "Oprichter & Strategisch Business Developer",
-      "Medeoprichter & CTO",
-    ],
-    bios: [
-      "Meer dan vijftien jaar ervaring in sales, horeca, bedrijfsontwikkeling en operationele strategie. Andrej is gespecialiseerd in schaalbare groeisystemen voor B2B, B2G en internationale klantrelaties.",
-      "De technische architect achter A.D.A.M., Kobe zet zijn uitgebreide expertise in om elk idee werkelijkheid te maken.",
-    ],
-    quotes: [
-      "Mijn focus is het bouwen van bedrijfssystemen die niet alleen winstgevend zijn — maar duurzaam, veilig en ontworpen om te schalen.",
-      "",
-    ],
-    locations: [
-      "Geboren in Oostenrijk",
-      "Geboren in België",
-    ],
-  },
-
-  caseStudyPages: {
-    nextCaseStudy: "Volgende casestudie",
-    problem: "Probleem",
-    solution: "Oplossing",
-    outcome: "Resultaat",
-    hospitality: {
-      title: "Horecabeheersysteem",
-      problem: "Een groeiende horecagroep met meerdere vestigingen werkte met losgekoppelde tools, handmatige processen en inconsistente gastervaringen. Omzetbeheer, personeelscoördinatie en gastcommunicatie waren versnipperd over spreadsheets en ad-hocoplossingen.",
-      solution: "We ontworpen en implementeerden een compleet digitaal operationeel systeem — waarbij reserveringsbeheer, personeelsplanning, gastcommunicatie en financieel toezicht werden geïntegreerd in één gestructureerd platform. De strategie omvatte operationeel herontwerp, technologieselectie en teamonboarding.",
-      outcome: "Uniforme operaties over alle vestigingen. De personeelsefficiëntie verbeterde, gasttevredenheidsscores stegen en de groep kreeg duidelijk zicht op prestatie-indicatoren — alles draaiend via één systeem.",
-    },
-    healthcare: {
-      title: "Digitalisering gezondheidszorg",
-      problem: "Een fysiotherapiekliniek worstelde met chaos in klinische werkprocessen — patiëntenplanning, behandelregistraties, facturering en communicatie werden allemaal via aparte, losgekoppelde systemen afgehandeld. Medewerkers besteedden meer tijd aan administratie dan aan patiëntenzorg.",
-      solution: "We ontwierpen een gestructureerd operationeel systeem voor de kliniek, waarbij patiëntenbeheer, afsprakenplanning, behandeldocumentatie en facturering werden geïntegreerd in een samenhangende digitale workflow — met A.D.A.M. Healthcare voor het document- en accountbeheer.",
-      outcome: "Administratietijd aanzienlijk verminderd. Patiëntendoorvoer verbeterd. De kliniek werkt nu met een duidelijke, gestructureerde digitale workflow die klinisch personeel gefocust houdt op zorg, niet op papierwerk.",
-    },
-    consulting: {
-      title: "Professionalisering consultancy",
-      problem: "Een adviesbureau leverde waarde maar inconsistent — voorstellen waren ad-hoc, projectmanagement was reactief en klantcommunicatie hing volledig af van de persoonlijke relaties van de oprichter. Het bedrijf kon niet schalen zonder structurele verandering.",
-      solution: "We transformeerden de adviesorganisatie van een emotiegedreven operatie naar een gestructureerde, professionele dienstverlening. Dit omvatte gestandaardiseerde voorstelsjablonen, projectmanagementworkflows, klantonboardingprocessen en een duidelijk dienstverleningskader.",
-      outcome: "De praktijk levert nu consistente, professionele dienstverlening ongeacht welk teamlid de leiding heeft. Klantbehoud verbeterde, verwijzingspercentages stegen en het bedrijf is gepositioneerd voor schaalbare groei.",
-    },
-  },
-
-  languages: {
-    en: "English",
-    es: "Español",
-    sk: "Slovenčina",
-    nl: "Nederlands",
-    pt: "Português",
-    de: "Deutsch",
+  cookie: {
+    message: "Pou\u017e\u00edvame cookies na zlep\u0161enie tvojho z\u00e1\u017eitku.",
+    accept: "Prija\u0165",
+    decline: "Odmietnu\u0165",
   },
 };
 
-// Portuguese translations
-const pt: typeof en = {
-  company: {
-    name: "Andy'K Group International LTD",
-    tagline: "Desenvolvimento Empresarial Completo e Arquitetura de Crescimento",
-    subtitle: "Serviços Integrados B2B, B2G e TI",
-    subtitleLine2: "Impulsionado pelo A.D.A.M. — Guiado pela E.V.A.",
-    description: "Andy'K Group International LTD é uma empresa de inovação sediada no Reino Unido, combinando inteligência empresarial, automatização e divulgação estratégica.",
-    descriptionExtra: "Com clientes em toda a Europa e América Latina, construímos ambientes de crescimento estruturados onde estratégia, operações e tecnologia avançam numa só direção.",
-    descriptionSystems: "Serviços estratégicos que combinam desenvolvimento empresarial, arquitetura operacional e tecnologia — ajudando startups, PMEs e instituições públicas a escalar com estrutura.",
-    quote: "Uma estrutura. Um fluxo. Um sistema.",
-    quoteSubtitle: "Construído para crescimento.",
-    location: "Londres, Reino Unido",
-    ukCompany: "Empresa Limitada do Reino Unido",
-  },
-
-  hero: {
-    ctaPrimary: "Conte-nos sobre você",
-    ctaSecondary: "Saiba como trabalhamos",
-    emailPlaceholder: "Seu endereço de e-mail",
-    getInContact: "Entre em contato",
-  },
-
-  banner: {
-    b2bLead: "Geração de leads B2B:",
-    b2bText: "divulgação direcionada e gestão de pipeline",
-    adamSystem: "Sistema A.D.A.M.:",
-    adamText: "documentos automatizados, propostas e ciclo de vida do cliente",
-    b2gTender: "Estratégia de licitação B2G:",
-    b2gText: "aquisição pública e preparação de propostas",
-    trusted: "Confiável em:",
-    trustedText: "LATAM, Benelux, DACH e EUA",
-  },
-
-  services: {
-    heading: "Nossos",
-    headingItalic: "serviços",
-    subtitle: "Serviços estratégicos que combinam desenvolvimento empresarial, arquitetura operacional e tecnologia.",
-    items: [
-      { title: "End-to-End", description: "Desenvolvimento empresarial estratégico e arquitetura de crescimento" },
-      { title: "B2B", description: "Geração de leads, campanhas de divulgação e gestão de pipeline" },
-      { title: "B2G", description: "Estratégia do setor público, consultoria de licitações e aquisições" },
-      { title: "IT Services", description: "Arquitetura de sistemas, desenvolvimento de plataformas e automação" },
-    ],
-  },
-
-  endToEnd: {
-    heading: "End-to-End",
-    headingItalic: "Desenvolvimento Empresarial",
-    description: "Projetamos, reestruturamos e arquitetamos negócios da base ao crescimento escalável. Impulsionado pelo A.D.A.M. Transformação estrutural — alinhando estratégia, receita, operações, posicionamento e execução num único sistema.",
-    bullets: [
-      { title: "Clareza estrutural", description: "Definição de hierarquia organizacional, funções e responsabilidades em cada camada do negócio." },
-      { title: "Arquitetura de receita", description: "Desenho de sistemas de preços, monetização e fluxo de receita para crescimento sustentável." },
-      { title: "Posicionamento de mercado", description: "Refinamento da marca, proposta de valor e vantagem competitiva no mercado-alvo." },
-      { title: "Redesenho operacional", description: "Reestruturação de fluxos internos, processos e coordenação de equipas para máxima eficiência." },
-      { title: "Integração de sistemas", description: "Conexão de ferramentas, plataformas e fluxos de dados num ecossistema operacional unificado." },
-      { title: "Expansão e controlo de crescimento", description: "Construção de estratégia de expansão escalável com posicionamento de longo prazo e execução controlada." },
-    ],
-  },
-
-  lovedBy: {
-    headingBold: "Construído sobre",
-    headingItalic: "confiança.",
-    headingLine2: "Movido por resultados.",
-    paragraph1: "Andy'K Group International LTD é uma empresa de inovação sediada no Reino Unido que oferece Desenvolvimento Empresarial End-to-End e Arquitetura de Crescimento em ambientes B2B, B2G e orientados por tecnologia.",
-    paragraph2: "Alinhamos posicionamento, design de receita, operações e execução em um sistema de crescimento estruturado.",
-    paragraph3: "Impulsionado pelo A.D.A.M. e guiado pela E.V.A., construímos ecossistemas escaláveis projetados para desempenho de longo prazo.",
-    quote: "Uma estrutura. Um fluxo. Um sistema.",
-    tagline: "CONSTRUÍDO PARA CRESCIMENTO.",
-  },
-
-  caseStudies: {
-    heading: "Casos de",
-    headingItalic: "estudo",
-    cards: [
-      { shortTitle: "Sistema operacional hoteleiro", title: "Como resolvemos operações hoteleiras fragmentadas com nossos serviços", description: "Construímos um sistema operacional digital completo para um grupo hoteleiro — da estratégia à execução.", link: "Saiba mais" },
-      { shortTitle: "Digitalização da saúde", title: "Como resolvemos o caos clínico com nossos serviços", description: "Projetamos um sistema operacional estruturado para uma clínica de fisioterapia, integrando A.D.A.M. Healthcare.", link: "Saiba mais" },
-      { shortTitle: "Profissionalização de consultoria", title: "Como resolvemos a inconsistência em consultoria com nossos serviços", description: "Transformamos uma prática de consultoria emocional num serviço profissional estruturado e escalável.", link: "Saiba mais" },
-    ],
-  },
-
-  roadmap: {
-    heading: "Como o A.D.A.M.",
-    headingItalic: "funciona",
-    subtitle: "Do primeiro contacto ao lançamento do projeto em seis passos estruturados.",
-    steps: [
-      {
-        title: "Questionário",
-        description: "Preencha nosso formulário de admissão estruturado. Conhecemos seu negócio, objetivos e requisitos.",
-      },
-      {
-        title: "Proposta",
-        description: "Elaboramos uma proposta personalizada com base nas suas necessidades. Revise-a no seu painel pessoal.",
-      },
-      {
-        title: "Contrato",
-        description: "Revise, comente e assine digitalmente seu contrato. Total transparência, sem surpresas.",
-      },
-      {
-        title: "Estratégia",
-        description: "Juntos definimos a estratégia e o cronograma. Cada detalhe alinhado antes de começar.",
-      },
-      {
-        title: "Fatura",
-        description: "Faturamento automatizado com condições de pagamento claras. Tudo rastreado em um só lugar.",
-      },
-      {
-        title: "Integração",
-        description: "O projeto é lançado. Atualizações em tempo real, compartilhamento de documentos e suporte contínuo pelo A.D.A.M.",
-      },
-    ],
-    statusBadge: "A.D.A.M. está ativo e processando clientes",
-    stepLabel: "Passo",
-  },
-
-  pricing: {
-    heading: "Planos para",
-    headingItalic: "cada estágio",
-    subtitle: "Assessoria estruturada e desenvolvimento de negócios — combinando estratégia, expertise no setor público e infraestrutura tecnológica para ajudá-lo a escalar.",
-    eyebrow: "Preços transparentes",
-    tabB2B: "Desenvolvimento de Negócios B2B",
-    tabB2G: "Setor Público B2G",
-    tabTech: "Tecnologia / CTO",
-    commitment: "A partir de 3 meses",
-    popular: "Popular",
-    from: "a partir de",
-    perMonth: "/ mês",
-    perHour: "/ hora",
-    getStarted: "Começar",
-    customQuote: "Precisa de algo personalizado? Adaptamos pacotes aos seus requisitos exatos.",
-    requestCustomQuote: "Solicitar orçamento personalizado",
-    billingBasis: "Faturamento mensal",
-    billingMinimum: "Compromisso inicial de 3\u201312 meses",
-    billingRenewal: "Transição para assinatura mensal contínua após entrega",
-    billingCancellation: "Aviso de cancelamento de 15 dias",
-
-    b2bCore: {
-      name: "CORE",
-      features: [
-        "40 leads qualificados por mês",
-        "1 mercado / 1 persona alvo",
-        "Divulgação por e-mail + cold calling",
-        "Relatórios mensais",
-        "Sessão de estratégia de integração",
-      ],
-    },
-    b2bAdvance: {
-      name: "ADVANCE",
-      features: [
-        "60 leads qualificados por mês",
-        "Cobertura de 2 mercados",
-        "Campanhas de divulgação multi-toque",
-        "Otimização de desempenho",
-        "Revisão de estratégia mensal",
-      ],
-    },
-    b2bVanguard: {
-      name: "VANGUARD",
-      features: [
-        "80 leads qualificados por mês",
-        "Campanhas multi-mercado",
-        "Configuração de pipeline CRM",
-        "Sistema de pontuação de leads",
-        "Arquitetura de divulgação estratégica",
-      ],
-    },
-    b2bPrestige: {
-      name: "PRESTIGE",
-      features: [
-        "120+ leads qualificados",
-        "Campanhas de divulgação de marca",
-        "Scripts personalizados de chamada e e-mail",
-        "Consultoria estratégica de desenvolvimento de negócios",
-        "Relatórios de nível executivo",
-      ],
-    },
-
-    b2gStarter: {
-      name: "GovStarter",
-      features: [
-        "5 licitações públicas verificadas por mês",
-        "Revisão de elegibilidade",
-        "Assessoria básica de propostas",
-        "Consulta mensal",
-      ],
-    },
-    b2gExpand: {
-      name: "GovExpand",
-      features: [
-        "10 licitações verificadas",
-        "Checklist pré-proposta",
-        "Consulta de estratégia",
-        "Construção de pipeline de licitações",
-      ],
-    },
-    b2gElite: {
-      name: "GovElite",
-      features: [
-        "1 rascunho de proposta completo por mês",
-        "Desenvolvimento de roadmap de licitações",
-        "Matchmaking de consórcio",
-        "Suporte de assessoria prioritário",
-      ],
-    },
-
-    techArchitecture: {
-      name: "Consultoria de Arquitetura de Sistemas",
-      features: [
-        "Design de arquitetura de sistemas de negócios",
-        "Planejamento de infraestrutura",
-        "Estratégia de arquitetura de automação",
-      ],
-    },
-    techPlatforms: {
-      name: "Desenvolvimento de Plataformas Empresariais",
-      features: [
-        "Portais internos",
-        "Dashboards operacionais",
-        "Sistemas empresariais personalizados",
-      ],
-    },
-    techAutomation: {
-      name: "Automação e Integrações",
-      features: [
-        "Integrações CRM / ERP",
-        "Automação de API",
-        "Sistemas de automação de fluxo de trabalho",
-      ],
-    },
-    techAudit: {
-      name: "Auditoria de Sistemas Técnicos",
-      features: [
-        "Auditoria de infraestrutura",
-        "Avaliação de escalabilidade",
-        "Revisão de linha de base de segurança",
-      ],
-    },
-    techCTO: {
-      name: "CTO-como-Serviço",
-      features: [
-        "Envolvimento técnico",
-        "Supervisão de arquitetura",
-        "Seleção de fornecedores e infraestrutura",
-        "Consultoria de estratégia de escalabilidade",
-        "Contrato mínimo de 1 mês — vagas limitadas",
-      ],
-    },
-  },
-
-  cta: {
-    eyebrow: "Entre em contato",
-    heading: "Vamos construir algo",
-    headingItalic: "juntos.",
-    subtitle: "Se você precisa de consultoria, soluções tecnológicas ou um parceiro estratégico para expansão internacional — estamos prontos para conversar.",
-    ctaPrimary: "Conte-nos sobre você",
-    ctaSecondary: "Solicitar orçamento personalizado",
-    followLinkedIn: "Siga-nos no LinkedIn",
-  },
-
-  contact: {
-    heading: "Envie-nos uma mensagem",
-    subtitle: "Preencha o formulário abaixo e entraremos em contato o mais breve possível.",
-    labelName: "Nome completo",
-    labelEmail: "Endereço de e-mail",
-    labelCompany: "Nome da empresa",
-    labelMessage: "Mensagem",
-    required: "*",
-    placeholderName: "Seu nome completo",
-    placeholderEmail: "seu@email.com",
-    placeholderCompany: "Nome da sua empresa",
-    placeholderMessage: "Conte-nos sobre seus objetivos de negócios e como podemos ajudar...",
-    buttonSend: "Enviar mensagem",
-    privacyText: "Ao enviar este formulário, você concorda com nossos termos de serviço e política de privacidade.",
-    successHeading: "Mensagem preparada",
-    successText: "Seu cliente de e-mail deve ter aberto. Caso contrário, envie-nos um e-mail diretamente para info@andykgroupinternational.com",
-  },
-
-  footer: {
-    copyright: "© 2026",
-    linkHome: "Início",
-    linkSystems: "A.D.A.M. & E.V.A.",
-    linkPricing: "Preços",
-    linkContact: "Contato",
-    linkPrivacy: "Política de privacidade",
-    linkCookies: "Política de cookies",
-    linkTerms: "Termos de uso",
-    linkDisclaimer: "Aviso legal do site",
-    linkLegalNotice: "Aviso legal",
-    linkClientPortal: "Portal do cliente",
-    selectLanguage: "Idioma",
-    selectCurrency: "Moeda",
-  },
-
-  common: {
-    getStarted: "Começar",
-    learnMore: "Saiba mais",
-    contactUs: "Entre em contato",
-    readMore: "Leia mais",
-  },
-
-  nav: {
-    about: "Sobre",
-    caseStudies: "Estudos de caso",
-    pricing: "Preços",
-    contact: "Contato",
-    services: "Serviços",
-    groupSystems: "Sistemas",
-    groupBusiness: "Serviços empresariais",
-    groupIT: "Serviços de TI",
-    adamDesc: "Gestor Automatizado de Documentos e Contas",
-    endToEnd: "End-to-End",
-    endToEndDesc: "Desenvolvimento empresarial estratégico e arquitetura de crescimento",
-    b2bDev: "Desenvolvimento B2B",
-    b2bDevDesc: "Geração de leads e campanhas de divulgação",
-    b2gPublic: "B2G Setor público",
-    b2gPublicDesc: "Licitações governamentais e aquisições",
-    sysArch: "Arquitetura de sistemas",
-    sysArchDesc: "Projeto e planejamento de sistemas empresariais",
-    platformDev: "Desenvolvimento de plataformas",
-    platformDevDesc: "Portais, dashboards e sistemas personalizados",
-    automation: "Automação e integrações",
-    automationDesc: "Automação de CRM, ERP e fluxos de trabalho",
-    cto: "CTO-as-a-Service",
-    ctoDesc: "Liderança técnica sob demanda",
-  },
-
-  founders: {
-    eyebrow: "As pessoas por trás",
-    heading: "Conheça os",
-    headingItalic: "fundadores",
-    connect: "Conectar",
-    roles: [
-      "Fundador e Desenvolvedor Empresarial Estratégico",
-      "Cofundador e CTO",
-    ],
-    bios: [
-      "Mais de quinze anos de liderança em vendas, hospitalidade, desenvolvimento empresarial e estratégia operacional. Andrej é especialista em sistemas de crescimento escalável para B2B, B2G e relações internacionais com clientes.",
-      "O arquiteto técnico por trás do A.D.A.M., Kobe utiliza sua vasta experiência para transformar qualquer ideia em realidade.",
-    ],
-    quotes: [
-      "Meu foco é construir sistemas empresariais que não sejam apenas lucrativos — mas sustentáveis, seguros e projetados para escalar.",
-      "",
-    ],
-    locations: [
-      "Nascido na Áustria",
-      "Nascido na Bélgica",
-    ],
-  },
-
-  caseStudyPages: {
-    nextCaseStudy: "Próximo estudo de caso",
-    problem: "Problema",
-    solution: "Solução",
-    outcome: "Resultado",
-    hospitality: {
-      title: "Sistema operacional hoteleiro",
-      problem: "Um grupo hoteleiro em crescimento com múltiplas propriedades funcionava com ferramentas desconectadas, processos manuais e experiências inconsistentes para os hóspedes. A gestão de receitas, a coordenação de pessoal e a comunicação com os hóspedes estavam fragmentadas entre planilhas e soluções improvisadas.",
-      solution: "Projetamos e implementamos um sistema operacional digital completo — integrando gestão de reservas, programação de pessoal, comunicação com hóspedes e supervisão financeira em uma plataforma estruturada. A estratégia cobriu redesenho operacional, seleção de tecnologia e integração da equipe.",
-      outcome: "Operações unificadas em todas as propriedades. A eficiência do pessoal melhorou, as pontuações de satisfação dos hóspedes aumentaram e o grupo ganhou visibilidade clara das métricas de desempenho — tudo funcionando através de um único sistema.",
-    },
-    healthcare: {
-      title: "Digitalização da saúde",
-      problem: "Uma clínica de fisioterapia enfrentava dificuldades com o caos nos fluxos de trabalho clínicos — agendamento de pacientes, registros de tratamento, faturamento e comunicação eram tratados por sistemas separados e desconectados. A equipe gastava mais tempo com administração do que com o atendimento ao paciente.",
-      solution: "Projetamos um sistema operacional estruturado para a clínica, integrando gestão de pacientes, agendamento de consultas, documentação de tratamentos e faturamento em um fluxo de trabalho digital coeso — com A.D.A.M. Healthcare gerenciando a camada de gestão de documentos e contas.",
-      outcome: "O tempo administrativo foi significativamente reduzido. A produtividade dos pacientes melhorou. A clínica agora opera com um fluxo de trabalho digital claro e estruturado que mantém a equipe clínica focada no atendimento, não na burocracia.",
-    },
-    consulting: {
-      title: "Profissionalização de consultoria",
-      problem: "Uma prática de consultoria entregava valor, mas de forma inconsistente — as propostas eram improvisadas, a gestão de projetos era reativa e a comunicação com os clientes dependia inteiramente das relações pessoais do fundador. O negócio não podia escalar sem mudança estrutural.",
-      solution: "Transformamos a prática de consultoria de uma operação movida por emoções em um serviço profissional estruturado. Isso incluiu modelos de propostas padronizados, fluxos de trabalho de gestão de projetos, processos de integração de clientes e uma estrutura clara de entrega de serviços.",
-      outcome: "A prática agora entrega um serviço profissional consistente, independentemente de qual membro da equipe está liderando. A retenção de clientes melhorou, as taxas de indicação aumentaram e o negócio está posicionado para crescimento escalável.",
-    },
-  },
-
-  languages: {
-    en: "English",
-    es: "Español",
-    sk: "Slovenčina",
-    nl: "Nederlands",
-    pt: "Português",
-    de: "Deutsch",
-  },
-};
-
-// German translations (formal - Sie)
-const de: typeof en = {
-  company: {
-    name: "Andy'K Group International LTD",
-    tagline: "End-to-End-Geschäftsentwicklung & Wachstumsarchitektur",
-    subtitle: "Integrierte B2B, B2G & IT-Dienstleistungen",
-    subtitleLine2: "Angetrieben von A.D.A.M. — Geführt von E.V.A.",
-    description: "Andy'K Group International LTD ist ein in Großbritannien ansässiges Innovationsunternehmen, das Business Intelligence, Automatisierung und strategisches Outreach kombiniert.",
-    descriptionExtra: "Mit Kunden in ganz Europa und Lateinamerika bauen wir strukturierte Wachstumsumgebungen, in denen Strategie, Betrieb und Technologie in eine Richtung bewegen.",
-    descriptionSystems: "Strategische Dienstleistungen, die Geschäftsentwicklung, operative Architektur und Technologie kombinieren — Startups, KMUs und öffentlichen Institutionen helfen, mit Struktur zu skalieren.",
-    quote: "Eine Struktur. Ein Ablauf. Ein System.",
-    quoteSubtitle: "Gebaut für Wachstum.",
-    location: "London, Großbritannien",
-    ukCompany: "UK Limited Company",
-  },
-
-  hero: {
-    ctaPrimary: "Erzählen Sie uns von sich",
-    ctaSecondary: "Erfahren Sie, wie wir arbeiten",
-    emailPlaceholder: "Ihre E-Mail-Adresse",
-    getInContact: "Kontakt aufnehmen",
-  },
-
-  banner: {
-    b2bLead: "B2B-Lead-Generierung:",
-    b2bText: "gezieltes Outreach und Pipeline-Management",
-    adamSystem: "A.D.A.M. System:",
-    adamText: "automatisierte Dokumente, Angebote und Kundenlebenszyklus",
-    b2gTender: "B2G-Ausschreibungsstrategie:",
-    b2gText: "öffentliche Beschaffung und Angebotsvorbereitung",
-    trusted: "Vertraut in:",
-    trustedText: "LATAM, Benelux, DACH und USA",
-  },
-
-  services: {
-    heading: "Unsere",
-    headingItalic: "Dienstleistungen",
-    subtitle: "Strategische Dienstleistungen, die Geschäftsentwicklung, operative Architektur und Technologie kombinieren.",
-    items: [
-      { title: "End-to-End", description: "Strategische Geschäftsentwicklung und Wachstumsarchitektur" },
-      { title: "B2B", description: "Lead-Generierung, Outreach-Kampagnen und Pipeline-Management" },
-      { title: "B2G", description: "Öffentlicher-Sektor-Strategie, Ausschreibungsberatung und Beschaffung" },
-      { title: "IT Services", description: "Systemarchitektur, Plattformentwicklung und Automatisierung" },
-    ],
-  },
-
-  endToEnd: {
-    heading: "End-to-End",
-    headingItalic: "Geschäftsentwicklung",
-    description: "Wir entwerfen, restrukturieren und bauen Unternehmensarchitektur von der Basis bis zum skalierbaren Wachstum. Angetrieben von A.D.A.M. Strukturelle Transformation — Strategie, Umsatz, Betrieb, Positionierung und Ausführung in ein System integriert.",
-    bullets: [
-      { title: "Strukturelle Klarheit", description: "Definition von Organisationshierarchie, Rollen und Verantwortlichkeiten über alle Geschäftsebenen." },
-      { title: "Umsatzarchitektur", description: "Gestaltung von Preis-, Monetarisierungs- und Umsatzflusssystemen für nachhaltiges Wachstum." },
-      { title: "Marktpositionierung", description: "Verfeinerung von Marke, Wertversprechen und Wettbewerbsvorteil in Ihrem Zielmarkt." },
-      { title: "Operatives Redesign", description: "Umstrukturierung interner Workflows, Prozesse und Teamkoordination für maximale Effizienz." },
-      { title: "Systemintegration", description: "Verbindung von Tools, Plattformen und Datenflüssen zu einem einheitlichen operativen Ökosystem." },
-      { title: "Expansion und Wachstumskontrolle", description: "Aufbau einer skalierbaren Expansionsstrategie mit langfristiger Positionierung und kontrollierter Umsetzung." },
-    ],
-  },
-
-  lovedBy: {
-    headingBold: "Gebaut auf",
-    headingItalic: "Vertrauen.",
-    headingLine2: "Angetrieben von Ergebnissen.",
-    paragraph1: "Andy'K Group International LTD ist ein in Großbritannien ansässiges Innovationsunternehmen, das End-to-End Geschäftsentwicklung und Wachstumsarchitektur in B2B-, B2G- und technologiegetriebenen Umgebungen liefert.",
-    paragraph2: "Wir stimmen Positionierung, Umsatzgestaltung, Betrieb und Umsetzung in ein strukturiertes Wachstumssystem ab.",
-    paragraph3: "Angetrieben von A.D.A.M. und geführt von E.V.A., bauen wir skalierbare Ökosysteme, die für langfristige Leistung konzipiert sind.",
-    quote: "Eine Struktur. Ein Ablauf. Ein System.",
-    tagline: "GEBAUT FÜR WACHSTUM.",
-  },
-
-  caseStudies: {
-    heading: "Fall-",
-    headingItalic: "studien",
-    cards: [
-      { shortTitle: "Hotel-Betriebssystem", title: "Wie wir fragmentierte Hotelbetriebe mit unseren Dienstleistungen lösten", description: "Ein komplettes digitales Betriebssystem für eine Hotelgruppe aufgebaut — von der Strategie bis zur Umsetzung.", link: "Mehr erfahren" },
-      { shortTitle: "Digitalisierung im Gesundheitswesen", title: "Wie wir klinisches Workflow-Chaos mit unseren Dienstleistungen lösten", description: "Ein strukturiertes Betriebssystem für eine Physiotherapie-Klinik entworfen, mit A.D.A.M. Healthcare-Integration.", link: "Mehr erfahren" },
-      { shortTitle: "Professionalisierung der Beratung", title: "Wie wir inkonsistente Beratungsleistung mit unseren Dienstleistungen lösten", description: "Eine emotionale Beratungspraxis in einen strukturierten, skalierbaren professionellen Service transformiert.", link: "Mehr erfahren" },
-    ],
-  },
-
-  roadmap: {
-    heading: "Wie A.D.A.M.",
-    headingItalic: "funktioniert",
-    subtitle: "Vom Erstkontakt bis zum Projektstart in sechs strukturierten Schritten.",
-    steps: [
-      {
-        title: "Fragebogen",
-        description: "Füllen Sie unser strukturiertes Aufnahmeformular aus. Wir lernen Ihr Unternehmen, Ihre Ziele und Anforderungen kennen.",
-      },
-      {
-        title: "Angebot",
-        description: "Wir erstellen ein maßgeschneidertes Angebot basierend auf Ihren Bedürfnissen. Prüfen Sie es in Ihrem persönlichen Dashboard.",
-      },
-      {
-        title: "Vertrag",
-        description: "Prüfen, kommentieren und digital unterschreiben Sie Ihren Vertrag. Volle Transparenz, keine Überraschungen.",
-      },
-      {
-        title: "Strategie",
-        description: "Gemeinsam definieren wir die Strategie und den Zeitplan. Jedes Detail abgestimmt, bevor wir beginnen.",
-      },
-      {
-        title: "Rechnung",
-        description: "Automatisierte Rechnungsstellung mit klaren Zahlungsbedingungen. Alles an einem Ort verfolgt.",
-      },
-      {
-        title: "Onboarding",
-        description: "Das Projekt startet. Echtzeit-Updates, Dokumentenaustausch und fortlaufende Unterstützung durch A.D.A.M.",
-      },
-    ],
-    statusBadge: "A.D.A.M. ist aktiv und verarbeitet Kunden",
-    stepLabel: "Schritt",
-  },
-
-  pricing: {
-    heading: "Pläne für",
-    headingItalic: "jede Phase",
-    subtitle: "Strukturierte Beratung und Geschäftsentwicklung — Kombination aus Strategie, Public-Sector-Expertise und technologischer Infrastruktur, um Sie beim Skalieren zu unterstützen.",
-    eyebrow: "Transparente Preise",
-    tabB2B: "B2B-Geschäftsentwicklung",
-    tabB2G: "B2G-Öffentlicher Sektor",
-    tabTech: "Technologie / CTO",
-    commitment: "Ab 3 Monaten",
-    popular: "Beliebt",
-    from: "ab",
-    perMonth: "/ Monat",
-    perHour: "/ Stunde",
-    getStarted: "Loslegen",
-    customQuote: "Benötigen Sie etwas Individuelles? Wir passen Pakete an Ihre genauen Anforderungen an.",
-    requestCustomQuote: "Individuelles Angebot anfordern",
-    billingBasis: "Monatliche Abrechnung",
-    billingMinimum: "Anfangsverpflichtung von 3\u201312 Monaten",
-    billingRenewal: "\u00DCbergang zu laufendem Monatsabonnement nach Lieferung",
-    billingCancellation: "15 Tage K\u00FCndigungsfrist",
-
-    b2bCore: {
-      name: "CORE",
-      features: [
-        "40 qualifizierte Leads pro Monat",
-        "1 Markt / 1 Zielpersona",
-        "E-Mail-Outreach + Kaltakquise",
-        "Monatliches Reporting",
-        "Onboarding-Strategiesitzung",
-      ],
-    },
-    b2bAdvance: {
-      name: "ADVANCE",
-      features: [
-        "60 qualifizierte Leads pro Monat",
-        "2 Märkte Abdeckung",
-        "Multi-Touch-Outreach-Kampagnen",
-        "Performance-Optimierung",
-        "Monatliche Strategieüberprüfung",
-      ],
-    },
-    b2bVanguard: {
-      name: "VANGUARD",
-      features: [
-        "80 qualifizierte Leads pro Monat",
-        "Multi-Markt-Kampagnen",
-        "CRM-Pipeline-Einrichtung",
-        "Lead-Scoring-System",
-        "Strategische Outreach-Architektur",
-      ],
-    },
-    b2bPrestige: {
-      name: "PRESTIGE",
-      features: [
-        "120+ qualifizierte Leads",
-        "Marken-Outreach-Kampagnen",
-        "Benutzerdefinierte Anruf- und E-Mail-Skripte",
-        "Strategische Geschäftsentwicklungsberatung",
-        "Reporting auf Führungsebene",
-      ],
-    },
-
-    b2gStarter: {
-      name: "GovStarter",
-      features: [
-        "5 verifizierte öffentliche Ausschreibungen pro Monat",
-        "Berechtigungsprüfung",
-        "Grundlegende Angebotsberatung",
-        "Monatliche Konsultation",
-      ],
-    },
-    b2gExpand: {
-      name: "GovExpand",
-      features: [
-        "10 verifizierte Ausschreibungen",
-        "Pre-Bid-Checkliste",
-        "Strategiekonsultation",
-        "Ausschreibungs-Pipeline-Aufbau",
-      ],
-    },
-    b2gElite: {
-      name: "GovElite",
-      features: [
-        "1 vollständiger Angebotsentwurf pro Monat",
-        "Ausschreibungs-Roadmap-Entwicklung",
-        "Konsortiums-Matchmaking",
-        "Prioritäre Beratungsunterstützung",
-      ],
-    },
-
-    techArchitecture: {
-      name: "Systemarchitektur-Beratung",
-      features: [
-        "Geschäftssystemarchitektur-Design",
-        "Infrastrukturplanung",
-        "Automatisierungsarchitektur-Strategie",
-      ],
-    },
-    techPlatforms: {
-      name: "Geschäftsplattform-Entwicklung",
-      features: [
-        "Interne Portale",
-        "Operative Dashboards",
-        "Benutzerdefinierte Unternehmenssysteme",
-      ],
-    },
-    techAutomation: {
-      name: "Automatisierung & Integrationen",
-      features: [
-        "CRM / ERP Integrationen",
-        "API-Automatisierung",
-        "Workflow-Automatisierungssysteme",
-      ],
-    },
-    techAudit: {
-      name: "Technische Systemprüfung",
-      features: [
-        "Infrastrukturaudit",
-        "Skalierbarkeitsbewertung",
-        "Sicherheits-Baseline-Überprüfung",
-      ],
-    },
-    techCTO: {
-      name: "CTO-als-Dienstleistung",
-      features: [
-        "Technische Beteiligung",
-        "Architekturüberwachung",
-        "Anbieter- und Infrastrukturauswahl",
-        "Skalierungsstrategieberatung",
-        "Mindestens 1-Monats-Vertrag — begrenzte Plätze",
-      ],
-    },
-  },
-
-  cta: {
-    eyebrow: "Kontaktieren Sie uns",
-    heading: "Lassen Sie uns etwas",
-    headingItalic: "gemeinsam aufbauen.",
-    subtitle: "Ob Sie Beratung, technologische Lösungen oder einen strategischen Partner für internationale Expansion benötigen — wir sind bereit zu sprechen.",
-    ctaPrimary: "Erzählen Sie uns von sich",
-    ctaSecondary: "Individuelles Angebot anfordern",
-    followLinkedIn: "Folgen Sie uns auf LinkedIn",
-  },
-
-  contact: {
-    heading: "Senden Sie uns eine Nachricht",
-    subtitle: "Füllen Sie das Formular unten aus und wir melden uns so schnell wie möglich bei Ihnen.",
-    labelName: "Vollständiger Name",
-    labelEmail: "E-Mail-Adresse",
-    labelCompany: "Firmenname",
-    labelMessage: "Nachricht",
-    required: "*",
-    placeholderName: "Ihr vollständiger Name",
-    placeholderEmail: "ihre@email.com",
-    placeholderCompany: "Ihr Firmenname",
-    placeholderMessage: "Erzählen Sie uns von Ihren Geschäftszielen und wie wir helfen können...",
-    buttonSend: "Nachricht senden",
-    privacyText: "Durch das Absenden dieses Formulars stimmen Sie unseren Nutzungsbedingungen und Datenschutzrichtlinien zu.",
-    successHeading: "Nachricht vorbereitet",
-    successText: "Ihr E-Mail-Client sollte sich geöffnet haben. Falls nicht, senden Sie uns direkt eine E-Mail an info@andykgroupinternational.com",
-  },
-
-  footer: {
-    copyright: "© 2026",
-    linkHome: "Startseite",
-    linkSystems: "A.D.A.M. & E.V.A.",
-    linkPricing: "Preise",
-    linkContact: "Kontakt",
-    linkPrivacy: "Datenschutzerklärung",
-    linkCookies: "Cookie-Richtlinie",
-    linkTerms: "Nutzungsbedingungen",
-    linkDisclaimer: "Website-Haftungsausschluss",
-    linkLegalNotice: "Impressum",
-    linkClientPortal: "Kundenportal",
-    selectLanguage: "Sprache",
-    selectCurrency: "Währung",
-  },
-
-  common: {
-    getStarted: "Loslegen",
-    learnMore: "Mehr erfahren",
-    contactUs: "Kontaktieren Sie uns",
-    readMore: "Mehr lesen",
-  },
-
-  nav: {
-    about: "Über uns",
-    caseStudies: "Fallstudien",
-    pricing: "Preise",
-    contact: "Kontakt",
-    services: "Dienstleistungen",
-    groupSystems: "Systeme",
-    groupBusiness: "Geschäftsdienstleistungen",
-    groupIT: "IT-Dienstleistungen",
-    adamDesc: "Automatisierter Dokument- & Kontomanager",
-    endToEnd: "End-to-End",
-    endToEndDesc: "Strategische Geschäftsentwicklung und Wachstumsarchitektur",
-    b2bDev: "B2B-Entwicklung",
-    b2bDevDesc: "Lead-Generierung und Outreach-Kampagnen",
-    b2gPublic: "B2G Öffentlicher Sektor",
-    b2gPublicDesc: "Ausschreibungen und öffentliches Beschaffungswesen",
-    sysArch: "Systemarchitektur",
-    sysArchDesc: "Geschäftssystemdesign und -planung",
-    platformDev: "Plattformentwicklung",
-    platformDevDesc: "Portale, Dashboards und maßgeschneiderte Systeme",
-    automation: "Automatisierung & Integrationen",
-    automationDesc: "CRM-, ERP- und Workflow-Automatisierung",
-    cto: "CTO-as-a-Service",
-    ctoDesc: "Technische Führung auf Abruf",
-  },
-
-  founders: {
-    eyebrow: "Die Menschen dahinter",
-    heading: "Lernen Sie die",
-    headingItalic: "Gründer kennen",
-    connect: "Verbinden",
-    roles: [
-      "Gründer & Strategischer Business Developer",
-      "Mitgründer & CTO",
-    ],
-    bios: [
-      "Über fünfzehn Jahre Führungserfahrung in Vertrieb, Gastgewerbe, Geschäftsentwicklung und operativer Strategie. Andrej spezialisiert sich auf skalierbare Wachstumssysteme für B2B, B2G und internationale Kundenbeziehungen.",
-      "Der technische Architekt hinter A.D.A.M., Kobe nutzt seine umfassende Expertise, um jede Idee in die Realität umzusetzen.",
-    ],
-    quotes: [
-      "Mein Fokus liegt darauf, Geschäftssysteme zu bauen, die nicht nur profitabel sind — sondern nachhaltig, sicher und für Skalierung konzipiert.",
-      "",
-    ],
-    locations: [
-      "Geboren in Österreich",
-      "Geboren in Belgien",
-    ],
-  },
-
-  caseStudyPages: {
-    nextCaseStudy: "Nächste Fallstudie",
-    problem: "Problem",
-    solution: "Lösung",
-    outcome: "Ergebnis",
-    hospitality: {
-      title: "Hotel-Betriebssystem",
-      problem: "Eine wachsende Hotelgruppe mit mehreren Häusern arbeitete mit unverbundenen Tools, manuellen Prozessen und inkonsistenten Gästeerlebnissen. Umsatzmanagement, Personalkoordination und Gästekommunikation waren über Tabellen und Ad-hoc-Lösungen verstreut.",
-      solution: "Wir haben ein vollständiges digitales Betriebssystem entworfen und implementiert — mit Integration von Reservierungsmanagement, Personalplanung, Gästekommunikation und Finanzaufsicht in einer strukturierten Plattform. Die Strategie umfasste operative Neugestaltung, Technologieauswahl und Teameinarbeitung.",
-      outcome: "Einheitliche Abläufe über alle Standorte hinweg. Die Personaleffizienz verbesserte sich, die Gästezufriedenheitswerte stiegen und die Gruppe gewann klare Einsicht in Leistungskennzahlen — alles über ein System.",
-    },
-    healthcare: {
-      title: "Digitalisierung Gesundheitswesen",
-      problem: "Eine Physiotherapiepraxis kämpfte mit Chaos in klinischen Arbeitsabläufen — Patientenplanung, Behandlungsdokumentation, Abrechnung und Kommunikation liefen über separate, unverbundene Systeme. Das Personal verbrachte mehr Zeit mit Verwaltung als mit Patientenversorgung.",
-      solution: "Wir entwarfen ein strukturiertes Betriebssystem für die Klinik, das Patientenmanagement, Terminplanung, Behandlungsdokumentation und Abrechnung in einem zusammenhängenden digitalen Workflow integriert — mit A.D.A.M. Healthcare für die Dokument- und Kontoverwaltung.",
-      outcome: "Die Verwaltungszeit wurde erheblich reduziert. Der Patientendurchsatz verbesserte sich. Die Klinik arbeitet nun mit einem klaren, strukturierten digitalen Workflow, der das klinische Personal auf die Versorgung fokussiert, nicht auf Papierkram.",
-    },
-    consulting: {
-      title: "Professionalisierung Beratung",
-      problem: "Eine Beratungspraxis lieferte Mehrwert, aber inkonsistent — Angebote waren improvisiert, Projektmanagement war reaktiv und die Kundenkommunikation hing ausschließlich von den persönlichen Beziehungen des Gründers ab. Das Unternehmen konnte ohne strukturelle Änderung nicht skalieren.",
-      solution: "Wir transformierten die Beratungspraxis von einem emotional gesteuerten Betrieb in einen strukturierten, professionellen Service. Dies umfasste standardisierte Angebotsvorlagen, Projektmanagement-Workflows, Kundenonboarding-Prozesse und ein klares Leistungserbringungsrahmenwerk.",
-      outcome: "Die Praxis liefert nun konsistente, professionelle Dienstleistungen unabhängig davon, welches Teammitglied die Leitung hat. Die Kundenbindung verbesserte sich, Empfehlungsraten stiegen und das Unternehmen ist für skalierbares Wachstum positioniert.",
-    },
-  },
-
-  languages: {
-    en: "English",
-    es: "Español",
-    sk: "Slovenčina",
-    nl: "Nederlands",
-    pt: "Português",
-    de: "Deutsch",
-  },
-};
-
-// Export translations object
-export const translations: Record<Locale, typeof en> = {
-  en,
-  es,
-  sk,
-  nl,
-  pt,
-  de,
-};
-
-// Export type for translation keys
 export type TranslationKeys = typeof en;
+
+export const translations: Record<Locale, typeof en> = { en, es, sk };
+
+export function getTranslations(locale: Locale): typeof en {
+  return translations[locale] ?? translations.en;
+}
