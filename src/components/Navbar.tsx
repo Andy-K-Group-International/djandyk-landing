@@ -51,6 +51,7 @@ export default function Navbar() {
     { label: t.nav.music, href: "#music" },
     { label: t.nav.albums, href: "#discography" },
     { label: t.nav.contact, href: "#contact" },
+    { label: t.nav.press, href: "/press" },
   ];
 
   useEffect(() => {

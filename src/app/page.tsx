@@ -14,6 +14,7 @@ import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
 import FlagshipSystems from "@/components/FlagshipSystems";
 import { HeroBackground } from "@/components/BackgroundGrid";
+import LatestReleaseBanner from "@/components/LatestReleaseBanner";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -80,6 +81,7 @@ export default function Home() {
       />
       <TopBanner />
       <Navbar />
+      <LatestReleaseBanner />
 
       <div className="relative overflow-clip">
         <HeroBackground />

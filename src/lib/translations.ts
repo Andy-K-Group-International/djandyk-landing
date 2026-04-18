@@ -34,6 +34,7 @@ const en = {
     music: "Music",
     albums: "Albums",
     contact: "Contact",
+    press: "Press",
     listenNow: "Listen Now",
   },
 
@@ -237,6 +238,7 @@ const es: typeof en = {
     music: "M\u00fasica",
     albums: "\u00c1lbumes",
     contact: "Contacto",
+    press: "Prensa",
     listenNow: "Escuchar Ahora",
   },
 
@@ -440,6 +442,7 @@ const sk: typeof en = {
     music: "Hudba",
     albums: "Albumy",
     contact: "Kontakt",
+    press: "Tla\u010d",
     listenNow: "Po\u010du\u0165 teraz",
   },
 

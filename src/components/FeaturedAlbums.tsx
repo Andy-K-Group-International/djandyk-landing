@@ -1,6 +1,25 @@
 "use client";
 
+import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+
+const ARTIST_SPOTIFY_ID = "3JhFGt6jRQvnYgvhWMQHUU";
+
+const TRACKLISTS: Record<string, { num: string; title: string }[]> = {
+  "When Later Becomes Never": [
+    { num: "0.1", title: "Intro – When Later Becomes Never" },
+    { num: "1", title: "Stay For A While" },
+    { num: "2", title: "Between Us" },
+    { num: "3", title: "Before We Knew" },
+    { num: "4", title: "Almost" },
+    { num: "5", title: "After Midnight" },
+    { num: "6", title: "Hostel Without Words" },
+    { num: "7", title: "Slow Motion" },
+    { num: "8", title: "One More Moment" },
+    { num: "9", title: "The Last Signal" },
+    { num: "9.1", title: "The Last Signal – Outro (spoken)" },
+  ],
+};
 
 const FEATURED_RELEASES = [
   {
@@ -58,60 +77,147 @@ function CoverPlaceholder({ title }: { title: string }) {
         background: "linear-gradient(135deg, rgba(220,239,230,0.6) 0%, rgba(168,213,194,0.3) 100%)",
       }}
     >
-      <span className="text-3xl font-bold text-deep-teal/30 font-serif tracking-widest">
+      <span className="text-3xl font-bold font-serif tracking-widest" style={{ color: "rgba(47,107,88,0.3)" }}>
         {initials}
       </span>
     </div>
   );
 }
 
-function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
+function PlayIcon() {
   return (
-    <a
-      href={release.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group relative block"
-    >
-      <div className="glass-card rounded-xl p-6 h-full flex flex-col transition-all duration-300 hover:shadow-[0_8px_30px_rgba(99,179,154,0.12)] hover:border-highlight/30">
-        {/* Cover art */}
-        <div className="mb-5 rounded-xl overflow-hidden">
-          <CoverPlaceholder title={release.title} />
-        </div>
+    <svg viewBox="0 0 16 16" fill="currentColor" className="w-3.5 h-3.5">
+      <path d="M5.25 3.75a.75.75 0 00-1.25.56v7.38a.75.75 0 001.25.56l5.5-3.69a.75.75 0 000-1.12L5.25 3.75z" />
+    </svg>
+  );
+}
 
-        {/* Kicker */}
-        <span className="text-[10px] uppercase tracking-[0.25em] text-highlight font-mono mb-2 block">
-          {release.kicker}
-        </span>
+function ListIcon() {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-3.5 h-3.5">
+      <path d="M2.5 4h11M2.5 8h11M2.5 12h7" strokeLinecap="round" />
+    </svg>
+  );
+}
 
-        {/* Title */}
-        <h3 className="text-lg font-bold text-foreground tracking-tight mb-1 leading-snug">
-          {release.title}
-        </h3>
+function ChevronIcon({ open }: { open: boolean }) {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={1.5} className={`w-3.5 h-3.5 transition-transform duration-200 ${open ? "rotate-180" : ""}`}>
+      <path d="M4 6l4 4 4-4" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
 
-        {/* Genre */}
-        <p className="text-sm font-light italic text-muted-2 mb-3">{release.genre}</p>
+function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
+  const [playerOpen, setPlayerOpen] = useState(false);
+  const [tracklistOpen, setTracklistOpen] = useState(false);
+  const tracks = TRACKLISTS[release.title] ?? null;
 
-        {/* Description */}
-        <p className="text-sm text-muted leading-relaxed flex-1">{release.description}</p>
+  return (
+    <div className="glass-card rounded-xl p-6 flex flex-col transition-all duration-300 hover:shadow-[0_8px_30px_rgba(99,179,154,0.12)] hover:border-highlight/30">
+      {/* Cover art */}
+      <div className="mb-5 rounded-xl overflow-hidden">
+        <CoverPlaceholder title={release.title} />
+      </div>
 
-        {/* CTA */}
-        <div className="mt-5 flex items-center gap-1.5">
-          <span className="text-sm font-medium text-highlight transition-colors">
-            Listen Now
-          </span>
-          <svg
-            viewBox="0 0 16 16"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            className="w-3.5 h-3.5 text-highlight transition-transform duration-200 group-hover:translate-x-1"
-          >
+      {/* Kicker */}
+      <span className="text-[10px] uppercase tracking-[0.25em] text-highlight font-mono mb-2 block">
+        {release.kicker}
+      </span>
+
+      {/* Title */}
+      <h3 className="text-lg font-bold text-foreground tracking-tight mb-1 leading-snug">
+        {release.title}
+      </h3>
+
+      {/* Genre */}
+      <p className="text-sm font-light italic text-muted-2 mb-3">{release.genre}</p>
+
+      {/* Description */}
+      <p className="text-sm text-muted leading-relaxed flex-1">{release.description}</p>
+
+      {/* Action row */}
+      <div className="mt-5 flex items-center gap-2 flex-wrap">
+        <a
+          href={release.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 text-sm font-medium text-highlight hover:text-deep-teal transition-colors"
+        >
+          Listen Now
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2} className="w-3.5 h-3.5">
             <path d="M6 4l4 4-4 4" />
           </svg>
+        </a>
+
+        <div className="flex items-center gap-1 ml-auto">
+          <button
+            onClick={() => { setPlayerOpen(!playerOpen); setTracklistOpen(false); }}
+            className={`inline-flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded border transition-colors ${
+              playerOpen
+                ? "bg-highlight text-white border-highlight"
+                : "text-muted-2 border-grid-500 hover:border-highlight hover:text-highlight"
+            }`}
+            title="Toggle player"
+          >
+            <PlayIcon />
+            Player
+          </button>
+          <button
+            onClick={() => { setTracklistOpen(!tracklistOpen); setPlayerOpen(false); }}
+            className={`inline-flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded border transition-colors ${
+              tracklistOpen
+                ? "bg-highlight text-white border-highlight"
+                : "text-muted-2 border-grid-500 hover:border-highlight hover:text-highlight"
+            }`}
+            title="Toggle tracklist"
+          >
+            <ListIcon />
+            Tracks
+            <ChevronIcon open={tracklistOpen} />
+          </button>
         </div>
       </div>
-    </a>
+
+      {/* Spotify embed — lazy: only mounts when playerOpen */}
+      {playerOpen && (
+        <div className="mt-4 rounded-xl overflow-hidden">
+          <iframe
+            src={`https://open.spotify.com/embed/artist/${ARTIST_SPOTIFY_ID}?utm_source=generator`}
+            width="100%"
+            height="152"
+            frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            style={{ borderRadius: "12px" }}
+          />
+        </div>
+      )}
+
+      {/* Tracklist accordion */}
+      {tracklistOpen && (
+        <div className="mt-4 border-t border-grid-300 pt-4">
+          {tracks ? (
+            <ol className="space-y-1.5">
+              {tracks.map((track) => (
+                <li key={track.num} className="flex items-baseline gap-3 group/track">
+                  <span className="text-[10px] font-mono text-muted-2 w-7 shrink-0 text-right">
+                    {track.num}
+                  </span>
+                  <span className={`text-sm text-muted leading-snug ${
+                    track.num.includes(".") ? "italic text-muted-2 text-xs" : ""
+                  }`}>
+                    {track.title}
+                  </span>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <p className="text-xs italic text-muted-2">Tracklist coming soon</p>
+          )}
+        </div>
+      )}
+    </div>
   );
 }
 
