@@ -25,14 +25,30 @@ const jsonLd = {
       url: "https://djandyk.com",
       description:
         "UK-based music producer creating progressive house, trance, and deep melodic soundscapes that blend emotion, energy, and storytelling.",
-      genre: ["Progressive House", "Trance", "Deep Melodic", "EDM"],
+      genre: ["Progressive House", "Trance", "Melodic EDM", "Deep Melodic"],
+      foundingLocation: {
+        "@type": "Place",
+        name: "United Kingdom",
+      },
       email: "info@djandyk.com",
+      member: {
+        "@type": "Person",
+        name: "Andrej Kneisl",
+        alternateName: "DJ Andy'K",
+      },
+      recordLabel: {
+        "@type": "Organization",
+        name: "ANDY'K GROUP INTERNATIONAL LTD",
+        url: "https://www.andykgroupinternational.com",
+      },
       sameAs: [
         "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
         "https://music.apple.com/gb/artist/dj-andyk/1835064975",
         "https://soundcloud.com/djandyk_2024",
         "https://www.youtube.com/channel/UCrlcaZ24IreLG97tXQ4EMqA",
+        "https://tidal.com/browse/artist/65848653",
         "https://www.instagram.com/djandykofficial",
+        "https://www.tiktok.com/@djandykofficial",
       ],
     },
     {
@@ -40,19 +56,17 @@ const jsonLd = {
       "@id": "https://djandyk.com/#website",
       url: "https://djandyk.com",
       name: "DJ Andy'K",
-      publisher: {
-        "@id": "https://djandyk.com/#artist",
-      },
+      publisher: { "@id": "https://djandyk.com/#artist" },
     },
     {
       "@type": "WebPage",
       "@id": "https://djandyk.com/#webpage",
       url: "https://djandyk.com",
-      name: "DJ Andy'K | Progressive House · Trance · Deep Melodic · EDM",
+      name: "DJ Andy'K — Official Website | Progressive House, Trance & Melodic EDM",
       isPartOf: { "@id": "https://djandyk.com/#website" },
       about: { "@id": "https://djandyk.com/#artist" },
       description:
-        "Music by DJ Andy'K — progressive house, trance, and deep melodic EDM. Stream across Spotify, Apple Music, SoundCloud, YouTube, TIDAL and more.",
+        "Official website of DJ Andy'K. Producer of progressive house, trance, and deep melodic sounds. Based in the UK, sharing music worldwide.",
     },
   ],
 };

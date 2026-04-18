@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://andykgroupinternational.com";
+const BASE_URL = "https://djandyk.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -38,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE_URL}/company-information`,
       lastModified: new Date(),
       changeFrequency: "yearly",
-      priority: 0.5,
+      priority: 0.4,
     },
   ];
 }

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
-import { CurrencyProvider } from "@/context/CurrencyContext";
 import { LanguageProvider } from "@/context/LanguageContext";
 import CookieBanner from "@/components/CookieBanner";
 import LocaleUrlSync from "@/components/LocaleUrlSync";
@@ -18,48 +17,47 @@ const ibmPlexMono = IBM_Plex_Mono({
   weight: ["400", "500", "700"],
 });
 
-const SITE_URL = "https://andykgroupinternational.com";
-const SITE_TITLE =
-  "Andy'K Group International LTD | B2B & B2G Business Automation";
+const SITE_URL = "https://djandyk.com";
+const SITE_TITLE = "DJ Andy'K — Official Website | Progressive House, Trance & Melodic EDM";
 const SITE_DESCRIPTION =
-  "Strategic partner in business automation & outreach. Powering the A.D.A.M. & E.V.A. systems for B2B lead generation, document automation, and government tender strategy.";
+  "Official website of DJ Andy'K. Producer of progressive house, trance, and deep melodic sounds. Based in the UK, sharing music worldwide.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: SITE_TITLE,
-    template: "%s | Andy'K Group International",
+    template: "%s | DJ Andy'K",
   },
   description: SITE_DESCRIPTION,
   keywords: [
-    "business automation",
-    "B2B lead generation",
-    "B2G tenders",
-    "ADAM",
-    "EVA",
-    "document automation",
-    "Andy'K Group International",
-    "UK automation company",
+    "DJ Andy'K",
+    "progressive house",
+    "trance",
+    "melodic EDM",
+    "UK artist",
+    "music producer",
+    "deep melodic",
+    "electronic music",
   ],
-  authors: [{ name: "Andy'K Group International LTD" }],
-  creator: "Andy'K Group International LTD",
-  publisher: "Andy'K Group International LTD",
+  authors: [{ name: "DJ Andy'K" }],
+  creator: "DJ Andy'K",
+  publisher: "ANDY'K GROUP INTERNATIONAL LTD",
   alternates: {
-    canonical: "/",
+    canonical: SITE_URL,
   },
   openGraph: {
-    type: "website",
+    type: "music.album",
     locale: "en_GB",
     url: SITE_URL,
-    siteName: "Andy'K Group International",
+    siteName: "DJ Andy'K",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Andy'K Group International — Business Automation & Outreach",
+        alt: "DJ Andy'K — Progressive House, Trance & Melodic EDM",
       },
     ],
   },
@@ -67,7 +65,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: ["/opengraph-image.png"],
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -93,11 +91,9 @@ export default function RootLayout({
         className={`${ibmPlexSans.variable} ${ibmPlexMono.variable} antialiased font-sans`}
       >
         <LanguageProvider>
-          <CurrencyProvider>
-            <LocaleUrlSync />
-            {children}
-            <CookieBanner />
-          </CurrencyProvider>
+          <LocaleUrlSync />
+          {children}
+          <CookieBanner />
         </LanguageProvider>
       </body>
     </html>

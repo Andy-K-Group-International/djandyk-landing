@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://andykgroupinternational.com/sitemap.xml",
+    sitemap: "https://djandyk.com/sitemap.xml",
   };
 }
