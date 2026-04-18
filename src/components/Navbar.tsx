@@ -2,11 +2,8 @@
 
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import CompanyLogo from "./CompanyLogo";
-import { useCurrency } from "@/context/CurrencyContext";
 import { useLanguage } from "@/context/LanguageContext";
-import { CURRENCIES } from "@/lib/currency";
-import type { CurrencyCode } from "@/lib/currency";
+import { NAV_SERVICES, COMPANY } from "@/lib/data";
 import type { Locale } from "@/lib/translations";
 
 function ChevronDown({ className = "w-4 h-4" }: { className?: string }) {
@@ -33,82 +30,44 @@ function CloseIcon() {
   );
 }
 
-/** Prefix hash-only hrefs with "/" when not on the homepage */
 function resolveHref(href: string, isHome: boolean): string {
   if (isHome) return href;
-  // Hash links like #about → /#about
   if (href.startsWith("#")) return `/${href}`;
-  // Already absolute or path-based, leave alone
   return href;
 }
 
 export default function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === "/";
-  const { currency, setCurrency } = useCurrency();
   const { locale, setLocale, t } = useLanguage();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [platformsOpen, setPlatformsOpen] = useState(false);
+  const [mobilePlatformsOpen, setMobilePlatformsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(null);
 
-  // Translated nav links
   const navLinks = [
     { label: t.nav.about, href: "#about" },
-    { label: t.nav.caseStudies, href: "#case-studies" },
-    { label: t.nav.pricing, href: "#pricing" },
+    { label: t.nav.music, href: "#music" },
+    { label: t.nav.albums, href: "#discography" },
     { label: t.nav.contact, href: "#contact" },
   ];
 
-  // Translated services dropdown
-  const navServices = [
-    {
-      group: t.nav.groupSystems,
-      isIT: false,
-      items: [
-        { label: "A.D.A.M.", description: t.nav.adamDesc, href: "#systems" },
-      ],
-    },
-    {
-      group: t.nav.groupBusiness,
-      isIT: false,
-      items: [
-        { label: t.nav.endToEnd, description: t.nav.endToEndDesc, href: "#end-to-end" },
-        { label: t.nav.b2bDev, description: t.nav.b2bDevDesc, href: "#pricing-b2b" },
-        { label: t.nav.b2gPublic, description: t.nav.b2gPublicDesc, href: "#pricing-b2g" },
-      ],
-    },
-    {
-      group: t.nav.groupIT,
-      isIT: true,
-      items: [
-        { label: t.nav.sysArch, description: t.nav.sysArchDesc, href: "#pricing-tech" },
-        { label: t.nav.platformDev, description: t.nav.platformDevDesc, href: "#pricing-tech" },
-        { label: t.nav.automation, description: t.nav.automationDesc, href: "#pricing-tech" },
-        { label: t.nav.cto, description: t.nav.ctoDesc, href: "#pricing-tech" },
-      ],
-    },
-  ];
-
-  // Close dropdown when clicking outside
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setServicesOpen(false);
+        setPlatformsOpen(false);
       }
     }
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
 
-  // Close mobile menu on resize to desktop
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth >= 768) setMobileOpen(false);
@@ -119,29 +78,28 @@ export default function Navbar() {
 
   function handleMouseEnter() {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    setServicesOpen(true);
+    setPlatformsOpen(true);
   }
 
   function handleMouseLeave() {
-    timeoutRef.current = setTimeout(() => setServicesOpen(false), 150);
+    timeoutRef.current = setTimeout(() => setPlatformsOpen(false), 150);
   }
 
   function closeMobile() {
     setMobileOpen(false);
-    setMobileServicesOpen(false);
+    setMobilePlatformsOpen(false);
   }
-
-  const logoHref = isHome ? "#hero" : "/";
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-grid-300">
       <div className="relative max-w-[1200px] mx-auto flex items-center justify-between px-6 sm:px-8 h-[60px]">
+
         {/* Logo */}
-        <a href={logoHref} className="shrink-0 text-foreground">
-          <CompanyLogo size="md" />
+        <a href={isHome ? "#hero" : "/"} className="shrink-0 font-bold text-foreground tracking-tight text-base">
+          DJ Andy&apos;K
         </a>
 
-        {/* Desktop nav - centered */}
+        {/* Desktop nav — centered */}
         <div className="hidden md:flex items-center gap-7 text-sm text-muted absolute left-1/2 -translate-x-1/2">
           {navLinks.map((link) => (
             <a key={link.href} href={resolveHref(link.href, isHome)} className="hover:text-foreground transition-colors">
@@ -149,7 +107,7 @@ export default function Navbar() {
             </a>
           ))}
 
-          {/* Services dropdown */}
+          {/* Platforms dropdown */}
           <div
             ref={dropdownRef}
             className="relative"
@@ -157,28 +115,29 @@ export default function Navbar() {
             onMouseLeave={handleMouseLeave}
           >
             <button
-              onClick={() => setServicesOpen(!servicesOpen)}
+              onClick={() => setPlatformsOpen(!platformsOpen)}
               className="flex items-center gap-1 hover:text-foreground transition-colors"
             >
-              {t.nav.services}
-              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`} />
+              {t.nav.listenNow}
+              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${platformsOpen ? "rotate-180" : ""}`} />
             </button>
 
-            {/* Dropdown panel */}
-            {servicesOpen && (
-              <div className="absolute top-full right-0 mt-2 w-[540px] bg-white rounded-xl border border-grid-300 shadow-lg p-6 grid grid-cols-2 gap-6">
-                {navServices.map((group) => (
-                  <div key={group.group} className={group.isIT ? "col-span-2" : ""}>
-                    <p className="text-[10px] uppercase tracking-widest text-muted-2 font-medium mb-3">
+            {platformsOpen && (
+              <div className="absolute top-full right-0 mt-2 w-[400px] bg-white rounded-xl border border-grid-300 shadow-lg p-5 grid grid-cols-2 gap-5">
+                {NAV_SERVICES.map((group) => (
+                  <div key={group.group}>
+                    <p className="text-[10px] uppercase tracking-widest text-muted-2 font-medium mb-2">
                       {group.group}
                     </p>
-                    <div className={group.isIT ? "grid grid-cols-2 gap-2" : "space-y-2"}>
+                    <div className="space-y-1">
                       {group.items.map((item) => (
                         <a
-                          key={item.href + item.label}
-                          href={resolveHref(item.href, isHome)}
-                          onClick={() => setServicesOpen(false)}
-                          className="block p-2.5 -mx-1 rounded-lg hover:bg-bg-light transition-colors group/item"
+                          key={item.label}
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setPlatformsOpen(false)}
+                          className="block p-2 -mx-1 rounded-lg hover:bg-bg-light transition-colors group/item"
                         >
                           <span className="text-sm font-medium text-foreground group-hover/item:text-highlight transition-colors">
                             {item.label}
@@ -194,11 +153,10 @@ export default function Navbar() {
               </div>
             )}
           </div>
-
         </div>
 
-        {/* Language & Currency selectors */}
-        <div className="hidden md:flex items-center gap-1.5">
+        {/* Right: language + CTA */}
+        <div className="hidden md:flex items-center gap-3">
           <select
             value={locale}
             onChange={(e) => setLocale(e.target.value as Locale)}
@@ -208,22 +166,15 @@ export default function Navbar() {
             <option value="en">EN</option>
             <option value="es">ES</option>
             <option value="sk">SK</option>
-            <option value="nl">NL</option>
-            <option value="pt">PT</option>
-            <option value="de">DE</option>
           </select>
-          <select
-            value={currency}
-            onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
-            aria-label="Select currency"
-            className="text-xs text-muted bg-transparent border border-grid-500 rounded px-1.5 py-1 cursor-pointer hover:border-grid-700 transition-colors focus:outline-none w-[60px]"
+          <a
+            href={COMPANY.hyperfollow}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center h-8 px-4 text-xs font-medium bg-highlight text-white hover:bg-deep-teal transition-colors rounded"
           >
-            {CURRENCIES.map((c) => (
-              <option key={c.code} value={c.code}>
-                {c.code}
-              </option>
-            ))}
-          </select>
+            {t.nav.listenNow}
+          </a>
         </div>
 
         {/* Mobile hamburger */}
@@ -245,25 +196,25 @@ export default function Navbar() {
                 key={link.href}
                 href={resolveHref(link.href, isHome)}
                 onClick={closeMobile}
-                className="block py-3 text-base font-medium text-foreground border-b border-grid-300 last:border-b-0"
+                className="block py-3 text-base font-medium text-foreground border-b border-grid-300"
               >
                 {link.label}
               </a>
             ))}
 
-            {/* Services accordion */}
+            {/* Platforms accordion */}
             <div className="border-b border-grid-300">
               <button
-                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                onClick={() => setMobilePlatformsOpen(!mobilePlatformsOpen)}
                 className="flex items-center justify-between w-full py-3 text-base font-medium text-foreground"
               >
-                {t.nav.services}
-                <ChevronDown className={`w-5 h-5 text-muted transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`} />
+                {t.nav.listenNow}
+                <ChevronDown className={`w-5 h-5 text-muted transition-transform duration-200 ${mobilePlatformsOpen ? "rotate-180" : ""}`} />
               </button>
 
-              {mobileServicesOpen && (
-                <div className="pb-4 space-y-5">
-                  {navServices.map((group) => (
+              {mobilePlatformsOpen && (
+                <div className="pb-4 space-y-4">
+                  {NAV_SERVICES.map((group) => (
                     <div key={group.group}>
                       <p className="text-[10px] uppercase tracking-widest text-muted-2 font-medium mb-2 px-2">
                         {group.group}
@@ -271,17 +222,15 @@ export default function Navbar() {
                       <div className="space-y-1">
                         {group.items.map((item) => (
                           <a
-                            key={item.href + item.label}
-                            href={resolveHref(item.href, isHome)}
+                            key={item.label}
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             onClick={closeMobile}
                             className="block px-3 py-2.5 rounded-lg hover:bg-bg-light transition-colors"
                           >
-                            <span className="text-sm font-medium text-foreground">
-                              {item.label}
-                            </span>
-                            <span className="block text-xs text-muted-2 mt-0.5">
-                              {item.description}
-                            </span>
+                            <span className="text-sm font-medium text-foreground">{item.label}</span>
+                            <span className="block text-xs text-muted-2 mt-0.5">{item.description}</span>
                           </a>
                         ))}
                       </div>
@@ -291,33 +240,26 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Mobile Language & Currency */}
-            <div className="pt-4 flex items-center gap-2">
+            {/* Language + CTA */}
+            <div className="pt-4 flex items-center gap-3">
               <select
                 value={locale}
                 onChange={(e) => setLocale(e.target.value as Locale)}
                 aria-label="Select language"
-                className="text-xs text-muted bg-transparent border border-grid-500 px-2 py-1.5 cursor-pointer hover:border-grid-700 transition-colors focus:outline-none"
+                className="text-xs text-muted bg-transparent border border-grid-500 px-2 py-1.5 cursor-pointer focus:outline-none"
               >
                 <option value="en">EN</option>
                 <option value="es">ES</option>
                 <option value="sk">SK</option>
-                <option value="nl">NL</option>
-                <option value="pt">PT</option>
-                <option value="de">DE</option>
               </select>
-              <select
-                value={currency}
-                onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
-                aria-label="Select currency"
-                className="text-xs text-muted bg-transparent border border-grid-500 px-2 py-1.5 cursor-pointer hover:border-grid-700 transition-colors focus:outline-none"
+              <a
+                href={COMPANY.hyperfollow}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center h-9 px-5 text-sm font-medium bg-highlight text-white hover:bg-deep-teal transition-colors rounded"
               >
-                {CURRENCIES.map((c) => (
-                  <option key={c.code} value={c.code}>
-                    {c.code}
-                  </option>
-                ))}
-              </select>
+                {t.nav.listenNow}
+              </a>
             </div>
           </div>
         </div>
