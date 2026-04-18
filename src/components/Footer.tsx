@@ -1,44 +1,24 @@
 "use client";
 
-import { COMPANY } from "@/lib/data";
-import CompanyLogo from "./CompanyLogo";
-import { useCurrency } from "@/context/CurrencyContext";
+import { COMPANY, FOOTER_LINKS } from "@/lib/data";
 import { useLanguage } from "@/context/LanguageContext";
-import { CURRENCIES } from "@/lib/currency";
-import type { CurrencyCode } from "@/lib/currency";
 import type { Locale } from "@/lib/translations";
 
 export default function Footer() {
-  const { currency, setCurrency } = useCurrency();
   const { locale, setLocale, t } = useLanguage();
-
-  const footerLinks = [
-    { label: t.footer.linkHome, href: "#hero" },
-    { label: t.footer.linkSystems, href: "#systems" },
-    { label: t.footer.linkPricing, href: "#pricing" },
-    { label: t.footer.linkContact, href: "#contact" },
-    { label: t.footer.linkPrivacy, href: "/privacy-policy" },
-    { label: t.footer.linkCookies, href: "/cookies-policy" },
-    { label: t.footer.linkTerms, href: "/terms-and-conditions" },
-    { label: t.footer.linkDisclaimer, href: "/disclaimer" },
-    { label: t.footer.linkLegalNotice, href: "/company-information" },
-    { label: t.footer.linkClientPortal, href: "https://adameva.app" },
-  ];
 
   return (
     <footer className="border-t border-grid-300 py-12 px-8">
       <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-4">
-          <a href="#hero" className="text-foreground">
-            <CompanyLogo size="sm" />
+          <a href="#hero" className="text-foreground font-bold tracking-tight text-sm">
+            DJ Andy&apos;K
           </a>
-          <span className="text-xs text-muted-2">
-            {t.footer.copyright} {COMPANY.name}
-          </span>
+          <span className="text-xs text-muted-2">{t.footer.copyright}</span>
         </div>
 
-        <div className="flex items-center gap-6 flex-wrap justify-center">
-          {footerLinks.map((link) => (
+        <div className="flex items-center gap-5 flex-wrap justify-center">
+          {FOOTER_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -60,25 +40,20 @@ export default function Footer() {
             aria-label="Select language"
             className="text-xs text-muted-2 bg-transparent border border-grid-500 px-2 py-1.5 cursor-pointer hover:border-grid-700 transition-colors focus:outline-none focus:ring-1 focus:ring-highlight/30"
           >
-            <option value="en">{t.languages.en}</option>
-            <option value="es">{t.languages.es}</option>
-            <option value="sk">{t.languages.sk}</option>
-            <option value="nl">{t.languages.nl}</option>
-            <option value="pt">{t.languages.pt}</option>
-            <option value="de">{t.languages.de}</option>
-          </select>
-          <select
-            value={currency}
-            onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
-            className="text-xs text-muted-2 bg-transparent border border-grid-500 px-2 py-1.5 cursor-pointer hover:border-grid-700 transition-colors focus:outline-none focus:ring-1 focus:ring-highlight/30"
-          >
-            {CURRENCIES.map((c) => (
-              <option key={c.code} value={c.code}>
-                {c.label}
-              </option>
-            ))}
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+            <option value="sk">SK</option>
           </select>
         </div>
+      </div>
+
+      <div className="max-w-[1200px] mx-auto mt-6 pt-6 border-t border-grid-300 text-center">
+        <p className="text-[11px] text-muted-2 font-mono">{t.footer.label}</p>
+        <p className="text-[11px] text-muted-2 mt-1">
+          <a href={COMPANY.labelWebsite} target="_blank" rel="noopener noreferrer" className="hover:text-muted transition-colors">
+            {COMPANY.labelWebsite}
+          </a>
+        </p>
       </div>
     </footer>
   );

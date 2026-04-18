@@ -5,7 +5,7 @@ export default function MockSlack() {
   return (
     <div className="bg-white rounded-xl border border-grid-300 overflow-hidden text-[13px]">
       <div className="px-4 py-3 border-b border-grid-300 flex items-center gap-2">
-        <img src={COMPANY.adamLogoUrl} alt="A.D.A.M." className="h-5 w-auto rounded" />
+        <div className="h-5 w-5 rounded bg-highlight/20 flex items-center justify-center text-[9px] font-bold text-foreground">AK</div>
         <span className="font-semibold text-foreground text-[13px]">A.D.A.M. Follow-ups</span>
         <span className="ml-auto text-[10px] text-highlight border border-highlight/30 px-2 py-0.5 rounded">Active</span>
       </div>

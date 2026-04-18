@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { COMPANY } from "@/lib/data";
 import { useLanguage } from "@/context/LanguageContext";
 
 function UserIcon() {
@@ -15,14 +16,6 @@ function MailIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5 text-muted-2">
       <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function BuildingIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5 text-muted-2">
-      <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -50,34 +43,32 @@ export default function ContactForm() {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-
-    // mailto fallback — opens user's email client with form data
     const name = data.get("name") as string;
     const email = data.get("email") as string;
-    const company = data.get("company") as string;
     const message = data.get("message") as string;
 
-    const subject = encodeURIComponent(`Contact from ${name}${company ? ` (${company})` : ""}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nCompany: ${company || "N/A"}\n\nMessage:\n${message}`
-    );
+    const subject = encodeURIComponent(`Message from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
 
-    window.location.href = `mailto:info@andykgroupinternational.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${COMPANY.email}?subject=${subject}&body=${body}`;
     setSubmitted(true);
   }
 
   return (
-    <section className="relative pt-10 pb-20 px-8">
+    <section id="contact" className="relative pt-10 pb-20 px-8">
       <div className="max-w-[720px] mx-auto">
         <div className="border border-grid-300 rounded-2xl p-8 sm:p-10 bg-white shadow-sm">
-          {/* Header */}
           <div className="text-center mb-10">
+            <span className="text-[10px] uppercase tracking-[0.3em] text-highlight font-mono block mb-3">
+              {t.contact.label}
+            </span>
             <h2 className="text-[clamp(1.5rem,1.2rem+1vw,2rem)] font-bold tracking-tight text-foreground mb-2">
-              {t.contact.heading}
+              {t.contact.heading}{" "}
+              <span className="font-serif font-light italic text-[1.15em]">
+                {t.contact.headingItalic}
+              </span>
             </h2>
-            <p className="text-sm text-muted">
-              {t.contact.subtitle}
-            </p>
+            <p className="text-sm text-muted">{t.contact.description}</p>
           </div>
 
           {submitted ? (
@@ -87,12 +78,10 @@ export default function ContactForm() {
                   <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">{t.contact.successHeading}</h3>
-              <p className="text-sm text-muted">{t.contact.successText}</p>
+              <p className="text-base font-medium text-foreground">{t.contact.success}</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name + Email row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="contact-name" className="block text-sm font-medium text-foreground mb-2">
@@ -132,26 +121,6 @@ export default function ContactForm() {
                 </div>
               </div>
 
-              {/* Company */}
-              <div>
-                <label htmlFor="contact-company" className="block text-sm font-medium text-foreground mb-2">
-                  {t.contact.labelCompany}
-                </label>
-                <div className="relative">
-                  <div className="absolute left-3 top-1/2 -translate-y-1/2">
-                    <BuildingIcon />
-                  </div>
-                  <input
-                    id="contact-company"
-                    name="company"
-                    type="text"
-                    placeholder={t.contact.placeholderCompany}
-                    className="w-full h-11 pl-10 pr-4 text-sm border border-grid-500 rounded-lg bg-white text-foreground placeholder:text-muted-2 focus:outline-none focus:ring-2 focus:ring-highlight/30 focus:border-highlight transition-colors"
-                  />
-                </div>
-              </div>
-
-              {/* Message */}
               <div>
                 <label htmlFor="contact-message" className="block text-sm font-medium text-foreground mb-2">
                   {t.contact.labelMessage} <span className="text-deep-teal">{t.contact.required}</span>
@@ -171,20 +140,15 @@ export default function ContactForm() {
                 </div>
               </div>
 
-              {/* Submit */}
               <button
                 type="submit"
                 className="relative w-full h-12 flex items-center justify-center gap-2 text-sm font-medium text-foreground btn-primary-gradient cursor-pointer"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   <SendIcon />
-                  {t.contact.buttonSend}
+                  {t.contact.submit}
                 </span>
               </button>
-
-              <p className="text-xs text-center text-muted-2">
-                {t.contact.privacyText}
-              </p>
             </form>
           )}
         </div>

@@ -19,49 +19,40 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://andykgroupinternational.com/#organization",
-      name: "Andy'K Group International LTD",
-      url: "https://andykgroupinternational.com",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://andykgroupinternational.com/full-logo.png",
-      },
+      "@type": "MusicGroup",
+      "@id": "https://djandyk.com/#artist",
+      name: "DJ Andy'K",
+      url: "https://djandyk.com",
       description:
-        "UK-based strategic services company combining business development, operational architecture, and technology to help businesses scale with structure.",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "86-90 Paul Street",
-        addressLocality: "London",
-        postalCode: "EC2A 4NE",
-        addressCountry: "GB",
-      },
-      email: "info@andykgroupinternational.com",
-      telephone: "+44 330 027 1319",
-      sameAs: ["https://www.linkedin.com/company/80971657/"],
+        "UK-based music producer creating progressive house, trance, and deep melodic soundscapes that blend emotion, energy, and storytelling.",
+      genre: ["Progressive House", "Trance", "Deep Melodic", "EDM"],
+      email: "info@djandyk.com",
+      sameAs: [
+        "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+        "https://music.apple.com/gb/artist/dj-andyk/1835064975",
+        "https://soundcloud.com/djandyk_2024",
+        "https://www.youtube.com/channel/UCrlcaZ24IreLG97tXQ4EMqA",
+        "https://www.instagram.com/djandykofficial",
+      ],
     },
     {
       "@type": "WebSite",
-      "@id": "https://andykgroupinternational.com/#website",
-      url: "https://andykgroupinternational.com",
-      name: "Andy'K Group International",
+      "@id": "https://djandyk.com/#website",
+      url: "https://djandyk.com",
+      name: "DJ Andy'K",
       publisher: {
-        "@id": "https://andykgroupinternational.com/#organization",
+        "@id": "https://djandyk.com/#artist",
       },
     },
     {
       "@type": "WebPage",
-      "@id": "https://andykgroupinternational.com/#webpage",
-      url: "https://andykgroupinternational.com",
-      name: "Andy'K Group International LTD | End-to-End Business Development & Growth Architecture",
-      isPartOf: {
-        "@id": "https://andykgroupinternational.com/#website",
-      },
-      about: {
-        "@id": "https://andykgroupinternational.com/#organization",
-      },
+      "@id": "https://djandyk.com/#webpage",
+      url: "https://djandyk.com",
+      name: "DJ Andy'K | Progressive House · Trance · Deep Melodic · EDM",
+      isPartOf: { "@id": "https://djandyk.com/#website" },
+      about: { "@id": "https://djandyk.com/#artist" },
       description:
-        "Strategic partner in end-to-end business development and growth architecture. Combining strategy, operations, and technology to help businesses scale.",
+        "Music by DJ Andy'K — progressive house, trance, and deep melodic EDM. Stream across Spotify, Apple Music, SoundCloud, YouTube, TIDAL and more.",
     },
   ],
 };
@@ -76,7 +67,6 @@ export default function Home() {
       <TopBanner />
       <Navbar />
 
-      {/* Hero area with background layers */}
       <div className="relative overflow-clip">
         <HeroBackground />
         <Hero />
@@ -84,10 +74,10 @@ export default function Home() {
 
       <TronDivider />
 
-      {/* End-to-End Service Section */}
+      {/* Sound Philosophy */}
       <FaqSection />
 
-      {/* Case Studies */}
+      {/* Featured Releases */}
       <CaseStudyCards />
 
       <TronDivider />
@@ -97,29 +87,29 @@ export default function Home() {
 
       <TronDivider />
 
-      {/* Founders */}
+      {/* Artist Spotlight */}
       <section className="relative pt-12 pb-14 px-8 max-w-[1200px] mx-auto">
         <TestimonialPair />
       </section>
 
       <TronDivider />
 
-      {/* Our Services */}
+      {/* Streaming Platforms */}
       <IntegrationsSection />
 
       <TronDivider />
 
-      {/* Pricing Plans */}
+      {/* Discography */}
       <PricingSection />
 
       <TronDivider />
 
-      {/* A.D.A.M. & E.V.A. Flagship Systems */}
+      {/* Flagship Albums */}
       <FlagshipSystems />
 
       <TronDivider />
 
-      {/* How A.D.A.M. Works */}
+      {/* Album Journey */}
       <RoadmapSection />
 
       <TronDivider />

@@ -1,98 +1,79 @@
 "use client";
 
-import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
+import { STREAMING_PLATFORMS } from "@/lib/data";
 
-const SERVICE_CARDS: { href: string | null; accent: string }[] = [
-  { href: "#end-to-end", accent: "rgba(99,179,154,0.12)" },
-  { href: "#pricing-b2b", accent: "rgba(49,38,59,0.08)" },
-  { href: "#pricing-b2g", accent: "rgba(49,38,59,0.08)" },
-  { href: "#pricing-tech", accent: "rgba(49,38,59,0.08)" },
-];
-
-const SERVICE_ICONS = [
-  // Layers — End-to-End
-  <svg key="e2e" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5"><path d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0l4.179 2.25L12 17.25 6.429 14.25m5.571 3v4.5" strokeLinecap="round" strokeLinejoin="round" /></svg>,
-  // Users — B2B
-  <svg key="b2b" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5"><path d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" strokeLinecap="round" strokeLinejoin="round" /></svg>,
-  // Building — B2G
-  <svg key="b2g" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5"><path d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" strokeLinecap="round" strokeLinejoin="round" /></svg>,
-  // CPU — IT Services
-  <svg key="it" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5"><path d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5M4.5 15.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" strokeLinecap="round" strokeLinejoin="round" /></svg>,
-];
+const PLATFORM_ICONS: Record<string, React.ReactNode> = {
+  spotify: (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+      <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
+    </svg>
+  ),
+  apple: (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+      <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701" />
+    </svg>
+  ),
+  soundcloud: (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+      <path d="M1.175 12.225c-.041 0-.082.035-.082.082l-.418 2.385.418 2.349c0 .047.041.082.082.082.042 0 .083-.035.083-.082l.473-2.349-.473-2.385c0-.047-.041-.082-.083-.082zm1.156-.371c-.044 0-.082.038-.082.083l-.363 2.755.363 2.63c0 .045.038.083.082.083.045 0 .082-.038.082-.083l.413-2.63-.413-2.755c0-.045-.037-.083-.082-.083zm1.188-.371c-.051 0-.098.047-.098.099l-.301 3.126.301 2.823c0 .052.047.099.098.099.052 0 .099-.047.099-.099l.341-2.823-.341-3.126c0-.052-.047-.099-.099-.099zm1.204-.148c-.06 0-.109.049-.109.11l-.245 3.274.245 2.956c0 .061.049.11.109.11.061 0 .11-.049.11-.11l.277-2.956-.277-3.274c0-.061-.049-.11-.11-.11zM24 10.234c-.413-3.128-3.048-5.551-6.246-5.551-1.063 0-2.067.269-2.933.733-.394-4.512-4.182-8.03-8.817-8.03-1.226 0-2.395.261-3.439.72C1.048-.285.315.758.191 1.972L.001 12.45l.001.062.001.065c.001.118.097.213.215.213h23.567c.119 0 .215-.096.215-.215v-.002c0-1.173-.001-2.339-.001-2.339z" />
+    </svg>
+  ),
+  youtube: (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+      <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+    </svg>
+  ),
+  tidal: (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+      <path d="M12.012 3.992L8.008 7.996 4.004 3.992 0 7.996l4.004 4.004 4.004-4.004 4.004 4.004 4.004-4.004L20.02 11.999l3.98-4.003L20.02 3.992l-4.004 4.004zM4.004 12.004L0 16.008l4.004 4.004 4.004-4.004L4.004 12.004zm8.008 0l-4.004 4.004 4.004 4.004 4.004-4.004-4.004-4.004z" />
+    </svg>
+  ),
+  hyperfollow: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6">
+      <path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M10.172 13.828a4 4 0 015.656 0l4 4a4 4 0 01-5.656 5.656l-1.102-1.101" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  ),
+};
 
 export default function IntegrationsSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="services" className="relative pt-10 pb-20 px-8 max-w-[1200px] mx-auto">
-      <div className="text-center mb-16">
+    <section id="platforms" className="relative pt-10 pb-20 px-8 max-w-[1200px] mx-auto">
+      <div className="text-center mb-14">
+        <span className="text-[10px] uppercase tracking-[0.3em] text-highlight font-mono block mb-3">
+          {t.music.label}
+        </span>
         <h2 className="text-[clamp(1.875rem,1.52rem+1.25vw,2.5rem)] font-bold tracking-tight text-foreground mb-4">
-          {t.services.heading}{" "}
+          {t.music.heading}{" "}
           <span className="font-serif font-light italic text-[1.2em]">
-            {t.services.headingItalic}
+            {t.music.headingItalic}
           </span>
         </h2>
-        <p className="text-lg text-muted font-light max-w-[560px] mx-auto">
-          {t.services.subtitle}
+        <p className="text-lg text-muted font-light max-w-[520px] mx-auto">
+          {t.music.description}
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {t.services.items.map((item, i) => {
-          const card = SERVICE_CARDS[i];
-          const icon = SERVICE_ICONS[i];
-          const isClickable = card.href !== null;
-
-          const inner = (
-            <div
-              className={`relative rounded-xl border border-grid-300 bg-white p-6 h-full flex flex-col transition-all duration-300 ${
-                isClickable ? "group hover:border-deep-teal/30 hover:shadow-[0_8px_30px_rgba(99,179,154,0.08)]" : ""
-              }`}
-            >
-              {/* Icon */}
-              <div
-                className="w-10 h-10 rounded-lg flex items-center justify-center mb-4 transition-colors duration-300"
-                style={{ background: card.accent, color: "#2F6B58" }}
-              >
-                {icon}
-              </div>
-
-              <div className="flex items-center gap-2.5 mb-1.5">
-                <h4 className="text-base font-bold text-foreground tracking-tight">
-                  {item.title}
-                </h4>
-              </div>
-              <p className="text-sm text-muted leading-relaxed flex-1">{item.description}</p>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        {STREAMING_PLATFORMS.map((platform) => (
+          <a
+            key={platform.name}
+            href={platform.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative rounded-xl border border-grid-300 bg-white p-5 flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:border-highlight/40 hover:shadow-[0_8px_30px_rgba(99,179,154,0.1)]"
+          >
+            <div className="text-muted-2 group-hover:text-highlight transition-colors duration-300">
+              {PLATFORM_ICONS[platform.icon]}
             </div>
-          );
-
-          if (!isClickable) {
-            return <div key={item.title}>{inner}</div>;
-          }
-
-          if (typeof card.href === "string" && card.href.startsWith("http")) {
-            return (
-              <a key={item.title} href={card.href} target="_blank" rel="noopener noreferrer">
-                {inner}
-              </a>
-            );
-          }
-
-          if (typeof card.href === "string" && card.href.startsWith("#")) {
-            return (
-              <a key={item.title} href={card.href}>
-                {inner}
-              </a>
-            );
-          }
-
-          return (
-            <Link key={item.title} href={card.href as string}>
-              {inner}
-            </Link>
-          );
-        })}
+            <span className="text-xs font-medium text-muted-2 group-hover:text-foreground transition-colors text-center">
+              {platform.name}
+            </span>
+          </a>
+        ))}
       </div>
     </section>
   );
