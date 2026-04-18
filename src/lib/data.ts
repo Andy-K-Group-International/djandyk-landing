@@ -1,119 +1,99 @@
 export const COMPANY = {
-  name: "Andy'K Group International LTD",
-  tagline: "End-to-end business development & growth architecture.",
-  subtitle: "We design, restructure, and architect businesses from foundation to scalable growth — powered by strategy, operations, and technology.",
+  name: "DJ Andy\u2019K",
+  realName: "Andrej Kneisl",
+  tagline: "Music is your passion.",
+  subtitle:
+    "Producer of progressive house, trance, deep melodic sounds, and EDM.",
   description:
-    "Andy'K Group International LTD is a UK-based innovation company, combining business intelligence, automation, and strategic outreach.",
+    "DJ Andy\u2019K is a UK-based music producer creating progressive house, trance, and deep melodic soundscapes that blend emotion, energy, and storytelling.",
   descriptionExtra:
-    "With clients across Europe and Latin America, we build structured growth environments where strategy, operations, and technology move in one direction.",
-  descriptionSystems:
-    "Strategic services combining business development, operational architecture, and technology — helping startups, SMEs, and public institutions scale with structure.",
-  companyNumber: "16453500",
-  address: "86–90 Paul Street, London, EC2A 4NE, United Kingdom",
-  phone: "+44 330 027 1319",
-  email: "info@andykgroupinternational.com",
+    "Every track is built as a journey \u2014 from the first chord to the final beat, designed to move both body and soul.",
+  label: "ANDY\u2019K GROUP INTERNATIONAL LTD",
+  basedIn: "United Kingdom",
+  genre: "Progressive House \u00B7 Trance \u00B7 Deep Melodic \u00B7 EDM",
+  email: "info@djandyk.com",
+  website: "djandyk.com",
+  labelWebsite: "https://www.andykgroupinternational.com",
   socials: {
-    linkedin: "https://www.linkedin.com/company/80971657/",
-    email: "info@andykgroupinternational.com",
+    instagram: "https://www.instagram.com/djandykofficial",
+    tiktok: "https://www.tiktok.com/@djandykofficial",
+    spotify: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+    youtube: "https://www.youtube.com/channel/UCrlcaZ24IreLG97tXQ4EMqA",
   },
-  logoUrl:
-    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/305703b2e_Andykgroup-LOGO.png",
-  logoFooterUrl:
-    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/b4799702d_Andykgroup-LOGO.png",
-  adamLogoUrl:
-    "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/bad775fd5_ADAM-LOGO.PNG",
-  adamUrl: "https://adameva.app",
-  trustCountries: "\u{1F1EC}\u{1F1E7} \u{1F1E9}\u{1F1EA} \u{1F1E7}\u{1F1F7} \u{1F1E6}\u{1F1F9} \u{1F1F8}\u{1F1F0}",
-  quote: "\u201COne structure. One flow. One system.\u201D",
-  quoteSubtitle: "Built for growth.",
+  hyperfollow: "https://hyperfollow.com/djandyk",
+  quote:
+    "\u201CI don\u2019t know anymore if music lives for me, or if I live for it. But I accept both.\u201D",
+  quoteSubtitle: "\u2014 DJ Andy\u2019K",
 };
 
+export const STREAMING_PLATFORMS = [
+  {
+    name: "Spotify",
+    href: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+    icon: "spotify",
+  },
+  {
+    name: "Apple Music",
+    href: "https://music.apple.com/gb/artist/dj-andyk/1835064975",
+    icon: "apple",
+  },
+  {
+    name: "SoundCloud",
+    href: "https://soundcloud.com/djandyk_2024",
+    icon: "soundcloud",
+  },
+  {
+    name: "YouTube",
+    href: "https://www.youtube.com/channel/UCrlcaZ24IreLG97tXQ4EMqA",
+    icon: "youtube",
+  },
+  {
+    name: "TIDAL",
+    href: "https://tidal.com/browse/artist/65848653",
+    icon: "tidal",
+  },
+  {
+    name: "Hyperfollow",
+    href: "https://hyperfollow.com/djandyk",
+    icon: "hyperfollow",
+  },
+];
+
+// Sound philosophy pillars — maps to FaqSection ("Crafting the Sound")
 export const SERVICES = [
   {
-    title: "Strategic Business Consulting",
+    title: "Progressive House",
     description:
-      "Expert guidance to refine your business strategies and optimize operations for growth.",
+      "Layered builds, melodic drops, and hypnotic progressions that carry listeners through evolving emotional landscapes.",
   },
   {
-    title: "Automation & AI Solutions",
+    title: "Trance",
     description:
-      "Implement cutting-edge automation and AI to streamline workflows and boost efficiency.",
+      "Euphoric synth lines and driving rhythms that create states of pure immersion and transcendence.",
   },
   {
-    title: "Market Entry & Outreach",
+    title: "Deep Melodic",
     description:
-      "Expand your reach with strategic market entry plans and effective outreach campaigns.",
+      "Introspective textures and warm harmonics \u2014 music that speaks directly to the subconscious.",
   },
   {
-    title: "Public Sector & Government Contracts",
+    title: "Cinematic EDM",
     description:
-      "Navigate the complexities of public sector procurement and secure valuable contracts.",
+      "Orchestral elements fused with electronic production \u2014 tracks built like film scores for the dancefloor.",
   },
   {
-    title: "Intellectual Property & Licensing",
+    title: "Emotional Storytelling",
     description:
-      "Protect and leverage your intellectual assets through smart licensing and IP strategies.",
+      "Every release follows a narrative arc. From tension to release, the journey is always intentional.",
   },
   {
-    title: "Brand Development & Digital Presence",
+    title: "Studio Craft",
     description:
-      "Build a strong brand identity and amplify your presence across digital platforms.",
+      "From composition to mastering, each detail is considered. Sound design, mix balance, and sonic identity refined to the last millisecond.",
   },
 ];
 
-export const ADAM_FEATURES = [
-  "Proposal, Strategy, Contract & Invoice automation",
-  "Follow-ups, Scheduling, Human engagement",
-  "Works for B2B, B2G, and Licensing",
-  "Keeps your clients active and loyal",
-];
-
-export const EVA_FEATURES = [
-  "Smart follow-ups, scheduling & human-style messages",
-  "Built for public sector & growth teams",
-  "Keeps communication active & personal",
-  "Connects directly with A.D.A.M. system",
-];
-
-export const ADAM_SHOWCASE = [
-  {
-    title: "Questionnaire",
-    description:
-      "Complete our structured intake form. We learn about your business, goals, and requirements.",
-  },
-  {
-    title: "Proposal",
-    description:
-      "We craft a tailored proposal based on your needs. Review it in your personal dashboard.",
-  },
-  {
-    title: "Contract",
-    description:
-      "Review, comment, and digitally sign your contract. Full transparency, no surprises.",
-  },
-  {
-    title: "Strategy",
-    description:
-      "Together we define the strategy and timeline. Every detail aligned before we start.",
-  },
-  {
-    title: "Invoice",
-    description:
-      "Automated invoicing with clear payment terms. Everything tracked in one place.",
-  },
-  {
-    title: "Onboarding",
-    description:
-      "Project launches. Real-time updates, document sharing, and ongoing support through A.D.A.M.",
-  },
-];
-
-export const STATS = [
-  { value: "\u20AC2.5M", label: "In client contract value supported" },
-  { value: "4", label: "Languages supported" },
-  { value: "98%", label: "Client satisfaction rate" },
-];
-
+// Artist profile — maps to LovedBySection / TestimonialPair
 export const FOUNDERS: {
   name: string;
   role: string;
@@ -127,283 +107,305 @@ export const FOUNDERS: {
   location?: string;
 }[] = [
   {
-    name: "Andrej Kneisl",
-    role: "Founder & Strategic Business Developer",
-    image: "/ceo.jpeg",
-    linkedin: "https://www.linkedin.com/in/disandrejkneisl/",
-    email: "ceo@andykgroupinternational.com",
-    bio: "15+ years of leadership in sales, hospitality, business development, and operational strategy. Andrej specializes in scalable growth systems for B2B, B2G, and international client relations.",
+    name: "DJ Andy\u2019K",
+    role: "Music Producer \u00B7 DJ \u00B7 Artist",
+    image: "/photos/artist-main.jpg",
+    linkedin: "",
+    email: "info@djandyk.com",
+    website: "https://djandyk.com",
+    websiteLabel: "djandyk.com",
+    bio: "UK-based music producer Andrej Kneisl crafts progressive house, trance, and deep melodic soundscapes under the name DJ Andy\u2019K. With releases spanning albums, EPs, and a dedicated Piano Series, his music bridges the emotional and the euphoric.",
     quote:
-      "My focus is building business systems that are not only profitable — but sustainable, secure, and designed to scale.",
-    location: "Born in Austria",
+      "\u201CI don\u2019t know anymore if music lives for me, or if I live for it. But I accept both.\u201D",
+    location: "United Kingdom",
   },
 ];
 
+export const STATS = [
+  { value: "4", label: "Albums in 2026" },
+  { value: "10+", label: "Singles & EPs released" },
+  { value: "6", label: "Streaming platforms" },
+];
+
+// Featured releases — maps to CaseStudyCards
+export const CASE_STUDIES = [
+  {
+    slug: "when-later-becomes-never",
+    titleKey: "whenLater",
+    link: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+  {
+    slug: "human-stories",
+    titleKey: "humanStories",
+    link: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+  {
+    slug: "four-elements",
+    titleKey: "fourElements",
+    link: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+];
+
+// Discography — Albums 2026 (maps to DiscographySection tab 1)
+export const ALBUMS_2026 = [
+  {
+    title: "When Later Becomes Never",
+    genre: "Progressive House / Cinematic",
+    bpm: "120\u2013124 BPM",
+    year: 2026,
+    coverUrl: "/albums/when-later-becomes-never.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+    highlighted: true,
+  },
+  {
+    title: "Human Stories",
+    genre: "Emotional Piano / Melodic",
+    year: 2026,
+    coverUrl: "/albums/human-stories.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+  {
+    title: "Deep Connections",
+    genre: "Progressive House",
+    year: 2026,
+    coverUrl: "/albums/deep-connections.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+  {
+    title: "Music Is Your Passion",
+    genre: "EDM / House",
+    year: 2026,
+    coverUrl: "/albums/music-is-your-passion.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+];
+
+// Discography — EPs & Singles 2026 (maps to DiscographySection tab 2)
+export const EPS_SINGLES_2026 = [
+  {
+    title: "Four Elements",
+    type: "EP",
+    year: 2026,
+    coverUrl: "/albums/four-elements.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+  {
+    title: "Paraller Stories",
+    type: "Single",
+    year: 2026,
+    highlighted: true,
+    note: "Latest release \u00B7 April 2026",
+    coverUrl: "/albums/paraller-stories.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+  {
+    title: "Feel My Spirit Wake",
+    type: "Single",
+    year: 2026,
+    coverUrl: "/albums/feel-my-spirit-wake.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+  {
+    title: "Love Will Find Us Once Again",
+    type: "Single",
+    year: 2026,
+    coverUrl: "/albums/love-will-find-us-once-again.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+  {
+    title: "Holding On Through All",
+    type: "Single",
+    year: 2026,
+    coverUrl: "/albums/holding-on-through-all.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+  {
+    title: "Hiding From It All",
+    type: "Single",
+    year: 2026,
+    coverUrl: "/albums/hiding-from-it-all.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+  {
+    title: "Pull Me Through",
+    type: "Single",
+    year: 2026,
+    coverUrl: "/albums/pull-me-through.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+  {
+    title: "Almost",
+    type: "Single",
+    year: 2026,
+    coverUrl: "/albums/almost.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+  {
+    title: "After Midnight",
+    type: "Single",
+    year: 2026,
+    coverUrl: "/albums/after-midnight.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+  {
+    title: "The Last Signal",
+    type: "Single",
+    year: 2026,
+    coverUrl: "/albums/the-last-signal.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+  {
+    title: "Between Us",
+    type: "Single",
+    year: 2026,
+    coverUrl: "/albums/between-us.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+];
+
+// Discography — Piano Series 2026 (maps to DiscographySection tab 3)
+export const PIANO_SERIES_2026 = [
+  {
+    title: "Human Stories (Piano)",
+    year: 2026,
+    coverUrl: "/albums/human-stories-piano.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+  {
+    title: "Letters Never Sent (Piano)",
+    year: 2026,
+    coverUrl: "/albums/letters-never-sent-piano.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+  {
+    title: "Only Rivers Know (Piano)",
+    year: 2026,
+    coverUrl: "/albums/only-rivers-know-piano.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+  {
+    title: "Running From Yesterday (Piano)",
+    year: 2026,
+    coverUrl: "/albums/running-from-yesterday-piano.jpg",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+];
+
+// Album creation journey — maps to RoadmapSection (AlbumJourney)
 export const ADAM_ROADMAP = [
   {
     step: 1,
-    title: "Questionnaire",
-    description: "Complete our structured intake form. We learn about your business, goals, and requirements.",
+    title: "Inspiration",
+    description:
+      "A feeling, a memory, or a moment captured \u2014 the seed of every track starts with something real.",
   },
   {
     step: 2,
-    title: "Proposal",
-    description: "We craft a tailored proposal based on your needs. Review it in your personal dashboard.",
+    title: "Composition",
+    description:
+      "Melodies and harmonies take shape. Chord progressions laid down, the emotional arc defined.",
   },
   {
     step: 3,
-    title: "Contract",
-    description: "Review, comment, and digitally sign your contract. Full transparency, no surprises.",
+    title: "Production",
+    description:
+      "Layers built in the studio \u2014 synths, drums, basslines, textures. The track comes alive.",
   },
   {
     step: 4,
-    title: "Strategy",
-    description: "Together we define the strategy and timeline. Every detail aligned before we start.",
+    title: "Mastering",
+    description:
+      "Final polish and loudness optimised. The track prepared for every streaming platform.",
   },
   {
     step: 5,
-    title: "Invoice",
-    description: "Automated invoicing with clear payment terms. Everything tracked in one place.",
+    title: "Release",
+    description:
+      "Published across Spotify, Apple Music, TIDAL, SoundCloud, YouTube and more.",
   },
   {
     step: 6,
-    title: "Onboarding",
-    description: "Project launches. Real-time updates, document sharing, and ongoing support through A.D.A.M.",
+    title: "Connection",
+    description:
+      "The music reaches listeners. The journey completes \u2014 until the next one begins.",
   },
 ];
 
-export const PRICING_B2B = [
-  {
-    name: "CORE",
-    basePrice: 1025,
-    baseCurrency: "GBP" as const,
-    period: "/ month",
-    features: [
-      "40 qualified leads per month",
-      "1 market / 1 target persona",
-      "Email outreach + cold calling",
-      "Monthly reporting",
-      "Onboarding strategy session",
-    ],
-  },
-  {
-    name: "ADVANCE",
-    basePrice: 1445,
-    baseCurrency: "GBP" as const,
-    period: "/ month",
-    highlighted: true,
-    features: [
-      "60 qualified leads per month",
-      "2 markets coverage",
-      "Multi-touch outreach campaigns",
-      "Performance optimization",
-      "Monthly strategy review",
-    ],
-  },
-  {
-    name: "VANGUARD",
-    basePrice: 1850,
-    baseCurrency: "GBP" as const,
-    period: "/ month",
-    features: [
-      "80 qualified leads per month",
-      "Multi-market campaigns",
-      "CRM pipeline setup",
-      "Lead scoring system",
-      "Strategic outreach architecture",
-    ],
-  },
-  {
-    name: "PRESTIGE",
-    basePrice: 2450,
-    baseCurrency: "GBP" as const,
-    period: "/ month",
-    prefix: "from",
-    features: [
-      "120+ qualified leads",
-      "Branded outreach campaigns",
-      "Custom call & email scripts",
-      "Strategic business development consulting",
-      "Executive-level reporting",
-    ],
-  },
+export const ADAM_SHOWCASE = ADAM_ROADMAP;
+
+// Flagship album bullet points — maps to FlagshipSystems (When Later Becomes Never)
+export const ADAM_FEATURES = [
+  "Progressive house with cinematic scope",
+  "120\u2013124 BPM \u2014 crafted for movement and emotion",
+  "Full album: multi-track journey",
+  "Available on all major streaming platforms",
 ];
 
-export const PRICING_B2G = [
-  {
-    name: "GovStarter",
-    basePrice: 800,
-    baseCurrency: "GBP" as const,
-    period: "/ month",
-    features: [
-      "5 verified public tenders per month",
-      "Eligibility review",
-      "Basic bid advisory",
-      "Monthly consultation",
-    ],
-  },
-  {
-    name: "GovExpand",
-    basePrice: 1300,
-    baseCurrency: "GBP" as const,
-    period: "/ month",
-    highlighted: true,
-    features: [
-      "10 verified tenders",
-      "Pre-bid checklist",
-      "Strategy consultation",
-      "Tender pipeline building",
-    ],
-  },
-  {
-    name: "GovElite",
-    basePrice: 2175,
-    baseCurrency: "GBP" as const,
-    period: "/ month",
-    features: [
-      "1 full proposal draft per month",
-      "Tender roadmap development",
-      "Consortium matchmaking",
-      "Priority advisory support",
-    ],
-  },
+// Piano Series bullet points — maps to FlagshipSystems (second card)
+export const EVA_FEATURES = [
+  "Intimate piano arrangements",
+  "Stripped-back emotional versions of key tracks",
+  "Perfect for late-night listening",
+  "Available alongside the main releases",
 ];
-
-export const PRICING_TECH = [
-  {
-    name: "System Architecture Consulting",
-    basePrice: 2500,
-    baseCurrency: "EUR" as const,
-    prefix: "from",
-    features: [
-      "Business system architecture design",
-      "Infrastructure planning",
-      "Automation architecture strategy",
-    ],
-  },
-  {
-    name: "Business Platforms Development",
-    basePrice: 3500,
-    baseCurrency: "EUR" as const,
-    prefix: "from",
-    features: [
-      "Internal portals",
-      "Operational dashboards",
-      "Custom company systems",
-    ],
-  },
-  {
-    name: "Automation & Integrations",
-    basePrice: 2000,
-    baseCurrency: "EUR" as const,
-    prefix: "from",
-    highlighted: true,
-    features: [
-      "CRM / ERP integrations",
-      "API automation",
-      "Workflow automation systems",
-    ],
-  },
-  {
-    name: "Technical System Audit",
-    basePrice: 1800,
-    baseCurrency: "EUR" as const,
-    prefix: "from",
-    features: [
-      "Infrastructure audit",
-      "Scalability assessment",
-      "Security baseline review",
-    ],
-  },
-  {
-    name: "CTO-as-a-Service",
-    basePrice: 200,
-    baseCurrency: "EUR" as const,
-    period: "/ hour",
-    prefix: "from",
-    features: [
-      "Technical involvement",
-      "Architecture supervision",
-      "Vendor and infrastructure selection",
-      "Scaling strategy consulting",
-      "Minimum 1-month contract — limited spots",
-    ],
-  },
-];
-
-export const COMMITMENT_OPTIONS = [
-  { months: 3, discount: 0, label: "3 months", note: "Standard rate" },
-  { months: 6, discount: 5, label: "6 months", note: "Save 5%" },
-  { months: 9, discount: 7, label: "9 months", note: "Save 7%" },
-  { months: 12, discount: 10, label: "12 months", note: "Save 10%" },
-] as const;
-
-export const BILLING_TERMS = {
-  basis: "Billed monthly (calendar month basis)",
-  minimum: "Commitment period determined in A.D.A.M.'s proposal",
-  renewal: "Auto-renews month-by-month after initial commitment",
-  cancellation: "Cancel with 15 days notice before end of commitment period",
-};
 
 export const NAV_LINKS = [
   { label: "About", href: "#about" },
-  { label: "Case Studies", href: "#case-studies" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Music", href: "#music" },
+  { label: "Albums", href: "#discography" },
   { label: "Contact", href: "#contact" },
 ];
 
 export const NAV_SERVICES = [
   {
-    group: "Systems",
+    group: "Latest Release",
     items: [
-      { label: "A.D.A.M.", description: "Automated Document & Account Manager", href: "https://adameva.app" },
+      {
+        label: "Paraller Stories",
+        description: "Single \u00B7 April 2026",
+        href: "https://hyperfollow.com/djandyk",
+      },
+      {
+        label: "When Later Becomes Never",
+        description: "Album \u00B7 Progressive House / Cinematic",
+        href: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+      },
     ],
   },
   {
-    group: "Business Services",
+    group: "Streaming",
     items: [
-      { label: "End-to-End", description: "Strategic business development & growth architecture", href: "#end-to-end" },
-      { label: "B2B Development", description: "Lead generation & outreach campaigns", href: "#pricing-b2b" },
-      { label: "B2G Public Sector", description: "Government tenders & procurement", href: "#pricing-b2g" },
+      {
+        label: "Spotify",
+        description: "Follow on Spotify",
+        href: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+      },
+      {
+        label: "Apple Music",
+        description: "Listen on Apple Music",
+        href: "https://music.apple.com/gb/artist/dj-andyk/1835064975",
+      },
+      {
+        label: "SoundCloud",
+        description: "Follow on SoundCloud",
+        href: "https://soundcloud.com/djandyk_2024",
+      },
+      {
+        label: "YouTube",
+        description: "Subscribe on YouTube",
+        href: "https://www.youtube.com/channel/UCrlcaZ24IreLG97tXQ4EMqA",
+      },
     ],
-  },
-  {
-    group: "IT Services",
-    items: [
-      { label: "System Architecture", description: "Business system design & planning", href: "#pricing-tech" },
-      { label: "Platform Development", description: "Portals, dashboards & custom systems", href: "#pricing-tech" },
-      { label: "Automation & Integrations", description: "CRM, ERP & workflow automation", href: "#pricing-tech" },
-      { label: "CTO-as-a-Service", description: "Technical leadership on demand", href: "#pricing-tech" },
-    ],
-  },
-];
-
-export const CASE_STUDIES = [
-  {
-    slug: "hospitality",
-    titleKey: "hospitality",
-    link: "/case-studies/hospitality",
-  },
-  {
-    slug: "healthcare",
-    titleKey: "healthcare",
-    link: "/case-studies/healthcare",
-  },
-  {
-    slug: "consulting",
-    titleKey: "consulting",
-    link: "/case-studies/consulting",
   },
 ];
 
 export const FOOTER_LINKS = [
   { label: "Home", href: "#hero" },
-  { label: "A.D.A.M. & E.V.A.", href: "#systems" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Music", href: "#music" },
+  { label: "Albums", href: "#discography" },
   { label: "Contact", href: "#contact" },
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Cookies Policy", href: "/cookies-policy" },
   { label: "Terms & Conditions", href: "/terms-and-conditions" },
   { label: "Disclaimer", href: "/disclaimer" },
-  { label: "Company Information", href: "/company-information" },
 ];
