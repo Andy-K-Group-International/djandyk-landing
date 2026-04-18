@@ -48,13 +48,13 @@ export default function CaseStudyCards() {
               href={CASE_STUDY_SLUGS[i]}
               className="group block"
             >
-              <div className="glass-card rounded-xl p-7 h-full min-h-[260px] flex flex-col transition-all duration-300 hover:shadow-[0_8px_30px_rgba(201,112,125,0.1)] hover:border-rose-dark/20">
+              <div className="glass-card rounded-xl p-7 h-full min-h-[260px] flex flex-col transition-all duration-300 hover:shadow-[0_8px_30px_rgba(99,179,154,0.1)] hover:border-deep-teal/20">
                 {/* Icon */}
                 <div
                   className="w-10 h-10 rounded-lg flex items-center justify-center mb-5 transition-colors duration-300"
                   style={{
-                    background: "linear-gradient(135deg, rgba(245,192,192,0.2), rgba(205,160,165,0.15))",
-                    color: "#cda0a5",
+                    background: "linear-gradient(135deg, rgba(220,239,230,0.2), rgba(168,213,194,0.15))",
+                    color: "#2F6B58",
                   }}
                 >
                   {CASE_STUDY_ICONS[i]}

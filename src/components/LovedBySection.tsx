@@ -40,11 +40,11 @@ export default function LovedBySection() {
             {"\u201C"}{t.lovedBy.quote}{"\u201D"}
           </blockquote>
           <div className="flex items-center justify-center gap-3">
-            <span className="w-8 h-[1px] bg-rose" />
+            <span className="w-8 h-[1px] bg-highlight" />
             <span className="text-xs uppercase tracking-widest text-muted-2 font-bold">
               {t.lovedBy.tagline}
             </span>
-            <span className="w-8 h-[1px] bg-rose" />
+            <span className="w-8 h-[1px] bg-highlight" />
           </div>
         </div>
       </div>

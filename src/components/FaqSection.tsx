@@ -49,17 +49,17 @@ export default function FaqSection() {
               <circle cx="32" cy="64" r="1" fill="rgba(49,38,59,0.05)" />
             </pattern>
             <pattern id="scattered-dots-md" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
-              <circle cx="30" cy="25" r="1.8" fill="rgba(201,112,125,0.06)" />
-              <circle cx="90" cy="70" r="2" fill="rgba(201,112,125,0.05)" />
-              <circle cx="15" cy="95" r="1.5" fill="rgba(201,112,125,0.07)" />
-              <circle cx="75" cy="15" r="2.2" fill="rgba(201,112,125,0.04)" />
-              <circle cx="105" cy="105" r="1.3" fill="rgba(201,112,125,0.06)" />
+              <circle cx="30" cy="25" r="1.8" fill="rgba(99,179,154,0.06)" />
+              <circle cx="90" cy="70" r="2" fill="rgba(99,179,154,0.05)" />
+              <circle cx="15" cy="95" r="1.5" fill="rgba(99,179,154,0.07)" />
+              <circle cx="75" cy="15" r="2.2" fill="rgba(99,179,154,0.04)" />
+              <circle cx="105" cy="105" r="1.3" fill="rgba(99,179,154,0.06)" />
             </pattern>
             <pattern id="scattered-dots-lg" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
-              <circle cx="40" cy="50" r="3" fill="rgba(245,192,192,0.08)" />
-              <circle cx="150" cy="30" r="2.5" fill="rgba(245,192,192,0.06)" />
-              <circle cx="90" cy="160" r="3.5" fill="rgba(245,192,192,0.05)" />
-              <circle cx="170" cy="140" r="2" fill="rgba(245,192,192,0.07)" />
+              <circle cx="40" cy="50" r="3" fill="rgba(220,239,230,0.08)" />
+              <circle cx="150" cy="30" r="2.5" fill="rgba(220,239,230,0.06)" />
+              <circle cx="90" cy="160" r="3.5" fill="rgba(220,239,230,0.05)" />
+              <circle cx="170" cy="140" r="2" fill="rgba(220,239,230,0.07)" />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#scattered-dots-sm)" />
@@ -90,8 +90,8 @@ export default function FaqSection() {
                 <div
                   className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
                   style={{
-                    background: "linear-gradient(135deg, rgba(245,192,192,0.2), rgba(205,160,165,0.15))",
-                    color: "#cda0a5",
+                    background: "linear-gradient(135deg, rgba(220,239,230,0.2), rgba(168,213,194,0.15))",
+                    color: "#2F6B58",
                   }}
                 >
                   {E2E_ICONS[i]}

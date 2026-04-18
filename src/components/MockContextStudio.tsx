@@ -16,7 +16,7 @@ export default function MockContextStudio() {
               { client: "Nova Logistics", action: "Follow-up pending", time: "4 hrs", status: "pending" },
             ].map((r) => (
               <div key={r.client} className="flex items-center gap-2 text-[11px]">
-                <div className={`w-1.5 h-1.5 rounded-full ${r.status === "done" ? "bg-highlight" : "bg-rose"}`} />
+                <div className={`w-1.5 h-1.5 rounded-full ${r.status === "done" ? "bg-highlight" : "bg-soft-green"}`} />
                 <span className="text-foreground font-medium flex-1 truncate">{r.client}</span>
                 <span className="text-muted truncate">{r.action}</span>
                 <span className="text-muted-2 shrink-0">{r.time}</span>
@@ -33,7 +33,7 @@ export default function MockContextStudio() {
               <div className="text-[9px] text-muted-2">Messages</div>
             </div>
             <div>
-              <div className="font-bold text-rose text-sm">2</div>
+              <div className="font-bold text-highlight text-sm">2</div>
               <div className="text-[9px] text-muted-2">Warnings</div>
             </div>
           </div>

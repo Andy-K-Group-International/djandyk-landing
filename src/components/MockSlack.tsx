@@ -11,7 +11,7 @@ export default function MockSlack() {
       </div>
       <div className="px-4 py-3 space-y-3 text-xs">
         <div className="flex gap-2.5">
-          <div className="w-7 h-7 rounded bg-rose/30 flex items-center justify-center text-[10px] font-bold text-foreground shrink-0">AD</div>
+          <div className="w-7 h-7 rounded bg-highlight/20 flex items-center justify-center text-[10px] font-bold text-foreground shrink-0">AD</div>
           <div>
             <div className="flex items-center gap-2 mb-0.5">
               <span className="font-semibold text-foreground">A.D.A.M.</span>

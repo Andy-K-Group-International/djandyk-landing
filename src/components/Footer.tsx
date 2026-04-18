@@ -51,7 +51,7 @@ export default function Footer() {
 
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2 text-xs text-muted-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-rose" />
+            <span className="w-1.5 h-1.5 rounded-full bg-highlight" />
             {t.company.location}
           </div>
           <select

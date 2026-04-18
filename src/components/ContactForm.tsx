@@ -96,7 +96,7 @@ export default function ContactForm() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="contact-name" className="block text-sm font-medium text-foreground mb-2">
-                    {t.contact.labelName} <span className="text-rose-dark">{t.contact.required}</span>
+                    {t.contact.labelName} <span className="text-deep-teal">{t.contact.required}</span>
                   </label>
                   <div className="relative">
                     <div className="absolute left-3 top-1/2 -translate-y-1/2">
@@ -114,7 +114,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <label htmlFor="contact-email" className="block text-sm font-medium text-foreground mb-2">
-                    {t.contact.labelEmail} <span className="text-rose-dark">{t.contact.required}</span>
+                    {t.contact.labelEmail} <span className="text-deep-teal">{t.contact.required}</span>
                   </label>
                   <div className="relative">
                     <div className="absolute left-3 top-1/2 -translate-y-1/2">
@@ -154,7 +154,7 @@ export default function ContactForm() {
               {/* Message */}
               <div>
                 <label htmlFor="contact-message" className="block text-sm font-medium text-foreground mb-2">
-                  {t.contact.labelMessage} <span className="text-rose-dark">{t.contact.required}</span>
+                  {t.contact.labelMessage} <span className="text-deep-teal">{t.contact.required}</span>
                 </label>
                 <div className="relative">
                   <div className="absolute left-3 top-3">

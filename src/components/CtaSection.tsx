@@ -29,7 +29,7 @@ export default function CtaSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left - CTA */}
           <div>
-            <span className="text-[10px] uppercase tracking-[0.25em] text-rose font-mono block mb-4">
+            <span className="text-[10px] uppercase tracking-[0.25em] text-highlight font-mono block mb-4">
               {t.cta.eyebrow}
             </span>
             <h2 className="text-[clamp(1.875rem,1.52rem+1.25vw,2.5rem)] font-bold tracking-tight text-white leading-[1.2] mb-4">
@@ -79,7 +79,7 @@ export default function CtaSection() {
             </p>
             <p className="text-sm text-white/80">
               {t.company.ukCompany} |{" "}
-              <span className="text-rose font-medium font-mono">
+              <span className="text-highlight font-medium font-mono">
                 {COMPANY.companyNumber}
               </span>
             </p>
@@ -88,13 +88,13 @@ export default function CtaSection() {
             </p>
             <a
               href={`mailto:${COMPANY.email}`}
-              className="block text-sm text-rose hover:text-rose-dark transition-colors"
+              className="block text-sm text-highlight hover:text-deep-teal transition-colors"
             >
               {COMPANY.email}
             </a>
             <a
               href={`tel:${COMPANY.phone}`}
-              className="block text-sm text-rose hover:text-rose-dark transition-colors"
+              className="block text-sm text-highlight hover:text-deep-teal transition-colors"
             >
               {COMPANY.phone}
             </a>

@@ -22,7 +22,7 @@ export default function FlagshipSystems() {
         <div className="flex items-center gap-4 mb-4">
           <img src="/adam-logo.png" alt="A.D.A.M." className="h-16 w-auto" />
           <div className="h-5 w-px bg-grid-300" />
-          <span className="text-[10px] uppercase tracking-widest text-rose-dark font-medium">In Development</span>
+          <span className="text-[10px] uppercase tracking-widest text-deep-teal font-medium">In Development</span>
         </div>
         <h3 className="text-2xl font-bold text-foreground mb-1">A.D.A.M.</h3>
         <p className="text-sm text-muted-2 mb-4">Automated Document &amp; Account Manager</p>
@@ -50,7 +50,7 @@ export default function FlagshipSystems() {
         <div className="flex items-center gap-4 mb-4">
           <img src="/eva-logo.jpg" alt="E.V.A." className="h-16 w-auto" />
           <div className="h-5 w-px bg-grid-300" />
-          <span className="text-[10px] uppercase tracking-widest text-rose-dark font-medium">Coming Soon</span>
+          <span className="text-[10px] uppercase tracking-widest text-deep-teal font-medium">Coming Soon</span>
         </div>
         <h3 className="text-2xl font-bold text-foreground mb-1">E.V.A.</h3>
         <p className="text-sm text-muted-2 mb-4">Economic Virtual Adviser</p>

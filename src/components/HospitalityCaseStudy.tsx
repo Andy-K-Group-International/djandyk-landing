@@ -230,7 +230,7 @@ export default function HospitalityCaseStudy() {
                 key={i}
                 className="flex items-start gap-3 text-[15px] text-muted leading-relaxed"
               >
-                <span className="mt-1.5 block w-1.5 h-1.5 rounded-full bg-rose shrink-0" />
+                <span className="mt-1.5 block w-1.5 h-1.5 rounded-full bg-highlight shrink-0" />
                 {item}
               </li>
             ))}

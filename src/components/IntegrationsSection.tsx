@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 
 const SERVICE_CARDS: { href: string | null; accent: string }[] = [
-  { href: "#end-to-end", accent: "rgba(201,112,125,0.12)" },
+  { href: "#end-to-end", accent: "rgba(99,179,154,0.12)" },
   { href: "#pricing-b2b", accent: "rgba(49,38,59,0.08)" },
   { href: "#pricing-b2g", accent: "rgba(49,38,59,0.08)" },
   { href: "#pricing-tech", accent: "rgba(49,38,59,0.08)" },
@@ -47,13 +47,13 @@ export default function IntegrationsSection() {
           const inner = (
             <div
               className={`relative rounded-xl border border-grid-300 bg-white p-6 h-full flex flex-col transition-all duration-300 ${
-                isClickable ? "group hover:border-rose-dark/30 hover:shadow-[0_8px_30px_rgba(201,112,125,0.08)]" : ""
+                isClickable ? "group hover:border-deep-teal/30 hover:shadow-[0_8px_30px_rgba(99,179,154,0.08)]" : ""
               }`}
             >
               {/* Icon */}
               <div
                 className="w-10 h-10 rounded-lg flex items-center justify-center mb-4 transition-colors duration-300"
-                style={{ background: card.accent, color: "#cda0a5" }}
+                style={{ background: card.accent, color: "#2F6B58" }}
               >
                 {icon}
               </div>

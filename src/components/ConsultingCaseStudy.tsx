@@ -359,7 +359,7 @@ export default function ConsultingCaseStudy() {
                 </div>
                 <div className="h-8 w-full bg-background border border-grid-300 overflow-hidden">
                   <div
-                    className="h-full bg-rose transition-all duration-500"
+                    className="h-full bg-highlight transition-all duration-500"
                     style={{ width: "34%" }}
                   />
                 </div>
@@ -401,7 +401,7 @@ export default function ConsultingCaseStudy() {
                 </div>
                 <div className="h-8 w-full bg-background border border-grid-300 overflow-hidden">
                   <div
-                    className="h-full bg-rose transition-all duration-500"
+                    className="h-full bg-highlight transition-all duration-500"
                     style={{ width: "83%" }}
                   />
                 </div>

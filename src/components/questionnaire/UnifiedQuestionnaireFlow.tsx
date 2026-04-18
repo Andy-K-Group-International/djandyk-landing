@@ -589,7 +589,7 @@ export default function UnifiedQuestionnaireFlow({ initialEmail }: { initialEmai
         </div>
         <div className="h-1 w-full rounded-full bg-[rgba(255,255,255,0.06)] overflow-hidden">
           <div
-            className="h-full rounded-full bg-gradient-to-r from-highlight to-rose transition-all duration-500 ease-out"
+            className="h-full rounded-full bg-gradient-to-r from-highlight to-deep-teal transition-all duration-500 ease-out"
             style={{ width: `${Math.max(progress * 100, 2)}%` }}
           />
         </div>
