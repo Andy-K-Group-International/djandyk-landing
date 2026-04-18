@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Company Information",
   description:
-    "Legal notice and company information for Andy'K Group International LTD.",
+    "Legal notice and company information for DJ Andy'K / ANDY'K GROUP INTERNATIONAL LTD.",
   alternates: { canonical: "/company-information" },
 };
 
@@ -35,7 +35,7 @@ export default function CompanyInformationPage() {
 
         <article className="mt-10 space-y-10 text-[15px] leading-relaxed text-muted">
           <p>
-            This website is operated by Andy&apos;K Group International LTD
+            This website is operated by DJ Andy&apos;K / ANDY&apos;K GROUP INTERNATIONAL LTD
             (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;).
           </p>
 
@@ -43,7 +43,7 @@ export default function CompanyInformationPage() {
           <section>
             <h2 className="text-lg font-semibold text-foreground mb-3">1) Company details</h2>
             <div className="space-y-1">
-              <p><strong className="text-foreground">Legal name:</strong> Andy&apos;K Group International LTD</p>
+              <p><strong className="text-foreground">Legal name:</strong> DJ Andy&apos;K / ANDY&apos;K GROUP INTERNATIONAL LTD</p>
               <p><strong className="text-foreground">Company type:</strong> Private company limited by shares (United Kingdom)</p>
               <p><strong className="text-foreground">Company number:</strong> 16453500</p>
               <p><strong className="text-foreground">Registered office:</strong> 86&ndash;90 Paul Street, London, EC2A 4NE, United Kingdom</p>
@@ -54,9 +54,19 @@ export default function CompanyInformationPage() {
           <section>
             <h2 className="text-lg font-semibold text-foreground mb-3">2) Contact</h2>
             <div className="space-y-1">
-              <p><strong className="text-foreground">Email:</strong> info@andykgroupinternational.com</p>
-              <p><strong className="text-foreground">Website:</strong> andykgroupinternational.com</p>
+              <p><strong className="text-foreground">Email:</strong> info@djandyk.com</p>
+              <p><strong className="text-foreground">Website:</strong> djandyk.com</p>
             </div>
+          </section>
+
+          {/* Artist */}
+          <section>
+            <h2 className="text-lg font-semibold text-foreground mb-3">Artist information</h2>
+            <p>
+              DJ Andy&apos;K is an artist name of Andrej Kneisl. Music is released under
+              ANDY&apos;K GROUP INTERNATIONAL LTD (UK Company No. 16453500,
+              86&ndash;90 Paul Street, London, EC2A 4NE, United Kingdom).
+            </p>
           </section>
 
           {/* 3 */}
@@ -64,7 +74,7 @@ export default function CompanyInformationPage() {
             <h2 className="text-lg font-semibold text-foreground mb-3">3) Business information</h2>
             <p>
               Unless otherwise stated, the content and services described on this website are
-              provided by Andy&apos;K Group International LTD.
+              provided by DJ Andy&apos;K / ANDY&apos;K GROUP INTERNATIONAL LTD.
             </p>
           </section>
 

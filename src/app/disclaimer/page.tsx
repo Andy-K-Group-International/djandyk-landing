@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Website Disclaimer",
   description:
-    "Website disclaimer for Andy'K Group International LTD.",
+    "Website disclaimer for DJ Andy'K / ANDY'K GROUP INTERNATIONAL LTD.",
   alternates: { canonical: "/disclaimer" },
 };
 
@@ -153,7 +153,7 @@ export default function DisclaimerPage() {
             <h2 className="text-lg font-semibold text-foreground mb-3">9) Contact</h2>
             <p>
               If you have questions about this Disclaimer, contact us at:
-              info@andykgroupinternational.com
+              info@djandyk.com
             </p>
           </section>
         </article>

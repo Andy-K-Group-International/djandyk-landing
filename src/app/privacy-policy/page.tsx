@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Learn how Andy'K Group International LTD collects, uses, and safeguards your personal data.",
+    "Learn how DJ Andy'K / ANDY'K GROUP INTERNATIONAL LTD collects, uses, and safeguards your personal data.",
   alternates: { canonical: "/privacy-policy" },
 };
 
@@ -27,11 +27,15 @@ export default function PrivacyPolicyPage() {
         </h1>
 
         <div className="mt-3 mb-10">
-          <p className="text-sm text-muted-2 font-mono">Andy&apos;K Group International LTD</p>
+          <p className="text-sm text-muted-2 font-mono">DJ Andy&apos;K / ANDY&apos;K GROUP INTERNATIONAL LTD</p>
           <p className="text-sm text-muted-2 font-mono">Registered Company Number: 16453500</p>
           <p className="text-sm text-muted-2 font-mono">86&ndash;90 Paul Street, London, EC2A 4NE, United Kingdom</p>
-          <p className="text-sm text-muted-2 font-mono">Email: info@andykgroupinternational.com</p>
+          <p className="text-sm text-muted-2 font-mono">Email: info@djandyk.com</p>
         </div>
+
+        <p className="text-sm text-muted-2 font-mono mt-2">
+          DJ Andy&apos;K is an artist name of Andrej Kneisl. Music released under ANDY&apos;K GROUP INTERNATIONAL LTD (UK Company No. 16453500, 86&ndash;90 Paul Street, London, EC2A 4NE).
+        </p>
 
         <div className="border-t border-grid-300" />
 
@@ -40,7 +44,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-lg font-semibold text-foreground mb-3">Introduction</h2>
             <p>
-              Andy&apos;K Group International LTD (&ldquo;we&rdquo;, &ldquo;us&rdquo;,
+              DJ Andy&apos;K / ANDY&apos;K GROUP INTERNATIONAL LTD (&ldquo;we&rdquo;, &ldquo;us&rdquo;,
               &ldquo;our&rdquo;) is committed to protecting and respecting your privacy. This
               Privacy Policy explains how we collect, use, and safeguard personal data in
               connection with our B2G and B2B lead generation and outreach services conducted
@@ -138,7 +142,7 @@ export default function PrivacyPolicyPage() {
             </ul>
             <p className="mt-2">
               To exercise any of these rights, please contact us at:
-              info@andykgroupinternational.com.
+              info@djandyk.com.
             </p>
           </section>
 
@@ -180,8 +184,8 @@ export default function PrivacyPolicyPage() {
               contact:
             </p>
             <div className="mt-3 text-sm font-mono text-muted-2 space-y-0.5">
-              <p className="font-medium text-foreground">Andy&apos;K Group International LTD</p>
-              <p>Email: info@andykgroupinternational.com</p>
+              <p className="font-medium text-foreground">DJ Andy&apos;K / ANDY&apos;K GROUP INTERNATIONAL LTD</p>
+              <p>Email: info@djandyk.com</p>
               <p>Address: 86&ndash;90 Paul Street, London, EC2A 4NE, United Kingdom</p>
             </div>
           </section>

@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Cookies Policy",
   description:
-    "Learn how Andy'K Group International LTD uses cookies and similar technologies on our website.",
+    "Learn how DJ Andy'K / ANDY'K GROUP INTERNATIONAL LTD uses cookies and similar technologies on our website.",
   alternates: { canonical: "/cookies-policy" },
 };
 
@@ -40,7 +40,7 @@ export default function CookiesPolicyPage() {
 
         <div className="mt-3 mb-10">
           <p className="text-sm text-muted-2 font-mono">
-            Andy&apos;K Group International LTD
+            DJ Andy&apos;K / ANDY&apos;K GROUP INTERNATIONAL LTD
           </p>
           <p className="text-sm text-muted-2 font-mono">
             Company Number: 16453500
@@ -49,7 +49,7 @@ export default function CookiesPolicyPage() {
             86&ndash;90 Paul Street, London, EC2A 4NE, United Kingdom
           </p>
           <p className="text-sm text-muted-2 font-mono">
-            Email: info@andykgroupinternational.com
+            Email: info@djandyk.com
           </p>
           <p className="text-sm text-muted-2 font-mono mt-2">
             Last Updated: 20 February 2026
@@ -268,28 +268,28 @@ export default function CookiesPolicyPage() {
                 <tbody className="text-muted">
                   <tr className="border-b border-grid-300/50">
                     <td className="px-3 py-2 font-mono text-foreground text-[12px]">cookie_consent_status</td>
-                    <td className="px-3 py-2">andykgroupinternational.com</td>
+                    <td className="px-3 py-2">djandyk.com</td>
                     <td className="px-3 py-2">Stores your cookie consent choice (accept/reject/preferences).</td>
                     <td className="px-3 py-2">First-party</td>
                     <td className="px-3 py-2">6 months</td>
                   </tr>
                   <tr className="border-b border-grid-300/50">
                     <td className="px-3 py-2 font-mono text-foreground text-[12px]">cookie_consent_preferences</td>
-                    <td className="px-3 py-2">andykgroupinternational.com</td>
+                    <td className="px-3 py-2">djandyk.com</td>
                     <td className="px-3 py-2">Stores category preferences (analytics/functional/marketing).</td>
                     <td className="px-3 py-2">First-party</td>
                     <td className="px-3 py-2">6 months</td>
                   </tr>
                   <tr className="border-b border-grid-300/50">
                     <td className="px-3 py-2 font-mono text-foreground text-[12px]">csrf_token</td>
-                    <td className="px-3 py-2">andykgroupinternational.com</td>
+                    <td className="px-3 py-2">djandyk.com</td>
                     <td className="px-3 py-2">Security cookie to protect forms from abuse (CSRF protection).</td>
                     <td className="px-3 py-2">First-party</td>
                     <td className="px-3 py-2">Session</td>
                   </tr>
                   <tr>
                     <td className="px-3 py-2 font-mono text-foreground text-[12px]">session_id</td>
-                    <td className="px-3 py-2">andykgroupinternational.com</td>
+                    <td className="px-3 py-2">djandyk.com</td>
                     <td className="px-3 py-2">Maintains session state (e.g., login session if applicable).</td>
                     <td className="px-3 py-2">First-party</td>
                     <td className="px-3 py-2">Session</td>
@@ -364,14 +364,14 @@ export default function CookiesPolicyPage() {
                 <tbody className="text-muted">
                   <tr className="border-b border-grid-300/50">
                     <td className="px-3 py-2 font-mono text-foreground text-[12px]">site_language</td>
-                    <td className="px-3 py-2">andykgroupinternational.com</td>
+                    <td className="px-3 py-2">djandyk.com</td>
                     <td className="px-3 py-2">Saves language preference.</td>
                     <td className="px-3 py-2">First-party</td>
                     <td className="px-3 py-2">12 months</td>
                   </tr>
                   <tr>
                     <td className="px-3 py-2 font-mono text-foreground text-[12px]">region_preference</td>
-                    <td className="px-3 py-2">andykgroupinternational.com</td>
+                    <td className="px-3 py-2">djandyk.com</td>
                     <td className="px-3 py-2">Saves region selection.</td>
                     <td className="px-3 py-2">First-party</td>
                     <td className="px-3 py-2">12 months</td>
@@ -482,9 +482,9 @@ export default function CookiesPolicyPage() {
             </p>
             <div className="mt-3 text-sm font-mono text-muted-2 space-y-0.5">
               <p className="font-medium text-foreground">
-                Andy&apos;K Group International LTD
+                DJ Andy&apos;K / ANDY&apos;K GROUP INTERNATIONAL LTD
               </p>
-              <p>Email: info@andykgroupinternational.com</p>
+              <p>Email: info@djandyk.com</p>
               <p>
                 Address: 86&ndash;90 Paul Street, London, EC2A 4NE, United
                 Kingdom
