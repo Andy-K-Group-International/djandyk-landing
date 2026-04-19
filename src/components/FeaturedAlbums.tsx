@@ -11,6 +11,7 @@ const FEATURED_RELEASES = [
     genre: "Progressive House / House",
     description: "A journey through emotion, memory, and release. Eleven tracks, one story.",
     href: "https://open.spotify.com/album/1ezdr7EOZWuLBiw7Rpqis6",
+    embedUrl: "https://open.spotify.com/embed/album/1ezdr7EOZWuLBiw7Rpqis6?utm_source=generator&theme=0",
     cover: "/albums/when-later-becomes-never.jpg",
   },
   {
@@ -20,6 +21,7 @@ const FEATURED_RELEASES = [
     description: "A house album with emotional depth — four tracks also released in piano versions.",
     note: "5 tracks available now \u00B7 Full album coming soon",
     href: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+    embedUrl: "https://open.spotify.com/embed/artist/3JhFGt6jRQvnYgvhWMQHUU?utm_source=generator&theme=0",
     cover: "/albums/human-stories.jpg",
   },
   {
@@ -29,6 +31,7 @@ const FEATURED_RELEASES = [
     description: "Connection is the core. Every track a bridge between two worlds.",
     note: "Recorded 2025 \u00B7 Released as album 2026",
     href: "https://open.spotify.com/album/39Zb0euYMqdqg658wqKVGU",
+    embedUrl: "https://open.spotify.com/embed/album/39Zb0euYMqdqg658wqKVGU?utm_source=generator&theme=0",
     cover: "/albums/deep-connections.jpg",
   },
   {
@@ -38,6 +41,7 @@ const FEATURED_RELEASES = [
     description: "Where it all began. The sound that defines everything that followed.",
     note: "Recorded 2025 \u00B7 Released as album 2026",
     href: "https://open.spotify.com/album/2en5D8nLMSTpRE6fhS1BJY",
+    embedUrl: "https://open.spotify.com/embed/album/2en5D8nLMSTpRE6fhS1BJY?utm_source=generator&theme=0",
     cover: "/albums/music-is-your-passion.jpg",
   },
   {
@@ -46,6 +50,7 @@ const FEATURED_RELEASES = [
     genre: "Deep Melodic / Progressive",
     description: "Four tracks. Four feelings. One direction.",
     href: "https://open.spotify.com/album/18OaI45bkpYwJtzL59BoUw",
+    embedUrl: "https://open.spotify.com/embed/album/18OaI45bkpYwJtzL59BoUw?utm_source=generator&theme=0",
     cover: "/albums/four-elements.jpg",
   },
 ];
@@ -182,7 +187,7 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
       {playerOpen && (
         <div className="mt-4 rounded-xl overflow-hidden">
           <iframe
-            src={release.href.replace("https://open.spotify.com/", "https://open.spotify.com/embed/") + "?utm_source=generator"}
+            src={release.embedUrl}
             width="100%"
             height="152"
             frameBorder="0"
