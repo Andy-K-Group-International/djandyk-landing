@@ -23,6 +23,7 @@ body {
   background: var(--color-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ===== BACKGROUND STRUCTURES ===== */
@@ -226,16 +227,12 @@ body {
 }
 
 /* ===== DARK MODE ===== */
-body {
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 [data-theme="dark"] {
   --color-background: #01011b;
   --color-foreground: #ffffff;
   --color-muted: #cbd5e0;
   --color-muted-2: #a0aec0;
-  --color-grid-300: #0d0d2b;
+  --color-grid-300: #1e1e45;
   --color-grid-500: #2d2d5e;
   --color-grid-700: #3d3d6e;
   --color-bg-light: #080820;
@@ -258,9 +255,23 @@ body {
   box-shadow: 0 0 11px 0 rgba(0,0,0,0.5) inset, 0 0 0 1px rgba(255,255,255,0.07), 0 16px 24px -8px rgba(0,0,0,0.5) !important;
 }
 
-/* Hardcoded white backgrounds */
-[data-theme="dark"] .bg-white {
-  background-color: #080820 !important;
+/* Hardcoded white backgrounds — all variants */
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-white\/80,
+[data-theme="dark"] .bg-white\/95 {
+  background-color: #0e0e2e !important;
+}
+
+/* Form inputs dark */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea {
+  background-color: #0e0e2e !important;
+  color: #ffffff !important;
+  border-color: #2d2d5e !important;
+}
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #718096 !important;
 }
 
 /* Hero gradient */
@@ -334,8 +345,8 @@ body {
   display: none !important;
 }
 
-/* Hero secondary button — white border + white text */
-[data-theme="dark"] #hero a {
+/* Hero secondary button — white border + white text (exclude primary btn) */
+[data-theme="dark"] #hero a:not(.btn-primary-gradient) {
   border-color: rgba(255,255,255,0.3) !important;
   color: #ffffff !important;
 }
