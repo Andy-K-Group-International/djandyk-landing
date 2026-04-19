@@ -19,7 +19,8 @@ const FEATURED_RELEASES = [
     title: "Human Stories",
     genre: "House / Progressive House",
     description: "A house album with emotional depth — four tracks also released in piano versions.",
-    note: "5 tracks available now \u00B7 Full album coming soon",
+    note: "Every week a new chapter.\nStay tuned — Human Stories is still being written.",
+    liveBadge: true,
     href: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
     embedUrl: "https://open.spotify.com/embed/artist/3JhFGt6jRQvnYgvhWMQHUU?utm_source=generator&theme=0",
     cover: "/albums/human-stories.jpg",
@@ -54,6 +55,36 @@ const FEATURED_RELEASES = [
     cover: "/albums/four-elements.jpg",
   },
 ];
+
+const LIVE_BADGE_STYLES = `
+  @keyframes hs-pulse { 0%,100% { opacity:1 } 50% { opacity:0.4 } }
+  @keyframes hs-dot { 0%,100% { opacity:1; transform:scale(1) } 50% { opacity:0.3; transform:scale(0.75) } }
+  .hs-badge { animation: hs-pulse 2.4s ease-in-out infinite; }
+  .hs-dot { animation: hs-dot 1.2s ease-in-out infinite; }
+`;
+
+function LiveBadge() {
+  return (
+    <>
+      <style>{LIVE_BADGE_STYLES}</style>
+      <div
+        className="hs-badge inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-mono font-medium mb-3 self-start"
+        style={{
+          background: "rgba(99,179,154,0.12)",
+          border: "1px solid rgba(99,179,154,0.4)",
+          color: "#63B39A",
+          boxShadow: "0 0 10px rgba(99,179,154,0.25), 0 0 20px rgba(99,179,154,0.1)",
+        }}
+      >
+        <span
+          className="hs-dot inline-block w-2 h-2 rounded-full shrink-0"
+          style={{ background: "#ef4444" }}
+        />
+        IN PROGRESS · New releases weekly
+      </div>
+    </>
+  );
+}
 
 function CoverPlaceholder({ title }: { title: string }) {
   const initials = title
@@ -106,6 +137,9 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
 
   return (
     <div className="glass-card rounded-xl p-6 flex flex-col transition-all duration-300 hover:shadow-[0_8px_30px_rgba(99,179,154,0.12)] hover:border-highlight/30">
+      {/* Live badge — Human Stories only */}
+      {"liveBadge" in release && release.liveBadge && <LiveBadge />}
+
       {/* Cover art */}
       <div className="mb-5 rounded-xl overflow-hidden">
         {release.cover ? (
@@ -137,7 +171,7 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
 
       {/* Note */}
       {"note" in release && release.note && (
-        <p className="text-[11px] font-mono text-muted-2 mt-2 italic">{release.note as string}</p>
+        <p className="text-[11px] font-mono text-muted-2 mt-2 italic whitespace-pre-line">{release.note as string}</p>
       )}
 
       {/* Action row */}
