@@ -378,6 +378,31 @@ export const TRACKLISTS: Record<string, TracklistEntry[]> = {
     { num: "12", title: "Human Stories (Piano)", released: true },
     { num: "13", title: "Human Stories \u2013 Outro" },
   ],
+  "Deep Connections": [
+    { num: "01", title: "Deep Connection (Intro)" },
+    { num: "02", title: "In My Veins" },
+    { num: "03", title: "Game" },
+    { num: "04", title: "Perfume" },
+    { num: "05", title: "Midnight Drive" },
+    { num: "06", title: "Mask" },
+    { num: "07", title: "Stone" },
+  ],
+  "Music Is Your Passion": [
+    { num: "01", title: "Music Is Your Passion (Intro)" },
+    { num: "02", title: "Beyond The Horizon" },
+    { num: "03", title: "I Will Never Fall Again" },
+    { num: "04", title: "Love Will Find Us Once Again" },
+    { num: "05", title: "Voices Of Tomorrow" },
+    { num: "06", title: "This Is Brand New Dawn" },
+    { num: "07", title: "Shine Forever" },
+    { num: "08", title: "Music Is Your Passion (Outro)" },
+  ],
+  "Four Elements": [
+    { num: "01", title: "Feel My Spirit Wake" },
+    { num: "02", title: "Holding On Through All" },
+    { num: "03", title: "Hiding From It All" },
+    { num: "04", title: "Pull Me Through" },
+  ],
 };
 
 // Flagship album bullet points — maps to FlagshipSystems (When Later Becomes Never)
