@@ -365,6 +365,17 @@ body {
   text-shadow: 0 0 20px rgba(99,179,154,0.5);
 }
 
+/* ===== MUSIC PLATFORMS ===== */
+[data-theme="dark"] .platform-icon {
+  filter: drop-shadow(0 0 8px rgba(99,179,154,0.8));
+}
+
+[data-theme="dark"] .platform-card:hover {
+  box-shadow: 0 0 20px rgba(99,179,154,0.3) !important;
+  border-color: #63B39A !important;
+  background-color: rgba(99,179,154,0.05) !important;
+}
+
 /* ===== FAQ ===== */
 .faq-open .faq-chevron {
   transform: rotate(180deg);

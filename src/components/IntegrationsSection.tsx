@@ -64,12 +64,12 @@ export default function IntegrationsSection() {
             href={platform.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative rounded-xl border border-grid-300 bg-white p-5 flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:border-highlight/40 hover:shadow-[0_8px_30px_rgba(99,179,154,0.1)]"
+            className="platform-card group relative rounded-xl border border-grid-300 bg-white p-5 flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:border-highlight hover:bg-soft-green"
           >
-            <div className="text-muted-2 group-hover:text-highlight transition-colors duration-300">
+            <div className="platform-icon text-highlight transition-all duration-300">
               {PLATFORM_ICONS[platform.icon]}
             </div>
-            <span className="text-xs font-medium text-muted-2 group-hover:text-foreground transition-colors text-center">
+            <span className="text-xs font-medium text-highlight transition-colors text-center">
               {platform.name}
             </span>
           </a>
