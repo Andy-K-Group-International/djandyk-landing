@@ -10,33 +10,36 @@ const FEATURED_RELEASES = [
   {
     kicker: "Album · 2026",
     title: "When Later Becomes Never",
-    genre: "Progressive House / Cinematic",
-    description: "A journey through emotion, memory, and release. Ten tracks, one story.",
-    href: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+    genre: "Progressive House / Trance",
+    description: "A journey through emotion, memory, and release. Eleven tracks, one story.",
+    href: "https://open.spotify.com/album/1ezdr7EOZWuLBiw7Rpqis6",
     cover: "/albums/when-later-becomes-never.jpg",
   },
   {
     kicker: "Album · 2026",
     title: "Human Stories",
-    genre: "Emotional Piano / Melodic House",
-    description: "Music built around the moments we rarely speak about.",
+    genre: "House / Progressive House",
+    description: "A house album with emotional depth — four tracks also released in piano versions.",
+    note: "5 tracks available now \u00B7 Full album coming soon",
     href: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
     cover: "/albums/human-stories.jpg",
   },
   {
     kicker: "Album · 2026",
     title: "Deep Connections",
-    genre: "Deep House / Melodic",
+    genre: "House / Progressive House",
     description: "Connection is the core. Every track a bridge between two worlds.",
-    href: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+    note: "Recorded 2025 \u00B7 Released as album 2026",
+    href: "https://open.spotify.com/album/39Zb0euYMqdqg658wqKVGU",
     cover: "/albums/deep-connections.jpg",
   },
   {
     kicker: "Album · 2026",
     title: "Music Is Your Passion",
-    genre: "Progressive House / EDM",
+    genre: "Trance",
     description: "Where it all began. The sound that defines everything that followed.",
-    href: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+    note: "Recorded 2025 \u00B7 Released as album 2026",
+    href: "https://open.spotify.com/album/2en5D8nLMSTpRE6fhS1BJY",
     cover: "/albums/music-is-your-passion.jpg",
   },
   {
@@ -44,7 +47,7 @@ const FEATURED_RELEASES = [
     title: "Four Elements",
     genre: "Deep Melodic / Progressive",
     description: "Four tracks. Four feelings. One direction.",
-    href: "https://hyperfollow.com/djandyk",
+    href: "https://open.spotify.com/album/18OaI45bkpYwJtzL59BoUw",
     cover: "/albums/four-elements.jpg",
   },
 ];
@@ -128,6 +131,11 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
 
       {/* Description */}
       <p className="text-sm text-muted leading-relaxed flex-1">{release.description}</p>
+
+      {/* Note */}
+      {"note" in release && release.note && (
+        <p className="text-[11px] font-mono text-muted-2 mt-2 italic">{release.note as string}</p>
+      )}
 
       {/* Action row */}
       <div className="mt-5 flex items-center gap-2 flex-wrap">

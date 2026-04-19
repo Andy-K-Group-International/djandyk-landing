@@ -114,7 +114,7 @@ export default function PressPage() {
               DJ Andy&apos;K is a UK-based producer of Trance, Progressive House, and EDM. Every track is built as a structured emotional journey — combining energy, melodic depth, and storytelling through sound. Released under ANDY&apos;K GROUP INTERNATIONAL LTD.
             </p>
             <p className="text-sm text-muted leading-relaxed">
-              With a discography spanning four albums, multiple EPs and singles, and a dedicated Piano Series in 2026, DJ Andy&apos;K has developed a distinctive sound that bridges the emotional and the euphoric — music for late nights, long drives, and moments that need a soundtrack.
+              With a discography spanning four albums, multiple EPs and singles in 2026, DJ Andy&apos;K has developed a distinctive sound that bridges the emotional and the euphoric — music for late nights, long drives, and moments that need a soundtrack.
             </p>
           </div>
         </Section>

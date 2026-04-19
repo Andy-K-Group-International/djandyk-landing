@@ -18,7 +18,7 @@ export const COMPANY = {
     instagram: "https://www.instagram.com/djandykofficial",
     tiktok: "https://www.tiktok.com/@djandykofficial",
     spotify: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
-    youtube: "https://www.youtube.com/@djandykofficial",
+    youtube: "https://www.youtube.com/channel/UCrlcaZ24IreLG97tXQ4EMqA",
   },
   hyperfollow: "https://hyperfollow.com/djandyk",
   quote:
@@ -52,7 +52,7 @@ export const STREAMING_PLATFORMS = [
   },
   {
     name: "YouTube",
-    href: "https://www.youtube.com/@djandykofficial",
+    href: "https://www.youtube.com/channel/UCrlcaZ24IreLG97tXQ4EMqA",
     icon: "youtube",
   },
   {
@@ -122,7 +122,7 @@ export const FOUNDERS: {
     email: "info@djandyk.com",
     website: "https://djandyk.com",
     websiteLabel: "djandyk.com",
-    bio: "UK-based music producer Andrej Kneisl creates Trance, Progressive House, and EDM under the name DJ Andy\u2019K. With releases spanning albums, EPs, and a dedicated Piano Series, his music bridges the emotional and the euphoric.",
+    bio: "UK-based music producer Andrej Kneisl crafts progressive house, trance, and deep melodic soundscapes under the name DJ Andy\u2019K. With releases spanning albums, EPs, and singles, his music bridges the emotional and the euphoric.",
     quote:
       "\u201CI don\u2019t know anymore if music lives for me, or if I live for it. But I accept both.\u201D",
     location: "United Kingdom",
@@ -167,7 +167,7 @@ export const ALBUMS_2026 = [
   },
   {
     title: "Human Stories",
-    genre: "House / Piano",
+    genre: "House / Progressive House",
     year: 2026,
     coverUrl: "/albums/human-stories.jpg",
     spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
@@ -176,6 +176,7 @@ export const ALBUMS_2026 = [
     title: "Deep Connections",
     genre: "House / Progressive House",
     year: 2026,
+    note: "Recorded 2025 \u00B7 Released as album 2026",
     coverUrl: "/albums/deep-connections.jpg",
     spotifyUrl: "https://open.spotify.com/album/39Zb0euYMqdqg658wqKVGU",
   },
@@ -183,6 +184,7 @@ export const ALBUMS_2026 = [
     title: "Music Is Your Passion",
     genre: "Trance",
     year: 2026,
+    note: "Recorded 2025 \u00B7 Released as album 2026",
     coverUrl: "/albums/music-is-your-passion.jpg",
     spotifyUrl: "https://open.spotify.com/album/2en5D8nLMSTpRE6fhS1BJY",
   },
@@ -438,7 +440,7 @@ export const NAV_SERVICES = [
       {
         label: "YouTube",
         description: "Subscribe on YouTube",
-        href: "https://www.youtube.com/@djandykofficial",
+        href: "https://www.youtube.com/channel/UCrlcaZ24IreLG97tXQ4EMqA",
       },
     ],
   },

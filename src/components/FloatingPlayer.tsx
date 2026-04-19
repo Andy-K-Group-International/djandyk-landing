@@ -4,7 +4,7 @@
 import { useState, useEffect, useRef } from "react";
 
 const TRACK_URL = encodeURIComponent(
-  "https://soundcloud.com/djandyk_2024/dj-andyk-parallel-stories"
+  "https://soundcloud.com/djandyk_2024"
 );
 const EMBED_URL = `https://w.soundcloud.com/player/?url=${TRACK_URL}&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false`;
 
@@ -117,15 +117,15 @@ export default function FloatingPlayer() {
       >
         {/* Cover art */}
         <img
-          src="/albums/paraller-stories.jpg"
-          alt="Parallel Stories"
+          src="/albums/music-is-your-passion.jpg"
+          alt="Music Is Your Passion"
           className="w-12 h-12 rounded-xl object-cover shrink-0"
         />
 
         {/* Track info */}
         <div className="flex-1 min-w-0">
           <p className="text-sm font-bold text-foreground truncate leading-tight">
-            Parallel Stories
+            Music Is Your Passion
           </p>
           <p className="text-xs text-muted-2 truncate">DJ Andy&apos;K</p>
           <div className="flex items-center gap-1 mt-0.5">
