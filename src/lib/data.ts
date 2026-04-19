@@ -278,24 +278,28 @@ export const PIANO_SERIES_2026 = [
     year: 2026,
     coverUrl: "/albums/human-stories-piano.jpg",
     spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+    youtubeUrl: "https://www.youtube.com/embed/UheJ-zGRwj0",
   },
   {
     title: "Letters Never Sent (Piano)",
     year: 2026,
     coverUrl: "/albums/letters-never-sent-piano.jpg",
     spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+    youtubeUrl: "https://www.youtube.com/embed/TSsDHdT65-Y",
   },
   {
     title: "Only Rivers Know (Piano)",
     year: 2026,
     coverUrl: "/albums/only-rivers-know-piano.jpg",
     spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+    youtubeUrl: "https://www.youtube.com/embed/qW9JqVoUfTo",
   },
   {
     title: "Running From Yesterday (Piano)",
     year: 2026,
     coverUrl: "/albums/running-from-yesterday-piano.jpg",
     spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+    youtubeUrl: "https://www.youtube.com/embed/KqJ-rNhN6gE",
   },
 ];
 

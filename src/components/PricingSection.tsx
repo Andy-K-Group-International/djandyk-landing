@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-img-element */
 
 import { useState } from "react";
 import { ALBUMS_2026, EPS_SINGLES_2026, PIANO_SERIES_2026 } from "@/lib/data";
@@ -9,6 +10,8 @@ type DiscographyItem = {
   title: string;
   year: number;
   spotifyUrl: string;
+  coverUrl?: string;
+  youtubeUrl?: string;
   highlighted?: boolean;
   note?: string;
   genre?: string;
@@ -16,11 +19,108 @@ type DiscographyItem = {
   type?: string;
 };
 
-function MusicNoteIcon() {
+function CoverArt({ item }: { item: DiscographyItem }) {
+  if (item.coverUrl) {
+    return (
+      <img
+        src={item.coverUrl}
+        alt={item.title}
+        className="w-full aspect-square object-cover rounded-lg mb-4"
+      />
+    );
+  }
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6">
-      <path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
+    <div
+      className="w-full aspect-square rounded-lg mb-4 flex items-center justify-center"
+      style={{ background: "linear-gradient(135deg, rgba(220,239,230,0.3), rgba(168,213,194,0.15))" }}
+    >
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2F6B58" strokeWidth={1.5} className="w-6 h-6 opacity-30">
+        <path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </div>
+  );
+}
+
+function ItemMeta({ item, t }: { item: DiscographyItem; t: { albums: { latestRelease: string; listenOn: string } } }) {
+  return (
+    <div className="flex-1">
+      {"highlighted" in item && item.highlighted && (
+        <span className="inline-block text-[10px] uppercase tracking-widest font-mono bg-highlight/10 text-highlight px-2 py-0.5 rounded mb-2">
+          {t.albums.latestRelease}
+        </span>
+      )}
+      <h3 className="text-sm font-bold text-foreground tracking-tight mb-1 leading-snug">
+        {item.title}
+      </h3>
+      {"genre" in item && item.genre && <p className="text-xs text-muted-2 mb-0.5">{item.genre}</p>}
+      {"bpm" in item && item.bpm && <p className="text-xs text-muted-2">{item.bpm}</p>}
+      {"type" in item && item.type && <p className="text-xs text-muted-2">{item.type} · {item.year}</p>}
+      {!("genre" in item) && !("type" in item) && <p className="text-xs text-muted-2">{item.year}</p>}
+    </div>
+  );
+}
+
+function ListenLink({ href, label }: { href: string; label: string }) {
+  return (
+    <div className="mt-4 flex items-center justify-end gap-1">
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-xs font-medium text-highlight hover:text-deep-teal transition-colors flex items-center gap-1"
+      >
+        {label}
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2} className="w-3.5 h-3.5">
+          <path d="M6 4l4 4-4 4" />
+        </svg>
+      </a>
+    </div>
+  );
+}
+
+function PianoCard({ item, t }: { item: DiscographyItem; t: { albums: { latestRelease: string; listenOn: string } } }) {
+  return (
+    <div className="glass-card rounded-xl p-5 flex flex-col">
+      <CoverArt item={item} />
+      <ItemMeta item={item} t={t} />
+
+      {item.youtubeUrl && (
+        <div className="mt-4 rounded-xl overflow-hidden">
+          <iframe
+            src={item.youtubeUrl}
+            width="100%"
+            height="200"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            loading="lazy"
+            style={{ borderRadius: "12px", display: "block" }}
+            title={item.title}
+          />
+        </div>
+      )}
+
+      <ListenLink href={item.spotifyUrl} label={t.albums.listenOn} />
+    </div>
+  );
+}
+
+function StandardCard({ item, t }: { item: DiscographyItem; t: { albums: { latestRelease: string; listenOn: string } } }) {
+  return (
+    <a
+      href={item.spotifyUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group glass-card rounded-xl p-5 flex flex-col transition-all duration-300 hover:shadow-[0_8px_30px_rgba(99,179,154,0.1)] hover:border-highlight/30"
+    >
+      <CoverArt item={item} />
+      <ItemMeta item={item} t={t} />
+      <div className="mt-4 flex items-center justify-end gap-1">
+        <span className="text-xs font-medium text-highlight">{t.albums.listenOn}</span>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2} className="w-3.5 h-3.5 text-highlight transition-transform duration-200 group-hover:translate-x-1">
+          <path d="M6 4l4 4-4 4" />
+        </svg>
+      </div>
+    </a>
   );
 }
 
@@ -40,6 +140,8 @@ export default function PricingSection() {
       : activeTab === "singles"
       ? EPS_SINGLES_2026
       : PIANO_SERIES_2026;
+
+  const isPiano = activeTab === "piano";
 
   return (
     <section id="discography" className="relative py-20 px-8">
@@ -64,57 +166,13 @@ export default function PricingSection() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {(data as DiscographyItem[]).map((item) => (
-            <a
-              key={item.title}
-              href={item.spotifyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group glass-card rounded-xl p-5 flex flex-col transition-all duration-300 hover:shadow-[0_8px_30px_rgba(99,179,154,0.1)] hover:border-highlight/30"
-            >
-              <div
-                className="w-full aspect-square rounded-lg mb-4 flex items-center justify-center"
-                style={{
-                  background: "linear-gradient(135deg, rgba(220,239,230,0.3), rgba(168,213,194,0.15))",
-                  color: "#2F6B58",
-                }}
-              >
-                <div className="opacity-30">
-                  <MusicNoteIcon />
-                </div>
-              </div>
-
-              <div className="flex-1">
-                {"highlighted" in item && item.highlighted && (
-                  <span className="inline-block text-[10px] uppercase tracking-widest font-mono bg-highlight/10 text-highlight px-2 py-0.5 rounded mb-2">
-                    {t.albums.latestRelease}
-                  </span>
-                )}
-                <h3 className="text-sm font-bold text-foreground tracking-tight mb-1 leading-snug">
-                  {item.title}
-                </h3>
-                {"genre" in item && item.genre && (
-                  <p className="text-xs text-muted-2 mb-0.5">{item.genre}</p>
-                )}
-                {"bpm" in item && item.bpm && (
-                  <p className="text-xs text-muted-2">{item.bpm}</p>
-                )}
-                {"type" in item && item.type && (
-                  <p className="text-xs text-muted-2">{item.type} · {item.year}</p>
-                )}
-                {!("genre" in item) && !("type" in item) && (
-                  <p className="text-xs text-muted-2">{item.year}</p>
-                )}
-              </div>
-
-              <div className="mt-4 flex items-center justify-end gap-1">
-                <span className="text-xs font-medium text-highlight">{t.albums.listenOn}</span>
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2} className="w-3.5 h-3.5 text-highlight transition-transform duration-200 group-hover:translate-x-1">
-                  <path d="M6 4l4 4-4 4" />
-                </svg>
-              </div>
-            </a>
-          ))}
+          {(data as DiscographyItem[]).map((item) =>
+            isPiano ? (
+              <PianoCard key={item.title} item={item} t={t} />
+            ) : (
+              <StandardCard key={item.title} item={item} t={t} />
+            )
+          )}
         </div>
       </div>
     </section>
