@@ -57,7 +57,7 @@ function Waveform() {
 }
 
 function SetCard({ set }: { set: typeof DJ_SETS[0] }) {
-  const embedSrc = `https://w.soundcloud.com/player/?url=${encodeURIComponent(set.url)}&color=%2363B39A&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false`;
+  const embedSrc = `https://w.soundcloud.com/player/?url=${encodeURIComponent(set.url)}&color=%2363B39A&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=true`;
 
   return (
     <div className="dj-set-card glass-card rounded-xl p-5 flex flex-col gap-4 border-highlight/0">
@@ -71,7 +71,7 @@ function SetCard({ set }: { set: typeof DJ_SETS[0] }) {
       <iframe
         src={embedSrc}
         width="100%"
-        height="166"
+        height="300"
         frameBorder="0"
         allow="autoplay"
         loading="lazy"
