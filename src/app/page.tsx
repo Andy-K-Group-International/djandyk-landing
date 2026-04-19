@@ -9,6 +9,7 @@ import PricingSection from "@/components/PricingSection";
 import FeaturedAlbums from "@/components/FeaturedAlbums";
 import LovedBySection from "@/components/LovedBySection";
 import IntegrationsSection from "@/components/IntegrationsSection";
+import DJSetsSection from "@/components/DJSetsSection";
 import ContactForm from "@/components/ContactForm";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
@@ -127,6 +128,13 @@ export default function Home() {
 
       {/* Album Journey */}
       <RoadmapSection />
+
+      <TronDivider />
+
+      <TronDivider />
+
+      {/* DJ Sets */}
+      <DJSetsSection />
 
       <TronDivider />
 

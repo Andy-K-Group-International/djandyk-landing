@@ -50,6 +50,7 @@ export default function Navbar() {
     { label: t.nav.about, href: "/about" },
     { label: t.nav.music, href: "#music" },
     { label: t.nav.albums, href: "#discography" },
+    { label: "Sets", href: "#sets" },
     { label: t.nav.contact, href: "#contact" },
     { label: t.nav.press, href: "/press" },
   ];
