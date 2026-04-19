@@ -52,20 +52,11 @@ export const metadata: Metadata = {
     siteName: "DJ Andy'K",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "DJ Andy'K — Progressive House, Trance & Melodic EDM",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: ["/og-image.jpg"],
   },
   icons: {
     icon: [
