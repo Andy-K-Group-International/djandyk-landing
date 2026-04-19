@@ -345,17 +345,17 @@ export type TracklistEntry = { num: string; title: string };
 
 export const TRACKLISTS: Record<string, TracklistEntry[]> = {
   "When Later Becomes Never": [
-    { num: "0.1", title: "Intro \u2013 When Later Becomes Never" },
-    { num: "1", title: "Stay For A While" },
-    { num: "2", title: "Between Us" },
-    { num: "3", title: "Before We Knew" },
-    { num: "4", title: "Almost" },
-    { num: "5", title: "After Midnight" },
-    { num: "6", title: "Hostel Without Words" },
-    { num: "7", title: "Slow Motion" },
-    { num: "8", title: "One More Moment" },
-    { num: "9", title: "The Last Signal" },
-    { num: "9.1", title: "The Last Signal \u2013 Outro (spoken)" },
+    { num: "01", title: "Intro \u2013 When Later Becomes Never" },
+    { num: "02", title: "Before We Knew" },
+    { num: "03", title: "Stay For A While" },
+    { num: "04", title: "Between Us" },
+    { num: "05", title: "When Later Becomes Never" },
+    { num: "06", title: "Almost" },
+    { num: "07", title: "After Midnight" },
+    { num: "08", title: "Hotel Without Words" },
+    { num: "09", title: "One More Moment" },
+    { num: "10", title: "The Last Signal" },
+    { num: "11", title: "Outro \u2013 The Last Signal" },
   ],
   "Human Stories": [
     { num: "01", title: "Human Stories \u2013 Intro" },
