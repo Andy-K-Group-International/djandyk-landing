@@ -96,8 +96,10 @@ export default function Navbar() {
       <div className="relative max-w-[1200px] mx-auto flex items-center justify-between px-6 sm:px-8 h-[60px]">
 
         {/* Logo */}
-        <a href={isHome ? "#hero" : "/"} className="shrink-0 font-bold text-foreground tracking-tight text-base">
-          DJ Andy&apos;K
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <a href={isHome ? "#hero" : "/"} className="shrink-0 flex items-center gap-2">
+          <img src="/logo.png" alt="DJ Andy'K" className="h-8 w-8 object-contain" />
+          <span className="font-bold text-foreground tracking-tight text-base">DJ Andy&apos;K</span>
         </a>
 
         {/* Desktop nav — centered */}
