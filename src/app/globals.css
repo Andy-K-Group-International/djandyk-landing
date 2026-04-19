@@ -233,11 +233,11 @@ body {
 [data-theme="dark"] {
   --color-background: #01011b;
   --color-foreground: #ffffff;
-  --color-muted: #a0aec0;
-  --color-muted-2: #718096;
+  --color-muted: #cbd5e0;
+  --color-muted-2: #a0aec0;
   --color-grid-300: #0d0d2b;
-  --color-grid-500: #1a1a3e;
-  --color-grid-700: #2d2d5e;
+  --color-grid-500: #2d2d5e;
+  --color-grid-700: #3d3d6e;
   --color-bg-light: #080820;
   --color-soft-green: rgba(99,179,154,0.15);
 }
@@ -299,6 +299,51 @@ body {
 [data-theme="dark"] .section-radial-bg {
   background-image: radial-gradient(circle at 66.66% 50%, #0a0a24 0%, #050518 80%) !important;
   box-shadow: 0 0 24px 0px rgba(99,179,154,0.08) inset !important;
+}
+
+/* Headings — white in dark mode */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3 {
+  color: #ffffff;
+}
+
+/* gradient-text override — dark mode: remove clip, set white */
+[data-theme="dark"] .gradient-text {
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  -webkit-text-fill-color: #ffffff;
+  color: #ffffff;
+}
+
+/* serif italic in h1 ("passion.") — neon green glow */
+[data-theme="dark"] h1 .italic {
+  -webkit-text-fill-color: #63B39A !important;
+  color: #63B39A !important;
+  text-shadow: 0 0 30px rgba(99,179,154,0.8), 0 0 60px rgba(99,179,154,0.4);
+}
+
+/* Hero primary button — green bg + glow */
+[data-theme="dark"] .btn-primary-gradient {
+  background: #63B39A !important;
+  border-color: #63B39A !important;
+  box-shadow: 0 0 20px rgba(99,179,154,0.4), 0 0 40px rgba(99,179,154,0.15) !important;
+}
+[data-theme="dark"] .btn-primary-gradient::after {
+  display: none !important;
+}
+
+/* Hero secondary button — white border + white text */
+[data-theme="dark"] #hero a {
+  border-color: rgba(255,255,255,0.3) !important;
+  color: #ffffff !important;
+}
+
+/* Kicker labels — ensure green in dark mode */
+[data-theme="dark"] .text-highlight {
+  color: #63B39A;
+  text-shadow: 0 0 20px rgba(99,179,154,0.5);
 }
 
 /* ===== FAQ ===== */
