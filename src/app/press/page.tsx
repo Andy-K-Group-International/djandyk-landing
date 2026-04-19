@@ -41,11 +41,11 @@ function InfoRow({ label, value }: { label: string; value: React.ReactNode }) {
 function DownloadCard({
   label,
   note,
-  available,
+  href,
 }: {
   label: string;
   note: string;
-  available?: boolean;
+  href?: string;
 }) {
   return (
     <div className="border border-grid-300 rounded-xl p-5 flex flex-col gap-3">
@@ -53,9 +53,10 @@ function DownloadCard({
         <p className="text-sm font-semibold text-foreground mb-0.5">{label}</p>
         <p className="text-xs text-muted-2">{note}</p>
       </div>
-      {available ? (
+      {href ? (
         <a
-          href="#"
+          href={href}
+          download
           className="inline-flex items-center gap-1.5 text-xs font-medium text-highlight hover:text-deep-teal transition-colors"
         >
           Download
@@ -186,18 +187,18 @@ export default function PressPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <DownloadCard
               label="Artist Photo"
-              note="High-res press photo (300 dpi)"
-              available={false}
+              note="High-res press photo"
+              href="/photos/artist-main.jpg"
             />
             <DownloadCard
               label="Logo Pack"
-              note="PNG + SVG, white / dark versions"
-              available={false}
+              note="PNG, dark version"
+              href="/logo.png"
             />
             <DownloadCard
               label="Bio (Text)"
-              note="Short & long versions, EN"
-              available={false}
+              note="Short bio, EN"
+              href="/bio.txt"
             />
           </div>
           <p className="text-xs text-muted-2 mt-3">
