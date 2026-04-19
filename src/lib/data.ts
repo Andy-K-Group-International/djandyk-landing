@@ -347,7 +347,7 @@ export const ADAM_ROADMAP = [
 
 export const ADAM_SHOWCASE = ADAM_ROADMAP;
 
-export type TracklistEntry = { num: string; title: string };
+export type TracklistEntry = { num: string; title: string; released?: boolean };
 
 export const TRACKLISTS: Record<string, TracklistEntry[]> = {
   "When Later Becomes Never": [

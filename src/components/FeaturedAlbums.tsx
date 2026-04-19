@@ -10,6 +10,7 @@ const FEATURED_RELEASES = [
     title: "When Later Becomes Never",
     genre: "Progressive House / House",
     description: "A journey through emotion, memory, and release. Eleven tracks, one story.",
+    availableNow: true,
     href: "https://open.spotify.com/album/1ezdr7EOZWuLBiw7Rpqis6",
     embedUrl: "https://open.spotify.com/embed/album/1ezdr7EOZWuLBiw7Rpqis6?utm_source=generator&theme=0",
     cover: "/albums/when-later-becomes-never.jpg",
@@ -31,6 +32,7 @@ const FEATURED_RELEASES = [
     genre: "House / Progressive House",
     description: "Connection is the core. Every track a bridge between two worlds.",
     note: "Recorded 2025 \u00B7 Released as album 2026",
+    availableNow: true,
     href: "https://open.spotify.com/album/39Zb0euYMqdqg658wqKVGU",
     embedUrl: "https://open.spotify.com/embed/album/39Zb0euYMqdqg658wqKVGU?utm_source=generator&theme=0",
     cover: "/albums/deep-connections.jpg",
@@ -41,6 +43,7 @@ const FEATURED_RELEASES = [
     genre: "Trance",
     description: "Where it all began. The sound that defines everything that followed.",
     note: "Recorded 2025 \u00B7 Released as album 2026",
+    availableNow: true,
     href: "https://open.spotify.com/album/2en5D8nLMSTpRE6fhS1BJY",
     embedUrl: "https://open.spotify.com/embed/album/2en5D8nLMSTpRE6fhS1BJY?utm_source=generator&theme=0",
     cover: "/albums/music-is-your-passion.jpg",
@@ -50,6 +53,7 @@ const FEATURED_RELEASES = [
     title: "Four Elements",
     genre: "Deep Melodic / Progressive",
     description: "Four tracks. Four feelings. One direction.",
+    availableNow: true,
     href: "https://open.spotify.com/album/18OaI45bkpYwJtzL59BoUw",
     embedUrl: "https://open.spotify.com/embed/album/18OaI45bkpYwJtzL59BoUw?utm_source=generator&theme=0",
     cover: "/albums/four-elements.jpg",
@@ -132,6 +136,8 @@ function ChevronIcon({ open }: { open: boolean }) {
   );
 }
 
+type TrackEntry = { num: string; title: string; released?: boolean };
+
 function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
   const [playerOpen, setPlayerOpen] = useState(false);
   const [tracklistOpen, setTracklistOpen] = useState(false);
@@ -141,6 +147,21 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
     <div className="glass-card rounded-xl p-6 flex flex-col transition-all duration-300 hover:shadow-[0_8px_30px_rgba(99,179,154,0.12)] hover:border-highlight/30">
       {/* Live badge — Human Stories only */}
       {"liveBadge" in release && release.liveBadge && <LiveBadge />}
+
+      {/* Available Now badge */}
+      {"availableNow" in release && release.availableNow && (
+        <div
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-mono font-medium mb-3 self-start"
+          style={{
+            background: "rgba(99,179,154,0.1)",
+            border: "1px solid rgba(99,179,154,0.3)",
+            color: "#63B39A",
+          }}
+        >
+          <span className="inline-block w-1.5 h-1.5 rounded-full shrink-0" style={{ background: "#63B39A" }} />
+          Available Now
+        </div>
+      )}
 
       {/* Cover art */}
       <div className="mb-5 rounded-xl overflow-hidden">
@@ -239,12 +260,12 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
         <div className="mt-4 border-t border-grid-300 pt-4">
           {tracks ? (
             <ol className="space-y-1.5">
-              {tracks.map((track) => (
+              {(tracks as TrackEntry[]).map((track) => (
                 <li key={track.num} className="flex items-center gap-3 group/track">
                   <span className="text-[10px] font-mono text-muted-2 w-7 shrink-0 text-right">
                     {track.num}
                   </span>
-                  {"released" in track && track.released ? (
+                  {track.released ? (
                     <span
                       className="hs-green-dot inline-block w-1.5 h-1.5 rounded-full shrink-0"
                       style={{ background: "#63B39A" }}
@@ -253,14 +274,10 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
                   ) : (
                     <span className="inline-block w-1.5 h-1.5 rounded-full shrink-0 bg-transparent" />
                   )}
-                  <span className={`text-sm leading-snug ${
-                    "released" in track && track.released
-                      ? "text-foreground font-medium"
-                      : "text-muted-2"
-                  }`}>
+                  <span className={`text-sm leading-snug ${track.released ? "text-foreground font-medium" : "text-muted-2"}`}>
                     {track.title}
                   </span>
-                  {"released" in track && track.released && (
+                  {track.released && (
                     <span className="text-[10px] font-mono text-highlight ml-auto shrink-0">Out now</span>
                   )}
                 </li>

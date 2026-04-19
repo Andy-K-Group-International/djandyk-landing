@@ -78,6 +78,22 @@ export const metadata: Metadata = {
   },
 };
 
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  name: "DJ Andy'K",
+  alternateName: "Andrej Kneisl",
+  url: SITE_URL,
+  genre: ["Trance", "Progressive House", "EDM"],
+  foundingLocation: { "@type": "Place", name: "United Kingdom" },
+  sameAs: [
+    "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+    "https://soundcloud.com/djandyk_2024",
+    "https://www.instagram.com/djandyk_official",
+    "https://www.tiktok.com/@djandyk_official",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -85,6 +101,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+        />
+      </head>
       <body
         className={`${ibmPlexSans.variable} ${ibmPlexMono.variable} antialiased font-sans`}
       >
