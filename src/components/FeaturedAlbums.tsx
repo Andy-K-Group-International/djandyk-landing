@@ -4,8 +4,6 @@ import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { TRACKLISTS } from "@/lib/data";
 
-const ARTIST_SPOTIFY_ID = "3JhFGt6jRQvnYgvhWMQHUU";
-
 const FEATURED_RELEASES = [
   {
     kicker: "Album · 2026",
@@ -184,7 +182,7 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
       {playerOpen && (
         <div className="mt-4 rounded-xl overflow-hidden">
           <iframe
-            src={`https://open.spotify.com/embed/artist/${ARTIST_SPOTIFY_ID}?utm_source=generator`}
+            src={release.href.replace("https://open.spotify.com/", "https://open.spotify.com/embed/") + "?utm_source=generator"}
             width="100%"
             height="152"
             frameBorder="0"
