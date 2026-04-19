@@ -19,6 +19,21 @@ const TRACKLISTS: Record<string, { num: string; title: string }[]> = {
     { num: "9", title: "The Last Signal" },
     { num: "9.1", title: "The Last Signal – Outro (spoken)" },
   ],
+  "Human Stories": [
+    { num: "01", title: "Human Stories – Intro" },
+    { num: "02", title: "Human Stories (House)" },
+    { num: "03", title: "When Home Is Nowhere" },
+    { num: "04", title: "Letters Never Sent" },
+    { num: "05", title: "Letters Never Sent (Piano)" },
+    { num: "06", title: "Running From Yesterday" },
+    { num: "07", title: "Running From Yesterday (Piano)" },
+    { num: "08", title: "Only Rivers Know" },
+    { num: "09", title: "Only Rivers Know (Piano)" },
+    { num: "10", title: "Parallel Stories" },
+    { num: "11", title: "Someone I Used To Be" },
+    { num: "12", title: "Human Stories (Piano)" },
+    { num: "13", title: "Human Stories – Outro" },
+  ],
 };
 
 const FEATURED_RELEASES = [
@@ -117,7 +132,15 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
     <div className="glass-card rounded-xl p-6 flex flex-col transition-all duration-300 hover:shadow-[0_8px_30px_rgba(99,179,154,0.12)] hover:border-highlight/30">
       {/* Cover art */}
       <div className="mb-5 rounded-xl overflow-hidden">
-        <CoverPlaceholder title={release.title} />
+        {release.cover ? (
+          <img
+            src={release.cover}
+            alt={release.title}
+            className="w-full aspect-square object-cover"
+          />
+        ) : (
+          <CoverPlaceholder title={release.title} />
+        )}
       </div>
 
       {/* Kicker */}
