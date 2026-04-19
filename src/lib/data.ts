@@ -162,7 +162,7 @@ export const ALBUMS_2026 = [
     bpm: "120\u2013124 BPM",
     year: 2026,
     coverUrl: "/albums/when-later-becomes-never.jpg",
-    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+    spotifyUrl: "https://open.spotify.com/album/1ezdr7EOZWuLBiw7Rpqis6",
     highlighted: true,
   },
   {
@@ -177,14 +177,14 @@ export const ALBUMS_2026 = [
     genre: "Progressive House",
     year: 2026,
     coverUrl: "/albums/deep-connections.jpg",
-    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+    spotifyUrl: "https://open.spotify.com/album/39Zb0euYMqdqg658wqKVGU",
   },
   {
     title: "Music Is Your Passion",
     genre: "EDM / House",
     year: 2026,
     coverUrl: "/albums/music-is-your-passion.jpg",
-    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+    spotifyUrl: "https://open.spotify.com/album/2en5D8nLMSTpRE6fhS1BJY",
   },
 ];
 
@@ -195,7 +195,7 @@ export const EPS_SINGLES_2026 = [
     type: "EP",
     year: 2026,
     coverUrl: "/albums/four-elements.jpg",
-    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+    spotifyUrl: "https://open.spotify.com/album/18OaI45bkpYwJtzL59BoUw",
   },
   {
     title: "Paraller Stories",
