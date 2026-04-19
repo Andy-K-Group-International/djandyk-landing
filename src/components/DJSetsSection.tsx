@@ -4,50 +4,51 @@ const DJ_SETS = [
   {
     year: "2026",
     title: "New Year House Signals (2026 Mix)",
-    url: "https://on.soundcloud.com/QHxv9Vcxj1pGQab9nS",
+    url: "https://soundcloud.com/djandyk_2024/new-year-house-signals-2026-mix",
   },
   {
     year: "2025",
     title: "MAMBA – House Session 2025",
-    url: "https://on.soundcloud.com/ZYbbfipGGthtdvoOk7",
+    url: "https://soundcloud.com/djandyk_2024/house-session-2025/s-crBn8TLkIEc",
   },
   {
     year: "2024",
     title: "New Era 2024",
-    url: "https://on.soundcloud.com/gxA4WkJ52hWkyjokEA",
+    url: "https://soundcloud.com/djandyk_2024/sets/new-era-2024-by-dj-andyk",
   },
   {
     year: "2024",
     title: "House 2024",
-    url: "https://on.soundcloud.com/03PxaGTCR6KRClYQlH",
+    url: "https://soundcloud.com/djandykofficial/dj-andyk-house-2024",
   },
   {
     year: "2023",
     title: "Sky 2023",
-    url: "https://on.soundcloud.com/UPFl0RpYIjv0P74rry",
+    url: "https://soundcloud.com/djandyk_2024/sets/sky-2023",
   },
 ];
 
 function SetCard({ set }: { set: typeof DJ_SETS[0] }) {
+  const embedSrc = `https://w.soundcloud.com/player/?url=${encodeURIComponent(set.url)}&color=%2363B39A&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false`;
+
   return (
     <div className="glass-card rounded-xl p-5 flex flex-col gap-4 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(99,179,154,0.12)] hover:border-highlight/30">
-      <div className="flex-1">
+      <div>
         <span className="text-[10px] uppercase tracking-[0.25em] text-highlight font-mono block mb-2">
           {set.year}
         </span>
         <h3 className="text-base font-bold text-foreground leading-snug">{set.title}</h3>
       </div>
-      <a
-        href={set.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 justify-center h-10 px-5 text-sm font-medium text-white bg-highlight hover:bg-deep-teal transition-colors rounded w-full"
-      >
-        <svg viewBox="0 0 16 16" fill="currentColor" className="w-3.5 h-3.5 shrink-0">
-          <path d="M5.25 3.75a.75.75 0 00-1.25.56v7.38a.75.75 0 001.25.56l5.5-3.69a.75.75 0 000-1.12L5.25 3.75z" />
-        </svg>
-        Listen on SoundCloud
-      </a>
+      <iframe
+        src={embedSrc}
+        width="100%"
+        height="166"
+        frameBorder="0"
+        allow="autoplay"
+        loading="lazy"
+        title={set.title}
+        style={{ borderRadius: "8px" }}
+      />
     </div>
   );
 }
