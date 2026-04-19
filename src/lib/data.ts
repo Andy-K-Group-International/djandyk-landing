@@ -3,14 +3,14 @@ export const COMPANY = {
   realName: "Andrej Kneisl",
   tagline: "Music is your passion.",
   subtitle:
-    "Producer of progressive house, trance, deep melodic sounds, and EDM.",
+    "Producer of Trance, Progressive House, and EDM.",
   description:
-    "DJ Andy\u2019K is a UK-based music producer creating progressive house, trance, and deep melodic soundscapes that blend emotion, energy, and storytelling.",
+    "DJ Andy\u2019K is a UK-based music producer creating Trance, Progressive House, and EDM that blend emotion, energy, and storytelling.",
   descriptionExtra:
     "Every track is built as a journey \u2014 from the first chord to the final beat, designed to move both body and soul.",
   label: "ANDY\u2019K GROUP INTERNATIONAL LTD",
   basedIn: "United Kingdom",
-  genre: "Progressive House \u00B7 Trance \u00B7 Deep Melodic \u00B7 EDM",
+  genre: "Trance \u00B7 Progressive House \u00B7 EDM",
   email: "info@djandyk.com",
   website: "djandyk.com",
   labelWebsite: "https://www.andykgroupinternational.com",
@@ -122,7 +122,7 @@ export const FOUNDERS: {
     email: "info@djandyk.com",
     website: "https://djandyk.com",
     websiteLabel: "djandyk.com",
-    bio: "UK-based music producer Andrej Kneisl crafts progressive house, trance, and deep melodic soundscapes under the name DJ Andy\u2019K. With releases spanning albums, EPs, and a dedicated Piano Series, his music bridges the emotional and the euphoric.",
+    bio: "UK-based music producer Andrej Kneisl creates Trance, Progressive House, and EDM under the name DJ Andy\u2019K. With releases spanning albums, EPs, and a dedicated Piano Series, his music bridges the emotional and the euphoric.",
     quote:
       "\u201CI don\u2019t know anymore if music lives for me, or if I live for it. But I accept both.\u201D",
     location: "United Kingdom",
@@ -158,7 +158,7 @@ export const CASE_STUDIES = [
 export const ALBUMS_2026 = [
   {
     title: "When Later Becomes Never",
-    genre: "Progressive House / Cinematic",
+    genre: "Progressive House / Trance",
     bpm: "120\u2013124 BPM",
     year: 2026,
     coverUrl: "/albums/when-later-becomes-never.jpg",
@@ -167,21 +167,21 @@ export const ALBUMS_2026 = [
   },
   {
     title: "Human Stories",
-    genre: "Emotional Piano / Melodic",
+    genre: "House / Piano",
     year: 2026,
     coverUrl: "/albums/human-stories.jpg",
     spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
   },
   {
     title: "Deep Connections",
-    genre: "Progressive House",
+    genre: "House / Progressive House",
     year: 2026,
     coverUrl: "/albums/deep-connections.jpg",
     spotifyUrl: "https://open.spotify.com/album/39Zb0euYMqdqg658wqKVGU",
   },
   {
     title: "Music Is Your Passion",
-    genre: "EDM / House",
+    genre: "Trance",
     year: 2026,
     coverUrl: "/albums/music-is-your-passion.jpg",
     spotifyUrl: "https://open.spotify.com/album/2en5D8nLMSTpRE6fhS1BJY",
@@ -412,7 +412,7 @@ export const NAV_SERVICES = [
       },
       {
         label: "When Later Becomes Never",
-        description: "Album \u00B7 Progressive House / Cinematic",
+        description: "Album \u00B7 Progressive House / Trance",
         href: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
       },
     ],

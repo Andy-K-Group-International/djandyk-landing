@@ -6,14 +6,14 @@ const en = {
     tagline: "Music is your passion.",
     label: "ANDY\u2019K GROUP INTERNATIONAL LTD",
     location: "United Kingdom",
-    genre: "Progressive House \u00B7 Trance \u00B7 Deep Melodic \u00B7 EDM",
+    genre: "Trance \u00B7 Progressive House \u00B7 EDM",
   },
 
   hero: {
     eyebrow: "DJ Andy\u2019K",
     title: "Music is your",
     titleItalic: "passion.",
-    subtitle: "Producer of progressive house, trance, deep melodic sounds, and EDM.",
+    subtitle: "Producer of Trance, Progressive House, and EDM.",
     subtitleLine2: "Every track built as a journey \u2014 mixing emotion, energy, and storytelling.",
     ctaPrimary: "Listen Across Platforms",
     ctaSecondary: "More About",
@@ -21,7 +21,7 @@ const en = {
 
   banner: {
     items: [
-      "Progressive house, trance & deep melodic EDM",
+      "Trance, Progressive House & EDM",
       "Every track built as a journey",
       "Based in the UK, sharing music worldwide",
       "Spotify \u00B7 Apple Music \u00B7 YouTube \u00B7 SoundCloud \u00B7 TIDAL",
@@ -100,7 +100,7 @@ const en = {
     label: "About",
     heading: "The story behind the",
     headingItalic: "sound",
-    bio: "UK-based music producer Andrej Kneisl crafts progressive house, trance, and deep melodic soundscapes under the name DJ Andy\u2019K. With releases spanning albums, EPs, and a dedicated Piano Series, his music bridges the emotional and the euphoric.",
+    bio: "UK-based music producer Andrej Kneisl creates Trance, Progressive House, and EDM under the name DJ Andy\u2019K. With releases spanning albums, EPs, and a dedicated Piano Series, his music bridges the emotional and the euphoric.",
     quote: "\u201CI don\u2019t know anymore if music lives for me, or if I live for it. But I accept both.\u201D",
     quoteAttribution: "\u2014 DJ Andy\u2019K",
     tagline: "MUSIC IS YOUR PASSION.",
@@ -136,7 +136,7 @@ const en = {
   flagship: {
     headingBold: "When Later",
     headingItalic: "Becomes Never",
-    subheading: "Progressive House / Cinematic \u00B7 2026",
+    subheading: "Progressive House / Trance \u00B7 2026",
     label: "Flagship Album",
     listenNow: "Listen on Spotify",
     pianoLabel: "Piano Series",
@@ -210,14 +210,14 @@ const es: typeof en = {
     tagline: "La m\u00fasica es tu pasi\u00f3n.",
     label: "ANDY\u2019K GROUP INTERNATIONAL LTD",
     location: "Reino Unido",
-    genre: "Progressive House \u00B7 Trance \u00B7 Deep Mel\u00f3dico \u00B7 EDM",
+    genre: "Trance \u00B7 Progressive House \u00B7 EDM",
   },
 
   hero: {
     eyebrow: "DJ Andy\u2019K",
     title: "La m\u00fasica es tu",
     titleItalic: "pasi\u00f3n.",
-    subtitle: "Productor de progressive house, trance, sonidos mel\u00f3dicos profundos y EDM.",
+    subtitle: "Productor de Trance, Progressive House y EDM.",
     subtitleLine2: "Cada tema construido como un viaje \u2014 mezclando emoci\u00f3n, energ\u00eda y narrativa.",
     ctaPrimary: "Escuchar en Plataformas",
     ctaSecondary: "M\u00e1s Info",
@@ -225,7 +225,7 @@ const es: typeof en = {
 
   banner: {
     items: [
-      "Progressive house, trance y EDM mel\u00f3dico profundo",
+      "Trance, Progressive House y EDM",
       "Cada tema construido como un viaje",
       "Desde el Reino Unido, compartiendo m\u00fasica con el mundo",
       "Spotify \u00B7 Apple Music \u00B7 YouTube \u00B7 SoundCloud \u00B7 TIDAL",
@@ -304,7 +304,7 @@ const es: typeof en = {
     label: "Acerca de",
     heading: "La historia detr\u00e1s del",
     headingItalic: "sonido",
-    bio: "El productor musical brit\u00e1nico Andrej Kneisl crea paisajes sonoros de progressive house, trance y melodic profundo bajo el nombre DJ Andy\u2019K. Con lanzamientos que abarcan \u00e1lbumes, EPs y una dedicada Piano Series, su m\u00fasica une lo emocional con lo euf\u00f3rico.",
+    bio: "El productor musical brit\u00e1nico Andrej Kneisl crea Trance, Progressive House y EDM bajo el nombre DJ Andy\u2019K. Con lanzamientos que abarcan \u00e1lbumes, EPs y una dedicada Piano Series, su m\u00fasica une lo emocional con lo euf\u00f3rico.",
     quote: "\u201CYa no s\u00e9 si la m\u00fasica vive para m\u00ed, o si yo vivo para ella. Pero acepto ambas.\u201D",
     quoteAttribution: "\u2014 DJ Andy\u2019K",
     tagline: "LA M\u00daSICA ES TU PASI\u00d3N.",
@@ -340,7 +340,7 @@ const es: typeof en = {
   flagship: {
     headingBold: "When Later",
     headingItalic: "Becomes Never",
-    subheading: "Progressive House / Cinem\u00e1tico \u00B7 2026",
+    subheading: "Progressive House / Trance \u00B7 2026",
     label: "\u00c1lbum Insignia",
     listenNow: "Escuchar en Spotify",
     pianoLabel: "Piano Series",
@@ -414,14 +414,14 @@ const sk: typeof en = {
     tagline: "Hudba je tvoja vášeň.",
     label: "ANDY\u2019K GROUP INTERNATIONAL LTD",
     location: "Veľká Británia",
-    genre: "Progressive House \u00B7 Trance \u00B7 Deep Mel\u00f3dic \u00B7 EDM",
+    genre: "Trance \u00B7 Progressive House \u00B7 EDM",
   },
 
   hero: {
     eyebrow: "DJ Andy\u2019K",
     title: "Hudba je tvoja",
     titleItalic: "vá\u0161e\u0148.",
-    subtitle: "Producent progressive house, trance, deep mel\u00f3dickych zvukov a EDM.",
+    subtitle: "Producent Trance, Progressive House a EDM.",
     subtitleLine2: "Ka\u017ed\u00e1 skladba postaven\u00e1 ako cesta \u2014 mixuj\u00fac emócie, energiu a pr\u00edbehy.",
     ctaPrimary: "Po\u010du\u0165 na platformách",
     ctaSecondary: "Viac o mne",
@@ -429,7 +429,7 @@ const sk: typeof en = {
 
   banner: {
     items: [
-      "Progressive house, trance & deep mel\u00f3dick\u00e9 EDM",
+      "Trance, Progressive House & EDM",
       "Ka\u017ed\u00e1 skladba postaven\u00e1 ako cesta",
       "Zo Spojeného kr\u00e1\u013eovstva, zdie\u013eam hudbu so svetom",
       "Spotify \u00B7 Apple Music \u00B7 YouTube \u00B7 SoundCloud \u00B7 TIDAL",
@@ -508,7 +508,7 @@ const sk: typeof en = {
     label: "O mne",
     heading: "Pr\u00edbe h za",
     headingItalic: "zvukom",
-    bio: "Brit\u00e1nsky hudobn\u00fd producent Andrej Kneisl tvor\u00ed progressive house, trance a deep mel\u00f3dick\u00e9 zvukov\u00e9 kr\u00e1jiny pod menom DJ Andy\u2019K. S vydaniami pokr\u00fdvaj\u00facimi albumy, EPčky a dedikovan\u00fa Piano Series, jeho hudba sp\u00e1ja emocionálne s euf\u00f3rickym.",
+    bio: "Brit\u00e1nsky hudobn\u00fd producent Andrej Kneisl tvor\u00ed Trance, Progressive House a EDM pod menom DJ Andy\u2019K. S vydaniami pokr\u00fdvaj\u00facimi albumy, EPčky a dedikovan\u00fa Piano Series, jeho hudba sp\u00e1ja emocionálne s euf\u00f3rickym.",
     quote: "\u201CU\u017e neviem, \u010di hudba \u017eije pre m\u0148a, alebo ja \u017eijem pre \u0148u. Ale oboje prij\u00edmam.\u201D",
     quoteAttribution: "\u2014 DJ Andy\u2019K",
     tagline: "HUDBA JE TVOJA VÁŠEň.",
@@ -544,7 +544,7 @@ const sk: typeof en = {
   flagship: {
     headingBold: "When Later",
     headingItalic: "Becomes Never",
-    subheading: "Progressive House / Cinematick\u00fd \u00B7 2026",
+    subheading: "Progressive House / Trance \u00B7 2026",
     label: "Vlajkov\u00fd album",
     listenNow: "Po\u010du\u0165 na Spotify",
     pianoLabel: "Piano Series",

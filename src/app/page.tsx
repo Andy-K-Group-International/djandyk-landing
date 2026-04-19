@@ -25,8 +25,8 @@ const jsonLd = {
       name: "DJ Andy'K",
       url: "https://djandyk.com",
       description:
-        "UK-based music producer creating progressive house, trance, and deep melodic soundscapes that blend emotion, energy, and storytelling.",
-      genre: ["Progressive House", "Trance", "Melodic EDM", "Deep Melodic"],
+        "UK-based music producer creating Trance, Progressive House, and EDM that blend emotion, energy, and storytelling.",
+      genre: ["Trance", "Progressive House", "EDM"],
       foundingLocation: {
         "@type": "Place",
         name: "United Kingdom",
@@ -63,11 +63,11 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": "https://djandyk.com/#webpage",
       url: "https://djandyk.com",
-      name: "DJ Andy'K — Official Website | Progressive House, Trance & Melodic EDM",
+      name: "DJ Andy'K — Official Website | Trance, Progressive House & EDM",
       isPartOf: { "@id": "https://djandyk.com/#website" },
       about: { "@id": "https://djandyk.com/#artist" },
       description:
-        "Official website of DJ Andy'K. Producer of progressive house, trance, and deep melodic sounds. Based in the UK, sharing music worldwide.",
+        "Official website of DJ Andy'K. Producer of Trance, Progressive House, and EDM. Based in the UK, sharing music worldwide.",
     },
   ],
 };
