@@ -133,7 +133,7 @@ export default function AboutPage() {
         </div>
 
         {/* Quote section */}
-        <div className="mt-16 -mx-6 px-8 py-14 sm:px-14 sm:py-16 rounded-2xl" style={{ backgroundColor: "var(--color-foreground)" }}>
+        <div className="about-quote-block mt-16 -mx-6 px-8 py-14 sm:px-14 sm:py-16 rounded-2xl">
           <blockquote>
             <p className="text-[clamp(1.25rem,1rem+1.2vw,1.75rem)] font-light leading-relaxed text-white mb-6" style={{ fontStyle: "italic" }}>
               &ldquo;I don&apos;t know anymore if music lives for me,
