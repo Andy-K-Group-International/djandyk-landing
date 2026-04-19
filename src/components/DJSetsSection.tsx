@@ -1,5 +1,3 @@
-"use client";
-
 import { COMPANY } from "@/lib/data";
 
 const DJ_SETS = [
@@ -31,26 +29,25 @@ const DJ_SETS = [
 ];
 
 function SetCard({ set }: { set: typeof DJ_SETS[0] }) {
-  const embedSrc = `https://w.soundcloud.com/player/?url=${encodeURIComponent(set.url)}&color=%2363B39A&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false`;
-
   return (
     <div className="glass-card rounded-xl p-5 flex flex-col gap-4 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(99,179,154,0.12)] hover:border-highlight/30">
-      <div>
+      <div className="flex-1">
         <span className="text-[10px] uppercase tracking-[0.25em] text-highlight font-mono block mb-2">
           {set.year}
         </span>
         <h3 className="text-base font-bold text-foreground leading-snug">{set.title}</h3>
       </div>
-      <iframe
-        src={embedSrc}
-        width="100%"
-        height="166"
-        frameBorder="0"
-        allow="autoplay"
-        loading="lazy"
-        title={set.title}
-        style={{ borderRadius: "8px" }}
-      />
+      <a
+        href={set.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 justify-center h-10 px-5 text-sm font-medium text-white bg-highlight hover:bg-deep-teal transition-colors rounded w-full"
+      >
+        <svg viewBox="0 0 16 16" fill="currentColor" className="w-3.5 h-3.5 shrink-0">
+          <path d="M5.25 3.75a.75.75 0 00-1.25.56v7.38a.75.75 0 001.25.56l5.5-3.69a.75.75 0 000-1.12L5.25 3.75z" />
+        </svg>
+        Listen on SoundCloud
+      </a>
     </div>
   );
 }
