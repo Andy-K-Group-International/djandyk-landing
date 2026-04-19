@@ -9,7 +9,7 @@ const DJ_SETS = [
   {
     year: "2025",
     title: "MAMBA – House Session 2025",
-    url: "https://soundcloud.com/djandyk_2024/house-session-2025/s-crBn8TLkIEc",
+    url: "https://soundcloud.com/djandyk_2024/house-session-2025",
   },
   {
     year: "2024",
