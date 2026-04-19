@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/press" },
 };
 
-function Section({ children, className = "" }: { children: React.ReactNode; className?: string }) {
-  return <div className={`mb-12 ${className}`}>{children}</div>;
+function Section({ children, className = "", id }: { children: React.ReactNode; className?: string; id?: string }) {
+  return <div id={id} className={`mb-12 ${className}`}>{children}</div>;
 }
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
@@ -178,6 +178,49 @@ export default function PressPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </Section>
+
+        {/* Artist Q&A */}
+        <Section id="interview">
+          <SectionTitle>Interview</SectionTitle>
+          <div className="mb-6">
+            <h2 className="text-lg font-bold text-foreground mb-1">The story behind the sound</h2>
+          </div>
+          <div className="divide-y divide-grid-300 border-t border-grid-300 mb-8">
+            {[
+              { num: "01", label: "Beginning", question: "Why music?", answer: "I've always loved music. But growing up, I didn't really know how to express myself with words. Music showed me there was another way." },
+              { num: "02", label: "Process", question: "When does creation happen?", answer: "Usually when I'm alone. And usually after something happens — something good, or something bad. Then I sit down on my own and start writing." },
+              { num: "03", label: "Meaning", question: "What is music to you?", answer: "My slogan says: 'Music is your passion.' But for me, it's more than passion. It's a friend. It's therapy. It's salvation. It's rescue. It's love. And even then, it's never enough." },
+              { num: "04", label: "Fame", question: "Why is this not about fame?", answer: "For me, it's not about that. I'm happy when people understand it, when they feel it. That is what matters most to me." },
+              { num: "05", label: "Connection", question: "What should people feel in your music?", answer: "First, I want them to find themselves. Then maybe they realize what we all share: love, drama, sadness, happiness. And then they understand that what I create is really just life." },
+              { num: "06", label: "Sound", question: "How would you describe your sound?", answer: "I grew up on trance. Now I combine house, progressive, and EDM. But the most important thing for me is always the story." },
+              { num: "07", label: "Turning Point", question: "Was there a moment that defined you?", answer: "There were more of them. But if I had to name one important point, my album Deep Connections 2025 gave me the base to keep going." },
+              { num: "08", label: "Challenge", question: "What is the hardest part right now?", answer: "Everything around the online world. On one side, it helps artists a lot. On the other side, it also creates problems." },
+              { num: "09", label: "Audience", question: "Who do you make music for?", answer: "For anyone who feels it. I think music — or art in general — cannot really be limited to one type of person. It belongs to whoever finds themselves in it." },
+            ].map(({ num, label, question, answer }) => (
+              <div key={num} className="py-7 flex flex-col sm:flex-row sm:gap-10">
+                <div className="sm:w-[160px] shrink-0 mb-3 sm:mb-0">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-highlight font-mono block">
+                    {num} / {label}
+                  </span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-semibold text-foreground mb-2">{question}</p>
+                  <p className="text-sm text-muted leading-relaxed font-light">&ldquo;{answer}&rdquo;</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="about-quote-block rounded-xl px-7 py-10">
+            <blockquote>
+              <p className="text-lg font-light leading-relaxed text-white italic mb-4">
+                &ldquo;I don&apos;t know anymore if music lives for me, or if I live for it. But I accept both.&rdquo;
+              </p>
+              <footer className="text-[10px] uppercase tracking-[0.3em] font-mono" style={{ color: "rgba(255,255,255,0.45)" }}>
+                — DJ ANDY&apos;K
+              </footer>
+            </blockquote>
           </div>
         </Section>
 

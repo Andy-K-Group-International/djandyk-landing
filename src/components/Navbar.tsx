@@ -49,7 +49,7 @@ export default function Navbar() {
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(null);
 
   const navLinks = [
-    { label: t.nav.about, href: "/about" },
+    { label: t.nav.about, href: "#about" },
     { label: t.nav.music, href: "#music" },
     { label: t.nav.albums, href: "#discography" },
     { label: "Sets", href: "#sets" },
