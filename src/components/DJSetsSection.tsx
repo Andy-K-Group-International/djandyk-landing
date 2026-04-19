@@ -28,16 +28,40 @@ const DJ_SETS = [
   },
 ];
 
+const BAR_HEIGHTS = [12, 20, 24, 16, 10];
+const BAR_DELAYS = ["0s", "0.1s", "0.2s", "0.3s", "0.4s"];
+
+function Waveform() {
+  return (
+    <div className="dj-waveform flex items-end gap-[3px] h-6 mt-2">
+      {BAR_HEIGHTS.map((h, i) => (
+        <span
+          key={i}
+          className="waveform-bar inline-block rounded-sm"
+          style={{
+            width: "3px",
+            height: `${h}px`,
+            backgroundColor: "#63B39A",
+            animationDelay: BAR_DELAYS[i],
+            transformOrigin: "bottom",
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
 function SetCard({ set }: { set: typeof DJ_SETS[0] }) {
   const embedSrc = `https://w.soundcloud.com/player/?url=${encodeURIComponent(set.url)}&color=%2363B39A&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false`;
 
   return (
-    <div className="glass-card rounded-xl p-5 flex flex-col gap-4 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(99,179,154,0.12)] hover:border-highlight/30">
+    <div className="dj-set-card glass-card rounded-xl p-5 flex flex-col gap-4 border-highlight/0">
       <div>
         <span className="text-[10px] uppercase tracking-[0.25em] text-highlight font-mono block mb-2">
           {set.year}
         </span>
         <h3 className="text-base font-bold text-foreground leading-snug">{set.title}</h3>
+        <Waveform />
       </div>
       <iframe
         src={embedSrc}
@@ -56,6 +80,26 @@ function SetCard({ set }: { set: typeof DJ_SETS[0] }) {
 export default function DJSetsSection() {
   return (
     <section id="sets" className="relative pt-10 pb-20 px-8">
+      <style>{`
+        @keyframes waveform {
+          0%, 100% { transform: scaleY(0.4); }
+          50% { transform: scaleY(1); }
+        }
+        .waveform-bar {
+          animation: waveform 1.2s ease-in-out infinite;
+        }
+        .dj-set-card {
+          transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .dj-set-card:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 0 20px rgba(99,179,154,0.3), 0 0 40px rgba(99,179,154,0.1), 0 12px 40px rgba(99,179,154,0.15);
+        }
+        .dj-set-card:hover .waveform-bar {
+          animation-duration: 0.6s;
+        }
+      `}</style>
+
       <div className="max-w-[1200px] mx-auto">
         {/* Header */}
         <div className="text-center max-w-[700px] mx-auto mb-12">
