@@ -22,7 +22,7 @@ async function sendEmail({
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: "Andy'K Group <info@andykgroupinternational.com>",
+      from: "DJ Andy'K <info@djandyk.com>",
       to: [to],
       subject,
       text,
@@ -72,7 +72,7 @@ Pre-Qualification Answers:
 ${answerLines}
 
 Best regards,
-Andy'K Group International`,
+DJ Andy'K / ANDY'K GROUP INTERNATIONAL LTD`,
   });
 }
 
@@ -116,7 +116,7 @@ All Answers:
 ${answerLines}
 
 Best regards,
-Andy'K Group International`,
+DJ Andy'K / ANDY'K GROUP INTERNATIONAL LTD`,
   });
 }
 
@@ -133,10 +133,10 @@ export async function sendClientConfirmation({
 
   return await sendEmail({
     to: clientEmail,
-    subject: "We've received your questionnaire — Andy'K Group International",
+    subject: "We've received your questionnaire — DJ Andy'K / ANDY'K GROUP INTERNATIONAL LTD",
     text: `Dear ${clientName},
 
-Thank you for completing your questionnaire with Andy'K Group International.
+Thank you for completing your questionnaire with DJ Andy'K / ANDY'K GROUP INTERNATIONAL LTD.
 
 We have received your submission and our team is reviewing it.${
       isE2E
@@ -147,8 +147,8 @@ We have received your submission and our team is reviewing it.${
 You will hear from us shortly with next steps.
 
 Best regards,
-Andy'K Group International
-info@andykgroupinternational.com
-+44 330 027 1319`,
+DJ Andy'K / ANDY'K GROUP INTERNATIONAL LTD
+info@djandyk.com
+djandyk.com`,
   });
 }

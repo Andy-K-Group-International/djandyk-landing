@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Terms & Conditions",
   description:
-    "Website Terms & Conditions governing your access to and use of the Andy'K Group International website.",
+    "Website Terms & Conditions governing your access to and use of the DJ Andy\u2019K website.",
   alternates: { canonical: "/terms-and-conditions" },
 };
 

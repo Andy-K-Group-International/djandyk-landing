@@ -34,8 +34,8 @@ export default function DisclaimerPage() {
 
         <article className="mt-10 space-y-10 text-[15px] leading-relaxed text-muted">
           <p>
-            This Disclaimer applies to the website operated by Andy&apos;K Group International
-            LTD (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;). By using this website,
+            This Disclaimer applies to the website operated by DJ Andy&apos;K / ANDY&apos;K GROUP INTERNATIONAL LTD
+            (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;). By using this website,
             you accept this Disclaimer. If you do not agree, please do not use the website.
           </p>
 

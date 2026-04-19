@@ -83,8 +83,8 @@ export default function CompanyInformationPage() {
             <h2 className="text-lg font-semibold text-foreground mb-3">4) Intellectual property</h2>
             <p>
               All content on this website (including text, branding, logos, templates, layouts,
-              documents, and materials) is owned by or licensed to Andy&apos;K Group International
-              LTD and is protected by applicable intellectual property laws. Unauthorised copying,
+              documents, and materials) is owned by or licensed to DJ Andy&apos;K / ANDY&apos;K GROUP INTERNATIONAL LTD
+              and is protected by applicable intellectual property laws. Unauthorised copying,
               reproduction, distribution, or commercial reuse is prohibited.
             </p>
           </section>

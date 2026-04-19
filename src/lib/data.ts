@@ -413,6 +413,7 @@ export const FOOTER_LINKS = [
   { label: "Albums", href: "#discography" },
   { label: "Contact", href: "#contact" },
   { label: "Press / EPK", href: "/press" },
+  { label: "Copyright", href: "/copyright" },
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Cookies Policy", href: "/cookies-policy" },
   { label: "Terms & Conditions", href: "/terms-and-conditions" },

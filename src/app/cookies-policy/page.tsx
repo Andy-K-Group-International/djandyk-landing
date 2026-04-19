@@ -65,8 +65,8 @@ export default function CookiesPolicyPage() {
               1. Introduction
             </h2>
             <p>
-              This Cookies Policy explains how Andy&apos;K Group International
-              LTD (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) uses
+              This Cookies Policy explains how DJ Andy&apos;K / ANDY&apos;K GROUP INTERNATIONAL LTD
+              (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) uses
               cookies and similar technologies when you visit our website.
             </p>
             <p className="mt-2">
