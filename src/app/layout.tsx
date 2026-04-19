@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
 import CookieBanner from "@/components/CookieBanner";
-import LocaleUrlSync from "@/components/LocaleUrlSync";
 import "./globals.css";
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -67,6 +66,13 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: ["/og-image.jpg"],
   },
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-icon.png",
+  },
   robots: {
     index: true,
     follow: true,
@@ -91,7 +97,6 @@ export default function RootLayout({
         className={`${ibmPlexSans.variable} ${ibmPlexMono.variable} antialiased font-sans`}
       >
         <LanguageProvider>
-          <LocaleUrlSync />
           {children}
           <CookieBanner />
         </LanguageProvider>
