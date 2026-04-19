@@ -61,12 +61,12 @@ export default function TestimonialPair() {
                 backgroundSize: "40px 40px, 40px 40px, 14px 14px",
               }}
             />
-            <div className="relative z-10 flex flex-col sm:flex-row gap-6 sm:gap-7 p-6 sm:p-7 bg-white/80">
+            <div className="relative z-10 flex flex-col sm:flex-row gap-6 sm:gap-8 p-6 sm:p-7 bg-white/80">
               <div className="shrink-0 flex justify-center sm:justify-start">
                 <img
-                  src={founder.image}
+                  src="/photos/artist-alt.jpg"
                   alt={founder.name}
-                  className="w-20 h-20 rounded-full object-cover object-top grayscale"
+                  className="w-28 h-28 sm:w-32 sm:h-32 rounded-xl object-cover object-top"
                 />
               </div>
               <div className="flex-1 min-w-0">
