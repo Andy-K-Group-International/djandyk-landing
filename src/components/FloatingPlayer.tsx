@@ -109,7 +109,7 @@ export default function FloatingPlayer() {
       {/* Player UI */}
       <div
         aria-label="Floating music player"
-        className={`fixed bottom-6 right-6 z-50 w-[320px] glass-card rounded-2xl p-3.5 flex items-center gap-3 shadow-[0_8px_40px_rgba(99,179,154,0.2)] transition-all duration-500 ${
+        className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-[calc(100vw-2rem)] max-w-[320px] glass-card rounded-2xl p-3.5 flex items-center gap-3 shadow-[0_8px_40px_rgba(99,179,154,0.2)] transition-all duration-500 ${
           visible
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 translate-y-8 pointer-events-none"
