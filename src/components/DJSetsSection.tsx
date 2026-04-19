@@ -22,6 +22,11 @@ const DJ_SETS = [
     url: "https://soundcloud.com/djandykofficial/dj-andyk-house-2024",
   },
   {
+    year: "2024",
+    title: "Trance 2024",
+    url: "https://soundcloud.com/djandykofficial/dj-andyk-trance-2024",
+  },
+  {
     year: "2023",
     title: "Sky 2023",
     url: "https://soundcloud.com/djandyk_2024/sets/sky-2023",
@@ -122,8 +127,8 @@ export default function DJSetsSection() {
           ))}
         </div>
 
-        {/* Row 2: 2 cards centred */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-[800px] mx-auto mb-10">
+        {/* Row 2: 3 cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
           {DJ_SETS.slice(3).map((set) => (
             <SetCard key={set.title} set={set} />
           ))}
