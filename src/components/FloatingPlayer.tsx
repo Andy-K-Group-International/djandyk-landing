@@ -3,10 +3,9 @@
 
 import { useState, useEffect, useRef } from "react";
 
-const TRACK_URL = encodeURIComponent(
-  "https://soundcloud.com/djandyk_2024"
-);
-const EMBED_URL = `https://w.soundcloud.com/player/?url=${TRACK_URL}&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false`;
+const EMBED_URL = `https://w.soundcloud.com/player/?url=${encodeURIComponent(
+  "https://soundcloud.com/djandyk_2024/this-is-dj-andyk-music-is-your-passion-official-album-intro-2025"
+)}&color=%2363B39A&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false`;
 
 function PlayIcon() {
   return (
@@ -131,7 +130,7 @@ export default function FloatingPlayer() {
           <div className="flex items-center gap-1 mt-0.5">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-highlight" />
             <span className="text-[10px] font-mono text-highlight uppercase tracking-wide">
-              {playing ? (muted ? "Playing · Muted" : "Playing") : "Latest Single"}
+              {playing ? (muted ? "Playing · Muted" : "Playing") : "Intro · 2025"}
             </span>
           </div>
         </div>
