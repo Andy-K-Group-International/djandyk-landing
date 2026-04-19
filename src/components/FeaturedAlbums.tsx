@@ -2,39 +2,9 @@
 
 import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import { TRACKLISTS } from "@/lib/data";
 
 const ARTIST_SPOTIFY_ID = "3JhFGt6jRQvnYgvhWMQHUU";
-
-const TRACKLISTS: Record<string, { num: string; title: string }[]> = {
-  "When Later Becomes Never": [
-    { num: "0.1", title: "Intro – When Later Becomes Never" },
-    { num: "1", title: "Stay For A While" },
-    { num: "2", title: "Between Us" },
-    { num: "3", title: "Before We Knew" },
-    { num: "4", title: "Almost" },
-    { num: "5", title: "After Midnight" },
-    { num: "6", title: "Hostel Without Words" },
-    { num: "7", title: "Slow Motion" },
-    { num: "8", title: "One More Moment" },
-    { num: "9", title: "The Last Signal" },
-    { num: "9.1", title: "The Last Signal – Outro (spoken)" },
-  ],
-  "Human Stories": [
-    { num: "01", title: "Human Stories – Intro" },
-    { num: "02", title: "Human Stories (House)" },
-    { num: "03", title: "When Home Is Nowhere" },
-    { num: "04", title: "Letters Never Sent" },
-    { num: "05", title: "Letters Never Sent (Piano)" },
-    { num: "06", title: "Running From Yesterday" },
-    { num: "07", title: "Running From Yesterday (Piano)" },
-    { num: "08", title: "Only Rivers Know" },
-    { num: "09", title: "Only Rivers Know (Piano)" },
-    { num: "10", title: "Parallel Stories" },
-    { num: "11", title: "Someone I Used To Be" },
-    { num: "12", title: "Human Stories (Piano)" },
-    { num: "13", title: "Human Stories – Outro" },
-  ],
-};
 
 const FEATURED_RELEASES = [
   {
