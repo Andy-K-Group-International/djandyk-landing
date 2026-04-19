@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 import { NAV_SERVICES, COMPANY } from "@/lib/data";
 import type { Locale } from "@/lib/translations";
+import { useTheme } from "@/context/ThemeContext";
 
 function ChevronDown({ className = "w-4 h-4" }: { className?: string }) {
   return (
@@ -40,6 +41,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === "/";
   const { locale, setLocale, t } = useLanguage();
+  const { theme, toggle: toggleTheme } = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [platformsOpen, setPlatformsOpen] = useState(false);
   const [mobilePlatformsOpen, setMobilePlatformsOpen] = useState(false);
@@ -159,8 +161,15 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Right: language + CTA */}
+        {/* Right: language + theme toggle + CTA */}
         <div className="hidden md:flex items-center gap-3">
+          <button
+            onClick={toggleTheme}
+            title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            className="w-8 h-8 flex items-center justify-center rounded-full border border-highlight text-sm hover:bg-soft-green transition-colors"
+          >
+            {theme === "dark" ? "☀️" : "🌙"}
+          </button>
           <select
             value={locale}
             onChange={(e) => setLocale(e.target.value as Locale)}
@@ -244,8 +253,15 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Language + CTA */}
+            {/* Language + theme + CTA */}
             <div className="pt-4 flex items-center gap-3">
+              <button
+                onClick={toggleTheme}
+                title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+                className="w-9 h-9 flex items-center justify-center rounded-full border border-highlight text-sm hover:bg-soft-green transition-colors"
+              >
+                {theme === "dark" ? "☀️" : "🌙"}
+              </button>
               <select
                 value={locale}
                 onChange={(e) => setLocale(e.target.value as Locale)}

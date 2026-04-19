@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 import CookieBanner from "@/components/CookieBanner";
 import FloatingPlayer from "@/components/FloatingPlayer";
 import "./globals.css";
@@ -83,15 +84,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${ibmPlexSans.variable} ${ibmPlexMono.variable} antialiased font-sans`}
       >
-        <LanguageProvider>
-          {children}
-          <FloatingPlayer />
-          <CookieBanner />
-        </LanguageProvider>
+        <ThemeProvider>
+          <LanguageProvider>
+            {children}
+            <FloatingPlayer />
+            <CookieBanner />
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

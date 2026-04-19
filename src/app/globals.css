@@ -225,6 +225,82 @@ body {
   background: linear-gradient(90deg, var(--color-grid-700), var(--color-grid-500) 50%, var(--color-grid-700));
 }
 
+/* ===== DARK MODE ===== */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] {
+  --color-background: #01011b;
+  --color-foreground: #ffffff;
+  --color-muted: #a0aec0;
+  --color-muted-2: #718096;
+  --color-grid-300: #0d0d2b;
+  --color-grid-500: #1a1a3e;
+  --color-grid-700: #2d2d5e;
+  --color-bg-light: #080820;
+  --color-soft-green: rgba(99,179,154,0.15);
+}
+
+[data-theme="dark"] body {
+  background-color: #01011b;
+}
+
+/* Navbar */
+[data-theme="dark"] nav {
+  background: rgba(1,1,27,0.96) !important;
+  border-bottom-color: rgba(255,255,255,0.07) !important;
+}
+
+/* Glass cards */
+[data-theme="dark"] .glass-card {
+  background: linear-gradient(105deg, rgba(99,179,154,0.04) 0%, rgba(99,179,154,0.01) 100%), rgba(255,255,255,0.04) !important;
+  box-shadow: 0 0 11px 0 rgba(0,0,0,0.5) inset, 0 0 0 1px rgba(255,255,255,0.07), 0 16px 24px -8px rgba(0,0,0,0.5) !important;
+}
+
+/* Hardcoded white backgrounds */
+[data-theme="dark"] .bg-white {
+  background-color: #080820 !important;
+}
+
+/* Hero gradient */
+[data-theme="dark"] .hero-gradient {
+  background-image: radial-gradient(at 0% 0%, #01012e 48%, #010122) !important;
+}
+
+/* Dot grid — green tint */
+[data-theme="dark"] .cartesian-grid {
+  background-image: radial-gradient(circle, rgba(99,179,154,0.07) 1px, transparent 1px) !important;
+}
+
+/* Line grid */
+[data-theme="dark"] .line-grid {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px) !important;
+}
+
+/* Tron divider — green glow */
+[data-theme="dark"] .tron-line {
+  background: linear-gradient(90deg, transparent, rgba(99,179,154,0.45) 50%, transparent) !important;
+}
+
+/* Highlight neon glow */
+[data-theme="dark"] .text-highlight {
+  text-shadow: 0 0 20px rgba(99,179,154,0.5);
+}
+
+/* Highlight buttons glow */
+[data-theme="dark"] .bg-highlight {
+  box-shadow: 0 0 15px rgba(99,179,154,0.3);
+}
+
+/* Section radial bg */
+[data-theme="dark"] .section-radial-bg {
+  background-image: radial-gradient(circle at 66.66% 50%, #0a0a24 0%, #050518 80%) !important;
+  box-shadow: 0 0 24px 0px rgba(99,179,154,0.08) inset !important;
+}
+
 /* ===== FAQ ===== */
 .faq-open .faq-chevron {
   transform: rotate(180deg);
