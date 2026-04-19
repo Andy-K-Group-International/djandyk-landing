@@ -59,8 +59,10 @@ const FEATURED_RELEASES = [
 const LIVE_BADGE_STYLES = `
   @keyframes hs-pulse { 0%,100% { opacity:1 } 50% { opacity:0.4 } }
   @keyframes hs-dot { 0%,100% { opacity:1; transform:scale(1) } 50% { opacity:0.3; transform:scale(0.75) } }
+  @keyframes hs-green-dot { 0%,100% { opacity:1; transform:scale(1) } 50% { opacity:0.45; transform:scale(0.7) } }
   .hs-badge { animation: hs-pulse 2.4s ease-in-out infinite; }
   .hs-dot { animation: hs-dot 1.2s ease-in-out infinite; }
+  .hs-green-dot { animation: hs-green-dot 2s ease-in-out infinite; }
 `;
 
 function LiveBadge() {
@@ -238,15 +240,29 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
           {tracks ? (
             <ol className="space-y-1.5">
               {tracks.map((track) => (
-                <li key={track.num} className="flex items-baseline gap-3 group/track">
+                <li key={track.num} className="flex items-center gap-3 group/track">
                   <span className="text-[10px] font-mono text-muted-2 w-7 shrink-0 text-right">
                     {track.num}
                   </span>
-                  <span className={`text-sm text-muted leading-snug ${
-                    track.num.includes(".") ? "italic text-muted-2 text-xs" : ""
+                  {"released" in track && track.released ? (
+                    <span
+                      className="hs-green-dot inline-block w-1.5 h-1.5 rounded-full shrink-0"
+                      style={{ background: "#63B39A" }}
+                      title="Out now"
+                    />
+                  ) : (
+                    <span className="inline-block w-1.5 h-1.5 rounded-full shrink-0 bg-transparent" />
+                  )}
+                  <span className={`text-sm leading-snug ${
+                    "released" in track && track.released
+                      ? "text-foreground font-medium"
+                      : "text-muted-2"
                   }`}>
                     {track.title}
                   </span>
+                  {"released" in track && track.released && (
+                    <span className="text-[10px] font-mono text-highlight ml-auto shrink-0">Out now</span>
+                  )}
                 </li>
               ))}
             </ol>
