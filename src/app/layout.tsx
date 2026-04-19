@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
 import CookieBanner from "@/components/CookieBanner";
+import FloatingPlayer from "@/components/FloatingPlayer";
 import "./globals.css";
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -98,6 +99,7 @@ export default function RootLayout({
       >
         <LanguageProvider>
           {children}
+          <FloatingPlayer />
           <CookieBanner />
         </LanguageProvider>
       </body>
