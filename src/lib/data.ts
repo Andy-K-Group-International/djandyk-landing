@@ -158,7 +158,7 @@ export const CASE_STUDIES = [
 export const ALBUMS_2026 = [
   {
     title: "When Later Becomes Never",
-    genre: "Progressive House / Trance",
+    genre: "Progressive House / House",
     bpm: "120\u2013124 BPM",
     year: 2026,
     coverUrl: "/albums/when-later-becomes-never.jpg",
@@ -414,7 +414,7 @@ export const NAV_SERVICES = [
       },
       {
         label: "When Later Becomes Never",
-        description: "Album \u00B7 Progressive House / Trance",
+        description: "Album \u00B7 Progressive House / House",
         href: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
       },
     ],

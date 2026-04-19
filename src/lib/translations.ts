@@ -136,7 +136,7 @@ const en = {
   flagship: {
     headingBold: "When Later",
     headingItalic: "Becomes Never",
-    subheading: "Progressive House / Trance \u00B7 2026",
+    subheading: "Progressive House / House \u00B7 2026",
     label: "Flagship Album",
     listenNow: "Listen on Spotify",
     pianoLabel: "House",
@@ -340,7 +340,7 @@ const es: typeof en = {
   flagship: {
     headingBold: "When Later",
     headingItalic: "Becomes Never",
-    subheading: "Progressive House / Trance \u00B7 2026",
+    subheading: "Progressive House / House \u00B7 2026",
     label: "\u00c1lbum Insignia",
     listenNow: "Escuchar en Spotify",
     pianoLabel: "House",
@@ -544,7 +544,7 @@ const sk: typeof en = {
   flagship: {
     headingBold: "When Later",
     headingItalic: "Becomes Never",
-    subheading: "Progressive House / Trance \u00B7 2026",
+    subheading: "Progressive House / House \u00B7 2026",
     label: "Vlajkov\u00fd album",
     listenNow: "Po\u010du\u0165 na Spotify",
     pianoLabel: "House",
