@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { useState } from "react";
-import { ALBUMS_2026, EPS_SINGLES_2026, PIANO_SERIES_2026 } from "@/lib/data";
+import { ALBUMS_2026, EPS_SINGLES_2026, PIANO_SERIES_2026, STANDALONE_SINGLES } from "@/lib/data";
 import { useLanguage } from "@/context/LanguageContext";
 import TabSwitcher from "@/components/TabSwitcher";
 
@@ -132,6 +132,7 @@ export default function PricingSection() {
     { id: "albums", label: t.albums.tabs.albums },
     { id: "singles", label: t.albums.tabs.singles },
     { id: "piano", label: t.albums.tabs.piano },
+    { id: "standalone", label: t.albums.tabs.standalone },
   ];
 
   const data =
@@ -139,6 +140,8 @@ export default function PricingSection() {
       ? ALBUMS_2026
       : activeTab === "singles"
       ? EPS_SINGLES_2026
+      : activeTab === "standalone"
+      ? STANDALONE_SINGLES
       : PIANO_SERIES_2026;
 
   const isPiano = activeTab === "piano";

@@ -294,6 +294,38 @@ export const EPS_SINGLES_2026 = [
   },
 ];
 
+// Discography — Standalone Singles 2025 (maps to DiscographySection tab 4)
+export const STANDALONE_SINGLES = [
+  {
+    title: "Own It",
+    type: "Single",
+    year: 2025,
+    coverUrl: "/albums/own-it.jpg",
+    spotifyUrl: "https://open.spotify.com/album/1q7J22EnbE9Iye1hsuES7E",
+  },
+  {
+    title: "Che Rohayhu (Noches de Asuncion)",
+    type: "Single",
+    year: 2025,
+    coverUrl: "/albums/che-rohayhu.jpg",
+    spotifyUrl: "https://open.spotify.com/track/5olTrwldhk5e87uUw25gwr",
+  },
+  {
+    title: "Lipstick Lies",
+    type: "Single",
+    year: 2025,
+    coverUrl: "/albums/lipstick-lies.jpg",
+    spotifyUrl: "https://open.spotify.com/album/3IIKeyPM7fGnBVizriypqE",
+  },
+  {
+    title: "Plastic Hearts Don't Break",
+    type: "Single",
+    year: 2025,
+    coverUrl: "/albums/plastic-hearts-dont-break.jpg",
+    spotifyUrl: "https://open.spotify.com/album/3Vak7mxhOyH8uelBENmJmx",
+  },
+];
+
 // Discography — Piano Series 2026 (maps to DiscographySection tab 3)
 export const PIANO_SERIES_2026 = [
   {
