@@ -26,13 +26,20 @@ export const COMPANY = {
   quoteSubtitle: "\u2014 DJ Andy\u2019K",
 };
 
-export const LATEST_RELEASE = {
-  title: "Paraller Stories",
-  artist: "DJ Andy\u2019K",
-  type: "Single" as const,
-  coverUrl: "/albums/paraller-stories.jpg",
-  spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
-};
+export const LATEST_RELEASES = [
+  {
+    title: "Someone I Used To Be",
+    type: "New Release \u00b7 Human Stories",
+    coverUrl: "/albums/someone-i-used-to-be.jpg",
+    spotifyUrl: "https://open.spotify.com/album/7bwDl4olECxWFhlPqGzKfA",
+  },
+  {
+    title: "When Home Is Nowhere",
+    type: "New Release \u00b7 Human Stories",
+    coverUrl: "/albums/when-home-is-nowhere.jpg",
+    spotifyUrl: "https://open.spotify.com/album/4ksawSjAnCnbVT6xXVRrSZ",
+  },
+];
 
 export const STREAMING_PLATFORMS = [
   {
