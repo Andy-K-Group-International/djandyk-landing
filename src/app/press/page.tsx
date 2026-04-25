@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import {
   COMPANY,
   ALBUMS_2026,
@@ -79,7 +81,9 @@ export default function PressPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-background pt-[60px]">
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-background pt-[60px]">
       <div className="max-w-[860px] mx-auto px-6 py-16 md:py-24">
 
         {/* Back link */}
@@ -312,5 +316,7 @@ export default function PressPage() {
 
       </div>
     </main>
+      <Footer />
+    </>
   );
 }

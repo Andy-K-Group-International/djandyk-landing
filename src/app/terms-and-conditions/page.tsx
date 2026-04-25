@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
@@ -10,8 +12,10 @@ export const metadata: Metadata = {
 
 export default function TermsAndConditionsPage() {
   return (
-    <main className="min-h-screen bg-background">
-      <div className="max-w-[760px] mx-auto px-6 py-16 md:py-24">
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-background pt-[60px]">
+      <div className="max-w-[760px] mx-auto px-6 py-12 md:py-16">
         <Link
           href="/"
           className="inline-flex items-center gap-1.5 text-sm text-muted-2 hover:text-muted transition-colors mb-10"
@@ -257,5 +261,7 @@ export default function TermsAndConditionsPage() {
         </article>
       </div>
     </main>
+      <Footer />
+    </>
   );
 }

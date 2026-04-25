@@ -102,7 +102,7 @@ export default function Navbar() {
         {/* Logo */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <a href={isHome ? "#hero" : "/"} className="shrink-0 flex items-center gap-2">
-          <img src="/logo.png" alt="DJ Andy'K" className="h-8 w-8 object-contain" />
+          <img src="/logo.png" alt="DJ Andy'K" className="h-8 w-8 object-contain nav-logo" />
           <span className="font-bold text-foreground tracking-tight text-base">DJ Andy&apos;K</span>
         </a>
 

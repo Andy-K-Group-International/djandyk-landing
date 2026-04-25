@@ -52,7 +52,7 @@ export default function TabSwitcher({
     >
       {/* Sliding indicator */}
       <div
-        className="absolute top-1 bottom-1 rounded-md bg-white shadow-sm transition-all duration-300 ease-out"
+        className="absolute top-1 bottom-1 rounded-md bg-white shadow-sm tab-indicator transition-all duration-300 ease-out"
         style={{
           left: indicator.left,
           width: indicator.width,

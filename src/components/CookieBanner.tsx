@@ -238,7 +238,7 @@ export default function CookieBanner() {
                         aria-label={`Toggle ${cat.label}`}
                       >
                         <span
-                          className={`absolute top-0.5 left-0.5 w-4 h-4 bg-white shadow-sm transition-transform ${
+                          className={`absolute top-0.5 left-0.5 w-4 h-4 bg-white toggle-knob shadow-sm transition-transform ${
                             cat.locked || consent[cat.key]
                               ? "translate-x-4"
                               : "translate-x-0"
