@@ -48,7 +48,7 @@ export default function IntegrationsSection() {
         </span>
         <h2 className="text-[clamp(1.875rem,1.52rem+1.25vw,2.5rem)] font-bold tracking-tight text-foreground mb-4">
           {(t.music.heading + " " + t.music.headingItalic).split(" ").map((word, i) => (
-            <span key={i} className={i % 2 === 0 ? "font-serif italic" : ""}>{i > 0 ? " " : ""}{word}</span>
+            <span key={i} className={i % 2 === 0 ? "font-serif italic font-light" : ""}>{i > 0 ? " " : ""}{word}</span>
           ))}
         </h2>
         <p className="text-lg text-muted font-light max-w-[520px] mx-auto">

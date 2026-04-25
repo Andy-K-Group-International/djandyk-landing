@@ -152,7 +152,7 @@ export default function PricingSection() {
           </span>
           <h2 className="text-[clamp(1.875rem,1.52rem+1.25vw,2.5rem)] font-bold tracking-tight leading-[1.2] text-foreground mb-4">
             {(t.albums.heading + " " + t.albums.headingItalic).split(" ").map((word, i) => (
-              <span key={i} className={i % 2 === 0 ? "font-serif italic" : ""}>{i > 0 ? " " : ""}{word}</span>
+              <span key={i} className={i % 2 === 0 ? "font-serif italic font-light" : ""}>{i > 0 ? " " : ""}{word}</span>
             ))}
           </h2>
           <p className="text-lg leading-relaxed text-muted font-light">

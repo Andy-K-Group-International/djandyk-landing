@@ -13,7 +13,7 @@ export default function FlagshipSystems() {
           {t.flagship.label}
         </span>
         <h2 className="text-[clamp(1.875rem,1.52rem+1.25vw,2.5rem)] font-bold tracking-tight text-foreground mb-4">
-          <span className="font-serif italic">Flagship</span>{" "}albums
+          <span className="font-serif italic font-light">Flagship</span>{" "}albums
         </h2>
         <p className="text-lg text-muted font-light max-w-[560px] mx-auto">
           {t.flagship.subheading}

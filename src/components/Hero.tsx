@@ -15,7 +15,7 @@ export default function Hero() {
       <h1 className="font-bold tracking-tight leading-[1.15] text-[clamp(2.5rem,1.8rem+3vw,4.25rem)] mb-6">
         <span className="block gradient-text">
           {(t.hero.title + " " + t.hero.titleItalic).split(" ").map((word, i) => (
-            <span key={i} className={i % 2 === 0 ? "font-serif italic" : ""}>{i > 0 ? " " : ""}{word}</span>
+            <span key={i} className={i % 2 === 0 ? "font-serif italic font-light" : ""}>{i > 0 ? " " : ""}{word}</span>
           ))}
         </span>
       </h1>
