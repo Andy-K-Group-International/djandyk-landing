@@ -1,4 +1,4 @@
-export type Locale = "en" | "es" | "sk";
+export type Locale = "en" | "es" | "sk" | "de";
 
 const en = {
   company: {
@@ -615,9 +615,214 @@ const sk: typeof en = {
   },
 };
 
+const de: typeof en = {
+  company: {
+    name: "DJ Andy’K",
+    tagline: "Musik ist deine Leidenschaft.",
+    label: "ANDY’K GROUP INTERNATIONAL LTD",
+    location: "Vereinigtes Königreich",
+    genre: "Trance · Progressive House · EDM",
+  },
+
+  hero: {
+    eyebrow: "DJ Andy’K",
+    title: "Musik ist deine",
+    titleItalic: "Leidenschaft.",
+    subtitle: "Produzent von Trance, Progressive House und EDM.",
+    subtitleLine2: "Jeder Track als eine Reise — Emotion, Energie und Erzählkunst.",
+    ctaPrimary: "Auf allen Plattformen hören",
+    ctaSecondary: "Mehr erfahren",
+  },
+
+  banner: {
+    items: [
+      "Trance, Progressive House & EDM",
+      "Jeder Track als eine Reise",
+      "Aus dem UK, Musik für die Welt",
+      "Spotify · Apple Music · YouTube · SoundCloud · TIDAL",
+      "Neue Single: Paraller Stories — jetzt verfügbar",
+    ],
+  },
+
+  nav: {
+    about: "Über",
+    music: "Musik",
+    albums: "Alben",
+    contact: "Kontakt",
+    press: "Presse",
+    listenNow: "Jetzt hören",
+  },
+
+  sound: {
+    label: "Klangphilosophie",
+    heading: "Klang als",
+    headingItalic: "Handwerk",
+    description: "Jedes Release basiert auf klaren klanglichen Säulen — jede ein Blickwinkel, aus dem DJ Andy’K an die Produktion herantritt.",
+    items: [
+      {
+        title: "Progressive House",
+        description: "Vielschichtige Builds, melodische Drops und hypnotische Progressionen, die den Hörer durch emotionale Landschaften führen.",
+      },
+      {
+        title: "Trance",
+        description: "Euphorische Synthesizer-Linien und treibende Rhythmen, die Zustände reiner Immersion und Transzendenz erzeugen.",
+      },
+      {
+        title: "Deep Melodic",
+        description: "Introspektive Texturen und warme Harmonik — Musik, die direkt mit dem Unterbewusstsein spricht.",
+      },
+      {
+        title: "Cinematic EDM",
+        description: "Orchestrale Elemente mit elektronischer Produktion verbunden — Tracks wie Filmmusik für die Tanzfläche.",
+      },
+      {
+        title: "Emotionales Erzählen",
+        description: "Jedes Release folgt einem narrativen Bogen. Von Spannung bis zur Auflösung — die Reise ist immer beabsichtigt.",
+      },
+      {
+        title: "Studio-Handwerk",
+        description: "Von der Komposition bis zum Mastering ist jedes Detail durchdacht. Sounddesign, Mix-Balance und klangliche Identität bis zur letzten Millisekunde verfeinert.",
+      },
+    ],
+  },
+
+  music: {
+    label: "Musik",
+    heading: "Wo die Musik",
+    headingItalic: "lebt",
+    description: "Stream DJ Andy’K auf allen großen Plattformen. Folge für neue Releases, Updates und die vollständige Diskographie.",
+    listenOn: "Hören auf",
+    follow: "Folgen",
+    streamNow: "Jetzt streamen",
+  },
+
+  albums: {
+    label: "Diskographie",
+    heading: "Die",
+    headingItalic: "Veröffentlichungen",
+    description: "Alben, EPs und Singles — jedes Release ist ein Kapitel.",
+    tabs: {
+      albums: "Alben 2026",
+      singles: "EPs & Singles",
+      piano: "Piano-Serie",
+      standalone: "Singles",
+    },
+    listenOn: "Hören",
+    bpm: "BPM",
+    latestRelease: "Neueste Veröffentlichung",
+  },
+
+  about: {
+    label: "Über",
+    heading: "Die Geschichte hinter dem",
+    headingItalic: "Klang",
+    bio: "Der in Großbritannien ansässige Musikproduzent Andrej Kneisl kreiert Progressive House, Trance und tiefe melodische Klangländschaften unter dem Namen DJ Andy’K. Mit Veröffentlichungen von Alben, EPs und Singles verbindet seine Musik das Emotionale mit dem Euphorischen.",
+    quote: "“Ich weiß nicht mehr, ob die Musik für mich lebt, oder ob ich für sie lebe. Aber ich akzeptiere beides.”",
+    quoteAttribution: "— DJ Andy’K",
+    tagline: "MUSIK IST DEINE LEIDENSCHAFT.",
+  },
+
+  featured: {
+    label: "Ausgewählte Releases",
+    heading: "Aktuelle",
+    headingItalic: "Alben",
+    description: "Drei Veröffentlichungen, die den Sound von DJ Andy’K im Jahr 2026 prägen.",
+    cards: [
+      {
+        shortTitle: "When Later Becomes Never",
+        title: "Progressive House mit cinematischem Anspruch — das Flaggschiff-Album 2026",
+        description: "Eine mehrteilige Reise durch melodische Builds, emotionale Drops und tiefe atmosphärische Texturen. 120–124 BPM.",
+        link: "Jetzt hören",
+      },
+      {
+        shortTitle: "Human Stories",
+        title: "Emotionale Klaviermelodien in melodische elektronische Produktion gewoben",
+        description: "Wo klassische Sensibilität auf modernes elektronisches Sounddesign trifft. Ein zutiefst persönliches Album.",
+        link: "Jetzt hören",
+      },
+      {
+        shortTitle: "Four Elements",
+        title: "Ein Album, das die vier Grundkräfte durch Klang erkundet",
+        description: "Erde, Wasser, Feuer und Luft — vier klangliche Landschaften, vereint durch eine Vision.",
+        link: "Jetzt hören",
+      },
+    ],
+  },
+
+  flagship: {
+    headingBold: "When Later",
+    headingItalic: "Becomes Never",
+    subheading: "Progressive House / House · 2026",
+    label: "Flaggschiff-Album",
+    listenNow: "Auf Spotify hören",
+    pianoLabel: "House",
+    pianoHeading: "Human Stories",
+    pianoSubheading: "House · 2026",
+    pianoListen: "Auf Spotify hören",
+  },
+
+  journey: {
+    label: "Der Prozess",
+    heading: "Die Reise eines",
+    headingItalic: "Tracks",
+    description: "Vom ersten Funken einer Idee bis zu dem Moment, in dem ein Hörer Play drückt — sechs Phasen, die jedes Release prägen.",
+    steps: [
+      { title: "Inspiration", description: "Ein Gefühl, eine Erinnerung oder ein eingefangener Moment — der Keim jedes Tracks beginnt mit etwas Realem." },
+      { title: "Komposition", description: "Melodien und Harmonien nehmen Gestalt an. Akkordfolgen werden festgelegt, der emotionale Bogen definiert." },
+      { title: "Produktion", description: "Schichten werden im Studio aufgebaut — Synthesizer, Drums, Basslines, Texturen. Der Track erwacht zum Leben." },
+      { title: "Mastering", description: "Letzter Schliff und Lautstärke optimiert. Der Track für jede Streaming-Plattform vorbereitet." },
+      { title: "Veröffentlichung", description: "Veröffentlicht auf Spotify, Apple Music, TIDAL, SoundCloud, YouTube und mehr." },
+      { title: "Verbindung", description: "Die Musik erreicht die Hörer. Die Reise vollendet sich — bis die nächste beginnt." },
+    ],
+  },
+
+  contact: {
+    label: "Kontakt",
+    heading: "Lass uns das nächste",
+    headingItalic: "Klangkapitel bauen.",
+    description: "Eine Frage, eine Kollaborationsidee oder einfach Hallo sagen? Schick eine Nachricht.",
+    labelName: "Name",
+    labelEmail: "E-Mail",
+    labelMessage: "Nachricht",
+    placeholderName: "Dein Name",
+    placeholderEmail: "du@email.de",
+    placeholderMessage: "Deine Nachricht…",
+    required: "*",
+    submit: "Nachricht senden",
+    sending: "Wird gesendet…",
+    success: "Nachricht gesendet! Danke.",
+    error: "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+  },
+
+  cta: {
+    eyebrow: "DJ Andy’K",
+    heading: "Musik ist deine",
+    headingItalic: "Leidenschaft.",
+    subtitle: "Folge DJ Andy’K auf Streaming-Plattformen und bleib bei jedem neuen Release dabei.",
+    ctaPrimary: "Auf allen Plattformen hören",
+    ctaSecondary: "hyperfollow.com/djandyk",
+    followInstagram: "Auf Instagram folgen",
+  },
+
+  footer: {
+    tagline: "Musik ist deine Leidenschaft.",
+    label: "℗ & © ANDY’K GROUP INTERNATIONAL LTD",
+    copyright: "© 2026 DJ Andy’K",
+    links: "Links",
+    home: "Startseite",
+    labelWebsite: "andykgroupinternational.com",
+  },
+
+  cookie: {
+    message: "Wir verwenden Cookies, um dein Erlebnis zu verbessern.",
+    accept: "Akzeptieren",
+    decline: "Ablehnen",
+  },
+};
+
 export type TranslationKeys = typeof en;
 
-export const translations: Record<Locale, typeof en> = { en, es, sk };
+export const translations: Record<Locale, typeof en> = { en, es, sk, de };
 
 export function getTranslations(locale: Locale): typeof en {
   return translations[locale] ?? translations.en;

@@ -6,7 +6,7 @@ import { translations } from "@/lib/translations";
 
 const COOKIE_KEY = "andy-k-language";
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 365; // 1 year
-const SUPPORTED_LOCALES: Locale[] = ["en", "es", "sk"];
+const SUPPORTED_LOCALES: Locale[] = ["en", "es", "sk", "de"];
 
 function getCookie(name: string): string | null {
   const match = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
