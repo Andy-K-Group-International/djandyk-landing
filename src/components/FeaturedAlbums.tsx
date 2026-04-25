@@ -49,7 +49,7 @@ const FEATURED_RELEASES = [
     cover: "/albums/music-is-your-passion.jpg",
   },
   {
-    kicker: "EP · 2026",
+    kicker: "Album · 2026",
     title: "Four Elements",
     genre: "Deep Melodic / Progressive",
     description: "Four tracks. Four feelings. One direction.",

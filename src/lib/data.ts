@@ -195,17 +195,17 @@ export const ALBUMS_2026 = [
     coverUrl: "/albums/music-is-your-passion.jpg",
     spotifyUrl: "https://open.spotify.com/album/2en5D8nLMSTpRE6fhS1BJY",
   },
-];
-
-// Discography — EPs & Singles 2026 (maps to DiscographySection tab 2)
-export const EPS_SINGLES_2026 = [
   {
     title: "Four Elements",
-    type: "EP",
+    genre: "Deep Melodic / Progressive",
     year: 2026,
     coverUrl: "/albums/four-elements.jpg",
     spotifyUrl: "https://open.spotify.com/album/18OaI45bkpYwJtzL59BoUw",
   },
+];
+
+// Discography — EPs & Singles 2026 (maps to DiscographySection tab 2)
+export const EPS_SINGLES_2026 = [
   {
     title: "Paraller Stories",
     type: "Single",
