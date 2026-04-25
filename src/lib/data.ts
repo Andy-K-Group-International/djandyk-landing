@@ -366,7 +366,7 @@ export const TRACKLISTS: Record<string, TracklistEntry[]> = {
   "Human Stories": [
     { num: "01", title: "Human Stories \u2013 Intro" },
     { num: "02", title: "Human Stories (House)" },
-    { num: "03", title: "When Home Is Nowhere" },
+    { num: "03", title: "When Home Is Nowhere", released: true },
     { num: "04", title: "Letters Never Sent" },
     { num: "05", title: "Letters Never Sent (Piano)", released: true },
     { num: "06", title: "Running From Yesterday" },
@@ -374,7 +374,7 @@ export const TRACKLISTS: Record<string, TracklistEntry[]> = {
     { num: "08", title: "Only Rivers Know" },
     { num: "09", title: "Only Rivers Know (Piano)", released: true },
     { num: "10", title: "Parallel Stories", released: true },
-    { num: "11", title: "Someone I Used To Be" },
+    { num: "11", title: "Someone I Used To Be", released: true },
     { num: "12", title: "Human Stories (Piano)", released: true },
     { num: "13", title: "Human Stories \u2013 Outro" },
   ],
