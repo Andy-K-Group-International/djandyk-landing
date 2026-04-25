@@ -55,6 +55,7 @@ export default function Navbar() {
     { label: "Sets", href: "#sets" },
     { label: t.nav.contact, href: "#contact" },
     { label: t.nav.press, href: "/press" },
+    { label: "Lab", href: "#lab" },
   ];
 
   useEffect(() => {

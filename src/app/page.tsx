@@ -16,6 +16,7 @@ import Footer from "@/components/Footer";
 import FlagshipSystems from "@/components/FlagshipSystems";
 import { HeroBackground } from "@/components/BackgroundGrid";
 import LatestReleaseBanner from "@/components/LatestReleaseBanner";
+import MusicLabSection from "@/components/MusicLabSection";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -140,6 +141,12 @@ export default function Home() {
 
       <ContactForm />
       <CtaSection />
+
+      <TronDivider />
+
+      {/* Andy'K Music Lab */}
+      <MusicLabSection />
+
       <Footer />
     </main>
   );
