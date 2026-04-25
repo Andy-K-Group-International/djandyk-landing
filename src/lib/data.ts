@@ -405,10 +405,10 @@ export const TRACKLISTS: Record<string, TracklistEntry[]> = {
     { num: "08", title: "Music Is Your Passion (Outro)" },
   ],
   "Four Elements": [
-    { num: "01", title: "Feel My Spirit Wake" },
-    { num: "02", title: "Holding On Through All" },
-    { num: "03", title: "Hiding From It All" },
-    { num: "04", title: "Pull Me Through" },
+    { num: "01", title: "Pull Me Through" },
+    { num: "02", title: "Hiding From It All" },
+    { num: "03", title: "Holding On Through All" },
+    { num: "04", title: "Feel My Spirit Wake" },
   ],
 };
 
