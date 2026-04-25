@@ -112,8 +112,7 @@ export default function DJSetsSection() {
             Live Sets
           </span>
           <h2 className="text-[clamp(1.875rem,1.52rem+1.25vw,2.5rem)] font-bold tracking-tight leading-[1.2] text-foreground mb-4">
-            The{" "}
-            <span className="font-serif font-light italic text-[1.2em]">sets</span>
+            <span className="font-serif italic">The</span>{" "}sets
           </h2>
           <p className="text-base text-muted font-light">
             Progressive house, trance, and EDM — live from the booth.

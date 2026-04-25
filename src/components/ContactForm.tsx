@@ -63,10 +63,9 @@ export default function ContactForm() {
               {t.contact.label}
             </span>
             <h2 className="text-[clamp(1.5rem,1.2rem+1vw,2rem)] font-bold tracking-tight text-foreground mb-2">
-              {t.contact.heading}{" "}
-              <span className="font-serif font-light italic text-[1.15em]">
-                {t.contact.headingItalic}
-              </span>
+              {(t.contact.heading + " " + t.contact.headingItalic).split(" ").map((word, i) => (
+                <span key={i} className={i % 2 === 0 ? "font-serif italic" : ""}>{i > 0 ? " " : ""}{word}</span>
+              ))}
             </h2>
             <p className="text-sm text-muted">{t.contact.description}</p>
           </div>

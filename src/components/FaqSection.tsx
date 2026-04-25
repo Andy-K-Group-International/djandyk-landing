@@ -66,10 +66,9 @@ export default function FaqSection() {
             {t.sound.label}
           </span>
           <h2 className="text-[clamp(1.875rem,1.52rem+1.25vw,2.5rem)] font-bold tracking-tight leading-[1.2] text-foreground mb-4">
-            {t.sound.heading}{" "}
-            <span className="font-serif font-light italic text-[1.2em]">
-              {t.sound.headingItalic}
-            </span>
+            {(t.sound.heading + " " + t.sound.headingItalic).split(" ").map((word, i) => (
+              <span key={i} className={i % 2 === 0 ? "font-serif italic" : ""}>{i > 0 ? " " : ""}{word}</span>
+            ))}
           </h2>
           <p className="text-lg text-muted font-light leading-relaxed">
             {t.sound.description}

@@ -102,10 +102,9 @@ export default function RoadmapSection() {
             {t.journey.label}
           </span>
           <h2 className="text-[clamp(1.875rem,1.52rem+1.25vw,2.5rem)] font-bold tracking-tight leading-[1.2] text-foreground mb-4">
-            {t.journey.heading}{" "}
-            <span className="font-serif font-light italic text-[1.2em]">
-              {t.journey.headingItalic}
-            </span>
+            {(t.journey.heading + " " + t.journey.headingItalic).split(" ").map((word, i) => (
+              <span key={i} className={i % 2 === 0 ? "font-serif italic" : ""}>{i > 0 ? " " : ""}{word}</span>
+            ))}
           </h2>
           <p className="text-lg leading-relaxed text-muted font-light">
             {t.journey.description}

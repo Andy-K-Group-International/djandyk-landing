@@ -40,8 +40,9 @@ export default function LovedBySection() {
             {t.about.label}
           </span>
           <h2 className="text-[clamp(1.875rem,1.52rem+1.25vw,2.5rem)] font-bold tracking-tight text-white mb-6">
-            {t.about.heading}{" "}
-            <span className="font-serif font-light italic text-[1.2em]">{t.about.headingItalic}</span>
+            {(t.about.heading + " " + t.about.headingItalic).split(" ").map((word, i) => (
+              <span key={i} className={i % 2 === 0 ? "font-serif italic" : ""}>{i > 0 ? " " : ""}{word}</span>
+            ))}
           </h2>
 
           <p className="text-base leading-relaxed text-white/70 font-light mb-8 max-w-[520px]">

@@ -32,10 +32,7 @@ export default function CtaSection() {
           {t.cta.eyebrow}
         </span>
         <h2 className="text-[clamp(1.875rem,1.52rem+1.25vw,2.5rem)] font-bold tracking-tight text-white leading-[1.2] mb-4">
-          {t.cta.heading}{" "}
-          <span className="font-serif font-light italic text-[1.2em]">
-            {t.cta.headingItalic}
-          </span>
+          <span className="font-serif italic">Listen</span>{" "}now
         </h2>
         <p className="text-base text-white/80 leading-relaxed mb-8 max-w-[460px] mx-auto">
           {t.cta.subtitle}
