@@ -20,7 +20,7 @@ const FEATURED_RELEASES = [
     title: "Human Stories",
     genre: "House / Progressive House",
     description: "A house album with emotional depth — four tracks also released in piano versions.",
-    note: "Every week a new chapter.\nStay tuned — Human Stories is still being written.",
+    note: "7 tracks available now · Full album coming soon",
     liveBadge: true,
     href: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
     embedUrl: "https://open.spotify.com/embed/artist/3JhFGt6jRQvnYgvhWMQHUU?utm_source=generator&theme=0",
@@ -136,7 +136,7 @@ function ChevronIcon({ open }: { open: boolean }) {
   );
 }
 
-type TrackEntry = { num: string; title: string; released?: boolean };
+type TrackEntry = { num: string; title: string; released?: boolean; spotifyUrl?: string };
 
 function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
   const [playerOpen, setPlayerOpen] = useState(false);
@@ -278,7 +278,11 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
                     {track.title}
                   </span>
                   {track.released && (
-                    <span className="text-[10px] font-mono text-highlight ml-auto shrink-0">Out now</span>
+                    track.spotifyUrl ? (
+                      <a href={track.spotifyUrl} target="_blank" rel="noopener noreferrer" className="text-[10px] font-mono text-highlight ml-auto shrink-0 hover:underline">Out now</a>
+                    ) : (
+                      <span className="text-[10px] font-mono text-highlight ml-auto shrink-0">Out now</span>
+                    )
                   )}
                 </li>
               ))}
