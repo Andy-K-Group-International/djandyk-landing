@@ -207,6 +207,20 @@ export const ALBUMS_2026 = [
 // Discography — EPs & Singles 2026 (maps to DiscographySection tab 2)
 export const EPS_SINGLES_2026 = [
   {
+    title: "Someone I Used To Be",
+    type: "Single",
+    year: 2026,
+    coverUrl: "/albums/someone-i-used-to-be.jpg",
+    spotifyUrl: "https://open.spotify.com/album/7bwDl4olECxWFhlPqGzKfA",
+  },
+  {
+    title: "When Home Is Nowhere",
+    type: "Single",
+    year: 2026,
+    coverUrl: "/albums/when-home-is-nowhere.jpg",
+    spotifyUrl: "https://open.spotify.com/album/4ksawSjAnCnbVT6xXVRrSZ",
+  },
+  {
     title: "Paraller Stories",
     type: "Single",
     year: 2026,
