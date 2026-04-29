@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(list\\(d.get\\('vaults',{}\\).values\\(\\)\\)\\)\")",
+      "Bash(sips -s format jpeg \"/Users/andrejkneisl/Library/Mobile Documents/iCloud~md~obsidian/Documents/SAFE ARCHIVE FOLDER/Dj Andy'K 2026/Dj Andy'K/Albums 2026/Human Stories/ArtWorks/3.png\" --out /Users/andrejkneisl/Projects/djandyk-landing/public/albums/when-home-is-nowhere.jpg)",
+      "Bash(sips -s format jpeg \"/Users/andrejkneisl/Library/Mobile Documents/iCloud~md~obsidian/Documents/SAFE ARCHIVE FOLDER/Dj Andy'K 2026/Dj Andy'K/Albums 2026/Human Stories/ArtWorks/11.png\" --out /Users/andrejkneisl/Projects/djandyk-landing/public/albums/someone-i-used-to-be.jpg)",
+      "Bash(git commit *)",
+      "Bash(npx tsc *)",
+      "Bash(sips -s format jpeg '/Users/andrejkneisl/Library/Mobile Documents/iCloud~md~obsidian/Documents/SAFE ARCHIVE FOLDER/Dj Andy'\\\\''K 2026/Dj Andy'\\\\''K/Albums 2025/Singles Songs ALL 2026/Own it/E4D7DC18-0EDF-4F80-B5DC-6878D03B6E50.JPG' --out /Users/andrejkneisl/Projects/djandyk-landing/public/albums/own-it.jpg)",
+      "Bash(sips -s format jpeg '/Users/andrejkneisl/Library/Mobile Documents/iCloud~md~obsidian/Documents/SAFE ARCHIVE FOLDER/Dj Andy'\\\\''K 2026/Dj Andy'\\\\''K/Albums 2025/Singles Songs ALL 2026/che rohayhu py/Noche de Asuncion .png' --out /Users/andrejkneisl/Projects/djandyk-landing/public/albums/che-rohayhu.jpg)",
+      "Bash(sips -s format jpeg '/Users/andrejkneisl/Library/Mobile Documents/iCloud~md~obsidian/Documents/SAFE ARCHIVE FOLDER/Dj Andy'\\\\''K 2026/Dj Andy'\\\\''K/Albums 2025/Singles Songs ALL 2026/lipstick lies/lipsitck lies .png' --out /Users/andrejkneisl/Projects/djandyk-landing/public/albums/lipstick-lies.jpg)",
+      "Bash(sips -s format jpeg '/Users/andrejkneisl/Library/Mobile Documents/iCloud~md~obsidian/Documents/SAFE ARCHIVE FOLDER/Dj Andy'\\\\''K 2026/Dj Andy'\\\\''K/Albums 2025/Singles Songs ALL 2026/Plastic herad dont break !/Pridajte nadpis.jpg' --out /Users/andrejkneisl/Projects/djandyk-landing/public/albums/plastic-hearts-dont-break.jpg)"
+    ]
+  }
+}

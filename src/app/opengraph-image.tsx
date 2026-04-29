@@ -128,7 +128,7 @@ export default async function OgImage() {
             letterSpacing: "0.08em",
           }}
         >
-          djandyk.com
+          djandyofficial.com
         </div>
       </div>
     ),

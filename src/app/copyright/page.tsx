@@ -24,7 +24,7 @@ export default function CopyrightPage() {
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="shrink-0">
             <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          Back to djandyk.com
+          Back to djandyofficial.com
         </Link>
 
         <h1 className="text-3xl md:text-4xl font-semibold text-foreground tracking-tight mb-2">
@@ -71,7 +71,7 @@ export default function CopyrightPage() {
             <h2 className="text-lg font-semibold text-foreground">Website Content</h2>
             <p>
               © 2026 DJ Andy&apos;K / ANDY&apos;K GROUP INTERNATIONAL LTD. All text, code, design,
-              and multimedia content published on djandyk.com is protected by applicable
+              and multimedia content published on djandyofficial.com is protected by applicable
               intellectual property laws.
             </p>
           </section>
@@ -100,8 +100,8 @@ export default function CopyrightPage() {
               <p className="font-semibold text-foreground">ANDY&apos;K GROUP INTERNATIONAL LTD</p>
               <p>
                 Email:{" "}
-                <a href="mailto:info@djandyk.com" className="text-highlight hover:text-deep-teal transition-colors">
-                  info@djandyk.com
+                <a href="mailto:info@djandyofficial.com" className="text-highlight hover:text-deep-teal transition-colors">
+                  info@djandyofficial.com
                 </a>
               </p>
               <p>Registered office: 86&ndash;90 Paul Street, London, EC2A 4NE, United Kingdom</p>

@@ -23,9 +23,9 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "MusicGroup",
-      "@id": "https://djandyk.com/#artist",
+      "@id": "https://djandyofficial.com/#artist",
       name: "DJ Andy'K",
-      url: "https://djandyk.com",
+      url: "https://djandyofficial.com",
       description:
         "UK-based music producer creating Trance, Progressive House, and EDM that blend emotion, energy, and storytelling.",
       genre: ["Trance", "Progressive House", "EDM"],
@@ -33,7 +33,7 @@ const jsonLd = {
         "@type": "Place",
         name: "United Kingdom",
       },
-      email: "info@djandyk.com",
+      email: "info@djandyofficial.com",
       member: {
         "@type": "Person",
         name: "Andrej Kneisl",
@@ -42,7 +42,7 @@ const jsonLd = {
       recordLabel: {
         "@type": "Organization",
         name: "ANDY'K GROUP INTERNATIONAL LTD",
-        url: "https://djandyk.com",
+        url: "https://djandyofficial.com",
       },
       sameAs: [
         "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
@@ -56,18 +56,18 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://djandyk.com/#website",
-      url: "https://djandyk.com",
+      "@id": "https://djandyofficial.com/#website",
+      url: "https://djandyofficial.com",
       name: "DJ Andy'K",
-      publisher: { "@id": "https://djandyk.com/#artist" },
+      publisher: { "@id": "https://djandyofficial.com/#artist" },
     },
     {
       "@type": "WebPage",
-      "@id": "https://djandyk.com/#webpage",
-      url: "https://djandyk.com",
+      "@id": "https://djandyofficial.com/#webpage",
+      url: "https://djandyofficial.com",
       name: "DJ Andy'K — Official Website | Trance, Progressive House & EDM",
-      isPartOf: { "@id": "https://djandyk.com/#website" },
-      about: { "@id": "https://djandyk.com/#artist" },
+      isPartOf: { "@id": "https://djandyofficial.com/#website" },
+      about: { "@id": "https://djandyofficial.com/#artist" },
       description:
         "Official website of DJ Andy'K. Producer of Trance, Progressive House, and EDM. Based in the UK, sharing music worldwide.",
     },

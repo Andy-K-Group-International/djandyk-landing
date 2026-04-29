@@ -18,10 +18,10 @@ const ibmPlexMono = IBM_Plex_Mono({
   weight: ["400", "500", "700"],
 });
 
-const SITE_URL = "https://djandyk.com";
-const SITE_TITLE = "DJ Andy'K — Official Website | Trance, Progressive House & EDM";
+const SITE_URL = "https://djandyofficial.com";
+const SITE_TITLE = "DJ Andy'K | Official Website — Trance, Progressive House & EDM";
 const SITE_DESCRIPTION =
-  "Official website of DJ Andy'K. Producer of Trance, Progressive House, and EDM. Based in the UK, sharing music worldwide.";
+  "Official website of DJ Andy'K (Andrej Kneisl). UK-based music producer of Trance, Progressive House and EDM.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -32,12 +32,14 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   keywords: [
     "DJ Andy'K",
-    "trance",
-    "progressive house",
+    "DJAndyK",
+    "Andrej Kneisl",
+    "Trance",
+    "Progressive House",
     "EDM",
-    "UK artist",
+    "UK DJ",
     "music producer",
-    "electronic music",
+    "djandyofficial.com",
   ],
   authors: [{ name: "DJ Andy'K" }],
   creator: "DJ Andy'K",

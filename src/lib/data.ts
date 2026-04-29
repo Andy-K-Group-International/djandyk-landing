@@ -11,8 +11,8 @@ export const COMPANY = {
   label: "ANDY\u2019K GROUP INTERNATIONAL LTD",
   basedIn: "United Kingdom",
   genre: "Trance \u00B7 Progressive House \u00B7 EDM",
-  email: "info@djandyk.com",
-  website: "djandyk.com",
+  email: "info@djandyofficial.com",
+  website: "djandyofficial.com",
   labelWebsite: "https://www.andykgroupinternational.com",
   socials: {
     instagram: "https://www.instagram.com/djandykofficial",
@@ -126,9 +126,9 @@ export const FOUNDERS: {
     role: "Music Producer \u00B7 DJ \u00B7 Artist",
     image: "/photos/artist-main.jpg",
     linkedin: "",
-    email: "info@djandyk.com",
-    website: "https://djandyk.com",
-    websiteLabel: "djandyk.com",
+    email: "info@djandyofficial.com",
+    website: "https://djandyofficial.com",
+    websiteLabel: "djandyofficial.com",
     bio: "UK-based music producer Andrej Kneisl crafts progressive house, trance, and deep melodic soundscapes under the name DJ Andy\u2019K. With releases spanning albums, EPs, and singles, his music bridges the emotional and the euphoric.",
     quote:
       "\u201CI don\u2019t know anymore if music lives for me, or if I live for it. But I accept both.\u201D",

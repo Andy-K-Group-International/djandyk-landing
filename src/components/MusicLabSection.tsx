@@ -99,10 +99,10 @@ export default function MusicLabSection() {
         {/* CTA */}
         <div className="text-center">
           <p className="text-[11px] uppercase tracking-[0.25em] text-highlight font-mono mb-4">
-            Launching on lab.djandyk.com
+            Launching on lab.djandyofficial.com
           </p>
           <a
-            href="mailto:info@djandyk.com?subject=Andy'K Music Lab Waitlist"
+            href="mailto:info@djandyofficial.com?subject=Andy'K Music Lab Waitlist"
             className="inline-flex items-center gap-2 h-11 px-7 text-sm font-semibold text-white rounded border border-highlight hover:bg-highlight/10 transition-colors"
           >
             Join Waitlist

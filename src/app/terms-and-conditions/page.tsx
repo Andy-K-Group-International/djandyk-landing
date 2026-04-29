@@ -55,8 +55,8 @@ export default function TermsAndConditionsPage() {
               <p><strong className="text-foreground">Company name:</strong> DJ Andy&apos;K / ANDY&apos;K GROUP INTERNATIONAL LTD</p>
               <p><strong className="text-foreground">Company number:</strong> 16453500</p>
               <p><strong className="text-foreground">Registered office:</strong> 86&ndash;90 Paul Street, London, EC2A 4NE, United Kingdom</p>
-              <p><strong className="text-foreground">Email:</strong> info@djandyk.com</p>
-              <p><strong className="text-foreground">Website:</strong> djandyk.com</p>
+              <p><strong className="text-foreground">Email:</strong> info@djandyofficial.com</p>
+              <p><strong className="text-foreground">Website:</strong> djandyofficial.com</p>
             </div>
           </section>
 
@@ -255,7 +255,7 @@ export default function TermsAndConditionsPage() {
             <h2 className="text-lg font-semibold text-foreground mb-3">14. Contact</h2>
             <p>
               If you have any questions about these Terms, contact us at:
-              info@djandyk.com
+              info@djandyofficial.com
             </p>
           </section>
         </article>
