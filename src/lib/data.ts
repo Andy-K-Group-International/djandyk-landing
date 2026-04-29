@@ -221,13 +221,13 @@ export const EPS_SINGLES_2026 = [
     spotifyUrl: "https://open.spotify.com/album/4ksawSjAnCnbVT6xXVRrSZ",
   },
   {
-    title: "Paraller Stories",
+    title: "Parallel Stories",
     type: "Single",
     year: 2026,
     highlighted: true,
     note: "Latest release \u00B7 April 2026",
     coverUrl: "/albums/paraller-stories.jpg",
-    spotifyUrl: "https://open.spotify.com/search/Paraller%20Stories%20DJ%20AndyK",
+    spotifyUrl: "https://open.spotify.com/search/Parallel%20Stories%20DJ%20AndyK",
   },
   {
     title: "Feel My Spirit Wake",
@@ -486,7 +486,7 @@ export const NAV_SERVICES = [
     group: "Latest Release",
     items: [
       {
-        label: "Paraller Stories",
+        label: "Parallel Stories",
         description: "Single \u00B7 April 2026",
         href: "https://hyperfollow.com/djandyk",
       },
