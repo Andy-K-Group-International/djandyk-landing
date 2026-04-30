@@ -103,6 +103,18 @@ const JSON_LD = {
   ],
 };
 
+const BREADCRUMB_LD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}` },
+    { "@type": "ListItem", position: 2, name: "Press", item: `${SITE_URL}/press` },
+    { "@type": "ListItem", position: 3, name: "Music", item: `${SITE_URL}/#music` },
+    { "@type": "ListItem", position: 4, name: "Albums", item: `${SITE_URL}/#albums` },
+    { "@type": "ListItem", position: 5, name: "Sets", item: `${SITE_URL}/#sets` },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -114,6 +126,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }}
         />
       </head>
       <body
