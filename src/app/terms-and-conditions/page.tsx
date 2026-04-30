@@ -4,9 +4,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions",
+  title: "Terms & Conditions | DJ Andy'K",
   description:
-    "Website Terms & Conditions governing your access to and use of the DJ Andy\u2019K website.",
+    "Terms and conditions for djandyofficial.com \u2014 official website of DJ Andy'K.",
   alternates: { canonical: "/terms-and-conditions" },
 };
 

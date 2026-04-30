@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = {
   title: "Press & Media | DJ Andy'K",
   description:
-    "Electronic Press Kit for DJ Andy'K — artist bio, discography, technical info, streaming links, and media contact.",
+    "DJ Andy'K press kit, artist bio, Q&A interview and media downloads. UK-based Trance and Progressive House producer Andrej Kneisl.",
   alternates: { canonical: "/press" },
 };
 

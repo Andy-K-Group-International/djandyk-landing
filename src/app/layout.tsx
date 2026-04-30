@@ -21,7 +21,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 const SITE_URL = "https://djandyofficial.com";
 const SITE_TITLE = "DJ Andy'K | Official Website — Trance, Progressive House & EDM";
 const SITE_DESCRIPTION =
-  "Official website of DJ Andy'K (Andrej Kneisl). UK-based music producer of Trance, Progressive House and EDM.";
+  "Official website of DJ Andy'K — UK-based music producer of Trance, Progressive House and EDM. Stream albums When Later Becomes Never, Human Stories and more on Spotify, Apple Music and SoundCloud.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -34,12 +34,19 @@ export const metadata: Metadata = {
     "DJ Andy'K",
     "DJAndyK",
     "Andrej Kneisl",
-    "Trance",
-    "Progressive House",
-    "EDM",
-    "UK DJ",
-    "music producer",
+    "DJ Andy K Slovakia",
+    "DJ Andy K UK",
+    "DJ Andy K Paraguay",
+    "Trance DJ",
+    "Progressive House producer",
+    "EDM producer",
+    "When Later Becomes Never",
+    "Human Stories",
+    "Deep Connections",
+    "Music Is Your Passion",
+    "Four Elements",
     "djandyofficial.com",
+    "Andy'K Group International",
   ],
   authors: [{ name: "DJ Andy'K" }],
   creator: "DJ Andy'K",

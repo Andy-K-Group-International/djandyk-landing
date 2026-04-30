@@ -4,9 +4,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Website Disclaimer",
+  title: "Disclaimer | DJ Andy'K",
   description:
-    "Website disclaimer for DJ Andy'K / ANDY'K GROUP INTERNATIONAL LTD.",
+    "Website disclaimer for djandyofficial.com — official website of DJ Andy'K.",
   alternates: { canonical: "/disclaimer" },
 };
 

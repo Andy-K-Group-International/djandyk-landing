@@ -72,6 +72,46 @@ const jsonLd = {
       description:
         "Official website of DJ Andy'K. Producer of Trance, Progressive House, and EDM. Based in the UK, sharing music worldwide.",
     },
+    {
+      "@type": "MusicAlbum",
+      name: "When Later Becomes Never",
+      byArtist: { "@type": "MusicGroup", name: "DJ Andy'K" },
+      datePublished: "2026",
+      genre: ["Progressive House", "Trance"],
+      url: "https://open.spotify.com/album/1ezdr7EOZWuLBiw7Rpqis6",
+    },
+    {
+      "@type": "MusicAlbum",
+      name: "Human Stories",
+      byArtist: { "@type": "MusicGroup", name: "DJ Andy'K" },
+      datePublished: "2026",
+      genre: ["House", "Progressive House"],
+      url: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+    },
+    {
+      "@type": "MusicAlbum",
+      name: "Deep Connections",
+      byArtist: { "@type": "MusicGroup", name: "DJ Andy'K" },
+      datePublished: "2026",
+      genre: ["House", "Progressive House"],
+      url: "https://open.spotify.com/album/39Zb0euYMqdqg658wqKVGU",
+    },
+    {
+      "@type": "MusicAlbum",
+      name: "Music Is Your Passion",
+      byArtist: { "@type": "MusicGroup", name: "DJ Andy'K" },
+      datePublished: "2026",
+      genre: ["Trance"],
+      url: "https://open.spotify.com/album/2en5D8nLMSTpRE6fhS1BJY",
+    },
+    {
+      "@type": "MusicAlbum",
+      name: "Four Elements",
+      byArtist: { "@type": "MusicGroup", name: "DJ Andy'K" },
+      datePublished: "2026",
+      genre: ["EDM"],
+      url: "https://open.spotify.com/album/18OaI45bkpYwJtzL59BoUw",
+    },
   ],
 };
 

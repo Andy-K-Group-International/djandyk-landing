@@ -169,7 +169,7 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
         {release.cover ? (
           <img
             src={release.cover}
-            alt={release.title}
+            alt={`${release.title} — album cover by DJ Andy'K`}
             className="w-full aspect-square object-cover"
           />
         ) : (

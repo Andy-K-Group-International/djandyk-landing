@@ -4,9 +4,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Copyright",
+  title: "Copyright | DJ Andy'K",
   description:
-    "Copyright notice for all music, artwork, and content released by DJ Andy\u2019K / ANDY\u2019K GROUP INTERNATIONAL LTD.",
+    "Copyright information for DJ Andy'K music and content. \u2117 & \u00a9 ANDY'K GROUP INTERNATIONAL LTD.",
   alternates: { canonical: "/copyright" },
 };
 
