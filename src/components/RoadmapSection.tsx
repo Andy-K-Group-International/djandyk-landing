@@ -93,7 +93,7 @@ export default function RoadmapSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="journey" className="relative py-20 px-8 bg-section-roadmap">
+    <section id="journey" className="relative py-20 px-8 section-with-glass">
       <div className="line-grid line-grid-fade" />
 
       <div className="relative z-10 max-w-[1200px] mx-auto">
