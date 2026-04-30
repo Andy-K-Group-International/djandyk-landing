@@ -52,7 +52,7 @@ function Waveform({ fast }: { fast: boolean }) {
             backgroundColor: "#63B39A",
             animationDelay: BAR_DELAYS[i],
             transformOrigin: "bottom",
-            animationDuration: fast ? "0.6s" : "1.2s",
+            animationDuration: fast ? "0.5s" : "1.2s",
           }}
         />
       ))}
@@ -60,30 +60,45 @@ function Waveform({ fast }: { fast: boolean }) {
   );
 }
 
-function ChevronLeft() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-5 h-5">
-      <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
+function embedUrl(url: string) {
+  return `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&color=%2363B39A&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=true`;
 }
 
-function ChevronRight() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-5 h-5">
-      <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
+/** Returns inline styles for a card in the 3D fan effect */
+function fanStyle(
+  i: number,
+  hoveredIndex: number | null
+): React.CSSProperties {
+  if (hoveredIndex === null) return { position: "relative" };
+
+  if (i === hoveredIndex) {
+    return {
+      position: "relative",
+      zIndex: 10,
+      transform: "scale(1.08) translateY(-12px)",
+      boxShadow:
+        "0 0 30px rgba(99,179,154,0.5), 0 0 60px rgba(99,179,154,0.2), 0 20px 50px rgba(99,179,154,0.2)",
+    };
+  }
+
+  // Push cards in the same row to the sides
+  const hovRow = Math.floor(hoveredIndex / 3);
+  const hovCol = hoveredIndex % 3;
+  const myRow = Math.floor(i / 3);
+  const myCol = i % 3;
+  const tx = myRow === hovRow ? (myCol > hovCol ? 16 : -16) : 0;
+
+  return {
+    position: "relative",
+    transform: `scale(0.93) translateX(${tx}px)`,
+    opacity: 0.6,
+  };
 }
 
 export default function DJSetsSection() {
-  const carouselRef = useRef<HTMLDivElement>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [currentCard, setCurrentCard] = useState(0);
   const touchStartX = useRef(0);
-
-  function scrollCarousel(dir: "left" | "right") {
-    carouselRef.current?.scrollBy({ left: dir === "right" ? 400 : -400, behavior: "smooth" });
-  }
 
   function handleTouchStart(e: React.TouchEvent) {
     touchStartX.current = e.touches[0].clientX;
@@ -92,7 +107,11 @@ export default function DJSetsSection() {
   function handleTouchEnd(e: React.TouchEvent) {
     const delta = touchStartX.current - e.changedTouches[0].clientX;
     if (Math.abs(delta) > 50) {
-      scrollCarousel(delta > 0 ? "right" : "left");
+      setCurrentCard((prev) =>
+        delta > 0
+          ? Math.min(prev + 1, DJ_SETS.length - 1)
+          : Math.max(prev - 1, 0)
+      );
     }
   }
 
@@ -101,45 +120,45 @@ export default function DJSetsSection() {
       <style>{`
         @keyframes waveform {
           0%, 100% { transform: scaleY(0.4); }
-          50% { transform: scaleY(1); }
+          50%       { transform: scaleY(1); }
         }
         .waveform-bar {
           animation: waveform 1.2s ease-in-out infinite;
         }
-        .dj-carousel {
-          display: flex;
-          gap: 20px;
-          overflow-x: auto;
-          scroll-snap-type: x mandatory;
-          -webkit-overflow-scrolling: touch;
-          scrollbar-width: none;
-          -ms-overflow-style: none;
-          padding: 20px 4px;
+        /* Smooth fan transition */
+        .dj-fan-card-inner {
+          transition:
+            transform  0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+            box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+            opacity    0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        .dj-carousel::-webkit-scrollbar {
-          display: none;
-        }
-        .dj-carousel-card {
-          flex-shrink: 0;
-          min-width: calc(83vw - 64px);
-          scroll-snap-align: center;
-        }
-        @media (min-width: 640px) {
-          .dj-carousel-card {
-            min-width: calc(50% - 12px);
-          }
-        }
-        @media (min-width: 1024px) {
-          .dj-carousel-card {
-            min-width: calc(33.333% - 14px);
-          }
-        }
-        .dj-set-card {
-          transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-        }
-        /* React state controls transform — disable CSS hover transform to avoid conflict */
-        .dj-set-card.glass-card:hover {
+        /* Disable global glass-card CSS hover — React controls transform */
+        .dj-fan-card-inner.glass-card:hover {
           transform: none;
+        }
+        /* Desktop fan grid */
+        .dj-fan-grid {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 16px;
+          justify-content: center;
+          align-items: flex-start;
+          padding: 28px 0; /* room for scale overflow */
+        }
+        .dj-fan-slot {
+          flex: 0 0 calc(33.333% - 12px);
+          max-width: 360px;
+          min-width: 240px;
+        }
+        /* Mobile slider */
+        .dj-mobile-track {
+          display: flex;
+          width: 100%;
+          transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .dj-mobile-slide {
+          flex: 0 0 100%;
+          width: 100%;
         }
       `}</style>
 
@@ -157,80 +176,106 @@ export default function DJSetsSection() {
           </p>
         </div>
 
-        {/* Carousel wrapper */}
-        <div className="relative">
-          {/* Left arrow */}
-          <button
-            onClick={() => scrollCarousel("left")}
-            aria-label="Scroll left"
-            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 items-center justify-center bg-white border border-grid-500 rounded-full shadow-md hover:bg-soft-green hover:border-highlight transition-all -translate-x-5"
-          >
-            <ChevronLeft />
-          </button>
-
-          <div
-            ref={carouselRef}
-            className="dj-carousel"
-            onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
-          >
-            {DJ_SETS.map((set, i) => {
-              const isHovered = hoveredIndex === i;
-              const anyHovered = hoveredIndex !== null;
-              const embedSrc = `https://w.soundcloud.com/player/?url=${encodeURIComponent(set.url)}&color=%2363B39A&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=true`;
-
-              return (
+        {/* ── DESKTOP: 3D fan grid (2 rows × 3 cards) ── */}
+        <div className="hidden md:block">
+          <div className="dj-fan-grid">
+            {DJ_SETS.map((set, i) => (
+              <div key={set.title} className="dj-fan-slot">
                 <div
-                  key={set.title}
-                  className="dj-carousel-card"
+                  className="dj-fan-card-inner glass-card rounded-xl flex flex-col gap-4"
+                  style={{ padding: "20px", ...fanStyle(i, hoveredIndex) }}
                   onMouseEnter={() => setHoveredIndex(i)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
+                  <div>
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-highlight font-mono block mb-2">
+                      {set.year}
+                    </span>
+                    <h3 className="text-base font-bold text-foreground leading-snug">
+                      {set.title}
+                    </h3>
+                    <Waveform fast={hoveredIndex === i} />
+                  </div>
+                  <iframe
+                    src={embedUrl(set.url)}
+                    width="100%"
+                    height="120"
+                    frameBorder="0"
+                    allow="autoplay"
+                    loading="lazy"
+                    title={set.title}
+                    style={{ borderRadius: "8px", display: "block" }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ── MOBILE: single-card slider + dots ── */}
+        <div className="md:hidden">
+          <div
+            className="overflow-hidden"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div
+              className="dj-mobile-track"
+              style={{ transform: `translateX(calc(-${currentCard} * 100%))` }}
+            >
+              {DJ_SETS.map((set) => (
+                <div key={set.title} className="dj-mobile-slide px-1">
                   <div
-                    className="dj-set-card glass-card rounded-xl p-5 flex flex-col gap-4"
-                    style={{
-                      transform: isHovered
-                        ? "scale(1.05) translateY(-8px)"
-                        : anyHovered
-                          ? "scale(0.97)"
-                          : undefined,
-                      opacity: anyHovered && !isHovered ? 0.7 : 1,
-                      boxShadow: isHovered
-                        ? "0 0 25px rgba(99,179,154,0.5), 0 0 50px rgba(99,179,154,0.2), 0 16px 40px rgba(99,179,154,0.2)"
-                        : undefined,
-                    }}
+                    className="glass-card rounded-xl flex flex-col gap-4"
+                    style={{ padding: "20px" }}
                   >
                     <div>
                       <span className="text-[10px] uppercase tracking-[0.25em] text-highlight font-mono block mb-2">
                         {set.year}
                       </span>
-                      <h3 className="text-base font-bold text-foreground leading-snug">{set.title}</h3>
-                      <Waveform fast={isHovered} />
+                      <h3 className="text-base font-bold text-foreground leading-snug">
+                        {set.title}
+                      </h3>
+                      <Waveform fast={false} />
                     </div>
                     <iframe
-                      src={embedSrc}
+                      src={embedUrl(set.url)}
                       width="100%"
-                      height="200"
+                      height="120"
                       frameBorder="0"
                       allow="autoplay"
                       loading="lazy"
                       title={set.title}
-                      style={{ borderRadius: "8px" }}
+                      style={{ borderRadius: "8px", display: "block" }}
                     />
                   </div>
                 </div>
-              );
-            })}
+              ))}
+            </div>
           </div>
 
-          {/* Right arrow */}
-          <button
-            onClick={() => scrollCarousel("right")}
-            aria-label="Scroll right"
-            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 items-center justify-center bg-white border border-grid-500 rounded-full shadow-md hover:bg-soft-green hover:border-highlight transition-all translate-x-5"
-          >
-            <ChevronRight />
-          </button>
+          {/* Dots navigation */}
+          <div className="flex justify-center gap-2 mt-5">
+            {DJ_SETS.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentCard(i)}
+                aria-label={`Go to set ${i + 1}`}
+                style={{
+                  height: "8px",
+                  width: i === currentCard ? "20px" : "8px",
+                  borderRadius: "4px",
+                  backgroundColor:
+                    i === currentCard ? "#63B39A" : "#e2e4ea",
+                  border: "none",
+                  padding: 0,
+                  cursor: "pointer",
+                  transition: "all 0.3s ease",
+                  flexShrink: 0,
+                }}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Booking CTA */}
