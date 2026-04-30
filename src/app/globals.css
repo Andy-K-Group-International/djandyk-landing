@@ -140,28 +140,24 @@ body {
   mask-image: linear-gradient(to bottom, transparent, black 3%, black 97%, transparent);
 }
 
-/* Feature card glassmorphism — macOS frosted glass */
+/* Feature card glassmorphism */
 .glass-card {
-  background: rgba(200, 220, 210, 0.25);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    0 2px 8px rgba(0, 0, 0, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.6);
-  transition: all 0.3s ease;
+  border: 1px solid rgba(99, 179, 154, 0.2);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .glass-card:hover {
-  background: rgba(200, 220, 210, 0.38);
-  border-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(99, 179, 154, 0.6);
   box-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.12),
-    0 4px 12px rgba(0, 0, 0, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.7);
-  transform: translateY(-4px);
+    0 20px 60px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(99, 179, 154, 0.3),
+    0 0 20px rgba(99, 179, 154, 0.15),
+    0 0 40px rgba(99, 179, 154, 0.08);
+  transform: translateY(-8px) scale(1.02);
 }
 
 @media (max-width: 768px) {
@@ -284,25 +280,24 @@ body {
   border-bottom-color: #111111 !important;
 }
 
-/* Glass cards — macOS frosted glass dark mode */
+/* Glass cards dark mode */
 [data-theme="dark"] .glass-card {
-  background: rgba(10, 10, 30, 0.45) !important;
+  background: rgba(10, 10, 30, 0.5) !important;
   backdrop-filter: blur(24px) saturate(180%) !important;
   -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(99, 179, 154, 0.15) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
 
 [data-theme="dark"] .glass-card:hover {
-  background: rgba(10, 10, 30, 0.6) !important;
-  border-color: rgba(99, 179, 154, 0.3) !important;
+  border: 1px solid rgba(99, 179, 154, 0.5) !important;
   box-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
-  transform: translateY(-6px) !important;
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(99, 179, 154, 0.2),
+    0 0 25px rgba(99, 179, 154, 0.3),
+    0 0 50px rgba(99, 179, 154, 0.12) !important;
+  transform: translateY(-8px) scale(1.02) !important;
 }
 
 /* Subtle section tint — makes glass cards visible without heavy body gradient */
