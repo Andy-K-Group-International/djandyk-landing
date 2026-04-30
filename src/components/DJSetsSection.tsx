@@ -116,7 +116,7 @@ export default function DJSetsSection() {
   }
 
   return (
-    <section id="sets" className="relative pt-10 pb-20 px-8">
+    <section id="sets" className="relative pt-10 pb-20 px-8 bg-section-sets">
       <style>{`
         @keyframes waveform {
           0%, 100% { transform: scaleY(0.4); }

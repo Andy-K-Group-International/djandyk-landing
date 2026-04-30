@@ -293,6 +293,26 @@ body {
   transform: translateY(-6px) !important;
 }
 
+/* Section gradient backgrounds — makes glass cards visible */
+.bg-section-platforms {
+  background: linear-gradient(135deg, #f0faf5 0%, #e8f4f0 50%, #f5f9f7 100%);
+}
+.bg-section-albums {
+  background: linear-gradient(180deg, #ffffff 0%, #f0faf5 50%, #ffffff 100%);
+}
+.bg-section-sets {
+  background: linear-gradient(135deg, #f5f9f7 0%, #e8f4f0 100%);
+}
+.bg-section-roadmap {
+  background: linear-gradient(180deg, #f0faf5 0%, #ffffff 100%);
+}
+[data-theme="dark"] .bg-section-platforms,
+[data-theme="dark"] .bg-section-albums,
+[data-theme="dark"] .bg-section-sets,
+[data-theme="dark"] .bg-section-roadmap {
+  background: linear-gradient(135deg, #030310 0%, #010118 100%);
+}
+
 /* Hardcoded white backgrounds — all variants */
 [data-theme="dark"] .bg-white,
 [data-theme="dark"] .bg-white\/80,

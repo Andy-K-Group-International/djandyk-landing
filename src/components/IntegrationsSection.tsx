@@ -41,7 +41,8 @@ export default function IntegrationsSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="platforms" className="relative pt-10 pb-20 px-8 max-w-[1200px] mx-auto">
+    <section id="platforms" className="relative pt-10 pb-20 px-8 bg-section-platforms">
+      <div className="max-w-[1200px] mx-auto">
       <div className="text-center mb-14">
         <span className="text-[10px] uppercase tracking-[0.3em] text-highlight font-mono block mb-3">
           {t.music.label}
@@ -73,6 +74,7 @@ export default function IntegrationsSection() {
             </span>
           </a>
         ))}
+      </div>
       </div>
     </section>
   );

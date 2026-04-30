@@ -301,7 +301,7 @@ export default function FeaturedAlbums() {
   const { t } = useLanguage();
 
   return (
-    <section id="featured" className="relative pt-10 pb-20 px-8">
+    <section id="featured" className="relative pt-10 pb-20 px-8 bg-section-albums">
       <div className="max-w-[1200px] mx-auto">
         <div className="text-center max-w-[700px] mx-auto mb-12">
           <span className="text-[10px] uppercase tracking-[0.3em] text-highlight font-mono block mb-3">
