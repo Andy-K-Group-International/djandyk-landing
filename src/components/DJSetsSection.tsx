@@ -137,6 +137,10 @@ export default function DJSetsSection() {
         .dj-set-card {
           transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
         }
+        /* React state controls transform — disable CSS hover transform to avoid conflict */
+        .dj-set-card.glass-card:hover {
+          transform: none;
+        }
       `}</style>
 
       <div className="max-w-[1200px] mx-auto">

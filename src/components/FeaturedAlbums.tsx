@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { TRACKLISTS } from "@/lib/data";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const FEATURED_RELEASES = [
   {
@@ -316,18 +317,18 @@ export default function FeaturedAlbums() {
         </div>
 
         {/* Row 1: 3 cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+        <ScrollReveal stagger className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
           {FEATURED_RELEASES.slice(0, 3).map((release) => (
             <AlbumCard key={release.title} release={release} />
           ))}
-        </div>
+        </ScrollReveal>
 
         {/* Row 2: 2 cards centred */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[800px] mx-auto">
+        <ScrollReveal stagger className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[800px] mx-auto">
           {FEATURED_RELEASES.slice(3).map((release) => (
             <AlbumCard key={release.title} release={release} />
           ))}
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

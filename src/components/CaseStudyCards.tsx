@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/context/LanguageContext";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const ALBUM_ICONS = [
   // Album / vinyl
@@ -38,7 +39,7 @@ export default function CaseStudyCards() {
           <p className="text-base text-muted font-light">{t.featured.description}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <ScrollReveal stagger className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {t.featured.cards.map((card, i) => (
             <a
               key={i}
@@ -75,7 +76,7 @@ export default function CaseStudyCards() {
               </div>
             </a>
           ))}
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

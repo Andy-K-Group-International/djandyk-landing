@@ -63,7 +63,7 @@ export default function IntegrationsSection() {
             href={platform.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="platform-card group relative rounded-xl border border-grid-300 bg-white p-5 flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:border-highlight hover:bg-soft-green"
+            className="platform-card glass-card group relative rounded-xl p-5 flex flex-col items-center justify-center gap-3"
           >
             <div className="platform-icon text-highlight transition-all duration-300">
               {PLATFORM_ICONS[platform.icon]}

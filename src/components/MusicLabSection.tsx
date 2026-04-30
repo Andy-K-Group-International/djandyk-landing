@@ -5,6 +5,19 @@ const BLINK_STYLES = `
   @keyframes lab-dot   { 0%,100% { opacity:1; transform:scale(1) } 50% { opacity:0.3; transform:scale(0.75) } }
   .lab-badge { animation: lab-pulse 2.4s ease-in-out infinite; }
   .lab-dot   { animation: lab-dot   1.2s ease-in-out infinite; }
+  .lab-card.glass-card {
+    background: rgba(255,255,255,0.03) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(99,179,154,0.2) !important;
+    box-shadow: none !important;
+  }
+  .lab-card.glass-card:hover {
+    background: rgba(255,255,255,0.06) !important;
+    border-color: rgba(99,179,154,0.45) !important;
+    box-shadow: 0 0 20px rgba(99,179,154,0.15) !important;
+    transform: translateY(-4px) !important;
+  }
 `;
 
 const TOOLS = [
@@ -81,12 +94,7 @@ export default function MusicLabSection() {
           {TOOLS.map((tool) => (
             <div
               key={tool.title}
-              className="rounded-xl p-6 flex flex-col"
-              style={{
-                background: "rgba(255,255,255,0.03)",
-                border: "1px solid rgba(99,179,154,0.2)",
-                backdropFilter: "blur(8px)",
-              }}
+              className="lab-card glass-card rounded-xl p-6 flex flex-col"
             >
               <DevBadge />
               <span className="text-2xl mb-3">{tool.emoji}</span>

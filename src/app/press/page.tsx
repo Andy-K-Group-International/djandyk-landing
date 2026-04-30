@@ -50,7 +50,7 @@ function DownloadCard({
   href?: string;
 }) {
   return (
-    <div className="border border-grid-300 rounded-xl p-5 flex flex-col gap-3">
+    <div className="glass-card rounded-xl p-5 flex flex-col gap-3">
       <div>
         <p className="text-sm font-semibold text-foreground mb-0.5">{label}</p>
         <p className="text-xs text-muted-2">{note}</p>
@@ -114,7 +114,7 @@ export default function PressPage() {
         {/* Artist Bio */}
         <Section>
           <SectionTitle>Artist Bio</SectionTitle>
-          <div className="border border-grid-300 rounded-xl p-6 bg-white">
+          <div className="glass-card rounded-xl p-6">
             <p className="text-sm text-muted leading-relaxed mb-4">
               DJ Andy&apos;K is a UK-based producer of Trance, Progressive House, and EDM. Every track is built as a structured emotional journey — combining energy, melodic depth, and storytelling through sound. Released under ANDY&apos;K GROUP INTERNATIONAL LTD.
             </p>
@@ -127,7 +127,7 @@ export default function PressPage() {
         {/* Technical Info */}
         <Section>
           <SectionTitle>Technical Info</SectionTitle>
-          <div className="border border-grid-300 rounded-xl overflow-hidden bg-white">
+          <div className="glass-card rounded-xl overflow-hidden">
             <InfoRow label="Artist" value="DJ Andy'K" />
             <InfoRow label="Real Name" value={COMPANY.realName} />
             <InfoRow label="Genres" value={COMPANY.genre} />
@@ -278,7 +278,7 @@ export default function PressPage() {
         {/* Media Contact */}
         <Section>
           <SectionTitle>Media Contact</SectionTitle>
-          <div className="border border-grid-300 rounded-xl p-6 bg-white">
+          <div className="glass-card rounded-xl p-6">
             <p className="text-sm text-muted mb-4">
               For press, interviews, playlist placements, sync licensing, or booking enquiries:
             </p>

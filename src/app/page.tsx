@@ -17,6 +17,7 @@ import FlagshipSystems from "@/components/FlagshipSystems";
 import { HeroBackground } from "@/components/BackgroundGrid";
 import LatestReleaseBanner from "@/components/LatestReleaseBanner";
 import MusicLabSection from "@/components/MusicLabSection";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -85,67 +86,93 @@ export default function Home() {
       <Navbar />
       <LatestReleaseBanner />
 
-      <div className="relative overflow-clip">
-        <HeroBackground />
-        <Hero />
-      </div>
+      <ScrollReveal>
+        <div className="relative overflow-clip">
+          <HeroBackground />
+          <Hero />
+        </div>
+      </ScrollReveal>
 
       <TronDivider />
 
       {/* Sound Philosophy */}
-      <FaqSection />
+      <ScrollReveal>
+        <FaqSection />
+      </ScrollReveal>
 
       {/* Featured Releases */}
-      <FeaturedAlbums />
+      <ScrollReveal>
+        <FeaturedAlbums />
+      </ScrollReveal>
 
       <TronDivider />
 
       {/* About */}
-      <LovedBySection />
+      <ScrollReveal>
+        <LovedBySection />
+      </ScrollReveal>
 
       <TronDivider />
 
       {/* Artist Spotlight */}
-      <section className="relative pt-12 pb-14 px-8 max-w-[1200px] mx-auto">
-        <TestimonialPair />
-      </section>
+      <ScrollReveal>
+        <section className="relative pt-12 pb-14 px-8 max-w-[1200px] mx-auto">
+          <TestimonialPair />
+        </section>
+      </ScrollReveal>
 
       <TronDivider />
 
       {/* Streaming Platforms */}
-      <IntegrationsSection />
+      <ScrollReveal>
+        <IntegrationsSection />
+      </ScrollReveal>
 
       <TronDivider />
 
       {/* Discography */}
-      <PricingSection />
+      <ScrollReveal>
+        <PricingSection />
+      </ScrollReveal>
 
       <TronDivider />
 
       {/* Flagship Albums */}
-      <FlagshipSystems />
+      <ScrollReveal>
+        <FlagshipSystems />
+      </ScrollReveal>
 
       <TronDivider />
 
       {/* Album Journey */}
-      <RoadmapSection />
+      <ScrollReveal>
+        <RoadmapSection />
+      </ScrollReveal>
 
       <TronDivider />
 
       <TronDivider />
 
       {/* DJ Sets */}
-      <DJSetsSection />
+      <ScrollReveal>
+        <DJSetsSection />
+      </ScrollReveal>
 
       <TronDivider />
 
-      <ContactForm />
-      <CtaSection />
+      <ScrollReveal>
+        <ContactForm />
+      </ScrollReveal>
+      <ScrollReveal>
+        <CtaSection />
+      </ScrollReveal>
 
       <TronDivider />
 
       {/* Andy'K Music Lab */}
-      <MusicLabSection />
+      <ScrollReveal>
+        <MusicLabSection />
+      </ScrollReveal>
 
       <Footer />
     </main>
