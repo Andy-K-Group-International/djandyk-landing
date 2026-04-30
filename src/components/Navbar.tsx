@@ -96,6 +96,7 @@ export default function Navbar() {
   }
 
   return (
+  <>
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-grid-300">
       <div className="relative max-w-[1200px] mx-auto flex items-center justify-between px-6 sm:px-8 h-[60px]">
 
@@ -194,99 +195,104 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          onClick={() => setMobileOpen(!mobileOpen)}
+          onClick={() => {
+            console.log("menu clicked", !mobileOpen);
+            setMobileOpen(!mobileOpen);
+          }}
           className="md:hidden flex items-center justify-center w-10 h-10 -mr-2 text-foreground"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
           {mobileOpen ? <CloseIcon /> : <HamburgerIcon />}
         </button>
       </div>
+    </nav>
 
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="md:hidden fixed top-[60px] left-0 right-0 bottom-0 z-[60] bg-white overflow-y-auto">
-          <div className="px-6 py-6 space-y-1">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={resolveHref(link.href, isHome)}
-                onClick={closeMobile}
-                className="block py-3 text-base font-medium text-foreground border-b border-grid-300"
-              >
-                {link.label}
-              </a>
-            ))}
+    {/* Mobile menu — rendered outside <nav> to avoid backdrop-filter containing-block bug
+        (backdrop-blur-sm creates a stacking context that traps fixed children) */}
+    {mobileOpen && (
+      <div className="md:hidden fixed top-[60px] left-0 right-0 bottom-0 z-[60] bg-white overflow-y-auto">
+        <div className="px-6 py-6 space-y-1">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={resolveHref(link.href, isHome)}
+              onClick={closeMobile}
+              className="block py-3 text-base font-medium text-foreground border-b border-grid-300"
+            >
+              {link.label}
+            </a>
+          ))}
 
-            {/* Platforms accordion */}
-            <div className="border-b border-grid-300">
-              <button
-                onClick={() => setMobilePlatformsOpen(!mobilePlatformsOpen)}
-                className="flex items-center justify-between w-full py-3 text-base font-medium text-foreground"
-              >
-                {t.nav.listenNow}
-                <ChevronDown className={`w-5 h-5 text-muted transition-transform duration-200 ${mobilePlatformsOpen ? "rotate-180" : ""}`} />
-              </button>
+          {/* Platforms accordion */}
+          <div className="border-b border-grid-300">
+            <button
+              onClick={() => setMobilePlatformsOpen(!mobilePlatformsOpen)}
+              className="flex items-center justify-between w-full py-3 text-base font-medium text-foreground"
+            >
+              {t.nav.listenNow}
+              <ChevronDown className={`w-5 h-5 text-muted transition-transform duration-200 ${mobilePlatformsOpen ? "rotate-180" : ""}`} />
+            </button>
 
-              {mobilePlatformsOpen && (
-                <div className="pb-4 space-y-4">
-                  {NAV_SERVICES.map((group) => (
-                    <div key={group.group}>
-                      <p className="text-[10px] uppercase tracking-widest text-muted-2 font-medium mb-2 px-2">
-                        {group.group}
-                      </p>
-                      <div className="space-y-1">
-                        {group.items.map((item) => (
-                          <a
-                            key={item.label}
-                            href={item.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={closeMobile}
-                            className="block px-3 py-2.5 rounded-lg hover:bg-bg-light transition-colors"
-                          >
-                            <span className="text-sm font-medium text-foreground">{item.label}</span>
-                            <span className="block text-xs text-muted-2 mt-0.5">{item.description}</span>
-                          </a>
-                        ))}
-                      </div>
+            {mobilePlatformsOpen && (
+              <div className="pb-4 space-y-4">
+                {NAV_SERVICES.map((group) => (
+                  <div key={group.group}>
+                    <p className="text-[10px] uppercase tracking-widest text-muted-2 font-medium mb-2 px-2">
+                      {group.group}
+                    </p>
+                    <div className="space-y-1">
+                      {group.items.map((item) => (
+                        <a
+                          key={item.label}
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={closeMobile}
+                          className="block px-3 py-2.5 rounded-lg hover:bg-bg-light transition-colors"
+                        >
+                          <span className="text-sm font-medium text-foreground">{item.label}</span>
+                          <span className="block text-xs text-muted-2 mt-0.5">{item.description}</span>
+                        </a>
+                      ))}
                     </div>
-                  ))}
-                </div>
-              )}
-            </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
 
-            {/* Language + theme + CTA */}
-            <div className="pt-4 flex items-center gap-3">
-              <button
-                onClick={toggleTheme}
-                title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-                className="w-9 h-9 flex items-center justify-center rounded-full border border-highlight text-sm hover:bg-soft-green transition-colors"
-              >
-                {theme === "dark" ? "☀️" : "🌙"}
-              </button>
-              <select
-                value={locale}
-                onChange={(e) => setLocale(e.target.value as Locale)}
-                aria-label="Select language"
-                className="text-xs text-muted bg-transparent border border-grid-500 px-2 py-1.5 cursor-pointer focus:outline-none"
-              >
-                <option value="en">EN</option>
-                <option value="es">ES</option>
-                <option value="sk">SK</option>
-                <option value="de">DE</option>
-              </select>
-              <a
-                href={COMPANY.hyperfollow}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center h-9 px-5 text-sm font-medium bg-highlight text-white hover:bg-deep-teal transition-colors rounded"
-              >
-                {t.nav.listenNow}
-              </a>
-            </div>
+          {/* Language + theme + CTA */}
+          <div className="pt-4 flex items-center gap-3">
+            <button
+              onClick={toggleTheme}
+              title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+              className="w-9 h-9 flex items-center justify-center rounded-full border border-highlight text-sm hover:bg-soft-green transition-colors"
+            >
+              {theme === "dark" ? "☀️" : "🌙"}
+            </button>
+            <select
+              value={locale}
+              onChange={(e) => setLocale(e.target.value as Locale)}
+              aria-label="Select language"
+              className="text-xs text-muted bg-transparent border border-grid-500 px-2 py-1.5 cursor-pointer focus:outline-none"
+            >
+              <option value="en">EN</option>
+              <option value="es">ES</option>
+              <option value="sk">SK</option>
+              <option value="de">DE</option>
+            </select>
+            <a
+              href={COMPANY.hyperfollow}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center h-9 px-5 text-sm font-medium bg-highlight text-white hover:bg-deep-teal transition-colors rounded"
+            >
+              {t.nav.listenNow}
+            </a>
           </div>
         </div>
-      )}
-    </nav>
+      </div>
+    )}
+  </>
   );
 }

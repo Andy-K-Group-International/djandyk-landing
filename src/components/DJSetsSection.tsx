@@ -1,3 +1,6 @@
+"use client";
+
+import { useRef, useState } from "react";
 import { COMPANY } from "@/lib/data";
 
 const DJ_SETS = [
@@ -36,9 +39,9 @@ const DJ_SETS = [
 const BAR_HEIGHTS = [12, 20, 24, 16, 10];
 const BAR_DELAYS = ["0s", "0.1s", "0.2s", "0.3s", "0.4s"];
 
-function Waveform() {
+function Waveform({ fast }: { fast: boolean }) {
   return (
-    <div className="dj-waveform flex items-end gap-[3px] h-6 mt-2">
+    <div className="flex items-end gap-[3px] h-6 mt-2">
       {BAR_HEIGHTS.map((h, i) => (
         <span
           key={i}
@@ -49,6 +52,7 @@ function Waveform() {
             backgroundColor: "#63B39A",
             animationDelay: BAR_DELAYS[i],
             transformOrigin: "bottom",
+            animationDuration: fast ? "0.6s" : "1.2s",
           }}
         />
       ))}
@@ -56,33 +60,42 @@ function Waveform() {
   );
 }
 
-function SetCard({ set }: { set: typeof DJ_SETS[0] }) {
-  const embedSrc = `https://w.soundcloud.com/player/?url=${encodeURIComponent(set.url)}&color=%2363B39A&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=true`;
-
+function ChevronLeft() {
   return (
-    <div className="dj-set-card glass-card rounded-xl p-5 flex flex-col gap-4 border-highlight/0">
-      <div>
-        <span className="text-[10px] uppercase tracking-[0.25em] text-highlight font-mono block mb-2">
-          {set.year}
-        </span>
-        <h3 className="text-base font-bold text-foreground leading-snug">{set.title}</h3>
-        <Waveform />
-      </div>
-      <iframe
-        src={embedSrc}
-        width="100%"
-        height="300"
-        frameBorder="0"
-        allow="autoplay"
-        loading="lazy"
-        title={set.title}
-        style={{ borderRadius: "8px" }}
-      />
-    </div>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-5 h-5">
+      <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function ChevronRight() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-5 h-5">
+      <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
   );
 }
 
 export default function DJSetsSection() {
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const touchStartX = useRef(0);
+
+  function scrollCarousel(dir: "left" | "right") {
+    carouselRef.current?.scrollBy({ left: dir === "right" ? 400 : -400, behavior: "smooth" });
+  }
+
+  function handleTouchStart(e: React.TouchEvent) {
+    touchStartX.current = e.touches[0].clientX;
+  }
+
+  function handleTouchEnd(e: React.TouchEvent) {
+    const delta = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(delta) > 50) {
+      scrollCarousel(delta > 0 ? "right" : "left");
+    }
+  }
+
   return (
     <section id="sets" className="relative pt-10 pb-20 px-8">
       <style>{`
@@ -93,15 +106,36 @@ export default function DJSetsSection() {
         .waveform-bar {
           animation: waveform 1.2s ease-in-out infinite;
         }
+        .dj-carousel {
+          display: flex;
+          gap: 20px;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+          padding: 20px 4px;
+        }
+        .dj-carousel::-webkit-scrollbar {
+          display: none;
+        }
+        .dj-carousel-card {
+          flex-shrink: 0;
+          min-width: calc(83vw - 64px);
+          scroll-snap-align: center;
+        }
+        @media (min-width: 640px) {
+          .dj-carousel-card {
+            min-width: calc(50% - 12px);
+          }
+        }
+        @media (min-width: 1024px) {
+          .dj-carousel-card {
+            min-width: calc(33.333% - 14px);
+          }
+        }
         .dj-set-card {
-          transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-        }
-        .dj-set-card:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 0 20px rgba(99,179,154,0.3), 0 0 40px rgba(99,179,154,0.1), 0 12px 40px rgba(99,179,154,0.15);
-        }
-        .dj-set-card:hover .waveform-bar {
-          animation-duration: 0.6s;
+          transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
         }
       `}</style>
 
@@ -119,22 +153,84 @@ export default function DJSetsSection() {
           </p>
         </div>
 
-        {/* Row 1: 3 cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
-          {DJ_SETS.slice(0, 3).map((set) => (
-            <SetCard key={set.title} set={set} />
-          ))}
-        </div>
+        {/* Carousel wrapper */}
+        <div className="relative">
+          {/* Left arrow */}
+          <button
+            onClick={() => scrollCarousel("left")}
+            aria-label="Scroll left"
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 items-center justify-center bg-white border border-grid-500 rounded-full shadow-md hover:bg-soft-green hover:border-highlight transition-all -translate-x-5"
+          >
+            <ChevronLeft />
+          </button>
 
-        {/* Row 2: 3 cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
-          {DJ_SETS.slice(3).map((set) => (
-            <SetCard key={set.title} set={set} />
-          ))}
+          <div
+            ref={carouselRef}
+            className="dj-carousel"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
+            {DJ_SETS.map((set, i) => {
+              const isHovered = hoveredIndex === i;
+              const anyHovered = hoveredIndex !== null;
+              const embedSrc = `https://w.soundcloud.com/player/?url=${encodeURIComponent(set.url)}&color=%2363B39A&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=true`;
+
+              return (
+                <div
+                  key={set.title}
+                  className="dj-carousel-card"
+                  onMouseEnter={() => setHoveredIndex(i)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <div
+                    className="dj-set-card glass-card rounded-xl p-5 flex flex-col gap-4"
+                    style={{
+                      transform: isHovered
+                        ? "scale(1.05) translateY(-8px)"
+                        : anyHovered
+                          ? "scale(0.97)"
+                          : undefined,
+                      opacity: anyHovered && !isHovered ? 0.7 : 1,
+                      boxShadow: isHovered
+                        ? "0 0 25px rgba(99,179,154,0.5), 0 0 50px rgba(99,179,154,0.2), 0 16px 40px rgba(99,179,154,0.2)"
+                        : undefined,
+                    }}
+                  >
+                    <div>
+                      <span className="text-[10px] uppercase tracking-[0.25em] text-highlight font-mono block mb-2">
+                        {set.year}
+                      </span>
+                      <h3 className="text-base font-bold text-foreground leading-snug">{set.title}</h3>
+                      <Waveform fast={isHovered} />
+                    </div>
+                    <iframe
+                      src={embedSrc}
+                      width="100%"
+                      height="200"
+                      frameBorder="0"
+                      allow="autoplay"
+                      loading="lazy"
+                      title={set.title}
+                      style={{ borderRadius: "8px" }}
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Right arrow */}
+          <button
+            onClick={() => scrollCarousel("right")}
+            aria-label="Scroll right"
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 items-center justify-center bg-white border border-grid-500 rounded-full shadow-md hover:bg-soft-green hover:border-highlight transition-all translate-x-5"
+          >
+            <ChevronRight />
+          </button>
         </div>
 
         {/* Booking CTA */}
-        <div className="text-center">
+        <div className="text-center mt-10">
           <p className="text-sm text-muted font-light mb-4">
             Available for bookings — clubs, events, and private sessions.
           </p>
