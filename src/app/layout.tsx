@@ -4,6 +4,7 @@ import { LanguageProvider } from "@/context/LanguageContext";
 import { ThemeProvider } from "@/context/ThemeContext";
 import CookieBanner from "@/components/CookieBanner";
 import FloatingPlayer from "@/components/FloatingPlayer";
+import AlbumAnnouncementPopup from "@/components/AlbumAnnouncementPopup";
 import "./globals.css";
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -140,6 +141,7 @@ export default function RootLayout({
             {children}
             <FloatingPlayer />
             <CookieBanner />
+            <AlbumAnnouncementPopup />
           </LanguageProvider>
         </ThemeProvider>
       </body>
