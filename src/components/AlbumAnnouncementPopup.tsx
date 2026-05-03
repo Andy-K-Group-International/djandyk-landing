@@ -189,9 +189,11 @@ export default function AlbumAnnouncementPopup() {
         </div>
 
         {/* Quote */}
-        <p className="bif-quote text-sm font-light leading-relaxed mb-7">
-          &ldquo;On my way back home, building something special.&rdquo;
-        </p>
+        <div className="bif-quote text-sm font-light leading-relaxed mb-7 space-y-2">
+          <p>&ldquo;On my way back home, building something special.&rdquo;</p>
+          <p>Preparing for Europe — music, energy, and the road ahead.</p>
+          <p>Ready for the stage. Stay with love. ♥</p>
+        </div>
 
         {/* Platform icons */}
         <div className="flex items-center gap-5 mb-7">
