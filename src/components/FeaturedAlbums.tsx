@@ -21,8 +21,7 @@ const FEATURED_RELEASES = [
     title: "Human Stories",
     genre: "House / Progressive House",
     description: "A house album with emotional depth — four tracks also released in piano versions.",
-    note: "7 tracks available now · Full album coming soon",
-    liveBadge: true,
+    completeBadge: true,
     href: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
     embedUrl: "https://open.spotify.com/embed/artist/3JhFGt6jRQvnYgvhWMQHUU?utm_source=generator&theme=0",
     cover: "/albums/human-stories.jpg",
@@ -61,35 +60,24 @@ const FEATURED_RELEASES = [
   },
 ];
 
-const LIVE_BADGE_STYLES = `
-  @keyframes hs-pulse { 0%,100% { opacity:1 } 50% { opacity:0.4 } }
-  @keyframes hs-dot { 0%,100% { opacity:1; transform:scale(1) } 50% { opacity:0.3; transform:scale(0.75) } }
+const TRACK_DOT_STYLES = `
   @keyframes hs-green-dot { 0%,100% { opacity:1; transform:scale(1) } 50% { opacity:0.45; transform:scale(0.7) } }
-  .hs-badge { animation: hs-pulse 2.4s ease-in-out infinite; }
-  .hs-dot { animation: hs-dot 1.2s ease-in-out infinite; }
   .hs-green-dot { animation: hs-green-dot 2s ease-in-out infinite; }
 `;
 
-function LiveBadge() {
+function CompleteBadge() {
   return (
-    <>
-      <style>{LIVE_BADGE_STYLES}</style>
-      <div
-        className="hs-badge inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-mono font-medium mb-3 self-start"
-        style={{
-          background: "rgba(99,179,154,0.12)",
-          border: "1px solid rgba(99,179,154,0.4)",
-          color: "#63B39A",
-          boxShadow: "0 0 10px rgba(99,179,154,0.25), 0 0 20px rgba(99,179,154,0.1)",
-        }}
-      >
-        <span
-          className="hs-dot inline-block w-2 h-2 rounded-full shrink-0"
-          style={{ background: "#ef4444" }}
-        />
-        IN PROGRESS · New releases weekly
-      </div>
-    </>
+    <div
+      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-mono font-medium mb-3 self-start"
+      style={{
+        background: "rgba(99,179,154,0.1)",
+        border: "1px solid rgba(99,179,154,0.3)",
+        color: "#63B39A",
+      }}
+    >
+      <span className="inline-block w-1.5 h-1.5 rounded-full shrink-0" style={{ background: "#63B39A" }} />
+      ✅ COMPLETE
+    </div>
   );
 }
 
@@ -146,8 +134,9 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
 
   return (
     <div className="glass-card rounded-xl p-6 flex flex-col transition-all duration-300 hover:shadow-[0_8px_30px_rgba(99,179,154,0.12)] hover:border-highlight/30">
-      {/* Live badge — Human Stories only */}
-      {"liveBadge" in release && release.liveBadge && <LiveBadge />}
+      <style>{TRACK_DOT_STYLES}</style>
+      {/* Complete badge — Human Stories */}
+      {"completeBadge" in release && release.completeBadge && <CompleteBadge />}
 
       {/* Available Now badge */}
       {"availableNow" in release && release.availableNow && (
