@@ -28,6 +28,13 @@ export const COMPANY = {
 
 export const LATEST_RELEASES = [
   {
+    title: "Before I Forget",
+    type: "New Single \u00b7 Trance",
+    releaseDate: "15.5.2026",
+    coverUrl: "/releases/before-i-forget.png",
+    spotifyUrl: "https://soundcloud.com/djandykofficial",
+  },
+  {
     title: "Someone I Used To Be",
     type: "New Release \u00b7 Human Stories",
     coverUrl: "/albums/someone-i-used-to-be.jpg",
@@ -163,6 +170,14 @@ export const CASE_STUDIES = [
 
 // Discography — Albums 2026 (maps to DiscographySection tab 1)
 export const ALBUMS_2026 = [
+  {
+    title: "Before I Forget",
+    genre: "Trance / Progressive Trance",
+    year: "2026",
+    status: "in-progress",
+    coverUrl: "/releases/before-i-forget.png",
+    soundcloudUrl: "https://soundcloud.com/djandykofficial",
+  },
   {
     title: "When Later Becomes Never",
     genre: "Progressive House / House",
@@ -400,9 +415,21 @@ export const ADAM_ROADMAP = [
 
 export const ADAM_SHOWCASE = ADAM_ROADMAP;
 
-export type TracklistEntry = { num: string; title: string; released?: boolean; spotifyUrl?: string };
+export type TracklistEntry = { num: string; title: string; released?: boolean; spotifyUrl?: string; label?: string; isIntro?: boolean };
 
 export const TRACKLISTS: Record<string, TracklistEntry[]> = {
+  "Before I Forget": [
+    { num: "", title: "Intro", isIntro: true },
+    { num: "01", title: "Before I Forget", released: true, label: "Out 15.5.2026" },
+    { num: "02", title: "Sunset Over Us" },
+    { num: "03", title: "Letting Go Feels Like Falling" },
+    { num: "04", title: "What I Remember" },
+    { num: "05", title: "Further Than Forever" },
+    { num: "06", title: "Between Me and You" },
+    { num: "07", title: "The Door We Found" },
+    { num: "08", title: "Almost Home" },
+    { num: "", title: "Outro", isIntro: true },
+  ],
   "When Later Becomes Never": [
     { num: "01", title: "Intro \u2013 When Later Becomes Never" },
     { num: "02", title: "Before We Knew" },

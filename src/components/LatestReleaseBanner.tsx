@@ -37,7 +37,7 @@ export default function LatestReleaseBanner() {
 
           <div className="min-w-0">
             <span className="text-[10px] uppercase tracking-[0.2em] text-white/70 font-mono block leading-tight">
-              {release.type} · Out Now
+              {release.type} · {"releaseDate" in release && release.releaseDate ? `Out ${release.releaseDate}` : "Out Now"}
             </span>
             <span className="text-sm font-semibold text-white truncate block leading-tight">
               {release.title}

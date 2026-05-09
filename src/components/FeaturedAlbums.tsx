@@ -8,6 +8,15 @@ import ScrollReveal from "@/components/ScrollReveal";
 const FEATURED_RELEASES = [
   {
     kicker: "Album · 2026",
+    title: "Before I Forget",
+    genre: "Trance / Progressive Trance",
+    description: "Eight tracks of progressive trance — a journey through memory, emotion, and release.",
+    inProgressBadge: true,
+    href: "https://soundcloud.com/djandykofficial",
+    cover: "/releases/before-i-forget.png",
+  },
+  {
+    kicker: "Album · 2026",
     title: "When Later Becomes Never",
     genre: "Progressive House / House",
     description: "A journey through emotion, memory, and release. Eleven tracks, one story.",
@@ -64,6 +73,22 @@ const TRACK_DOT_STYLES = `
   @keyframes hs-green-dot { 0%,100% { opacity:1; transform:scale(1) } 50% { opacity:0.45; transform:scale(0.7) } }
   .hs-green-dot { animation: hs-green-dot 2s ease-in-out infinite; }
 `;
+
+function InProgressBadge() {
+  return (
+    <div
+      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-mono font-medium mb-3 self-start"
+      style={{
+        background: "rgba(239,68,68,0.1)",
+        border: "1px solid rgba(239,68,68,0.3)",
+        color: "#ef4444",
+      }}
+    >
+      <span className="inline-block w-1.5 h-1.5 rounded-full shrink-0" style={{ background: "#ef4444" }} />
+      IN PROGRESS
+    </div>
+  );
+}
 
 function CompleteBadge() {
   return (
@@ -125,7 +150,7 @@ function ChevronIcon({ open }: { open: boolean }) {
   );
 }
 
-type TrackEntry = { num: string; title: string; released?: boolean; spotifyUrl?: string };
+type TrackEntry = { num: string; title: string; released?: boolean; spotifyUrl?: string; label?: string; isIntro?: boolean };
 
 function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
   const [playerOpen, setPlayerOpen] = useState(false);
@@ -135,6 +160,9 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
   return (
     <div className="glass-card rounded-xl p-6 flex flex-col transition-all duration-300 hover:shadow-[0_8px_30px_rgba(99,179,154,0.12)] hover:border-highlight/30">
       <style>{TRACK_DOT_STYLES}</style>
+      {/* In Progress badge — Before I Forget */}
+      {"inProgressBadge" in release && release.inProgressBadge && <InProgressBadge />}
+
       {/* Complete badge — Human Stories */}
       {"completeBadge" in release && release.completeBadge && <CompleteBadge />}
 
@@ -202,18 +230,20 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
         </a>
 
         <div className="flex items-center gap-1 ml-auto">
-          <button
-            onClick={() => { setPlayerOpen(!playerOpen); setTracklistOpen(false); }}
-            className={`inline-flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded border transition-colors ${
-              playerOpen
-                ? "bg-highlight text-white border-highlight"
-                : "text-muted-2 border-grid-500 hover:border-highlight hover:text-highlight"
-            }`}
-            title="Toggle player"
-          >
-            <PlayIcon />
-            Player
-          </button>
+          {"embedUrl" in release && release.embedUrl && (
+            <button
+              onClick={() => { setPlayerOpen(!playerOpen); setTracklistOpen(false); }}
+              className={`inline-flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded border transition-colors ${
+                playerOpen
+                  ? "bg-highlight text-white border-highlight"
+                  : "text-muted-2 border-grid-500 hover:border-highlight hover:text-highlight"
+              }`}
+              title="Toggle player"
+            >
+              <PlayIcon />
+              Player
+            </button>
+          )}
           <button
             onClick={() => { setTracklistOpen(!tracklistOpen); setPlayerOpen(false); }}
             className={`inline-flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded border transition-colors ${
@@ -231,10 +261,10 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
       </div>
 
       {/* Spotify embed — lazy: only mounts when playerOpen */}
-      {playerOpen && (
+      {"embedUrl" in release && release.embedUrl && playerOpen && (
         <div className="mt-4 rounded-xl overflow-hidden">
           <iframe
-            src={release.embedUrl}
+            src={release.embedUrl as string}
             width="100%"
             height="152"
             frameBorder="0"
@@ -250,32 +280,40 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
         <div className="mt-4 border-t border-grid-300 pt-4">
           {tracks ? (
             <ol className="space-y-1.5">
-              {(tracks as TrackEntry[]).map((track) => (
-                <li key={track.num} className="flex items-center gap-3 group/track">
-                  <span className="text-[10px] font-mono text-muted-2 w-7 shrink-0 text-right">
-                    {track.num}
-                  </span>
-                  {track.released ? (
-                    <span
-                      className="hs-green-dot inline-block w-1.5 h-1.5 rounded-full shrink-0"
-                      style={{ background: "#63B39A" }}
-                      title="Out now"
-                    />
-                  ) : (
-                    <span className="inline-block w-1.5 h-1.5 rounded-full shrink-0 bg-transparent" />
-                  )}
-                  <span className={`text-sm leading-snug ${track.released ? "text-foreground font-medium" : "text-muted-2"}`}>
-                    {track.title}
-                  </span>
-                  {track.released && (
-                    track.spotifyUrl ? (
-                      <a href={track.spotifyUrl} target="_blank" rel="noopener noreferrer" className="text-[10px] font-mono text-highlight ml-auto shrink-0 hover:underline">Out now</a>
+              {(tracks as TrackEntry[]).map((track, i) =>
+                track.isIntro ? (
+                  <li key={i} className="flex items-center gap-3">
+                    <span className="text-[10px] font-mono text-muted-2 w-7 shrink-0 text-right" />
+                    <span className="inline-block w-1.5 h-1.5 shrink-0" />
+                    <span className="text-xs italic text-muted-2">{track.title}</span>
+                  </li>
+                ) : (
+                  <li key={track.num} className="flex items-center gap-3 group/track">
+                    <span className="text-[10px] font-mono text-muted-2 w-7 shrink-0 text-right">
+                      {track.num}
+                    </span>
+                    {track.released ? (
+                      <span
+                        className="hs-green-dot inline-block w-1.5 h-1.5 rounded-full shrink-0"
+                        style={{ background: "#63B39A" }}
+                        title="Out now"
+                      />
                     ) : (
-                      <span className="text-[10px] font-mono text-highlight ml-auto shrink-0">Out now</span>
-                    )
-                  )}
-                </li>
-              ))}
+                      <span className="inline-block w-1.5 h-1.5 rounded-full shrink-0 bg-transparent" />
+                    )}
+                    <span className={`text-sm leading-snug ${track.released ? "text-foreground font-medium" : "text-muted-2"}`}>
+                      {track.title}
+                    </span>
+                    {track.released && (
+                      track.spotifyUrl ? (
+                        <a href={track.spotifyUrl} target="_blank" rel="noopener noreferrer" className="text-[10px] font-mono text-highlight ml-auto shrink-0 hover:underline">{track.label ?? "Out now"}</a>
+                      ) : (
+                        <span className="text-[10px] font-mono text-highlight ml-auto shrink-0">{track.label ?? "Out now"}</span>
+                      )
+                    )}
+                  </li>
+                )
+              )}
             </ol>
           ) : (
             <p className="text-xs italic text-muted-2">Tracklist coming soon</p>
@@ -312,8 +350,8 @@ export default function FeaturedAlbums() {
           ))}
         </ScrollReveal>
 
-        {/* Row 2: 2 cards centred */}
-        <ScrollReveal stagger className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[800px] mx-auto">
+        {/* Row 2: 3 cards */}
+        <ScrollReveal stagger className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {FEATURED_RELEASES.slice(3).map((release) => (
             <AlbumCard key={release.title} release={release} />
           ))}
