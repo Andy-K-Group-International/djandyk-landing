@@ -169,8 +169,7 @@ export default function Home() {
         <IntegrationsSection />
       </ScrollReveal>
 
-      {/* Music Lab Live Banner — flows directly into Discography */}
-      <MusicLabBanner />
+      <TronDivider />
 
       {/* Discography */}
       <ScrollReveal>
@@ -209,7 +208,8 @@ export default function Home() {
         <CtaSection />
       </ScrollReveal>
 
-      <TronDivider />
+      {/* Music Lab Live Banner — directly above pricing cards */}
+      <MusicLabBanner />
 
       {/* Andy'K Music Lab */}
       <ScrollReveal>
