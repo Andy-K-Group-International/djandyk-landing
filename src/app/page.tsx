@@ -169,7 +169,8 @@ export default function Home() {
         <IntegrationsSection />
       </ScrollReveal>
 
-      <TronDivider />
+      {/* Music Lab Live Banner — flows directly into Discography */}
+      <MusicLabBanner />
 
       {/* Discography */}
       <ScrollReveal>
@@ -214,9 +215,6 @@ export default function Home() {
       <ScrollReveal>
         <MusicLabSection />
       </ScrollReveal>
-
-      {/* Music Lab Live Banner */}
-      <MusicLabBanner />
 
       <Footer />
     </main>
