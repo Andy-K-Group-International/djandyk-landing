@@ -17,6 +17,7 @@ import FlagshipSystems from "@/components/FlagshipSystems";
 import { HeroBackground } from "@/components/BackgroundGrid";
 import LatestReleaseBanner from "@/components/LatestReleaseBanner";
 import MusicLabSection from "@/components/MusicLabSection";
+import MusicLabBanner from "@/components/MusicLabBanner";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const jsonLd = {
@@ -212,6 +213,13 @@ export default function Home() {
       {/* Andy'K Music Lab */}
       <ScrollReveal>
         <MusicLabSection />
+      </ScrollReveal>
+
+      <TronDivider />
+
+      {/* Music Lab Live Banner */}
+      <ScrollReveal>
+        <MusicLabBanner />
       </ScrollReveal>
 
       <Footer />

@@ -13,7 +13,7 @@ export const COMPANY = {
   genre: "Trance \u00B7 Progressive House \u00B7 EDM",
   email: "info@djandyofficial.com",
   website: "djandyofficial.com",
-  labelWebsite: "https://www.andykgroupinternational.com",
+  labelWebsite: "https://www.andykgroup.com",
   socials: {
     instagram: "https://www.instagram.com/djandykofficial",
     tiktok: "https://www.tiktok.com/@djandykofficial",
