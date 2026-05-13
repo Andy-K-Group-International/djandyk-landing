@@ -58,22 +58,10 @@ const CHECK_ICON = (
 
 export default function MusicLabSection() {
   return (
-    <section id="lab" className="relative py-20 px-8 bg-[#0a0a0a] overflow-hidden">
-      {/* Radial glow */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(99,179,154,0.1) 0%, transparent 70%)",
-        }}
-      />
-
+    <section id="lab" className="relative pb-20 pt-10 px-8 overflow-hidden" style={{ background: "#0d1117" }}>
       <div className="relative z-10 max-w-[1100px] mx-auto">
         {/* Header */}
         <div className="text-center max-w-[680px] mx-auto mb-14">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-highlight font-mono block mb-4">
-            Coming Soon
-          </span>
           <h2 className="text-[clamp(1.875rem,1.52rem+1.25vw,2.5rem)] font-bold tracking-tight text-white leading-[1.2] mb-4">
             <span className="font-serif italic font-light">Andy&apos;K</span>{" "}
             Music{" "}
