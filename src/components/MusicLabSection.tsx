@@ -1,5 +1,28 @@
 "use client";
 
+const WAVE_HEIGHTS = [
+  16, 24, 36, 52, 65, 72, 60, 78, 70, 55, 80, 72, 64, 76, 58, 82, 74, 66,
+  88, 78, 90, 82, 76, 92, 88, 80, 92, 84, 78, 88, 82, 72, 86, 76, 66, 80,
+  70, 60, 74, 62, 52, 68, 56, 44, 58, 40, 28, 18,
+];
+
+function LabWaveform() {
+  return (
+    <div className="lab-waveform" aria-hidden="true">
+      {WAVE_HEIGHTS.map((h, i) => (
+        <div
+          key={i}
+          className="lab-wave-bar"
+          style={{
+            height: `${h}px`,
+            animationDelay: `${((i * 0.075) % 1.8).toFixed(2)}s`,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
 const PLANS = [
   {
     id: "studio",
@@ -58,7 +81,7 @@ const CHECK_ICON = (
 
 export default function MusicLabSection() {
   return (
-    <section id="lab" className="relative pb-20 pt-10 px-8 overflow-hidden" style={{ background: "#0d1117" }}>
+    <section id="lab" className="relative pt-10 pb-0 px-8 overflow-hidden" style={{ background: "#0d1117" }}>
       <div className="relative z-10 max-w-[1100px] mx-auto">
         {/* Header */}
         <div className="text-center max-w-[680px] mx-auto mb-14">
@@ -134,14 +157,6 @@ export default function MusicLabSection() {
                   ))}
                 </ul>
 
-                {/* Badge */}
-                <span
-                  className="block text-center text-[9px] font-mono uppercase tracking-[0.2em] pb-3"
-                  style={{ color: "rgba(99,179,154,0.55)" }}
-                >
-                  {plan.badge}
-                </span>
-
                 {/* CTA */}
                 <a
                   href={WAITLIST}
@@ -168,10 +183,13 @@ export default function MusicLabSection() {
         </div>
 
         {/* Footer note */}
-        <p className="text-center text-xs text-white/25 mt-10 font-light">
+        <p className="text-center text-xs text-white/25 mt-10 mb-16 font-light">
           Launching on lab.djandyofficial.com — be first in line.
         </p>
       </div>
+
+      {/* Waveform pinned to bottom of Lab section */}
+      <LabWaveform />
 
       <style>{`
         .lab-pricing-card {

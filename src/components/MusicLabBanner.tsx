@@ -1,31 +1,8 @@
-const WAVE_HEIGHTS = [
-  16, 24, 36, 52, 65, 72, 60, 78, 70, 55, 80, 72, 64, 76, 58, 82, 74, 66,
-  88, 78, 90, 82, 76, 92, 88, 80, 92, 84, 78, 88, 82, 72, 86, 76, 66, 80,
-  70, 60, 74, 62, 52, 68, 56, 44, 58, 40, 28, 18,
-];
-
-function LabWaveform() {
-  return (
-    <div className="lab-waveform" aria-hidden="true">
-      {WAVE_HEIGHTS.map((h, i) => (
-        <div
-          key={i}
-          className="lab-wave-bar"
-          style={{
-            height: `${h}px`,
-            animationDelay: `${((i * 0.075) % 1.8).toFixed(2)}s`,
-          }}
-        />
-      ))}
-    </div>
-  );
-}
-
 export default function MusicLabBanner() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ background: "#0d1117", paddingTop: "56px", paddingBottom: "110px", paddingInline: "2rem" }}
+      style={{ background: "#0d1117", paddingTop: "56px", paddingBottom: "56px", paddingInline: "2rem" }}
     >
       {/* Radial glow */}
       <div
@@ -85,9 +62,6 @@ export default function MusicLabBanner() {
           Try Now →
         </a>
       </div>
-
-      {/* Waveform pinned to bottom */}
-      <LabWaveform />
     </section>
   );
 }
