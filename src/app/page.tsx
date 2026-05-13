@@ -215,12 +215,8 @@ export default function Home() {
         <MusicLabSection />
       </ScrollReveal>
 
-      <TronDivider />
-
       {/* Music Lab Live Banner */}
-      <ScrollReveal>
-        <MusicLabBanner />
-      </ScrollReveal>
+      <MusicLabBanner />
 
       <Footer />
     </main>
