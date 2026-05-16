@@ -31,7 +31,7 @@ export const LATEST_RELEASES = [
     title: "Before I Forget",
     type: "New Single \u00b7 Trance",
     coverUrl: "/releases/before-i-forget.png",
-    spotifyUrl: "https://soundcloud.com/djandykofficial",
+    spotifyUrl: "https://open.spotify.com/album/0KN8WFTt4WsjSB6f2jXx20?si=XDyLYdTyRzC9XU0gDs1eDQ",
   },
   {
     title: "Someone I Used To Be",
