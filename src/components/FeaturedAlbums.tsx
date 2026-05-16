@@ -150,7 +150,7 @@ function ChevronIcon({ open }: { open: boolean }) {
   );
 }
 
-type TrackEntry = { num: string; title: string; released?: boolean; spotifyUrl?: string; label?: string; isIntro?: boolean };
+type TrackEntry = { num: string; title: string; released?: boolean; comingSoon?: boolean; spotifyUrl?: string; label?: string; isIntro?: boolean };
 
 function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
   const [playerOpen, setPlayerOpen] = useState(false);
@@ -298,10 +298,16 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
                         style={{ background: "#63B39A" }}
                         title="Out now"
                       />
+                    ) : track.comingSoon ? (
+                      <span
+                        className="inline-block w-1.5 h-1.5 rounded-full shrink-0"
+                        style={{ background: "#F59E0B", opacity: 0.7 }}
+                        title="Coming soon"
+                      />
                     ) : (
                       <span className="inline-block w-1.5 h-1.5 rounded-full shrink-0 bg-transparent" />
                     )}
-                    <span className={`text-sm leading-snug ${track.released ? "text-foreground font-medium" : "text-muted-2"}`}>
+                    <span className={`text-sm leading-snug ${track.released ? "text-foreground font-medium" : track.comingSoon ? "text-muted" : "text-muted-2"}`}>
                       {track.title}
                     </span>
                     {track.released && (
@@ -310,6 +316,9 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
                       ) : (
                         <span className="text-[10px] font-mono text-highlight ml-auto shrink-0">{track.label ?? "Out now"}</span>
                       )
+                    )}
+                    {track.comingSoon && (
+                      <span className="text-[10px] font-mono ml-auto shrink-0" style={{ color: "#F59E0B", opacity: 0.8 }}>{track.label}</span>
                     )}
                   </li>
                 )

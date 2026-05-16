@@ -30,7 +30,6 @@ export const LATEST_RELEASES = [
   {
     title: "Before I Forget",
     type: "New Single \u00b7 Trance",
-    releaseDate: "15.5.2026",
     coverUrl: "/releases/before-i-forget.png",
     spotifyUrl: "https://soundcloud.com/djandykofficial",
   },
@@ -415,17 +414,17 @@ export const ADAM_ROADMAP = [
 
 export const ADAM_SHOWCASE = ADAM_ROADMAP;
 
-export type TracklistEntry = { num: string; title: string; released?: boolean; spotifyUrl?: string; label?: string; isIntro?: boolean };
+export type TracklistEntry = { num: string; title: string; released?: boolean; comingSoon?: boolean; spotifyUrl?: string; label?: string; isIntro?: boolean };
 
 export const TRACKLISTS: Record<string, TracklistEntry[]> = {
   "Before I Forget": [
     { num: "", title: "Intro", isIntro: true },
-    { num: "01", title: "Before I Forget", released: true, label: "Out 15.5.2026" },
+    { num: "01", title: "Before I Forget", released: true, label: "Out Now" },
     { num: "02", title: "Sunset Over Us" },
     { num: "03", title: "Letting Go Feels Like Falling" },
     { num: "04", title: "What I Remember" },
     { num: "05", title: "Further Than Forever" },
-    { num: "06", title: "Between Me and You" },
+    { num: "06", title: "Between Me and You", comingSoon: true, label: "22.5.2026" },
     { num: "07", title: "The Door We Found" },
     { num: "08", title: "Almost Home" },
     { num: "", title: "Outro", isIntro: true },
