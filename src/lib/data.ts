@@ -423,10 +423,10 @@ export const TRACKLISTS: Record<string, TracklistEntry[]> = {
     { num: "02", title: "Sunset Over Us" },
     { num: "03", title: "Letting Go Feels Like Falling" },
     { num: "04", title: "What I Remember" },
-    { num: "05", title: "Further Than Forever" },
+    { num: "05", title: "Further Than Forever (ft. Aria Noir)" },
     { num: "06", title: "Between Me and You", comingSoon: true, label: "22.5.2026" },
     { num: "07", title: "The Door We Found" },
-    { num: "08", title: "Almost Home" },
+    { num: "08", title: "Almost Home (ft. Lia Bonson)" },
     { num: "", title: "Outro", isIntro: true },
   ],
   "When Later Becomes Never": [
