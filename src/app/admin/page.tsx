@@ -17,7 +17,7 @@ export default function AdminPage() {
     e.preventDefault();
     if (email.trim() === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
       try { localStorage.setItem(ADMIN_KEY, "true"); } catch {}
-      router.push("/");
+      router.push("/dashboard");
     } else {
       setError(true);
       setPassword("");
