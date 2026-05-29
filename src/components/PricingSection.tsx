@@ -32,9 +32,9 @@ function CoverArt({ item }: { item: DiscographyItem }) {
   return (
     <div
       className="w-full aspect-square rounded-lg mb-4 flex items-center justify-center"
-      style={{ background: "linear-gradient(135deg, rgba(220,239,230,0.3), rgba(168,213,194,0.15))" }}
+      style={{ background: "linear-gradient(135deg, rgba(0,0,0,0.05), rgba(0,0,0,0.03))" }}
     >
-      <svg viewBox="0 0 24 24" fill="none" stroke="#2F6B58" strokeWidth={1.5} className="w-6 h-6 opacity-30">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#111111" strokeWidth={1.5} className="w-6 h-6 opacity-30">
         <path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </div>
@@ -110,7 +110,7 @@ function StandardCard({ item, t }: { item: DiscographyItem; t: { albums: { lates
       href={item.spotifyUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="group glass-card rounded-xl p-5 flex flex-col transition-all duration-300 hover:shadow-[0_8px_30px_rgba(99,179,154,0.1)] hover:border-highlight/30"
+      className="group glass-card rounded-xl p-5 flex flex-col transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:border-highlight/30"
     >
       <CoverArt item={item} />
       <ItemMeta item={item} t={t} />

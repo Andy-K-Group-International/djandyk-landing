@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react";
 
 const EMBED_URL = `https://w.soundcloud.com/player/?url=${encodeURIComponent(
   "https://soundcloud.com/djandyk_2024/this-is-dj-andyk-music-is-your-passion-official-album-intro-2025"
-)}&color=%2363B39A&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false`;
+)}&color=%23111111&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false`;
 
 function PlayIcon() {
   return (
@@ -108,7 +108,7 @@ export default function FloatingPlayer() {
       {/* Player UI */}
       <div
         aria-label="Floating music player"
-        className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-[calc(100vw-2rem)] max-w-[320px] glass-card rounded-2xl p-3.5 flex items-center gap-3 shadow-[0_8px_40px_rgba(99,179,154,0.2)] transition-all duration-500 ${
+        className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-[calc(100vw-2rem)] max-w-[320px] glass-card rounded-2xl p-3.5 flex items-center gap-3 shadow-[0_8px_40px_rgba(0,0,0,0.1)] transition-all duration-500 ${
           visible
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 translate-y-8 pointer-events-none"

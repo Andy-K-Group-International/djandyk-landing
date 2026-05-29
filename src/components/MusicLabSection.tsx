@@ -74,7 +74,7 @@ const PLANS = [
 const WAITLIST = "mailto:info@djandyofficial.com?subject=Andy'K Music Lab Waitlist";
 
 const CHECK_ICON = (
-  <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "#63b39a" }}>
+  <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "#111111" }}>
     <path d="M3 8l3.5 3.5 6.5-6.5" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
@@ -105,13 +105,13 @@ export default function MusicLabSection() {
                 plan.highlighted
                   ? {
                       background: "rgba(8,20,16,0.85)",
-                      border: "1px solid rgba(99,179,154,0.55)",
+                      border: "1px solid rgba(255,255,255,0.25)",
                       boxShadow:
-                        "0 0 48px rgba(99,179,154,0.2), 0 0 0 1px rgba(99,179,154,0.25), 0 8px 32px rgba(0,0,0,0.5)",
+                        "0 0 48px rgba(255,255,255,0.06), 0 0 0 1px rgba(255,255,255,0.15), 0 8px 32px rgba(0,0,0,0.5)",
                     }
                   : {
                       background: "rgba(255,255,255,0.03)",
-                      border: "1px solid rgba(99,179,154,0.18)",
+                      border: "1px solid rgba(255,255,255,0.08)",
                     }
               }
             >
@@ -121,9 +121,9 @@ export default function MusicLabSection() {
                   <span
                     className="inline-block px-3 py-1 rounded-full text-[10px] font-mono font-semibold uppercase tracking-widest"
                     style={{
-                      background: "rgba(99,179,154,0.15)",
-                      border: "1px solid rgba(99,179,154,0.45)",
-                      color: "#63b39a",
+                      background: "rgba(255,255,255,0.08)",
+                      border: "1px solid rgba(255,255,255,0.2)",
+                      color: "#D9D9D9",
                     }}
                   >
                     ⭐ Most Popular
@@ -164,9 +164,9 @@ export default function MusicLabSection() {
                   style={
                     plan.highlighted
                       ? {
-                          background: "rgba(99,179,154,0.18)",
-                          border: "1px solid rgba(99,179,154,0.6)",
-                          color: "#63b39a",
+                          background: "rgba(255,255,255,0.1)",
+                          border: "1px solid rgba(255,255,255,0.3)",
+                          color: "#D9D9D9",
                         }
                       : {
                           background: "transparent",
@@ -201,8 +201,8 @@ export default function MusicLabSection() {
           transform: translateY(-4px);
         }
         .lab-pricing-card--pro:hover {
-          box-shadow: 0 0 60px rgba(99,179,154,0.28), 0 0 0 1px rgba(99,179,154,0.35), 0 12px 48px rgba(0,0,0,0.6) !important;
-          border-color: rgba(99,179,154,0.75) !important;
+          box-shadow: 0 0 60px rgba(255,255,255,0.08), 0 0 0 1px rgba(255,255,255,0.25), 0 12px 48px rgba(0,0,0,0.6) !important;
+          border-color: rgba(255,255,255,0.4) !important;
         }
       `}</style>
     </section>

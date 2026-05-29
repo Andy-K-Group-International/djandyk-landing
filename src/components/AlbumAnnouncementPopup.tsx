@@ -106,13 +106,13 @@ export default function AlbumAnnouncementPopup() {
           background: rgba(255, 255, 255, 0.95);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
-          border: 1px solid rgba(99, 179, 154, 0.4);
-          box-shadow: 0 20px 60px rgba(0,0,0,0.15), 0 0 0 1px rgba(99,179,154,0.1);
+          border: 1px solid rgba(0, 0, 0, 0.12);
+          box-shadow: 0 20px 60px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.06);
         }
         .dark .bif-card {
           background: rgba(5, 5, 25, 0.92);
-          border: 1px solid rgba(99, 179, 154, 0.4);
-          box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 30px rgba(99,179,154,0.1);
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 30px rgba(255,255,255,0.04);
         }
 
         .bif-title { color: #01011b; }
@@ -130,19 +130,19 @@ export default function AlbumAnnouncementPopup() {
         .dark .bif-close:hover { color: #ffffff; }
 
         .bif-icon { color: #1a1a1a; transition: color 0.2s; }
-        .bif-icon:hover { color: #63B39A; }
+        .bif-icon:hover { color: #111111; }
         .dark .bif-icon { color: #ffffff; }
-        .dark .bif-icon:hover { color: #63B39A; }
+        .dark .bif-icon:hover { color: #D9D9D9; }
 
         .bif-btn {
-          background: #63B39A;
+          background: #111111;
           color: #ffffff;
           border: none;
           transition: background 0.2s, box-shadow 0.2s;
         }
         .bif-btn:hover {
-          background: #4d9e86;
-          box-shadow: 0 0 24px rgba(99,179,154,0.45);
+          background: #333333;
+          box-shadow: 0 0 24px rgba(0,0,0,0.25);
         }
       `}</style>
 
@@ -160,7 +160,7 @@ export default function AlbumAnnouncementPopup() {
         {/* Kicker */}
         <span
           className="text-[11px] uppercase font-mono block mb-4"
-          style={{ color: "#63B39A", letterSpacing: "0.35em" }}
+          style={{ color: "#111111", letterSpacing: "0.35em" }}
         >
           🎵 New Album In Progress
         </span>
@@ -168,7 +168,7 @@ export default function AlbumAnnouncementPopup() {
         {/* Artist */}
         <p
           className="text-[11px] uppercase font-mono mb-2"
-          style={{ color: "#63B39A", letterSpacing: "0.35em" }}
+          style={{ color: "#111111", letterSpacing: "0.35em" }}
         >
           DJ Andy&apos;K
         </p>
@@ -185,7 +185,7 @@ export default function AlbumAnnouncementPopup() {
         <div className="flex items-center gap-3 mb-5">
           <span className="bif-genre text-sm">Trance &amp; Progressive</span>
           <span className="w-px h-3 inline-block" style={{ background: "rgba(0,0,0,0.2)" }} />
-          <span className="text-sm font-semibold" style={{ color: "#63B39A" }}>Summer 2026</span>
+          <span className="text-sm font-semibold" style={{ color: "#111111" }}>Summer 2026</span>
         </div>
 
         {/* Quote */}

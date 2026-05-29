@@ -68,8 +68,8 @@ function JourneyCard({
           <div
             className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
             style={{
-              background: "linear-gradient(135deg, rgba(220,239,230,0.2), rgba(168,213,194,0.15))",
-              color: "#2F6B58",
+              background: "linear-gradient(135deg, rgba(0,0,0,0.05), rgba(0,0,0,0.03))",
+              color: "#111111",
             }}
           >
             {icon}

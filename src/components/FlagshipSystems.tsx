@@ -21,7 +21,7 @@ export default function FlagshipSystems() {
       </div>
 
       {/* When Later Becomes Never */}
-      <div className="glass-card rounded-xl p-8 mb-6 transition-all duration-300 hover:shadow-[0_4px_24px_rgba(99,179,154,0.12)]">
+      <div className="glass-card rounded-xl p-8 mb-6 transition-all duration-300 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
         <div className="flex items-center gap-4 mb-4">
           <span className="text-[10px] uppercase tracking-widest text-highlight font-mono">
             {t.flagship.label}
@@ -53,7 +53,7 @@ export default function FlagshipSystems() {
       </div>
 
       {/* Piano Series */}
-      <div className="glass-card rounded-xl p-8 transition-all duration-300 hover:shadow-[0_4px_24px_rgba(99,179,154,0.12)]">
+      <div className="glass-card rounded-xl p-8 transition-all duration-300 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
         <div className="flex items-center gap-4 mb-4">
           <span className="text-[10px] uppercase tracking-widest text-highlight font-mono">
             {t.flagship.pianoLabel}

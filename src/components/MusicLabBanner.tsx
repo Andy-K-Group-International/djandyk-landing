@@ -9,7 +9,7 @@ export default function MusicLabBanner() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 60% 70% at 50% 40%, rgba(99,179,154,0.08) 0%, transparent 70%)",
+            "radial-gradient(ellipse 60% 70% at 50% 40%, rgba(255,255,255,0.04) 0%, transparent 70%)",
         }}
       />
 
@@ -18,9 +18,9 @@ export default function MusicLabBanner() {
         <span
           className="inline-block text-[10px] font-mono uppercase tracking-[0.3em] mb-4 px-3 py-1 rounded-full"
           style={{
-            background: "rgba(99,179,154,0.1)",
-            border: "1px solid rgba(99,179,154,0.28)",
-            color: "#63b39a",
+            background: "rgba(255,255,255,0.08)",
+            border: "1px solid rgba(255,255,255,0.2)",
+            color: "#D9D9D9",
           }}
         >
           Now Live
@@ -42,7 +42,7 @@ export default function MusicLabBanner() {
         </p>
         <p
           className="text-sm font-mono mb-8"
-          style={{ color: "rgba(99,179,154,0.65)" }}
+          style={{ color: "rgba(255,255,255,0.45)" }}
         >
           BPM Detector · DJ Planner · Mastering Tool
         </p>
@@ -53,10 +53,10 @@ export default function MusicLabBanner() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-7 py-3 text-sm font-semibold rounded transition-all duration-200 hover:-translate-y-0.5"
           style={{
-            background: "rgba(99,179,154,0.1)",
-            border: "1px solid rgba(99,179,154,0.4)",
-            color: "#63b39a",
-            boxShadow: "0 0 28px rgba(99,179,154,0.1)",
+            background: "rgba(255,255,255,0.08)",
+            border: "1px solid rgba(255,255,255,0.3)",
+            color: "#D9D9D9",
+            boxShadow: "0 0 28px rgba(255,255,255,0.04)",
           }}
         >
           Try Now →

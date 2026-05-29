@@ -95,12 +95,12 @@ function CompleteBadge() {
     <div
       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-mono font-medium mb-3 self-start"
       style={{
-        background: "rgba(99,179,154,0.1)",
-        border: "1px solid rgba(99,179,154,0.3)",
-        color: "#63B39A",
+        background: "rgba(0,0,0,0.05)",
+        border: "1px solid rgba(0,0,0,0.15)",
+        color: "#111111",
       }}
     >
-      <span className="inline-block w-1.5 h-1.5 rounded-full shrink-0" style={{ background: "#63B39A" }} />
+      <span className="inline-block w-1.5 h-1.5 rounded-full shrink-0" style={{ background: "#111111" }} />
       ✅ COMPLETE
     </div>
   );
@@ -116,10 +116,10 @@ function CoverPlaceholder({ title }: { title: string }) {
     <div
       className="w-full aspect-square rounded-xl flex items-center justify-center"
       style={{
-        background: "linear-gradient(135deg, rgba(220,239,230,0.6) 0%, rgba(168,213,194,0.3) 100%)",
+        background: "linear-gradient(135deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.04) 100%)",
       }}
     >
-      <span className="text-3xl font-bold font-serif tracking-widest" style={{ color: "rgba(47,107,88,0.3)" }}>
+      <span className="text-3xl font-bold font-serif tracking-widest" style={{ color: "rgba(0,0,0,0.25)" }}>
         {initials}
       </span>
     </div>
@@ -158,7 +158,7 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
   const tracks = TRACKLISTS[release.title] ?? null;
 
   return (
-    <div className="glass-card rounded-xl p-6 flex flex-col transition-all duration-300 hover:shadow-[0_8px_30px_rgba(99,179,154,0.12)] hover:border-highlight/30">
+    <div className="glass-card rounded-xl p-6 flex flex-col transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:border-highlight/30">
       <style>{TRACK_DOT_STYLES}</style>
       {/* In Progress badge — Before I Forget */}
       {"inProgressBadge" in release && release.inProgressBadge && <InProgressBadge />}
@@ -171,12 +171,12 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
         <div
           className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-mono font-medium mb-3 self-start"
           style={{
-            background: "rgba(99,179,154,0.1)",
-            border: "1px solid rgba(99,179,154,0.3)",
-            color: "#63B39A",
+            background: "rgba(0,0,0,0.05)",
+            border: "1px solid rgba(0,0,0,0.15)",
+            color: "#111111",
           }}
         >
-          <span className="inline-block w-1.5 h-1.5 rounded-full shrink-0" style={{ background: "#63B39A" }} />
+          <span className="inline-block w-1.5 h-1.5 rounded-full shrink-0" style={{ background: "#111111" }} />
           Available Now
         </div>
       )}
@@ -295,7 +295,7 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
                     {track.released ? (
                       <span
                         className="hs-green-dot inline-block w-1.5 h-1.5 rounded-full shrink-0"
-                        style={{ background: "#63B39A" }}
+                        style={{ background: "#111111" }}
                         title="Out now"
                       />
                     ) : track.comingSoon ? (

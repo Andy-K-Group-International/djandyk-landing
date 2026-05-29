@@ -49,7 +49,7 @@ function Waveform({ fast }: { fast: boolean }) {
           style={{
             width: "3px",
             height: `${h}px`,
-            backgroundColor: "#63B39A",
+            backgroundColor: "#111111",
             animationDelay: BAR_DELAYS[i],
             transformOrigin: "bottom",
             animationDuration: fast ? "0.5s" : "1.2s",
@@ -61,7 +61,7 @@ function Waveform({ fast }: { fast: boolean }) {
 }
 
 function embedUrl(url: string) {
-  return `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&color=%2363B39A&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=true`;
+  return `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&color=%23111111&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=true`;
 }
 
 /** Returns inline styles for a card in the 3D fan effect */
@@ -77,7 +77,7 @@ function fanStyle(
       zIndex: 10,
       transform: "scale(1.08) translateY(-12px)",
       boxShadow:
-        "0 0 30px rgba(99,179,154,0.5), 0 0 60px rgba(99,179,154,0.2), 0 20px 50px rgba(99,179,154,0.2)",
+        "0 0 30px rgba(0,0,0,0.25), 0 0 60px rgba(0,0,0,0.1), 0 20px 50px rgba(0,0,0,0.1)",
     };
   }
 
@@ -266,7 +266,7 @@ export default function DJSetsSection() {
                   width: i === currentCard ? "20px" : "8px",
                   borderRadius: "4px",
                   backgroundColor:
-                    i === currentCard ? "#63B39A" : "#e2e4ea",
+                    i === currentCard ? "#111111" : "#e2e4ea",
                   border: "none",
                   padding: 0,
                   cursor: "pointer",

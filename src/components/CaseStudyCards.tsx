@@ -48,12 +48,12 @@ export default function CaseStudyCards() {
               rel="noopener noreferrer"
               className="group block"
             >
-              <div className="glass-card rounded-xl p-7 h-full min-h-[260px] flex flex-col transition-all duration-300 hover:shadow-[0_8px_30px_rgba(99,179,154,0.1)]">
+              <div className="glass-card rounded-xl p-7 h-full min-h-[260px] flex flex-col transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
                 <div
                   className="w-10 h-10 rounded-lg flex items-center justify-center mb-5"
                   style={{
-                    background: "linear-gradient(135deg, rgba(220,239,230,0.2), rgba(168,213,194,0.15))",
-                    color: "#2F6B58",
+                    background: "linear-gradient(135deg, rgba(0,0,0,0.05), rgba(0,0,0,0.03))",
+                    color: "#111111",
                   }}
                 >
                   {ALBUM_ICONS[i]}

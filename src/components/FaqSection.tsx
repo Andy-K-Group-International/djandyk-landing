@@ -49,10 +49,10 @@ export default function FaqSection() {
               <circle cx="32" cy="64" r="1" fill="rgba(49,38,59,0.05)" />
             </pattern>
             <pattern id="sound-dots-md" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
-              <circle cx="30" cy="25" r="1.8" fill="rgba(99,179,154,0.06)" />
-              <circle cx="90" cy="70" r="2" fill="rgba(99,179,154,0.05)" />
-              <circle cx="15" cy="95" r="1.5" fill="rgba(99,179,154,0.07)" />
-              <circle cx="75" cy="15" r="2.2" fill="rgba(99,179,154,0.04)" />
+              <circle cx="30" cy="25" r="1.8" fill="rgba(0,0,0,0.06)" />
+              <circle cx="90" cy="70" r="2" fill="rgba(0,0,0,0.05)" />
+              <circle cx="15" cy="95" r="1.5" fill="rgba(0,0,0,0.07)" />
+              <circle cx="75" cy="15" r="2.2" fill="rgba(0,0,0,0.04)" />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#sound-dots-sm)" />
@@ -82,8 +82,8 @@ export default function FaqSection() {
                 <div
                   className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
                   style={{
-                    background: "linear-gradient(135deg, rgba(220,239,230,0.2), rgba(168,213,194,0.15))",
-                    color: "#2F6B58",
+                    background: "linear-gradient(135deg, rgba(0,0,0,0.05), rgba(0,0,0,0.03))",
+                    color: "#111111",
                   }}
                 >
                   {SOUND_ICONS[i]}

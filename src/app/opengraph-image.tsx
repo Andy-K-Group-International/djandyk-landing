@@ -16,7 +16,7 @@ export default async function OgImage() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          background: "linear-gradient(135deg, #f8fffc 0%, #edf8f4 50%, #f0faf6 100%)",
+          background: "linear-gradient(135deg, #F5F5F5 0%, #EBEBEB 50%, #F0F0F0 100%)",
           fontFamily: "sans-serif",
           padding: "60px 80px",
           position: "relative",
@@ -28,7 +28,7 @@ export default async function OgImage() {
             position: "absolute",
             inset: 0,
             backgroundImage:
-              "linear-gradient(rgba(99,179,154,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(99,179,154,0.07) 1px, transparent 1px)",
+              "linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px)",
             backgroundSize: "60px 60px",
           }}
         />
@@ -42,7 +42,7 @@ export default async function OgImage() {
             width: 400,
             height: 400,
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(99,179,154,0.15) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(0,0,0,0.06) 0%, transparent 70%)",
           }}
         />
 
@@ -68,7 +68,7 @@ export default async function OgImage() {
             width: 80,
             height: 3,
             borderRadius: 2,
-            background: "linear-gradient(90deg, #63B39A, #2F6B58)",
+            background: "linear-gradient(90deg, #111111, #333333)",
             marginBottom: 28,
           }}
         />
@@ -78,7 +78,7 @@ export default async function OgImage() {
           style={{
             fontSize: 26,
             fontWeight: 300,
-            color: "#2F6B58",
+            color: "#333333",
             textAlign: "center",
             letterSpacing: "0.04em",
             marginBottom: 32,
@@ -104,10 +104,10 @@ export default async function OgImage() {
               style={{
                 padding: "8px 18px",
                 borderRadius: 999,
-                border: "1px solid rgba(99,179,154,0.4)",
-                background: "rgba(99,179,154,0.08)",
+                border: "1px solid rgba(0,0,0,0.12)",
+                background: "rgba(0,0,0,0.05)",
                 fontSize: 16,
-                color: "#2F6B58",
+                color: "#111111",
                 letterSpacing: "0.06em",
                 fontWeight: 500,
               }}
@@ -124,7 +124,7 @@ export default async function OgImage() {
             bottom: 40,
             right: 80,
             fontSize: 16,
-            color: "#63B39A",
+            color: "#111111",
             letterSpacing: "0.08em",
           }}
         >
