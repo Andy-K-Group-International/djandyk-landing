@@ -3,8 +3,6 @@
 import { COMPANY, FOOTER_LINKS } from "@/lib/data";
 import { useLanguage } from "@/context/LanguageContext";
 import type { Locale } from "@/lib/translations";
-import AdminUnlock from "@/components/AdminUnlock";
-
 export default function Footer() {
   const { locale, setLocale, t } = useLanguage();
 
@@ -13,7 +11,7 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-4">
           <a href="#hero" className="text-foreground font-bold tracking-tight text-sm">
-            <AdminUnlock>DJ Andy&apos;K</AdminUnlock>
+            DJ Andy&apos;K
           </a>
           <span className="text-xs text-muted-2">{t.footer.copyright}</span>
         </div>
@@ -53,6 +51,11 @@ export default function Footer() {
         <p className="text-[11px] text-muted-2 mt-1">
           <a href={COMPANY.labelWebsite} target="_blank" rel="noopener noreferrer" className="hover:text-muted transition-colors">
             {COMPANY.labelWebsite}
+          </a>
+        </p>
+        <p className="mt-3">
+          <a href="/admin" className="text-[10px] text-muted-2/50 hover:text-muted-2 transition-colors font-mono">
+            Admin
           </a>
         </p>
       </div>
