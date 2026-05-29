@@ -115,7 +115,7 @@ export default function AlbumAnnouncementPopup() {
           box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 30px rgba(255,255,255,0.04);
         }
 
-        .bif-title { color: #01011b; }
+        .bif-title { color: #111111; }
         .dark .bif-title { color: #ffffff; }
 
         .bif-genre { color: #333333; }

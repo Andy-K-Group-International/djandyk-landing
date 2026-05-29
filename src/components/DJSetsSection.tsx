@@ -266,7 +266,7 @@ export default function DJSetsSection() {
                   width: i === currentCard ? "20px" : "8px",
                   borderRadius: "4px",
                   backgroundColor:
-                    i === currentCard ? "#111111" : "#e2e4ea",
+                    i === currentCard ? "#111111" : "#e5e5e5",
                   border: "none",
                   padding: 0,
                   cursor: "pointer",

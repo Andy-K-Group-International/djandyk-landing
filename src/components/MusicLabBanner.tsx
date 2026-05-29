@@ -28,7 +28,7 @@ export default function MusicLabBanner() {
           is Live!
         </h2>
 
-        <p className="text-base font-light mb-2" style={{ color: "#525a70" }}>
+        <p className="text-base font-light mb-2" style={{ color: "#525252" }}>
           Free professional tools for producers and DJs.
         </p>
         <p

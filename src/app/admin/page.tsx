@@ -41,7 +41,7 @@ export default function AdminPage() {
           fontWeight: 700,
           letterSpacing: "0.18em",
           textTransform: "uppercase",
-          color: "#8b93a8",
+          color: "#8a8a8a",
           marginBottom: 8,
         }}>
           Andy&apos;K Music Lab
@@ -67,7 +67,7 @@ export default function AdminPage() {
             style={{
               width: "100%",
               padding: "11px 14px",
-              border: `1px solid ${error ? "#ef4444" : "#e2e4ea"}`,
+              border: `1px solid ${error ? "#ef4444" : "#e5e5e5"}`,
               borderRadius: 10,
               fontSize: 14,
               color: "#111111",
@@ -87,7 +87,7 @@ export default function AdminPage() {
             style={{
               width: "100%",
               padding: "11px 14px",
-              border: `1px solid ${error ? "#ef4444" : "#e2e4ea"}`,
+              border: `1px solid ${error ? "#ef4444" : "#e5e5e5"}`,
               borderRadius: 10,
               fontSize: 14,
               color: "#111111",
