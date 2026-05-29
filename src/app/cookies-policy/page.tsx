@@ -53,7 +53,7 @@ export default function CookiesPolicyPage() {
             86&ndash;90 Paul Street, London, EC2A 4NE, United Kingdom
           </p>
           <p className="text-sm text-muted-2 font-mono">
-            Email: info@djandyofficial.com
+            Email: ceo@andykgroup.com
           </p>
           <p className="text-sm text-muted-2 font-mono mt-2">
             Last Updated: 20 February 2026
@@ -488,7 +488,7 @@ export default function CookiesPolicyPage() {
               <p className="font-medium text-foreground">
                 DJ Andy&apos;K / ANDY&apos;K GROUP INTERNATIONAL LTD
               </p>
-              <p>Email: info@djandyofficial.com</p>
+              <p>Email: ceo@andykgroup.com</p>
               <p>
                 Address: 86&ndash;90 Paul Street, London, EC2A 4NE, United
                 Kingdom

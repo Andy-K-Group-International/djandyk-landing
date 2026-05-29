@@ -34,7 +34,7 @@ export default function PrivacyPolicyPage() {
           <p className="text-sm text-muted-2 font-mono">DJ Andy&apos;K / ANDY&apos;K GROUP INTERNATIONAL LTD</p>
           <p className="text-sm text-muted-2 font-mono">Registered Company Number: 16453500</p>
           <p className="text-sm text-muted-2 font-mono">86&ndash;90 Paul Street, London, EC2A 4NE, United Kingdom</p>
-          <p className="text-sm text-muted-2 font-mono">Email: info@djandyofficial.com</p>
+          <p className="text-sm text-muted-2 font-mono">Email: ceo@andykgroup.com</p>
         </div>
 
         <p className="text-sm text-muted-2 font-mono mt-2">
@@ -146,7 +146,7 @@ export default function PrivacyPolicyPage() {
             </ul>
             <p className="mt-2">
               To exercise any of these rights, please contact us at:
-              info@djandyofficial.com.
+              ceo@andykgroup.com.
             </p>
           </section>
 
@@ -189,7 +189,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <div className="mt-3 text-sm font-mono text-muted-2 space-y-0.5">
               <p className="font-medium text-foreground">DJ Andy&apos;K / ANDY&apos;K GROUP INTERNATIONAL LTD</p>
-              <p>Email: info@djandyofficial.com</p>
+              <p>Email: ceo@andykgroup.com</p>
               <p>Address: 86&ndash;90 Paul Street, London, EC2A 4NE, United Kingdom</p>
             </div>
           </section>

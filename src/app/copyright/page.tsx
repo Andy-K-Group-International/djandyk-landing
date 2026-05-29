@@ -100,8 +100,8 @@ export default function CopyrightPage() {
               <p className="font-semibold text-foreground">ANDY&apos;K GROUP INTERNATIONAL LTD</p>
               <p>
                 Email:{" "}
-                <a href="mailto:info@djandyofficial.com" className="text-highlight hover:text-deep-teal transition-colors">
-                  info@djandyofficial.com
+                <a href="mailto:ceo@andykgroup.com" className="text-highlight hover:text-deep-teal transition-colors">
+                  ceo@andykgroup.com
                 </a>
               </p>
               <p>Registered office: 86&ndash;90 Paul Street, London, EC2A 4NE, United Kingdom</p>

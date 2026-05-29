@@ -22,8 +22,8 @@ export async function sendContactNotification({
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: "DJ Andy'K Website <info@djandyofficial.com>",
-      to: ["info@djandyofficial.com"],
+      from: "DJ Andy'K Website <ceo@andykgroup.com>",
+      to: ["ceo@andykgroup.com"],
       subject: `New message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     }),

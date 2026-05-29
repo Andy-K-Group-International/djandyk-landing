@@ -35,7 +35,7 @@ const jsonLd = {
         "@type": "Place",
         name: "United Kingdom",
       },
-      email: "info@djandyofficial.com",
+      email: "ceo@andykgroup.com",
       member: {
         "@type": "Person",
         name: "Andrej Kneisl",

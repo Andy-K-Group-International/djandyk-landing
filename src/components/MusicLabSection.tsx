@@ -71,7 +71,7 @@ const PLANS = [
   },
 ] as const;
 
-const WAITLIST = "mailto:info@djandyofficial.com?subject=Andy'K Music Lab Waitlist";
+const WAITLIST = "mailto:ceo@andykgroup.com?subject=Andy'K Music Lab Waitlist";
 
 const CHECK_ICON = (
   <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 shrink-0 mt-0.5" style={{ color: "#111111" }}>
