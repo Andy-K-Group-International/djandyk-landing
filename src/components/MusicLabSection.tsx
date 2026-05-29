@@ -81,7 +81,7 @@ const CHECK_ICON = (
 
 export default function MusicLabSection() {
   return (
-    <section id="lab" className="relative pt-10 pb-0 px-8 overflow-hidden" style={{ background: "#0d1117" }}>
+    <section id="lab" className="relative pt-10 pb-0 px-8 overflow-hidden" style={{ background: "#111111" }}>
       <div className="relative z-10 max-w-[1100px] mx-auto">
         {/* Header */}
         <div className="text-center max-w-[680px] mx-auto mb-14">
@@ -104,14 +104,14 @@ export default function MusicLabSection() {
               style={
                 plan.highlighted
                   ? {
-                      background: "rgba(8,20,16,0.85)",
+                      background: "#0a0a0a",
                       border: "1px solid rgba(255,255,255,0.25)",
                       boxShadow:
                         "0 0 48px rgba(255,255,255,0.06), 0 0 0 1px rgba(255,255,255,0.15), 0 8px 32px rgba(0,0,0,0.5)",
                     }
                   : {
-                      background: "rgba(255,255,255,0.03)",
-                      border: "1px solid rgba(255,255,255,0.08)",
+                      background: "#1a1a1a",
+                      border: "1px solid #333333",
                     }
               }
             >
@@ -199,8 +199,11 @@ export default function MusicLabSection() {
         }
         .lab-pricing-card:hover {
           transform: translateY(-4px);
+          background: #222222;
+          border-color: #444444 !important;
         }
         .lab-pricing-card--pro:hover {
+          background: #0a0a0a !important;
           box-shadow: 0 0 60px rgba(255,255,255,0.08), 0 0 0 1px rgba(255,255,255,0.25), 0 12px 48px rgba(0,0,0,0.6) !important;
           border-color: rgba(255,255,255,0.4) !important;
         }

@@ -2,7 +2,7 @@ export default function MusicLabBanner() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ background: "#0d1117", paddingTop: "56px", paddingBottom: "56px", paddingInline: "2rem" }}
+      style={{ background: "#111111", paddingTop: "56px", paddingBottom: "56px", paddingInline: "2rem" }}
     >
       {/* Radial glow */}
       <div
