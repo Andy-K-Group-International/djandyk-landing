@@ -50,7 +50,7 @@ const PLANS = [
     features: [
       "Everything in Studio Pass",
       "Mastering — unlimited",
-      "1x personal Mix Feedback from DJ Andy’K per month",
+      "1x personal Mix Feedback from DJ Andy'K per month",
       "Early access to new tools",
       "Priority support",
     ],
@@ -81,16 +81,16 @@ const CHECK_ICON = (
 
 export default function MusicLabSection() {
   return (
-    <section id="lab" className="relative pt-10 pb-0 px-8 overflow-hidden" style={{ background: "#111111" }}>
+    <section id="lab" className="relative pt-10 pb-0 px-8 overflow-hidden" style={{ background: "#F5F5F5" }}>
       <div className="relative z-10 max-w-[1100px] mx-auto">
         {/* Header */}
         <div className="text-center max-w-[680px] mx-auto mb-14">
-          <h2 className="text-[clamp(1.875rem,1.52rem+1.25vw,2.5rem)] font-bold tracking-tight text-white leading-[1.2] mb-4">
+          <h2 className="text-[clamp(1.875rem,1.52rem+1.25vw,2.5rem)] font-bold tracking-tight text-[#111111] leading-[1.2] mb-4">
             <span className="font-serif italic font-light">Andy&apos;K</span>{" "}
             Music{" "}
             <span className="font-serif italic font-light">Lab</span>
           </h2>
-          <p className="text-base text-white/60 font-light">
+          <p className="text-base text-[rgba(0,0,0,0.6)] font-light">
             Professional music tools for producers and DJs — built by DJ Andy&apos;K.
           </p>
         </div>
@@ -104,14 +104,13 @@ export default function MusicLabSection() {
               style={
                 plan.highlighted
                   ? {
-                      background: "#0a0a0a",
-                      border: "1px solid rgba(255,255,255,0.25)",
-                      boxShadow:
-                        "0 0 48px rgba(255,255,255,0.06), 0 0 0 1px rgba(255,255,255,0.15), 0 8px 32px rgba(0,0,0,0.5)",
+                      background: "#ffffff",
+                      border: "1px solid rgba(0,0,0,0.25)",
+                      boxShadow: "0 0 48px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.1), 0 8px 32px rgba(0,0,0,0.1)",
                     }
                   : {
-                      background: "#1a1a1a",
-                      border: "1px solid #333333",
+                      background: "#ffffff",
+                      border: "1px solid rgba(0,0,0,0.1)",
                     }
               }
             >
@@ -121,9 +120,9 @@ export default function MusicLabSection() {
                   <span
                     className="inline-block px-3 py-1 rounded-full text-[10px] font-mono font-semibold uppercase tracking-widest"
                     style={{
-                      background: "rgba(255,255,255,0.08)",
-                      border: "1px solid rgba(255,255,255,0.2)",
-                      color: "#D9D9D9",
+                      background: "rgba(0,0,0,0.06)",
+                      border: "1px solid rgba(0,0,0,0.15)",
+                      color: "#111111",
                     }}
                   >
                     ⭐ Most Popular
@@ -133,24 +132,24 @@ export default function MusicLabSection() {
 
               <div className={`p-6 flex flex-col flex-1${plan.tag ? " pt-4" : ""}`}>
                 {/* Plan name */}
-                <h3 className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/45 mb-3">
+                <h3 className="text-[10px] font-mono uppercase tracking-[0.25em] text-[rgba(0,0,0,0.45)] mb-3">
                   {plan.name}
                 </h3>
 
                 {/* Price */}
                 <div className="mb-6 flex items-baseline gap-1.5">
                   <span
-                    className={`font-bold text-white${plan.highlighted ? " text-4xl" : " text-3xl"}`}
+                    className={`font-bold text-[#111111]${plan.highlighted ? " text-4xl" : " text-3xl"}`}
                   >
                     {plan.price}
                   </span>
-                  <span className="text-sm text-white/35">{plan.period}</span>
+                  <span className="text-sm text-[rgba(0,0,0,0.35)]">{plan.period}</span>
                 </div>
 
                 {/* Features */}
                 <ul className="space-y-2.5 mb-8 flex-1">
                   {plan.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2.5 text-sm text-white/65">
+                    <li key={f} className="flex items-start gap-2.5 text-sm text-[rgba(0,0,0,0.65)]">
                       {CHECK_ICON}
                       {f}
                     </li>
@@ -164,14 +163,14 @@ export default function MusicLabSection() {
                   style={
                     plan.highlighted
                       ? {
-                          background: "rgba(255,255,255,0.1)",
-                          border: "1px solid rgba(255,255,255,0.3)",
-                          color: "#D9D9D9",
+                          background: "#111111",
+                          border: "1px solid transparent",
+                          color: "#ffffff",
                         }
                       : {
                           background: "transparent",
-                          border: "1px solid rgba(255,255,255,0.12)",
-                          color: "rgba(255,255,255,0.6)",
+                          border: "1px solid rgba(0,0,0,0.18)",
+                          color: "#111111",
                         }
                   }
                 >
@@ -183,7 +182,7 @@ export default function MusicLabSection() {
         </div>
 
         {/* Footer note */}
-        <p className="text-center text-xs text-white/25 mt-10 mb-16 font-light">
+        <p className="text-center text-xs text-[rgba(0,0,0,0.3)] mt-10 mb-16 font-light">
           Launching on lab.djandyofficial.com — be first in line.
         </p>
       </div>
@@ -199,13 +198,13 @@ export default function MusicLabSection() {
         }
         .lab-pricing-card:hover {
           transform: translateY(-4px);
-          background: #222222;
-          border-color: #444444 !important;
+          background: #f8f8f8 !important;
+          border-color: rgba(0,0,0,0.2) !important;
         }
         .lab-pricing-card--pro:hover {
-          background: #0a0a0a !important;
-          box-shadow: 0 0 60px rgba(255,255,255,0.08), 0 0 0 1px rgba(255,255,255,0.25), 0 12px 48px rgba(0,0,0,0.6) !important;
-          border-color: rgba(255,255,255,0.4) !important;
+          background: #f5f5f5 !important;
+          box-shadow: 0 0 48px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.15), 0 12px 48px rgba(0,0,0,0.12) !important;
+          border-color: rgba(0,0,0,0.3) !important;
         }
       `}</style>
     </section>

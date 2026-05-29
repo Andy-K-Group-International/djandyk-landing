@@ -2,25 +2,16 @@ export default function MusicLabBanner() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ background: "#111111", paddingTop: "56px", paddingBottom: "56px", paddingInline: "2rem" }}
+      style={{ background: "#F5F5F5", paddingTop: "56px", paddingBottom: "56px", paddingInline: "2rem" }}
     >
-      {/* Radial glow */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 60% 70% at 50% 40%, rgba(255,255,255,0.04) 0%, transparent 70%)",
-        }}
-      />
-
       {/* Content */}
       <div className="relative z-10 max-w-[800px] mx-auto text-center">
         <span
           className="inline-block text-[10px] font-mono uppercase tracking-[0.3em] mb-4 px-3 py-1 rounded-full"
           style={{
-            background: "rgba(255,255,255,0.08)",
-            border: "1px solid rgba(255,255,255,0.2)",
-            color: "#D9D9D9",
+            background: "rgba(0,0,0,0.06)",
+            border: "1px solid rgba(0,0,0,0.15)",
+            color: "#111111",
           }}
         >
           Now Live
@@ -28,7 +19,7 @@ export default function MusicLabBanner() {
 
         <h2
           className="text-[clamp(1.5rem,1.2rem+1.2vw,2.25rem)] font-bold tracking-tight leading-[1.2] mb-3"
-          style={{ color: "#ffffff" }}
+          style={{ color: "#111111" }}
         >
           🎛️{" "}
           <span className="font-serif italic font-light">Andy&apos;K</span>{" "}
@@ -37,12 +28,12 @@ export default function MusicLabBanner() {
           is Live!
         </h2>
 
-        <p className="text-base font-light mb-2" style={{ color: "#8b9ab0" }}>
+        <p className="text-base font-light mb-2" style={{ color: "#525a70" }}>
           Free professional tools for producers and DJs.
         </p>
         <p
           className="text-sm font-mono mb-8"
-          style={{ color: "rgba(255,255,255,0.45)" }}
+          style={{ color: "rgba(0,0,0,0.45)" }}
         >
           BPM Detector · DJ Planner · Mastering Tool
         </p>
@@ -53,10 +44,9 @@ export default function MusicLabBanner() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-7 py-3 text-sm font-semibold rounded transition-all duration-200 hover:-translate-y-0.5"
           style={{
-            background: "rgba(255,255,255,0.08)",
-            border: "1px solid rgba(255,255,255,0.3)",
-            color: "#D9D9D9",
-            boxShadow: "0 0 28px rgba(255,255,255,0.04)",
+            background: "#111111",
+            border: "1px solid transparent",
+            color: "#ffffff",
           }}
         >
           Try Now →
