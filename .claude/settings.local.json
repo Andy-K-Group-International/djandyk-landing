@@ -12,7 +12,25 @@
       "Bash(sips -s format jpeg '/Users/andrejkneisl/Library/Mobile Documents/iCloud~md~obsidian/Documents/SAFE ARCHIVE FOLDER/Dj Andy'\\\\''K 2026/Dj Andy'\\\\''K/Albums 2025/Singles Songs ALL 2026/Own it/E4D7DC18-0EDF-4F80-B5DC-6878D03B6E50.JPG' --out /Users/andrejkneisl/Projects/djandyk-landing/public/albums/own-it.jpg)",
       "Bash(sips -s format jpeg '/Users/andrejkneisl/Library/Mobile Documents/iCloud~md~obsidian/Documents/SAFE ARCHIVE FOLDER/Dj Andy'\\\\''K 2026/Dj Andy'\\\\''K/Albums 2025/Singles Songs ALL 2026/che rohayhu py/Noche de Asuncion .png' --out /Users/andrejkneisl/Projects/djandyk-landing/public/albums/che-rohayhu.jpg)",
       "Bash(sips -s format jpeg '/Users/andrejkneisl/Library/Mobile Documents/iCloud~md~obsidian/Documents/SAFE ARCHIVE FOLDER/Dj Andy'\\\\''K 2026/Dj Andy'\\\\''K/Albums 2025/Singles Songs ALL 2026/lipstick lies/lipsitck lies .png' --out /Users/andrejkneisl/Projects/djandyk-landing/public/albums/lipstick-lies.jpg)",
-      "Bash(sips -s format jpeg '/Users/andrejkneisl/Library/Mobile Documents/iCloud~md~obsidian/Documents/SAFE ARCHIVE FOLDER/Dj Andy'\\\\''K 2026/Dj Andy'\\\\''K/Albums 2025/Singles Songs ALL 2026/Plastic herad dont break !/Pridajte nadpis.jpg' --out /Users/andrejkneisl/Projects/djandyk-landing/public/albums/plastic-hearts-dont-break.jpg)"
+      "Bash(sips -s format jpeg '/Users/andrejkneisl/Library/Mobile Documents/iCloud~md~obsidian/Documents/SAFE ARCHIVE FOLDER/Dj Andy'\\\\''K 2026/Dj Andy'\\\\''K/Albums 2025/Singles Songs ALL 2026/Plastic herad dont break !/Pridajte nadpis.jpg' --out /Users/andrejkneisl/Projects/djandyk-landing/public/albums/plastic-hearts-dont-break.jpg)",
+      "Bash(npm run *)",
+      "Bash(vercel --version)",
+      "Bash(git *)",
+      "Read(//Users/andrejkneisl/andyk-music-lab/**)",
+      "Bash(npm install *)",
+      "Bash(sort -t: -k1,1 -k2,2n)",
+      "Bash(perl -i -pe ' *)",
+      "mcp__claude_ai_Supabase__list_tables",
+      "mcp__claude_ai_Supabase__apply_migration",
+      "mcp__claude_ai_Supabase__execute_sql",
+      "Bash(perl -0777 -pi -e 's/\\\\[data-theme=\"dark\"\\\\][^{]+\\\\{[^{}]*\\\\}\\\\s*//g' src/app/globals.css)",
+      "Bash(perl -pi -e 's/\\\\[data-theme=\"light\"\\\\] //' src/app/globals.css)",
+      "Bash(perl -pi -e 's/color-scheme: light dark;/color-scheme: light;/' src/app/globals.css)",
+      "Bash(grep -v \"^$\")",
+      "Bash(perl -pi -e 's/info@djandykofficial\\\\.com/ceo@andykgroup.com/g; s/noreply@djandykofficial\\\\.com/noreply@andykgroup.com/g' src/app/disclaimer/page.tsx src/app/privacy-policy/page.tsx src/app/company-information/page.tsx src/app/terms-and-conditions/page.tsx src/app/cookies-policy/page.tsx src/app/copyright/page.tsx)",
+      "Bash(perl -pi -e 's/info@djandyofficial\\\\.com/ceo@andykgroup.com/g; s/noreply@djandyofficial\\\\.com/noreply@andykgroup.com/g' src/app/disclaimer/page.tsx src/app/page.tsx src/app/privacy-policy/page.tsx src/app/company-information/page.tsx src/app/terms-and-conditions/page.tsx src/app/actions/email.ts src/app/copyright/page.tsx src/app/cookies-policy/page.tsx src/components/MusicLabSection.tsx src/lib/data.ts)",
+      "Bash(perl -pi -e 's/info@djandykofficial\\\\.com/ceo@andykgroup.com/g; s/noreply@djandykofficial\\\\.com/noreply@andykgroup.com/g' /Users/andrejkneisl/andyk-music-lab/src/app/disclaimer/page.tsx /Users/andrejkneisl/andyk-music-lab/src/app/privacy-policy/page.tsx /Users/andrejkneisl/andyk-music-lab/src/app/company-information/page.tsx /Users/andrejkneisl/andyk-music-lab/src/app/terms-and-conditions/page.tsx /Users/andrejkneisl/andyk-music-lab/src/app/cookies-policy/page.tsx /Users/andrejkneisl/andyk-music-lab/src/app/copyright/page.tsx)",
+      "Bash(perl -pi -e 's/info@djandyofficial\\\\.com/ceo@andykgroup.com/g; s/noreply@djandyofficial\\\\.com/noreply@andykgroup.com/g' /Users/andrejkneisl/djandyk-landing/src/app/disclaimer/page.tsx /Users/andrejkneisl/djandyk-landing/src/app/page.tsx /Users/andrejkneisl/djandyk-landing/src/app/privacy-policy/page.tsx /Users/andrejkneisl/djandyk-landing/src/app/company-information/page.tsx /Users/andrejkneisl/djandyk-landing/src/app/terms-and-conditions/page.tsx /Users/andrejkneisl/djandyk-landing/src/app/actions/email.ts /Users/andrejkneisl/djandyk-landing/src/app/copyright/page.tsx /Users/andrejkneisl/djandyk-landing/src/app/cookies-policy/page.tsx /Users/andrejkneisl/djandyk-landing/src/components/MusicLabSection.tsx /Users/andrejkneisl/djandyk-landing/src/lib/data.ts)"
     ]
   }
 }
