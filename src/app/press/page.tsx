@@ -218,10 +218,10 @@ export default function PressPage() {
           </div>
           <div className="about-quote-block rounded-xl px-7 py-10">
             <blockquote>
-              <p className="text-lg font-light leading-relaxed text-white italic mb-4">
+              <p className="text-lg font-light leading-relaxed text-[#111111] italic mb-4">
                 &ldquo;I don&apos;t know anymore if music lives for me, or if I live for it. But I accept both.&rdquo;
               </p>
-              <footer className="text-[10px] uppercase tracking-[0.3em] font-mono" style={{ color: "rgba(255,255,255,0.45)" }}>
+              <footer className="text-[10px] uppercase tracking-[0.3em] font-mono" style={{ color: "rgba(0,0,0,0.45)" }}>
                 — DJ ANDY&apos;K
               </footer>
             </blockquote>
