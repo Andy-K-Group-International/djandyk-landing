@@ -127,7 +127,7 @@ export default function PressPage() {
         {/* Technical Info */}
         <Section>
           <SectionTitle>Technical Info</SectionTitle>
-          <div className="glass-card rounded-xl overflow-hidden">
+          <div className="glass-card rounded-xl overflow-hidden pb-4">
             <InfoRow label="Artist" value="DJ Andy'K" />
             <InfoRow label="Real Name" value={COMPANY.realName} />
             <InfoRow label="Genres" value={COMPANY.genre} />
