@@ -27,7 +27,7 @@ const PLANS = [
   {
     id: "studio",
     name: "Studio Pass",
-    price: "£19",
+    price: "£29",
     period: "/ month",
     badge: "COMING SOON",
     tag: null,
@@ -42,7 +42,7 @@ const PLANS = [
   {
     id: "pro",
     name: "Pro Pass",
-    price: "£149",
+    price: "£199",
     period: "/ year",
     badge: "BEST VALUE · COMING SOON",
     tag: "Most Popular",
