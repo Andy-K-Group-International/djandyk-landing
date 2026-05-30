@@ -129,22 +129,25 @@ export default function CookieBanner() {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 p-4 md:p-6">
-      <div className="max-w-[520px] mx-auto md:mx-0 md:ml-auto bg-white border border-grid-500 shadow-[0_-4px_24px_-4px_rgba(0,0,0,0.1)] overflow-hidden">
+    <div className="fixed inset-x-0 bottom-0 z-50 p-3 md:p-6">
+      <div className="max-w-[520px] mx-auto md:mx-0 md:ml-auto bg-white border border-grid-500 shadow-[0_-4px_24px_-4px_rgba(0,0,0,0.1)] overflow-hidden max-h-[180px] md:max-h-none">
         {!showPreferences ? (
           /* ── Layer 1: Banner ── */
-          <div className="p-5">
-            <p className="text-sm text-foreground font-medium mb-1.5">
+          <div className="p-3 md:p-5">
+            <p className="text-sm text-foreground font-medium mb-1">
               We value your privacy
             </p>
-            <p className="text-[13px] text-muted leading-relaxed">
+            <p className="text-[13px] text-muted leading-relaxed hidden md:block">
               We use cookies to make this website work, improve your experience,
               and (with your consent) measure performance and marketing
               effectiveness. You can accept all cookies, reject non-essential
               cookies, or manage your preferences at any time.
             </p>
+            <p className="text-[13px] text-muted leading-relaxed md:hidden">
+              We use cookies to improve your experience. Accept or reject below.
+            </p>
 
-            <div className="flex flex-wrap gap-2 mt-4">
+            <div className="flex flex-wrap gap-2 mt-2 md:mt-4">
               <button
                 onClick={acceptAll}
                 className="btn-primary-gradient relative px-4 py-2.5 text-[13px] font-medium text-foreground cursor-pointer"
@@ -165,7 +168,7 @@ export default function CookieBanner() {
               </button>
             </div>
 
-            <div className="flex gap-4 mt-3">
+            <div className="hidden md:flex gap-4 mt-3">
               <Link
                 href="/cookies-policy"
                 className="text-[12px] text-muted-2 underline underline-offset-2 hover:text-muted transition-colors"
