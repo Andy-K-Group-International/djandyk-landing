@@ -1,5 +1,13 @@
 "use client";
 
+import { useState, useEffect } from "react";
+
+interface SpotsData {
+  spots_left: number;
+  total: number;
+  closed: boolean;
+}
+
 const WAVE_HEIGHTS = [
   16, 24, 36, 52, 65, 72, 60, 78, 70, 55, 80, 72, 64, 76, 58, 82, 74, 66,
   88, 78, 90, 82, 76, 92, 88, 80, 92, 84, 78, 88, 82, 72, 86, 76, 66, 80,
@@ -80,6 +88,18 @@ const CHECK_ICON = (
 );
 
 export default function MusicLabSection() {
+  const [spots, setSpots] = useState<SpotsData | null>(null);
+
+  useEffect(() => {
+    fetch("https://lab.djandykofficial.com/api/spots")
+      .then((r) => r.json())
+      .then((d: SpotsData) => setSpots(d))
+      .catch(() => {});
+  }, []);
+
+  const earlyAccessOpen = spots !== null && !spots.closed && spots.spots_left > 0;
+  const earlyAccessClosed = spots !== null && (spots.closed || spots.spots_left === 0);
+
   return (
     <section id="lab" className="relative pt-10 pb-0 px-8 overflow-hidden" style={{ background: "#F5F5F5" }}>
       <div className="relative z-10 max-w-[1100px] mx-auto">
@@ -94,6 +114,35 @@ export default function MusicLabSection() {
             Professional music tools for producers and DJs — built by DJ Andy&apos;K.
           </p>
         </div>
+
+        {/* Early access banner */}
+        {spots !== null && (
+          <div
+            className="mb-8 px-5 py-3.5 rounded-lg flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2"
+            style={{ background: "#111111" }}
+          >
+            <span
+              className="text-[11px] font-mono uppercase tracking-[0.2em] text-white"
+            >
+              Early Access — First 40 members get 40% off the yearly plan
+            </span>
+            {earlyAccessOpen ? (
+              <span
+                className="text-[11px] font-mono uppercase tracking-[0.15em] shrink-0"
+                style={{ color: "#D9D9D9" }}
+              >
+                {spots.spots_left} spot{spots.spots_left !== 1 ? "s" : ""} remaining
+              </span>
+            ) : (
+              <span
+                className="text-[11px] font-mono uppercase tracking-[0.15em] shrink-0"
+                style={{ color: "#888888" }}
+              >
+                Early access closed
+              </span>
+            )}
+          </div>
+        )}
 
         {/* Pricing cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
@@ -137,13 +186,32 @@ export default function MusicLabSection() {
                 </h3>
 
                 {/* Price */}
-                <div className="mb-6 flex items-baseline gap-1.5">
-                  <span
-                    className={`font-bold text-[#111111]${plan.highlighted ? " text-4xl" : " text-3xl"}`}
-                  >
-                    {plan.price}
-                  </span>
-                  <span className="text-sm text-[rgba(0,0,0,0.35)]">{plan.period}</span>
+                <div className="mb-6">
+                  {plan.highlighted && earlyAccessOpen ? (
+                    <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                      <span className="font-bold text-4xl text-[#111111]">£119</span>
+                      <span className="text-sm text-[rgba(0,0,0,0.35)]">/yr</span>
+                      <span className="text-sm text-[rgba(0,0,0,0.35)] line-through">£199</span>
+                      <span
+                        className="text-[10px] font-mono font-semibold uppercase tracking-widest px-2 py-0.5 rounded"
+                        style={{ background: "#111111", color: "#ffffff" }}
+                      >
+                        40% OFF
+                      </span>
+                    </div>
+                  ) : plan.highlighted && earlyAccessClosed ? (
+                    <div className="flex items-baseline gap-1.5">
+                      <span className="font-bold text-4xl text-[#111111]">{plan.price}</span>
+                      <span className="text-sm text-[rgba(0,0,0,0.35)]">{plan.period}</span>
+                    </div>
+                  ) : (
+                    <div className="flex items-baseline gap-1.5">
+                      <span className={`font-bold text-[#111111]${plan.highlighted ? " text-4xl" : " text-3xl"}`}>
+                        {plan.price}
+                      </span>
+                      <span className="text-sm text-[rgba(0,0,0,0.35)]">{plan.period}</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Features */}
