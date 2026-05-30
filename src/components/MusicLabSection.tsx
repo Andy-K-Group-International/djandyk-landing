@@ -98,9 +98,19 @@ const CHECK_ICON = (
   </svg>
 );
 
+interface SpotsData { spots_left: number; total: number; closed: boolean; }
+
 export default function MusicLabSection() {
+  const [spots, setSpots] = useState<SpotsData | null>(null);
   const [currency, setCurrency] = useState<CurrencyCode>("GBP");
   const cur = CURRENCIES.find((c) => c.code === currency)!;
+
+  useEffect(() => {
+    fetch("https://lab.djandykofficial.com/api/spots")
+      .then(r => r.json())
+      .then((d: SpotsData) => setSpots(d))
+      .catch(() => {});
+  }, []);
 
   const [demoPlaying, setDemoPlaying] = useState<"before" | "after" | null>(null);
   const [demoProgress, setDemoProgress] = useState(0);
@@ -154,6 +164,23 @@ export default function MusicLabSection() {
         </div>
 
         {/* Early access banner */}
+        {spots && (
+          <div style={{ background: "#111111", padding: "14px 24px", marginBottom: 8, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "6px 16px" }}>
+            <span style={{ fontFamily: "'IBM Plex Mono',monospace", fontSize: 11, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#ffffff" }}>
+              Early Access — First 40 Members Get 40% Off
+            </span>
+            <span style={{ fontFamily: "'IBM Plex Mono',monospace", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: spots.closed || spots.spots_left === 0 ? "rgba(255,255,255,0.35)" : "rgba(255,255,255,0.75)", whiteSpace: "nowrap" }}>
+              {spots.closed || spots.spots_left === 0 ? "Early Access Closed" : `${spots.spots_left} Spots Remaining`}
+            </span>
+          </div>
+        )}
+        {spots && !(spots.closed || spots.spots_left === 0) && (
+          <p style={{ fontFamily: "'IBM Plex Mono',monospace", fontSize: 11, color: "#a3a3a3", marginBottom: 20 }}>
+            <a href="/#waitlist" style={{ color: "#a3a3a3", textDecoration: "underline" }}>
+              Join the waitlist to lock in your discount →
+            </a>
+          </p>
+        )}
 
         {/* Currency selector */}
         <div className="flex justify-end mb-2 gap-1.5">
