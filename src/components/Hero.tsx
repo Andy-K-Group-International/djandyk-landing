@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { COMPANY } from "@/lib/data";
 
@@ -8,6 +9,17 @@ export default function Hero() {
 
   return (
     <section id="hero" className="text-center py-24 px-8 max-w-[860px] mx-auto">
+      <div className="flex justify-center mb-6">
+        <Image
+          src="/dj3DHQ.png"
+          alt="DJ Andy'K"
+          width={200}
+          height={200}
+          priority
+          style={{ mixBlendMode: "multiply" }}
+        />
+      </div>
+
       <span className="text-[11px] uppercase tracking-[0.3em] text-highlight font-mono block mb-6">
         {t.hero.eyebrow}
       </span>
