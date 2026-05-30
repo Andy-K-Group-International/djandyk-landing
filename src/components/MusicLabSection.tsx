@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 interface SpotsData {
   spots_left: number;
@@ -119,6 +119,42 @@ export default function MusicLabSection() {
 
   const earlyAccessOpen = spots !== null && !spots.closed && spots.spots_left > 0;
   const earlyAccessClosed = spots !== null && (spots.closed || spots.spots_left === 0);
+
+  const [demoPlaying, setDemoPlaying] = useState<"before" | "after" | null>(null);
+  const [demoProgress, setDemoProgress] = useState(0);
+  const beforeAudioRef = useRef<HTMLAudioElement | null>(null);
+  const afterAudioRef  = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    const before = new Audio("https://lab.djandykofficial.com/audio/before.mp3");
+    const after  = new Audio("https://lab.djandykofficial.com/audio/after.mp3");
+    const onUpdate = (e: Event) => {
+      const el = e.target as HTMLAudioElement;
+      if (el.duration > 0) setDemoProgress(el.currentTime / el.duration);
+    };
+    const onEnd = () => { setDemoPlaying(null); setDemoProgress(0); };
+    before.addEventListener("timeupdate", onUpdate);
+    after.addEventListener("timeupdate", onUpdate);
+    before.addEventListener("ended", onEnd);
+    after.addEventListener("ended", onEnd);
+    beforeAudioRef.current = before;
+    afterAudioRef.current  = after;
+    return () => { before.pause(); after.pause(); };
+  }, []);
+
+  const playDemo = (track: "before" | "after") => {
+    const ref   = track === "before" ? beforeAudioRef : afterAudioRef;
+    const other = track === "before" ? afterAudioRef  : beforeAudioRef;
+    other.current?.pause();
+    if (demoPlaying === track) {
+      ref.current?.pause();
+      setDemoPlaying(null);
+    } else {
+      if (ref.current) { ref.current.currentTime = 0; ref.current.play().catch(() => {}); }
+      setDemoProgress(0);
+      setDemoPlaying(track);
+    }
+  };
 
   return (
     <section id="lab" className="relative pt-10 pb-0 px-8 overflow-hidden" style={{ background: "#F5F5F5" }}>
@@ -287,8 +323,45 @@ export default function MusicLabSection() {
           ))}
         </div>
 
+        {/* Mastering demo */}
+        <div className="mt-14 mb-4 text-center">
+          <p className="text-[10px] font-mono uppercase tracking-[0.25em] text-[rgba(0,0,0,0.38)] mb-3">
+            Mastering Demo
+          </p>
+          <h3 className="text-2xl font-bold tracking-tight text-[#111111] mb-6">
+            Hear the <em className="font-serif font-light not-italic" style={{ fontStyle: "italic" }}>difference</em>
+          </h3>
+          <div className="flex gap-3 justify-center mb-4 flex-wrap">
+            {(["before", "after"] as const).map(track => (
+              <button
+                key={track}
+                onClick={() => playDemo(track)}
+                className="flex items-center gap-2.5 transition-all duration-150"
+                style={{
+                  padding: "12px 28px", borderRadius: 10,
+                  fontFamily: "monospace", fontSize: 12, fontWeight: 700,
+                  letterSpacing: "0.12em", textTransform: "uppercase",
+                  background: demoPlaying === track ? "#111111" : "transparent",
+                  color: demoPlaying === track ? "#ffffff" : "#111111",
+                  border: "1.5px solid #111111",
+                  cursor: "pointer", minWidth: 120,
+                }}
+              >
+                <span>{demoPlaying === track ? "■" : "▶"}</span>
+                {track === "before" ? "Before" : "After"}
+              </button>
+            ))}
+          </div>
+          <div style={{ height: 2, background: "rgba(0,0,0,0.1)", borderRadius: 2, maxWidth: 340, margin: "0 auto 10px" }}>
+            <div style={{ height: "100%", background: "#111111", borderRadius: 2, width: `${demoProgress * 100}%`, transition: "width 0.15s linear" }} />
+          </div>
+          <p className="text-[10px] font-mono uppercase tracking-[0.15em] text-[rgba(0,0,0,0.3)]" style={{ minHeight: 14 }}>
+            {demoPlaying === "before" ? "Playing: Unmastered" : demoPlaying === "after" ? "Playing: Mastered — −14 LUFS" : ""}
+          </p>
+        </div>
+
         {/* Footer note */}
-        <p className="text-center text-xs text-[rgba(0,0,0,0.3)] mt-10 mb-16 font-light">
+        <p className="text-center text-xs text-[rgba(0,0,0,0.3)] mt-8 mb-16 font-light">
           Launching on lab.djandykofficial.com — be first in line.
         </p>
       </div>
