@@ -19,7 +19,7 @@ const ibmPlexMono = IBM_Plex_Mono({
   weight: ["400", "500", "700"],
 });
 
-const SITE_URL = "https://djandyofficial.com";
+const SITE_URL = "https://djandykofficial.com";
 const SITE_TITLE = "DJ Andy'K | Official Website — Trance, Progressive House & EDM";
 const SITE_DESCRIPTION =
   "Official website of DJ Andy'K — UK-based music producer of Trance, Progressive House and EDM. Stream albums When Later Becomes Never, Human Stories and more on Spotify, Apple Music and SoundCloud.";
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     "Deep Connections",
     "Music Is Your Passion",
     "Four Elements",
-    "djandyofficial.com",
+    "djandykofficial.com",
     "Andy'K Group International",
   ],
   authors: [{ name: "DJ Andy'K" }],
@@ -62,11 +62,13 @@ export const metadata: Metadata = {
     siteName: "DJ Andy'K",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "DJ Andy'K" }],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
+    images: ["/og-image.jpg"],
   },
   icons: {
     icon: [

@@ -1,3 +1,26 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "DJ Andy'K | Official Website — Trance, Progressive House & EDM",
+  description:
+    "Official website of DJ Andy'K — UK-based music producer of Trance, Progressive House and EDM. Stream albums When Later Becomes Never, Human Stories, Deep Connections and more on Spotify, Apple Music and SoundCloud.",
+  alternates: { canonical: "https://djandykofficial.com" },
+  openGraph: {
+    type: "website",
+    url: "https://djandykofficial.com",
+    title: "DJ Andy'K | Trance, Progressive House & EDM",
+    description:
+      "UK-based music producer. Stream When Later Becomes Never, Human Stories, Deep Connections and more on Spotify, Apple Music and SoundCloud.",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "DJ Andy'K" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DJ Andy'K | Trance, Progressive House & EDM",
+    description: "UK-based music producer — Trance, Progressive House and EDM.",
+    images: ["/og-image.jpg"],
+  },
+};
+
 import TopBanner from "@/components/TopBanner";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";

@@ -5,8 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/"],
+      disallow: ["/api/", "/admin", "/dashboard"],
     },
-    sitemap: "https://djandyofficial.com/sitemap.xml",
+    sitemap: "https://djandykofficial.com/sitemap.xml",
   };
 }

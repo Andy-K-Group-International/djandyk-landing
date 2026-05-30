@@ -10,11 +10,29 @@ import {
   STREAMING_PLATFORMS,
 } from "@/lib/data";
 
+const PRESS_URL = "https://djandykofficial.com/press";
+
 export const metadata: Metadata = {
   title: "Press & Media Kit | DJ Andy'K Official",
   description:
     "DJ Andy'K press kit, artist bio, Q&A interview and media downloads. UK-based Trance and Progressive House producer Andrej Kneisl.",
-  alternates: { canonical: "/press" },
+  alternates: { canonical: PRESS_URL },
+  openGraph: {
+    type: "profile",
+    url: PRESS_URL,
+    siteName: "DJ Andy'K",
+    title: "Press & Media Kit — DJ Andy'K",
+    description:
+      "Official EPK for DJ Andy'K. Artist bio, discography, Q&A interview, streaming links, and media downloads for Trance and Progressive House producer Andrej Kneisl.",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "DJ Andy'K Press Kit" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Press & Media Kit — DJ Andy'K",
+    description:
+      "Official EPK for DJ Andy'K — artist bio, discography, Q&A, and media downloads.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 function Section({ children, className = "", id }: { children: React.ReactNode; className?: string; id?: string }) {
@@ -80,8 +98,28 @@ export default function PressPage() {
     ...PIANO_SERIES_2026.map((p) => ({ ...p, category: "Piano Series" })),
   ];
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "DJ Andy'K",
+    alternateName: "Andrej Kneisl",
+    url: "https://djandykofficial.com",
+    jobTitle: "DJ & Music Producer",
+    genre: ["Trance", "Progressive House", "EDM"],
+    sameAs: [
+      "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+      "https://soundcloud.com/djandyk_2024",
+      "https://www.instagram.com/djandyk_official",
+      "https://www.tiktok.com/@djandyk_official",
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-background pt-[60px]">
       <div className="max-w-[860px] mx-auto px-6 py-16 md:py-24">
