@@ -2,12 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 
-interface SpotsData {
-  spots_left: number;
-  total: number;
-  closed: boolean;
-}
-
 const CURRENCIES = [
   { code: "GBP", symbol: "£",  rate: 1 },
   { code: "EUR", symbol: "€",  rate: 1.20 },
@@ -18,8 +12,7 @@ const CURRENCIES = [
 
 type CurrencyCode = typeof CURRENCIES[number]["code"];
 
-const BASE_GBP: Record<string, number> = { studio: 29, pro: 199, single: 49 };
-const PRO_EARLY_GBP = 119;
+const BASE_GBP: Record<string, number> = { studio: 49, pro: 199, single: 79 };
 
 function fmt(gbp: number, symbol: string, rate: number): string {
   const amount = Math.round(gbp * rate);
@@ -106,19 +99,8 @@ const CHECK_ICON = (
 );
 
 export default function MusicLabSection() {
-  const [spots, setSpots] = useState<SpotsData | null>(null);
   const [currency, setCurrency] = useState<CurrencyCode>("GBP");
   const cur = CURRENCIES.find((c) => c.code === currency)!;
-
-  useEffect(() => {
-    fetch("https://lab.djandykofficial.com/api/spots")
-      .then((r) => r.json())
-      .then((d: SpotsData) => setSpots(d))
-      .catch(() => {});
-  }, []);
-
-  const earlyAccessOpen = spots !== null && !spots.closed && spots.spots_left > 0;
-  const earlyAccessClosed = spots !== null && (spots.closed || spots.spots_left === 0);
 
   const [demoPlaying, setDemoPlaying] = useState<"before" | "after" | null>(null);
   const [demoProgress, setDemoProgress] = useState(0);
@@ -172,33 +154,6 @@ export default function MusicLabSection() {
         </div>
 
         {/* Early access banner */}
-        {spots !== null && (
-          <div
-            className="mb-8 px-5 py-3.5 rounded-lg flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2"
-            style={{ background: "#111111" }}
-          >
-            <span
-              className="text-[11px] font-mono uppercase tracking-[0.2em] text-white"
-            >
-              Early Access — First 40 members get 40% off the yearly plan
-            </span>
-            {earlyAccessOpen ? (
-              <span
-                className="text-[11px] font-mono uppercase tracking-[0.15em] shrink-0"
-                style={{ color: "#D9D9D9" }}
-              >
-                {spots.spots_left} spot{spots.spots_left !== 1 ? "s" : ""} remaining
-              </span>
-            ) : (
-              <span
-                className="text-[11px] font-mono uppercase tracking-[0.15em] shrink-0"
-                style={{ color: "#888888" }}
-              >
-                Early access closed
-              </span>
-            )}
-          </div>
-        )}
 
         {/* Currency selector */}
         <div className="flex justify-end mb-2 gap-1.5">
@@ -263,33 +218,14 @@ export default function MusicLabSection() {
                   {plan.name}
                 </h3>
 
-                {/* Price */}
+                {/* Price — always show normal price */}
                 <div className="mb-6">
-                  {plan.highlighted && earlyAccessOpen ? (
-                    <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                      <span className="font-bold text-4xl text-[#111111]">{fmt(PRO_EARLY_GBP, cur.symbol, cur.rate)}</span>
-                      <span className="text-sm text-[rgba(0,0,0,0.35)]">/yr</span>
-                      <span className="text-sm text-[rgba(0,0,0,0.35)] line-through">{fmt(BASE_GBP[plan.id], cur.symbol, cur.rate)}</span>
-                      <span
-                        className="text-[10px] font-mono font-semibold uppercase tracking-widest px-2 py-0.5 rounded"
-                        style={{ background: "#111111", color: "#ffffff" }}
-                      >
-                        40% OFF
-                      </span>
-                    </div>
-                  ) : plan.highlighted && earlyAccessClosed ? (
-                    <div className="flex items-baseline gap-1.5">
-                      <span className="font-bold text-4xl text-[#111111]">{fmt(BASE_GBP[plan.id], cur.symbol, cur.rate)}</span>
-                      <span className="text-sm text-[rgba(0,0,0,0.35)]">{plan.period}</span>
-                    </div>
-                  ) : (
-                    <div className="flex items-baseline gap-1.5">
-                      <span className={`font-bold text-[#111111]${plan.highlighted ? " text-4xl" : " text-3xl"}`}>
-                        {fmt(BASE_GBP[plan.id], cur.symbol, cur.rate)}
-                      </span>
-                      <span className="text-sm text-[rgba(0,0,0,0.35)]">{plan.period}</span>
-                    </div>
-                  )}
+                  <div className="flex items-baseline gap-1.5">
+                    <span className={`font-bold text-[#111111]${plan.highlighted ? " text-4xl" : " text-3xl"}`}>
+                      {fmt(BASE_GBP[plan.id], cur.symbol, cur.rate)}
+                    </span>
+                    <span className="text-sm text-[rgba(0,0,0,0.35)]">{plan.period}</span>
+                  </div>
                 </div>
 
                 {/* Features */}
@@ -365,8 +301,11 @@ export default function MusicLabSection() {
         </div>
 
         {/* Footer note */}
-        <p className="text-center text-xs text-[rgba(0,0,0,0.3)] mt-8 mb-16 font-light">
+        <p className="text-center text-xs text-[rgba(0,0,0,0.3)] mt-8 mb-4 font-light">
           Launching on lab.djandykofficial.com — be first in line.
+        </p>
+        <p className="text-center mb-16" style={{ fontFamily: "'IBM Plex Mono',monospace", fontSize: 11, color: "#a3a3a3" }}>
+          Have an early access code? Use it at checkout for 40% off.
         </p>
       </div>
 
