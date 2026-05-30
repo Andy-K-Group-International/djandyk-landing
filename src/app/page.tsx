@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "DJ Andy'K | Official Website — Trance, Progressive House & EDM",
   description:
-    "Official website of DJ Andy'K — UK-based music producer of Trance, Progressive House and EDM. Stream albums When Later Becomes Never, Human Stories, Deep Connections and more on Spotify, Apple Music and SoundCloud.",
-  alternates: { canonical: "https://djandykofficial.com" },
+    "DJ Andy'K — UK-based Trance, Progressive House & EDM producer. Stream When Later Becomes Never, Human Stories and more on Spotify, Apple Music and SoundCloud.",
+  alternates: { canonical: "https://www.djandykofficial.com" },
   openGraph: {
     type: "website",
-    url: "https://djandykofficial.com",
+    url: "https://www.djandykofficial.com",
     title: "DJ Andy'K | Trance, Progressive House & EDM",
     description:
-      "UK-based music producer. Stream When Later Becomes Never, Human Stories, Deep Connections and more on Spotify, Apple Music and SoundCloud.",
+      "DJ Andy'K — UK-based Trance, Progressive House & EDM producer. Stream When Later Becomes Never, Human Stories and more on Spotify, Apple Music and SoundCloud.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "DJ Andy'K" }],
   },
   twitter: {

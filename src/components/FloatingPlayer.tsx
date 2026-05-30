@@ -52,8 +52,9 @@ function CloseIcon() {
 export default function FloatingPlayer() {
   const [visible, setVisible] = useState(false);
   const [playing, setPlaying] = useState(false);
-  const [muted, setMuted] = useState(true);
+  const [muted, setMuted] = useState(false);
   const [dismissed, setDismissed] = useState(false);
+  const [widgetReady, setWidgetReady] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
@@ -61,11 +62,30 @@ export default function FloatingPlayer() {
     return () => clearTimeout(timer);
   }, []);
 
+  // SoundCloud widget signals readiness via postMessage
+  useEffect(() => {
+    function onMessage(e: MessageEvent) {
+      if (typeof e.data !== "string") return;
+      try {
+        const d = JSON.parse(e.data) as Record<string, unknown>;
+        if ("soundcloud_widget" in d || d.soundcloud !== undefined) {
+          setWidgetReady(true);
+        }
+      } catch {}
+    }
+    // Mark ready after a fallback timeout in case the event never fires
+    const fallback = setTimeout(() => setWidgetReady(true), 5000);
+    window.addEventListener("message", onMessage);
+    return () => {
+      window.removeEventListener("message", onMessage);
+      clearTimeout(fallback);
+    };
+  }, []);
+
   function sc(method: string, value?: unknown) {
-    iframeRef.current?.contentWindow?.postMessage(
-      JSON.stringify({ method, value }),
-      "*"
-    );
+    const msg: Record<string, unknown> = { method };
+    if (value !== undefined) msg.value = value;
+    iframeRef.current?.contentWindow?.postMessage(JSON.stringify(msg), "*");
   }
 
   function togglePlay() {
@@ -147,7 +167,8 @@ export default function FloatingPlayer() {
 
           <button
             onClick={togglePlay}
-            className="w-9 h-9 flex items-center justify-center rounded-xl bg-highlight hover:bg-deep-teal transition-colors text-white"
+            disabled={!widgetReady}
+            className="w-9 h-9 flex items-center justify-center rounded-xl bg-highlight hover:bg-deep-teal transition-colors text-white disabled:opacity-40 disabled:cursor-wait"
             title={playing ? "Pause" : "Play"}
           >
             {playing ? <PauseIcon /> : <PlayIcon />}

@@ -45,8 +45,20 @@ export default function LovedBySection() {
             ))}
           </h2>
 
-          <p className="text-base leading-relaxed text-[rgba(0,0,0,0.65)] font-light mb-8 max-w-[520px]">
+          <p className="text-base leading-relaxed text-[rgba(0,0,0,0.65)] font-light mb-4 max-w-[520px]">
             {t.about.bio}
+          </p>
+
+          <p className="text-base leading-relaxed text-[rgba(0,0,0,0.65)] font-light mb-8 max-w-[520px]">
+            Beyond releases and live sets, DJ Andy&apos;K is also building Andy&apos;K Music Lab — a browser-based toolkit created from his own music preparation workflow.{" "}
+            <a
+              href="https://lab.djandykofficial.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[rgba(0,0,0,0.8)] underline underline-offset-2 hover:text-[#111111] transition-colors"
+            >
+              Explore Music Lab →
+            </a>
           </p>
 
           <blockquote className="border-l-2 border-highlight pl-5 mb-8">

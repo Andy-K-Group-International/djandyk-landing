@@ -26,10 +26,10 @@ const playfairDisplay = Playfair_Display({
   style: ["normal", "italic"],
 });
 
-const SITE_URL = "https://djandykofficial.com";
+const SITE_URL = "https://www.djandykofficial.com";
 const SITE_TITLE = "DJ Andy'K | Official Website — Trance, Progressive House & EDM";
 const SITE_DESCRIPTION =
-  "Official website of DJ Andy'K — UK-based music producer of Trance, Progressive House and EDM. Stream albums When Later Becomes Never, Human Stories and more on Spotify, Apple Music and SoundCloud.";
+  "DJ Andy'K — UK-based Trance, Progressive House & EDM producer. Stream When Later Becomes Never, Human Stories and more on Spotify, Apple Music and SoundCloud.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
