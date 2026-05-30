@@ -21,7 +21,6 @@ export default function MusicLabBanner() {
           className="text-[clamp(1.5rem,1.2rem+1.2vw,2.25rem)] font-bold tracking-tight leading-[1.2] mb-3"
           style={{ color: "#111111" }}
         >
-          🎛️{" "}
           <span className="font-serif italic font-light">Andy&apos;K</span>{" "}
           Music{" "}
           <span className="font-serif italic font-light">Lab</span>{" "}
