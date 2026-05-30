@@ -201,7 +201,7 @@ export default function MusicLabSection() {
         )}
 
         {/* Currency selector */}
-        <div className="flex justify-end mb-4 gap-1.5">
+        <div className="flex justify-end mb-2 gap-1.5">
           {CURRENCIES.map((c) => (
             <button
               key={c.code}
@@ -217,6 +217,10 @@ export default function MusicLabSection() {
             </button>
           ))}
         </div>
+        <p style={{ fontFamily: "'IBM Plex Mono',monospace", fontSize: 11, color: "#a3a3a3", textAlign: "right", marginTop: 8, marginBottom: 16 }}>
+          Prices shown in GBP. Other currencies are approximate. Final amount charged in GBP by{" "}
+          <a href="https://www.revolut.com/business/" target="_blank" rel="noopener noreferrer" style={{ color: "#a3a3a3", textDecoration: "underline" }}>Revolut Business</a>.
+        </p>
 
         {/* Pricing cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
