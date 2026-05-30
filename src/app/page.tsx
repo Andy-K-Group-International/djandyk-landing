@@ -18,6 +18,7 @@ import { HeroBackground } from "@/components/BackgroundGrid";
 import LatestReleaseBanner from "@/components/LatestReleaseBanner";
 import MusicLabSection from "@/components/MusicLabSection";
 import MusicLabBanner from "@/components/MusicLabBanner";
+import LabPromoSection from "@/components/LabPromoSection";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const jsonLd = {
@@ -216,6 +217,7 @@ export default function Home() {
         <MusicLabSection />
       </ScrollReveal>
 
+      <LabPromoSection />
       <Footer />
     </main>
   );
