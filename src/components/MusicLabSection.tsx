@@ -8,6 +8,24 @@ interface SpotsData {
   closed: boolean;
 }
 
+const CURRENCIES = [
+  { code: "GBP", symbol: "£",  rate: 1 },
+  { code: "EUR", symbol: "€",  rate: 1.20 },
+  { code: "USD", symbol: "$",  rate: 1.27 },
+  { code: "BRL", symbol: "R$", rate: 6.50 },
+  { code: "PYG", symbol: "₲",  rate: 950 },
+] as const;
+
+type CurrencyCode = typeof CURRENCIES[number]["code"];
+
+const BASE_GBP: Record<string, number> = { studio: 29, pro: 199, single: 49 };
+const PRO_EARLY_GBP = 119;
+
+function fmt(gbp: number, symbol: string, rate: number): string {
+  const amount = Math.round(gbp * rate);
+  return symbol + (amount >= 1000 ? amount.toLocaleString("en-GB") : String(amount));
+}
+
 const WAVE_HEIGHTS = [
   16, 24, 36, 52, 65, 72, 60, 78, 70, 55, 80, 72, 64, 76, 58, 82, 74, 66,
   88, 78, 90, 82, 76, 92, 88, 80, 92, 84, 78, 88, 82, 72, 86, 76, 66, 80,
@@ -89,6 +107,8 @@ const CHECK_ICON = (
 
 export default function MusicLabSection() {
   const [spots, setSpots] = useState<SpotsData | null>(null);
+  const [currency, setCurrency] = useState<CurrencyCode>("GBP");
+  const cur = CURRENCIES.find((c) => c.code === currency)!;
 
   useEffect(() => {
     fetch("https://lab.djandykofficial.com/api/spots")
@@ -144,6 +164,24 @@ export default function MusicLabSection() {
           </div>
         )}
 
+        {/* Currency selector */}
+        <div className="flex justify-end mb-4 gap-1.5">
+          {CURRENCIES.map((c) => (
+            <button
+              key={c.code}
+              onClick={() => setCurrency(c.code)}
+              className="px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest transition-colors"
+              style={
+                currency === c.code
+                  ? { background: "#111111", color: "#ffffff" }
+                  : { background: "rgba(0,0,0,0.06)", color: "rgba(0,0,0,0.5)", border: "1px solid rgba(0,0,0,0.1)" }
+              }
+            >
+              {c.code}
+            </button>
+          ))}
+        </div>
+
         {/* Pricing cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
           {PLANS.map((plan) => (
@@ -189,9 +227,9 @@ export default function MusicLabSection() {
                 <div className="mb-6">
                   {plan.highlighted && earlyAccessOpen ? (
                     <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                      <span className="font-bold text-4xl text-[#111111]">£119</span>
+                      <span className="font-bold text-4xl text-[#111111]">{fmt(PRO_EARLY_GBP, cur.symbol, cur.rate)}</span>
                       <span className="text-sm text-[rgba(0,0,0,0.35)]">/yr</span>
-                      <span className="text-sm text-[rgba(0,0,0,0.35)] line-through">£199</span>
+                      <span className="text-sm text-[rgba(0,0,0,0.35)] line-through">{fmt(BASE_GBP[plan.id], cur.symbol, cur.rate)}</span>
                       <span
                         className="text-[10px] font-mono font-semibold uppercase tracking-widest px-2 py-0.5 rounded"
                         style={{ background: "#111111", color: "#ffffff" }}
@@ -201,13 +239,13 @@ export default function MusicLabSection() {
                     </div>
                   ) : plan.highlighted && earlyAccessClosed ? (
                     <div className="flex items-baseline gap-1.5">
-                      <span className="font-bold text-4xl text-[#111111]">{plan.price}</span>
+                      <span className="font-bold text-4xl text-[#111111]">{fmt(BASE_GBP[plan.id], cur.symbol, cur.rate)}</span>
                       <span className="text-sm text-[rgba(0,0,0,0.35)]">{plan.period}</span>
                     </div>
                   ) : (
                     <div className="flex items-baseline gap-1.5">
                       <span className={`font-bold text-[#111111]${plan.highlighted ? " text-4xl" : " text-3xl"}`}>
-                        {plan.price}
+                        {fmt(BASE_GBP[plan.id], cur.symbol, cur.rate)}
                       </span>
                       <span className="text-sm text-[rgba(0,0,0,0.35)]">{plan.period}</span>
                     </div>
