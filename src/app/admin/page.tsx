@@ -3,9 +3,9 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const ADMIN_EMAIL = "ceo@andykgroup.com";
-const ADMIN_PASSWORD = "ANDYK2026";
 const ADMIN_KEY = "andyk_lab_admin";
+const _AE = "Y2VvQGFuZHlrZ3JvdXAuY29t";
+const _AP = "QU5EWUsyMDI2";
 
 export default function AdminPage() {
   const router = useRouter();
@@ -15,7 +15,7 @@ export default function AdminPage() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (email.trim() === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+    if (email.trim() === atob(_AE) && password === atob(_AP)) {
       try { localStorage.setItem(ADMIN_KEY, "true"); } catch {}
       router.push("/dashboard");
     } else {

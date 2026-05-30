@@ -49,9 +49,9 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "MusicGroup",
-      "@id": "https://djandyofficial.com/#artist",
+      "@id": "https://djandykofficial.com/#artist",
       name: "DJ Andy'K",
-      url: "https://djandyofficial.com",
+      url: "https://djandykofficial.com",
       description:
         "UK-based music producer creating Trance, Progressive House, and EDM that blend emotion, energy, and storytelling.",
       genre: ["Trance", "Progressive House", "EDM"],
@@ -68,7 +68,7 @@ const jsonLd = {
       recordLabel: {
         "@type": "Organization",
         name: "ANDY'K GROUP INTERNATIONAL LTD",
-        url: "https://djandyofficial.com",
+        url: "https://djandykofficial.com",
       },
       sameAs: [
         "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
@@ -82,18 +82,18 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://djandyofficial.com/#website",
-      url: "https://djandyofficial.com",
+      "@id": "https://djandykofficial.com/#website",
+      url: "https://djandykofficial.com",
       name: "DJ Andy'K",
-      publisher: { "@id": "https://djandyofficial.com/#artist" },
+      publisher: { "@id": "https://djandykofficial.com/#artist" },
     },
     {
       "@type": "WebPage",
-      "@id": "https://djandyofficial.com/#webpage",
-      url: "https://djandyofficial.com",
+      "@id": "https://djandykofficial.com/#webpage",
+      url: "https://djandykofficial.com",
       name: "DJ Andy'K — Official Website | Trance, Progressive House & EDM",
-      isPartOf: { "@id": "https://djandyofficial.com/#website" },
-      about: { "@id": "https://djandyofficial.com/#artist" },
+      isPartOf: { "@id": "https://djandykofficial.com/#website" },
+      about: { "@id": "https://djandykofficial.com/#artist" },
       description:
         "Official website of DJ Andy'K. Producer of Trance, Progressive House, and EDM. Based in the UK, sharing music worldwide.",
     },

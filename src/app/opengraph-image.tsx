@@ -51,7 +51,7 @@ export default async function OgImage() {
           style={{
             fontSize: 72,
             fontWeight: 700,
-            color: "#1a1a2e",
+            color: "#111111",
             textAlign: "center",
             letterSpacing: "-0.02em",
             lineHeight: 1.1,
@@ -128,7 +128,7 @@ export default async function OgImage() {
             letterSpacing: "0.08em",
           }}
         >
-          djandyofficial.com
+          djandykofficial.com
         </div>
       </div>
     ),

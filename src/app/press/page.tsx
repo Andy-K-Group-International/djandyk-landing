@@ -109,8 +109,8 @@ export default function PressPage() {
     sameAs: [
       "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
       "https://soundcloud.com/djandyk_2024",
-      "https://www.instagram.com/djandyk_official",
-      "https://www.tiktok.com/@djandyk_official",
+      "https://www.instagram.com/djandykofficial",
+      "https://www.tiktok.com/@djandykofficial",
     ],
   };
 
@@ -132,7 +132,7 @@ export default function PressPage() {
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="shrink-0">
             <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          Back to djandyofficial.com
+          Back to djandykofficial.com
         </Link>
 
         {/* Header */}

@@ -183,7 +183,7 @@ export default function MusicLabSection() {
 
         {/* Footer note */}
         <p className="text-center text-xs text-[rgba(0,0,0,0.3)] mt-10 mb-16 font-light">
-          Launching on lab.djandyofficial.com — be first in line.
+          Launching on lab.djandykofficial.com — be first in line.
         </p>
       </div>
 

@@ -195,10 +195,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          onClick={() => {
-            console.log("menu clicked", !mobileOpen);
-            setMobileOpen(!mobileOpen);
-          }}
+          onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden flex items-center justify-center w-10 h-10 -mr-2 text-foreground"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >

@@ -56,7 +56,7 @@ export default function LabPromoSection() {
           Professional tools for{" "}
           <span
             style={{
-              fontFamily: "var(--font-playfair, Georgia, serif)",
+              fontFamily: "var(--font-playfair)",
               fontStyle: "italic",
               fontWeight: 400,
             }}

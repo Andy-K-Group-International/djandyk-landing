@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Mono, Playfair_Display } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { ThemeProvider } from "@/context/ThemeContext";
 import CookieBanner from "@/components/CookieBanner";
@@ -17,6 +17,13 @@ const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
   weight: ["400", "500", "700"],
+});
+
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
 });
 
 const SITE_URL = "https://djandykofficial.com";
@@ -56,7 +63,7 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   openGraph: {
-    type: "music.album",
+    type: "website",
     locale: "en_GB",
     url: SITE_URL,
     siteName: "DJ Andy'K",
@@ -90,22 +97,6 @@ export const metadata: Metadata = {
   },
 };
 
-const JSON_LD = {
-  "@context": "https://schema.org",
-  "@type": "MusicGroup",
-  name: "DJ Andy'K",
-  alternateName: "Andrej Kneisl",
-  url: SITE_URL,
-  genre: ["Trance", "Progressive House", "EDM"],
-  foundingLocation: { "@type": "Place", name: "United Kingdom" },
-  sameAs: [
-    "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
-    "https://soundcloud.com/djandyk_2024",
-    "https://www.instagram.com/djandyk_official",
-    "https://www.tiktok.com/@djandyk_official",
-  ],
-};
-
 const BREADCRUMB_LD = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -128,15 +119,11 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
-        />
-        <script
-          type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_LD) }}
         />
       </head>
       <body
-        className={`${ibmPlexSans.variable} ${ibmPlexMono.variable} antialiased font-sans`}
+        className={`${ibmPlexSans.variable} ${ibmPlexMono.variable} ${playfairDisplay.variable} antialiased font-sans`}
       >
         <ThemeProvider>
           <LanguageProvider>
