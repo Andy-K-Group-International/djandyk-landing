@@ -49,7 +49,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 
 function InfoRow({ label, value }: { label: string; value: React.ReactNode }) {
   return (
-    <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-0 py-4 border-b border-grid-300">
+    <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-0 py-4 border-b border-grid-300 last:border-b-0">
       <span className="text-xs uppercase tracking-widest text-muted-2 font-mono sm:w-40 shrink-0 leading-relaxed">
         {label}
       </span>
@@ -165,7 +165,7 @@ export default function PressPage() {
         {/* Technical Info */}
         <Section>
           <SectionTitle>Technical Info</SectionTitle>
-          <div className="glass-card rounded-xl pb-6">
+          <div className="glass-card rounded-xl pb-10">
             <InfoRow label="Artist" value="DJ Andy'K" />
             <InfoRow label="Real Name" value={COMPANY.realName} />
             <InfoRow label="Genres" value={COMPANY.genre} />
