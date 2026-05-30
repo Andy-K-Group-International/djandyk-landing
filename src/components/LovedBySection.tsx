@@ -16,7 +16,7 @@ export default function LovedBySection() {
           <img
             src="/photos/artist-main.jpg"
             alt="DJ Andy'K"
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className="absolute inset-0 w-full h-full object-contain object-top"
           />
           {/* subtle right-fade overlay so text side bleeds in */}
           <div
