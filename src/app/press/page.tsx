@@ -10,7 +10,7 @@ import {
   STREAMING_PLATFORMS,
 } from "@/lib/data";
 
-const PRESS_URL = "https://djandykofficial.com/press";
+const PRESS_URL = "https://www.djandykofficial.com/press";
 
 export const metadata: Metadata = {
   title: "Press & Media Kit | DJ Andy'K Official",
@@ -108,7 +108,7 @@ export default function PressPage() {
     genre: ["Trance", "Progressive House", "EDM"],
     sameAs: [
       "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
-      "https://soundcloud.com/djandyk_2024",
+      "https://soundcloud.com/djandykofficial",
       "https://www.instagram.com/djandykofficial",
       "https://www.tiktok.com/@djandykofficial",
     ],
@@ -165,7 +165,7 @@ export default function PressPage() {
         {/* Technical Info */}
         <Section>
           <SectionTitle>Technical Info</SectionTitle>
-          <div className="glass-card rounded-xl pb-10">
+          <div className="glass-card rounded-xl px-6 pb-10">
             <InfoRow label="Artist" value="DJ Andy'K" />
             <InfoRow label="Real Name" value={COMPANY.realName} />
             <InfoRow label="Genres" value={COMPANY.genre} />

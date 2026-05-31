@@ -55,7 +55,7 @@ export default function Navbar() {
     { label: "Sets", href: "#sets" },
     { label: t.nav.contact, href: "#contact" },
     { label: t.nav.press, href: "/press" },
-    { label: "Lab", href: "#lab" },
+    { label: "Lab", href: "https://lab.djandykofficial.com" },
   ];
 
   useEffect(() => {
@@ -110,7 +110,12 @@ export default function Navbar() {
         {/* Desktop nav — centered */}
         <div className="hidden md:flex items-center gap-7 text-sm text-muted absolute left-1/2 -translate-x-1/2">
           {navLinks.map((link) => (
-            <a key={link.href} href={resolveHref(link.href, isHome)} className="hover:text-foreground transition-colors">
+            <a
+              key={link.href}
+              href={resolveHref(link.href, isHome)}
+              className="hover:text-foreground transition-colors"
+              {...(link.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            >
               {link.label}
             </a>
           ))}
@@ -215,6 +220,7 @@ export default function Navbar() {
               href={resolveHref(link.href, isHome)}
               onClick={closeMobile}
               className="block py-3 text-base font-medium text-foreground border-b border-grid-300"
+              {...(link.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             >
               {link.label}
             </a>

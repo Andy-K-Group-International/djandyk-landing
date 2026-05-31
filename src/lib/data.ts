@@ -60,7 +60,7 @@ export const STREAMING_PLATFORMS = [
   },
   {
     name: "SoundCloud",
-    href: "https://soundcloud.com/djandyk_2024",
+    href: "https://soundcloud.com/djandykofficial",
     icon: "soundcloud",
   },
   {
@@ -539,7 +539,7 @@ export const NAV_SERVICES = [
       {
         label: "SoundCloud",
         description: "Follow on SoundCloud",
-        href: "https://soundcloud.com/djandyk_2024",
+        href: "https://soundcloud.com/djandykofficial",
       },
       {
         label: "YouTube",

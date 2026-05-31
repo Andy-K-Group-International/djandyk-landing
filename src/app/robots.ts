@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/admin", "/dashboard"],
     },
-    sitemap: "https://djandykofficial.com/sitemap.xml",
+    sitemap: "https://www.djandykofficial.com/sitemap.xml",
   };
 }
