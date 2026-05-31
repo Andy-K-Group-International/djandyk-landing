@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import CookieBanner from "@/components/CookieBanner";
 import FloatingPlayer from "@/components/FloatingPlayer";
 import AlbumAnnouncementPopup from "@/components/AlbumAnnouncementPopup";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -136,6 +137,7 @@ export default function RootLayout({
             <AlbumAnnouncementPopup />
           </LanguageProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
