@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 const LOCALES = new Set(["en", "es", "sk", "nl", "pt", "de"]);
 const CURRENCY_CODES = new Set(["EUR", "GBP", "USD", "BRL", "PYG"]);
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Only process paths that start with a potential locale prefix

@@ -18,7 +18,7 @@ export const COMPANY = {
     instagram: "https://www.instagram.com/djandykofficial",
     tiktok: "https://www.tiktok.com/@djandykofficial",
     spotify: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
-    youtube: "https://www.youtube.com/channel/UCrlcaZ24IreLG97tXQ4EMqA",
+    youtube: "https://www.youtube.com/@djandykofficial",
   },
   hyperfollow: "https://hyperfollow.com/djandyk",
   quote:
@@ -65,7 +65,7 @@ export const STREAMING_PLATFORMS = [
   },
   {
     name: "YouTube",
-    href: "https://www.youtube.com/channel/UCrlcaZ24IreLG97tXQ4EMqA",
+    href: "https://www.youtube.com/@djandykofficial",
     icon: "youtube",
   },
   {
@@ -424,10 +424,10 @@ export const TRACKLISTS: Record<string, TracklistEntry[]> = {
     { num: "02", title: "Sunset Over Us", comingSoon: true, label: "05.06.2026" },
     { num: "03", title: "Letting Go Feels Like Falling", comingSoon: true, label: "26.06.2026" },
     { num: "04", title: "What I Remember", comingSoon: true, label: "12.06.2026" },
-    { num: "05", title: "Further Than Forever (ft. Aria Noir)", released: true, label: "Out Now" },
+    { num: "05", title: "Further Than Forever ft. Aria Noir", released: true, label: "Out Now" },
     { num: "06", title: "Between Me and You", released: true, label: "Out Now" },
-    { num: "07", title: "The Door We Found (ft. Kaelis)", comingSoon: true, label: "03.07.2026" },
-    { num: "08", title: "Almost Home (ft. Lia Bonson)", comingSoon: true, label: "19.06.2026" },
+    { num: "07", title: "The Door We Found ft. Kaelis", comingSoon: true, label: "03.07.2026" },
+    { num: "08", title: "Almost Home ft. Lia Bonson", comingSoon: true, label: "19.06.2026" },
     { num: "", title: "Outro", isIntro: true },
   ],
   "When Later Becomes Never": [
@@ -545,7 +545,7 @@ export const NAV_SERVICES = [
       {
         label: "YouTube",
         description: "Subscribe on YouTube",
-        href: "https://www.youtube.com/channel/UCrlcaZ24IreLG97tXQ4EMqA",
+        href: "https://www.youtube.com/@djandykofficial",
       },
     ],
   },

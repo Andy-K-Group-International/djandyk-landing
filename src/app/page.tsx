@@ -73,7 +73,7 @@ const jsonLd = {
         "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
         "https://music.apple.com/gb/artist/dj-andyk/1835064975",
         "https://soundcloud.com/djandykofficial",
-        "https://www.youtube.com/channel/UCrlcaZ24IreLG97tXQ4EMqA",
+        "https://www.youtube.com/@djandykofficial",
         "https://tidal.com/browse/artist/65848653",
         "https://www.instagram.com/djandykofficial",
         "https://www.tiktok.com/@djandykofficial",
