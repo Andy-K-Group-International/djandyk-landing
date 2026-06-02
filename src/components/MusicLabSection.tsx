@@ -46,7 +46,7 @@ const PLANS = [
   {
     id: "studio",
     name: "Studio Pass",
-    price: "£29",
+    price: "£49",
     period: "/ month",
     badge: "COMING SOON",
     tag: null,
@@ -77,7 +77,7 @@ const PLANS = [
   {
     id: "single",
     name: "Single Session",
-    price: "£49",
+    price: "£79",
     period: "/ one-time",
     badge: "COMING SOON",
     tag: null,

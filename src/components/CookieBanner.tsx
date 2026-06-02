@@ -42,10 +42,10 @@ const CATEGORIES = [
       "Required for security, network management, and core functionality (including secure areas and form submission).",
     locked: true,
     cookies: [
-      { name: "cookie_consent_status", provider: "djandyofficial.com", purpose: "Stores your cookie consent choice", duration: "6 months" },
-      { name: "cookie_consent_preferences", provider: "djandyofficial.com", purpose: "Stores category preferences", duration: "6 months" },
-      { name: "csrf_token", provider: "djandyofficial.com", purpose: "CSRF protection for forms", duration: "Session" },
-      { name: "session_id", provider: "djandyofficial.com", purpose: "Maintains session state", duration: "Session" },
+      { name: "cookie_consent_status", provider: "djandykofficial.com", purpose: "Stores your cookie consent choice", duration: "6 months" },
+      { name: "cookie_consent_preferences", provider: "djandykofficial.com", purpose: "Stores category preferences", duration: "6 months" },
+      { name: "csrf_token", provider: "djandykofficial.com", purpose: "CSRF protection for forms", duration: "Session" },
+      { name: "session_id", provider: "djandykofficial.com", purpose: "Maintains session state", duration: "Session" },
     ],
   },
   {
@@ -70,8 +70,8 @@ const CATEGORIES = [
       "Remembers your preferences (e.g., language, region, saved settings, login session if applicable).",
     locked: false,
     cookies: [
-      { name: "site_language", provider: "djandyofficial.com", purpose: "Saves language preference", duration: "12 months" },
-      { name: "region_preference", provider: "djandyofficial.com", purpose: "Saves region selection", duration: "12 months" },
+      { name: "site_language", provider: "djandykofficial.com", purpose: "Saves language preference", duration: "12 months" },
+      { name: "region_preference", provider: "djandykofficial.com", purpose: "Saves region selection", duration: "12 months" },
     ],
   },
   {

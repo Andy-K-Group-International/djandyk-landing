@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Cookies Policy | DJ Andy'K",
   description:
-    "Cookies policy for djandyofficial.com — how DJ Andy'K uses cookies and tracking technologies.",
+    "Cookies policy for djandykofficial.com — how DJ Andy'K uses cookies and tracking technologies.",
   alternates: { canonical: "/cookies-policy" },
 };
 
@@ -272,28 +272,28 @@ export default function CookiesPolicyPage() {
                 <tbody className="text-muted">
                   <tr className="border-b border-grid-300/50">
                     <td className="px-3 py-2 font-mono text-foreground text-[12px]">cookie_consent_status</td>
-                    <td className="px-3 py-2">djandyofficial.com</td>
+                    <td className="px-3 py-2">djandykofficial.com</td>
                     <td className="px-3 py-2">Stores your cookie consent choice (accept/reject/preferences).</td>
                     <td className="px-3 py-2">First-party</td>
                     <td className="px-3 py-2">6 months</td>
                   </tr>
                   <tr className="border-b border-grid-300/50">
                     <td className="px-3 py-2 font-mono text-foreground text-[12px]">cookie_consent_preferences</td>
-                    <td className="px-3 py-2">djandyofficial.com</td>
+                    <td className="px-3 py-2">djandykofficial.com</td>
                     <td className="px-3 py-2">Stores category preferences (analytics/functional/marketing).</td>
                     <td className="px-3 py-2">First-party</td>
                     <td className="px-3 py-2">6 months</td>
                   </tr>
                   <tr className="border-b border-grid-300/50">
                     <td className="px-3 py-2 font-mono text-foreground text-[12px]">csrf_token</td>
-                    <td className="px-3 py-2">djandyofficial.com</td>
+                    <td className="px-3 py-2">djandykofficial.com</td>
                     <td className="px-3 py-2">Security cookie to protect forms from abuse (CSRF protection).</td>
                     <td className="px-3 py-2">First-party</td>
                     <td className="px-3 py-2">Session</td>
                   </tr>
                   <tr>
                     <td className="px-3 py-2 font-mono text-foreground text-[12px]">session_id</td>
-                    <td className="px-3 py-2">djandyofficial.com</td>
+                    <td className="px-3 py-2">djandykofficial.com</td>
                     <td className="px-3 py-2">Maintains session state (e.g., login session if applicable).</td>
                     <td className="px-3 py-2">First-party</td>
                     <td className="px-3 py-2">Session</td>
@@ -368,14 +368,14 @@ export default function CookiesPolicyPage() {
                 <tbody className="text-muted">
                   <tr className="border-b border-grid-300/50">
                     <td className="px-3 py-2 font-mono text-foreground text-[12px]">site_language</td>
-                    <td className="px-3 py-2">djandyofficial.com</td>
+                    <td className="px-3 py-2">djandykofficial.com</td>
                     <td className="px-3 py-2">Saves language preference.</td>
                     <td className="px-3 py-2">First-party</td>
                     <td className="px-3 py-2">12 months</td>
                   </tr>
                   <tr>
                     <td className="px-3 py-2 font-mono text-foreground text-[12px]">region_preference</td>
-                    <td className="px-3 py-2">djandyofficial.com</td>
+                    <td className="px-3 py-2">djandykofficial.com</td>
                     <td className="px-3 py-2">Saves region selection.</td>
                     <td className="px-3 py-2">First-party</td>
                     <td className="px-3 py-2">12 months</td>

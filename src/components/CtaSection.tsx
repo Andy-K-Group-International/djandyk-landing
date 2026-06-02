@@ -28,7 +28,7 @@ export default function CtaSection() {
       </div>
 
       <div className="relative z-10 max-w-[800px] mx-auto text-center">
-        <span className="text-[10px] uppercase tracking-[0.25em] text-highlight font-mono block mb-4">
+        <span className="text-[10px] uppercase tracking-[0.25em] text-white/50 font-mono block mb-4">
           {t.cta.eyebrow}
         </span>
         <h2 className="text-[clamp(1.875rem,1.52rem+1.25vw,2.5rem)] font-bold tracking-tight text-white leading-[1.2] mb-4">

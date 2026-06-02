@@ -165,7 +165,7 @@ export default function PressPage() {
         {/* Technical Info */}
         <Section>
           <SectionTitle>Technical Info</SectionTitle>
-          <div className="glass-card rounded-xl px-6 pb-10">
+          <div className="glass-card rounded-xl p-6">
             <InfoRow label="Artist" value="DJ Andy'K" />
             <InfoRow label="Real Name" value={COMPANY.realName} />
             <InfoRow label="Genres" value={COMPANY.genre} />
@@ -209,14 +209,25 @@ export default function PressPage() {
                     {item.category}
                   </span>
                   <span className="text-xs text-muted-2">{item.year}</span>
-                  <a
-                    href={item.spotifyUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-highlight hover:text-deep-teal transition-colors"
-                  >
-                    Spotify ↗
-                  </a>
+                  {item.spotifyUrl ? (
+                    <a
+                      href={item.spotifyUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-highlight hover:text-deep-teal transition-colors"
+                    >
+                      Spotify ↗
+                    </a>
+                  ) : (item as { soundcloudUrl?: string }).soundcloudUrl ? (
+                    <a
+                      href={(item as { soundcloudUrl?: string }).soundcloudUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-highlight hover:text-deep-teal transition-colors"
+                    >
+                      SoundCloud ↗
+                    </a>
+                  ) : null}
                 </div>
               </div>
             ))}

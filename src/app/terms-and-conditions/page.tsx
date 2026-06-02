@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Terms & Conditions | DJ Andy'K",
   description:
-    "Terms and conditions for djandyofficial.com \u2014 official website of DJ Andy'K.",
+    "Terms and conditions for djandykofficial.com \u2014 official website of DJ Andy'K.",
   alternates: { canonical: "/terms-and-conditions" },
 };
 
@@ -56,7 +56,7 @@ export default function TermsAndConditionsPage() {
               <p><strong className="text-foreground">Company number:</strong> 16453500</p>
               <p><strong className="text-foreground">Registered office:</strong> 86&ndash;90 Paul Street, London, EC2A 4NE, United Kingdom</p>
               <p><strong className="text-foreground">Email:</strong> ceo@andykgroup.com</p>
-              <p><strong className="text-foreground">Website:</strong> djandyofficial.com</p>
+              <p><strong className="text-foreground">Website:</strong> djandykofficial.com</p>
             </div>
           </section>
 

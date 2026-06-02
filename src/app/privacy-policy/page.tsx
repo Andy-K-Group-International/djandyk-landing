@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Privacy Policy | DJ Andy'K",
   description:
-    "Privacy policy for djandyofficial.com — official website of DJ Andy'K, released under ANDY'K GROUP INTERNATIONAL LTD.",
+    "Privacy policy for djandykofficial.com — official website of DJ Andy'K, released under ANDY'K GROUP INTERNATIONAL LTD.",
   alternates: { canonical: "/privacy-policy" },
 };
 

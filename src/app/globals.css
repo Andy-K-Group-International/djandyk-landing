@@ -15,6 +15,7 @@
   --color-bg-light: #fafafa;
   --font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
+  --font-serif: var(--font-playfair), Georgia, 'Times New Roman', serif;
 }
 
 :root {

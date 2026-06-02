@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Disclaimer | DJ Andy'K",
   description:
-    "Website disclaimer for djandyofficial.com — official website of DJ Andy'K.",
+    "Website disclaimer for djandykofficial.com — official website of DJ Andy'K.",
   alternates: { canonical: "/disclaimer" },
 };
 

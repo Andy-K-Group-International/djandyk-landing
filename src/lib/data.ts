@@ -175,6 +175,7 @@ export const ALBUMS_2026 = [
     year: "2026",
     status: "in-progress",
     coverUrl: "/releases/before-i-forget.png",
+    spotifyUrl: "https://open.spotify.com/album/0KN8WFTt4WsjSB6f2jXx20",
     soundcloudUrl: "https://soundcloud.com/djandykofficial",
   },
   {
