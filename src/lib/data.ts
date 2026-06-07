@@ -421,7 +421,7 @@ export const TRACKLISTS: Record<string, TracklistEntry[]> = {
   "Before I Forget": [
     { num: "", title: "Intro", isIntro: true },
     { num: "01", title: "Before I Forget", released: true, label: "Out Now" },
-    { num: "02", title: "Sunset Over Us", comingSoon: true, label: "05.06.2026" },
+    { num: "02", title: "Sunset Over Us", released: true, label: "Out Now" },
     { num: "03", title: "Letting Go Feels Like Falling", comingSoon: true, label: "26.06.2026" },
     { num: "04", title: "What I Remember", comingSoon: true, label: "12.06.2026" },
     { num: "05", title: "Further Than Forever ft. Aria Noir", released: true, label: "Out Now" },
