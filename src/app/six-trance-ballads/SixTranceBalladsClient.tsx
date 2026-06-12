@@ -10,7 +10,7 @@ const TRACKS = [
     title: "I Arrived As Someone Else",
     from: "From me, to me.",
     line: "I did not come back. I arrived as someone else.",
-    status: "out" as const,
+    releaseDate: "2026-06-12",
     date: "17.6.2026",
     accent: "#D2691E",
     coverUrl: "/releases/i-arrived-as-someone-else.png",
@@ -90,7 +90,8 @@ const TRACKS = [
     title: "A Letter With No Address",
     from: "From me, to someone I couldn't name.",
     line: "A letter unsent. A feeling without a name.",
-    status: "soon" as const,
+    releaseDate: "2026-06-19",
+    date: "24.6.2026",
     accent: "#8B7355",
     coverUrl: "/releases/a-letter-with-no-address.png",
     audioSrc: "/audio/a-letter-with-no-address.wav",
@@ -180,7 +181,8 @@ const TRACKS = [
     title: "If This Finds You",
     from: "From me, to you.",
     line: "A message for the one who needed to hear it today.",
-    status: "soon" as const,
+    releaseDate: "2026-06-26",
+    date: "1.7.2026",
     accent: "#7EB8D4",
     coverUrl: "/releases/if-this-finds-you.png",
     audioSrc: "/audio/if-this-finds-you.wav",
@@ -276,7 +278,8 @@ const TRACKS = [
     title: "Whatever You Believe",
     from: "From me, to God.",
     line: "I call it God. But whatever you believe, I hope it hears you too.",
-    status: "soon" as const,
+    releaseDate: "2026-07-03",
+    date: "8.7.2026",
     accent: "#C9A84C",
     coverUrl: "/releases/whatever-you-believe.png",
     audioSrc: "/audio/whatever-you-believe.wav",
@@ -382,7 +385,8 @@ const TRACKS = [
     title: "The Past Still Had My Voice",
     from: "From me, to the past.",
     line: "A voice I left behind, still calling through the dark.",
-    status: "soon" as const,
+    releaseDate: "2026-07-10",
+    date: "15.7.2026",
     accent: "#C0392B",
     coverUrl: "/releases/the-past-still-had-my-voice.png",
     audioSrc: "/audio/the-past-still-had-my-voice.wav",
@@ -478,7 +482,8 @@ const TRACKS = [
     title: "If Tomorrow Lets Me In",
     from: "From me, to tomorrow.",
     line: "A door of light, waiting after the dark.",
-    status: "soon" as const,
+    releaseDate: "2026-07-17",
+    date: "22.7.2026",
     accent: "#C9A0DC",
     coverUrl: "/releases/if-tomorrow-lets-me-in.png",
     audioSrc: "/audio/if-tomorrow-lets-me-in.wav",
@@ -579,6 +584,7 @@ const GREEN = "#63B39A";
 
 function TrackCard({ track }: { track: Track }) {
   const [lyricsOpen, setLyricsOpen] = useState(false);
+  const isOut = new Date(track.releaseDate) <= new Date();
 
   return (
     <div
@@ -598,7 +604,7 @@ function TrackCard({ track }: { track: Track }) {
           alt={track.title}
           className="w-full h-full object-cover"
           style={{
-            filter: track.status === "soon" ? "brightness(0.85) saturate(0.9)" : "none",
+            filter: !isOut ? "brightness(0.85) saturate(0.9)" : "none",
           }}
         />
         <div
@@ -608,12 +614,12 @@ function TrackCard({ track }: { track: Track }) {
           <span
             className="text-[9px] font-mono uppercase tracking-[0.3em] px-2.5 py-1 rounded-full border"
             style={{
-              color: track.status === "out" ? track.accent : "rgba(255,255,255,0.4)",
-              borderColor: track.status === "out" ? `${track.accent}66` : "rgba(255,255,255,0.15)",
+              color: isOut ? track.accent : "rgba(255,255,255,0.4)",
+              borderColor: isOut ? `${track.accent}66` : "rgba(255,255,255,0.15)",
               background: "rgba(0,0,0,0.6)",
             }}
           >
-            {track.status === "out" ? `Out Now · ${track.date}` : "Coming Soon"}
+            {isOut ? `Out Now · ${track.date}` : track.date}
           </span>
         </div>
       </div>
@@ -634,7 +640,7 @@ function TrackCard({ track }: { track: Track }) {
         {/* Title */}
         <h3
           className="text-lg font-bold tracking-tight mb-2 leading-snug font-sans"
-          style={{ color: track.status === "out" ? "#f0f6fc" : "rgba(255,255,255,0.55)" }}
+          style={{ color: isOut ? "#f0f6fc" : "rgba(255,255,255,0.55)" }}
         >
           {track.title}
         </h3>
@@ -774,27 +780,25 @@ export default function SixTranceBalladsClient() {
             className="text-[clamp(2rem,5vw,3.5rem)] font-bold tracking-tight leading-[1.1] mb-3 font-sans"
             style={{ color: "#f0f6fc" }}
           >
-            I Arrived As{" "}
-            <span className="font-serif italic font-light">Someone Else</span>
+            THE ALBUM
           </h1>
 
           <p
-            className="text-lg font-light mb-4 font-mono uppercase tracking-[0.2em]"
+            className="text-lg font-light mb-1 font-mono uppercase tracking-[0.2em]"
             style={{ color: GREEN }}
           >
             Six Trance Ballads
           </p>
 
           <p
-            className="text-base italic font-light mb-3 font-serif"
-            style={{ color: "rgba(255,255,255,0.4)" }}
+            className="text-base italic font-light mb-4 font-serif"
+            style={{ color: "rgba(255,255,255,0.45)" }}
           >
-            "I did not come back. I arrived as someone else."
+            From Me, To...
           </p>
 
           <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.28)" }}>
-            Six emotional trance ballads written as personal letters. A cinematic trance project
-            by DJ Andy'K.
+            Six personal letters in trance. New track every Wednesday. Full album 22.7.2026.
           </p>
         </section>
 

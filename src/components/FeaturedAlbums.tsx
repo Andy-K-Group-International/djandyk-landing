@@ -8,9 +8,9 @@ import ScrollReveal from "@/components/ScrollReveal";
 const FEATURED_RELEASES = [
   {
     kicker: "Album · 2026",
-    title: "I Arrived As Someone Else",
-    genre: "Trance Ballads",
-    description: "Six personal letters in trance. Written from me, to you.",
+    title: "THE ALBUM — From Me, To...",
+    genre: "Six Trance Ballads",
+    description: "Six personal letters in trance. New track every Wednesday. Full album 22.7.2026.",
     availableNow: true,
     href: "/six-trance-ballads",
     cover: "/releases/six-trance-ballads-the-album.png",
@@ -159,7 +159,12 @@ function ChevronIcon({ open }: { open: boolean }) {
   );
 }
 
-type TrackEntry = { num: string; title: string; released?: boolean; comingSoon?: boolean; spotifyUrl?: string; label?: string; isIntro?: boolean };
+type TrackEntry = { num: string; title: string; released?: boolean; comingSoon?: boolean; spotifyUrl?: string; label?: string; isIntro?: boolean; releaseDate?: string };
+
+function isTrackReleased(track: TrackEntry): boolean {
+  if (track.releaseDate) return new Date(track.releaseDate) <= new Date();
+  return !!track.released;
+}
 
 function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
   const [playerOpen, setPlayerOpen] = useState(false);
@@ -300,13 +305,13 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
                     <span className="text-[10px] font-mono text-muted-2 w-7 shrink-0 text-right">
                       {track.num}
                     </span>
-                    {track.released ? (
+                    {isTrackReleased(track) ? (
                       <span
                         className="hs-green-dot inline-block w-1.5 h-1.5 rounded-full shrink-0"
                         style={{ background: "#111111" }}
                         title="Out now"
                       />
-                    ) : track.comingSoon ? (
+                    ) : track.comingSoon || track.releaseDate ? (
                       <span
                         className="inline-block w-1.5 h-1.5 rounded-full shrink-0"
                         style={{ background: "#F59E0B", opacity: 0.7 }}
@@ -315,17 +320,17 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
                     ) : (
                       <span className="inline-block w-1.5 h-1.5 rounded-full shrink-0 bg-transparent" />
                     )}
-                    <span className={`text-sm leading-snug ${track.released ? "text-foreground font-medium" : track.comingSoon ? "text-muted" : "text-muted-2"}`}>
+                    <span className={`text-sm leading-snug ${isTrackReleased(track) ? "text-foreground font-medium" : (track.comingSoon || track.releaseDate) ? "text-muted" : "text-muted-2"}`}>
                       {track.title}
                     </span>
-                    {track.released && (
+                    {isTrackReleased(track) && (
                       track.spotifyUrl ? (
                         <a href={track.spotifyUrl} target="_blank" rel="noopener noreferrer" className="text-[10px] font-mono text-highlight ml-auto shrink-0 hover:underline">{track.label ?? "Out now"}</a>
                       ) : (
                         <span className="text-[10px] font-mono text-highlight ml-auto shrink-0">{track.label ?? "Out now"}</span>
                       )
                     )}
-                    {track.comingSoon && (
+                    {(track.comingSoon || track.releaseDate) && !isTrackReleased(track) && (
                       <span className="text-[10px] font-mono ml-auto shrink-0" style={{ color: "#F59E0B", opacity: 0.8 }}>{track.label}</span>
                     )}
                   </li>

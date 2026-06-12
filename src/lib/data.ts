@@ -28,9 +28,9 @@ export const COMPANY = {
 
 export const LATEST_RELEASES = [
   {
-    title: "I Arrived As Someone Else",
-    type: "Six Trance Ballads · New track every Wednesday",
-    coverUrl: "/releases/i-arrived-as-someone-else.png",
+    title: "THE ALBUM — From Me, To...",
+    type: "Six Trance Ballads · New Every Wednesday",
+    coverUrl: "/releases/six-trance-ballads-the-album.png",
     spotifyUrl: "/six-trance-ballads",
     releaseDate: "17.6.2026",
   },
@@ -422,27 +422,27 @@ export const ADAM_ROADMAP = [
 
 export const ADAM_SHOWCASE = ADAM_ROADMAP;
 
-export type TracklistEntry = { num: string; title: string; released?: boolean; comingSoon?: boolean; spotifyUrl?: string; label?: string; isIntro?: boolean };
+export type TracklistEntry = { num: string; title: string; released?: boolean; comingSoon?: boolean; spotifyUrl?: string; label?: string; isIntro?: boolean; releaseDate?: string };
 
 export const TRACKLISTS: Record<string, TracklistEntry[]> = {
-  "I Arrived As Someone Else": [
-    { num: "01", title: "A Letter With No Address", released: true, label: "Out Now" },
-    { num: "02", title: "If This Finds You", released: true, label: "Out Now" },
-    { num: "03", title: "I Arrived As Someone Else", released: true, label: "Out Now" },
-    { num: "04", title: "Whatever You Believe", released: true, label: "Out Now" },
-    { num: "05", title: "The Past Still Had My Voice", released: true, label: "Out Now" },
-    { num: "06", title: "If Tomorrow Lets Me In", released: true, label: "Out Now" },
+  "THE ALBUM — From Me, To...": [
+    { num: "01", title: "I Arrived As Someone Else", releaseDate: "2026-06-12", label: "Out Now" },
+    { num: "02", title: "A Letter With No Address", releaseDate: "2026-06-19", label: "24.6.2026" },
+    { num: "03", title: "If This Finds You", releaseDate: "2026-06-26", label: "1.7.2026" },
+    { num: "04", title: "Whatever You Believe", releaseDate: "2026-07-03", label: "8.7.2026" },
+    { num: "05", title: "The Past Still Had My Voice", releaseDate: "2026-07-10", label: "15.7.2026" },
+    { num: "06", title: "If Tomorrow Lets Me In", releaseDate: "2026-07-17", label: "22.7.2026" },
   ],
   "Before I Forget": [
     { num: "", title: "Intro", isIntro: true },
     { num: "01", title: "Before I Forget", released: true, label: "Out Now" },
     { num: "02", title: "Sunset Over Us", released: true, label: "Out Now" },
-    { num: "03", title: "Letting Go Feels Like Falling", comingSoon: true, label: "26.06.2026" },
-    { num: "04", title: "What I Remember", comingSoon: true, label: "12.06.2026" },
+    { num: "03", title: "Letting Go Feels Like Falling", releaseDate: "2026-06-26", label: "26.6.2026" },
+    { num: "04", title: "What I Remember", releaseDate: "2026-06-12", label: "12.6.2026" },
     { num: "05", title: "Further Than Forever ft. Aria Noir", released: true, label: "Out Now" },
     { num: "06", title: "Between Me and You", released: true, label: "Out Now" },
-    { num: "07", title: "The Door We Found ft. Kaelis", comingSoon: true, label: "03.07.2026" },
-    { num: "08", title: "Almost Home ft. Lia Bonson", comingSoon: true, label: "19.06.2026" },
+    { num: "07", title: "The Door We Found ft. Kaelis", releaseDate: "2026-07-03", label: "3.7.2026" },
+    { num: "08", title: "Almost Home ft. Lia Bonson", releaseDate: "2026-06-19", label: "19.6.2026" },
     { num: "", title: "Outro", isIntro: true },
   ],
   "When Later Becomes Never": [

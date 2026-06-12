@@ -32,19 +32,22 @@ export default function SixTranceBalladsPromo() {
         </span>
 
         <h2
-          className="text-[clamp(1.8rem,1.4rem+1.5vw,2.75rem)] font-bold tracking-tight leading-[1.15] mb-3"
+          className="text-[clamp(1.8rem,1.4rem+1.5vw,2.75rem)] font-bold tracking-tight leading-[1.15] mb-2"
           style={{ color: "#ffffff" }}
         >
-          I Arrived As{" "}
-          <span className="font-serif italic font-light">Someone Else</span>
+          THE ALBUM
         </h2>
 
-        <p className="text-base font-light mb-2" style={{ color: "rgba(255,255,255,0.75)" }}>
+        <p className="text-base font-light mb-1" style={{ color: "rgba(255,255,255,0.75)" }}>
+          <span className="font-serif italic">From Me, To...</span>
+        </p>
+
+        <p className="text-sm font-mono mb-2" style={{ color: "#63B39A" }}>
           Six Trance Ballads · DJ Andy&apos;K
         </p>
 
-        <p className="text-sm font-mono mb-10" style={{ color: "rgba(255,255,255,0.45)" }}>
-          Six personal letters in trance · Listen now on SoundCloud &amp; Spotify
+        <p className="text-sm font-mono mb-10" style={{ color: "rgba(255,255,255,0.4)" }}>
+          New track every Wednesday · Full album 22.7.2026
         </p>
 
         <Link
