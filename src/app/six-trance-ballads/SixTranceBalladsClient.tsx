@@ -640,11 +640,16 @@ function TrackCard({ track }: { track: Track }) {
 
         {/* Title */}
         <h3
-          className="text-lg font-bold tracking-tight mb-2 leading-snug font-sans"
+          className="text-lg font-bold tracking-tight mb-1 leading-snug font-sans"
           style={{ color: isOut ? "#f0f6fc" : "rgba(255,255,255,0.55)" }}
         >
           {track.title}
         </h3>
+
+        {/* Release date */}
+        <p className="text-[11px] font-mono uppercase tracking-widest mb-2" style={{ color: isOut ? track.accent : "rgba(255,255,255,0.25)" }}>
+          {isOut ? `Released · ${track.date}` : `Release · ${track.date}`}
+        </p>
 
         {/* Core line */}
         <p
