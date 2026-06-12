@@ -656,33 +656,18 @@ function TrackCard({ track }: { track: Track }) {
 
         {/* Audio player */}
         <div className="mb-3">
-          {isOut && track.audioSrc ? (
-            <audio
-              controls
-              preload="none"
-              className="w-full"
-              style={{
-                height: "32px",
-                accentColor: track.accent,
-                colorScheme: "dark",
-                borderRadius: "6px",
-              }}
-            >
-              <source src={track.audioSrc} type="audio/mpeg" />
-            </audio>
-          ) : (
-            <div
-              className="flex items-center justify-center rounded-md text-[10px] font-mono"
-              style={{
-                height: "32px",
-                background: "rgba(255,255,255,0.03)",
-                border: "1px solid rgba(255,255,255,0.06)",
-                color: "rgba(255,255,255,0.18)",
-              }}
-            >
-              Audio coming {track.date}
-            </div>
-          )}
+          <audio
+            controls
+            preload="none"
+            className="w-full"
+            style={{
+              accentColor: track.accent,
+              colorScheme: "dark",
+              borderRadius: "6px",
+            }}
+          >
+            <source src={track.audioSrc} type="audio/mpeg" />
+          </audio>
         </div>
 
         {/* Lyrics toggle */}
