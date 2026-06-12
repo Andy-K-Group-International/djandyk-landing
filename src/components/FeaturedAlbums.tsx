@@ -8,6 +8,15 @@ import ScrollReveal from "@/components/ScrollReveal";
 const FEATURED_RELEASES = [
   {
     kicker: "Album · 2026",
+    title: "I Arrived As Someone Else",
+    genre: "Trance Ballads",
+    description: "Six personal letters in trance. Written from me, to you.",
+    availableNow: true,
+    href: "/six-trance-ballads",
+    cover: "/releases/six-trance-ballads-the-album.png",
+  },
+  {
+    kicker: "Album · 2026",
     title: "Before I Forget",
     genre: "Trance / Progressive Trance",
     description: "Eight tracks of progressive trance — a journey through memory, emotion, and release.",
@@ -219,11 +228,10 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
       <div className="mt-5 flex items-center gap-2 flex-wrap">
         <a
           href={release.href}
-          target="_blank"
-          rel="noopener noreferrer"
+          {...(release.href.startsWith("/") ? {} : { target: "_blank", rel: "noopener noreferrer" })}
           className="inline-flex items-center gap-1.5 text-sm font-medium text-highlight hover:text-deep-teal transition-colors"
         >
-          Listen Now
+          {release.href.startsWith("/") ? "View Album" : "Listen Now"}
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2} className="w-3.5 h-3.5">
             <path d="M6 4l4 4-4 4" />
           </svg>

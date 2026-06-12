@@ -134,7 +134,7 @@ export default function RootLayout({
             {children}
             <FloatingPlayer />
             <CookieBanner />
-            <AlbumAnnouncementPopup />
+            {/* AlbumAnnouncementPopup removed — Before I Forget campaign ended */}
           </LanguageProvider>
         </ThemeProvider>
         <Analytics />

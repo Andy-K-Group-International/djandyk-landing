@@ -14,10 +14,10 @@ export const metadata: Metadata = {
       "Six emotional trance ballads written as personal letters. A cinematic trance project by DJ Andy'K.",
     images: [
       {
-        url: "/releases/i-arrived-as-someone-else.png",
+        url: "/releases/six-trance-ballads-the-album.png",
         width: 1200,
         height: 1200,
-        alt: "I Arrived As Someone Else",
+        alt: "I Arrived As Someone Else — Six Trance Ballads by DJ Andy'K",
       },
     ],
   },

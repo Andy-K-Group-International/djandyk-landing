@@ -418,6 +418,14 @@ export const ADAM_SHOWCASE = ADAM_ROADMAP;
 export type TracklistEntry = { num: string; title: string; released?: boolean; comingSoon?: boolean; spotifyUrl?: string; label?: string; isIntro?: boolean };
 
 export const TRACKLISTS: Record<string, TracklistEntry[]> = {
+  "I Arrived As Someone Else": [
+    { num: "01", title: "A Letter With No Address", released: true, label: "Out Now" },
+    { num: "02", title: "If This Finds You", released: true, label: "Out Now" },
+    { num: "03", title: "I Arrived As Someone Else", released: true, label: "Out Now" },
+    { num: "04", title: "Whatever You Believe", released: true, label: "Out Now" },
+    { num: "05", title: "The Past Still Had My Voice", released: true, label: "Out Now" },
+    { num: "06", title: "If Tomorrow Lets Me In", released: true, label: "Out Now" },
+  ],
   "Before I Forget": [
     { num: "", title: "Intro", isIntro: true },
     { num: "01", title: "Before I Forget", released: true, label: "Out Now" },

@@ -598,19 +598,19 @@ function TrackCard({ track }: { track: Track }) {
           alt={track.title}
           className="w-full h-full object-cover"
           style={{
-            filter: track.status === "soon" ? "brightness(0.65) saturate(0.75)" : "none",
+            filter: track.status === "soon" ? "brightness(0.85) saturate(0.9)" : "none",
           }}
         />
         <div
           className="absolute inset-0 flex items-end p-3"
-          style={{ background: "linear-gradient(to top, rgba(13,17,23,0.85) 20%, transparent)" }}
+          style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 20%, transparent)" }}
         >
           <span
             className="text-[9px] font-mono uppercase tracking-[0.3em] px-2.5 py-1 rounded-full border"
             style={{
               color: track.status === "out" ? track.accent : "rgba(255,255,255,0.4)",
               borderColor: track.status === "out" ? `${track.accent}66` : "rgba(255,255,255,0.15)",
-              background: "rgba(13,17,23,0.7)",
+              background: "rgba(0,0,0,0.6)",
             }}
           >
             {track.status === "out" ? `Out Now · ${track.date}` : "Coming Soon"}
@@ -760,7 +760,7 @@ export default function SixTranceBalladsClient() {
     <>
       <Navbar />
 
-      <main className="pt-[60px] min-h-screen font-sans" style={{ background: "#0d1117" }}>
+      <main className="pt-[60px] min-h-screen font-sans" style={{ background: "#000000" }}>
         {/* Hero */}
         <section className="px-6 pt-20 pb-12 max-w-[680px] mx-auto text-center">
           <span
@@ -812,7 +812,15 @@ export default function SixTranceBalladsClient() {
                 SoundCloud Early Access
               </p>
               <p className="text-xs" style={{ color: "rgba(255,255,255,0.4)" }}>
-                Every release arrives on SoundCloud 5–7 days early. Because I still believe in it.
+                Every release arrives on SoundCloud 5–7 days early. Because I still believe in it.{" "}
+                <a
+                  href="https://soundcloud.com/djandyk_2024/sets/i-arrived-as-someone-else?si=a66090b6c7c74df4bd263da8ef5b6659&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "#ff5500", textDecoration: "underline" }}
+                >
+                  Listen on SoundCloud →
+                </a>
               </p>
             </div>
           </div>
