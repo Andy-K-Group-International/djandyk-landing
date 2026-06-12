@@ -47,12 +47,11 @@ export default function LatestReleaseBanner() {
 
         <a
           href={release.spotifyUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+          {...(release.spotifyUrl.startsWith("/") ? {} : { target: "_blank", rel: "noopener noreferrer" })}
           className="shrink-0 inline-flex items-center gap-1.5 text-xs font-semibold text-white border border-white/40 hover:bg-white/10 transition-colors px-3 py-1.5 rounded"
           style={{ opacity: visible ? 1 : 0, transition: "opacity 300ms" }}
         >
-          Listen Now
+          {release.spotifyUrl.startsWith("/") ? "View Album" : "Listen Now"}
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2} className="w-3 h-3">
             <path d="M6 4l4 4-4 4" />
           </svg>

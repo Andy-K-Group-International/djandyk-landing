@@ -28,6 +28,13 @@ export const COMPANY = {
 
 export const LATEST_RELEASES = [
   {
+    title: "I Arrived As Someone Else",
+    type: "Six Trance Ballads · New track every Wednesday",
+    coverUrl: "/releases/i-arrived-as-someone-else.png",
+    spotifyUrl: "/six-trance-ballads",
+    releaseDate: "17.6.2026",
+  },
+  {
     title: "Before I Forget",
     type: "New Single \u00b7 Trance",
     coverUrl: "/releases/before-i-forget.png",
