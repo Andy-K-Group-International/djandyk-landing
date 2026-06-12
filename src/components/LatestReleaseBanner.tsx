@@ -20,6 +20,23 @@ export default function LatestReleaseBanner() {
 
   const release = LATEST_RELEASES[idx];
 
+  function getWeeklyLabel(releases: { date: string; label: string }[]): string {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const next = releases.find(r => new Date(r.date) >= today);
+    return next ? next.label : releases[releases.length - 1].label;
+  }
+
+  function getReleaseLabel(): string {
+    if ("weeklyReleases" in release && release.weeklyReleases) {
+      return `Out ${getWeeklyLabel(release.weeklyReleases)}`;
+    }
+    if ("releaseDate" in release && release.releaseDate) {
+      return `Out ${release.releaseDate}`;
+    }
+    return "Out Now";
+  }
+
   return (
     <div className="w-full bg-highlight px-4 py-2.5">
       <div className="max-w-[1200px] mx-auto flex items-center justify-between gap-4">
@@ -37,7 +54,7 @@ export default function LatestReleaseBanner() {
 
           <div className="min-w-0">
             <span className="text-[10px] uppercase tracking-[0.2em] text-white/70 font-mono block leading-tight">
-              {release.type} · {"releaseDate" in release && release.releaseDate ? `Out ${release.releaseDate}` : "Out Now"}
+              {release.type} · {getReleaseLabel()}
             </span>
             <span className="text-sm font-semibold text-white truncate block leading-tight">
               {release.title}

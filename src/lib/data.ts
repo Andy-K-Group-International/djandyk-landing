@@ -32,7 +32,14 @@ export const LATEST_RELEASES = [
     type: "Six Trance Ballads · New Every Wednesday",
     coverUrl: "/releases/six-trance-ballads-the-album.png",
     spotifyUrl: "/six-trance-ballads",
-    releaseDate: "17.6.2026",
+    weeklyReleases: [
+      { date: "2026-06-17", label: "17.6.2026" },
+      { date: "2026-06-24", label: "24.6.2026" },
+      { date: "2026-07-01", label: "1.7.2026" },
+      { date: "2026-07-08", label: "8.7.2026" },
+      { date: "2026-07-15", label: "15.7.2026" },
+      { date: "2026-07-22", label: "22.7.2026" },
+    ],
   },
   {
     title: "Before I Forget",
