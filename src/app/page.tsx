@@ -39,6 +39,7 @@ import Footer from "@/components/Footer";
 import FlagshipSystems from "@/components/FlagshipSystems";
 import { HeroBackground } from "@/components/BackgroundGrid";
 import LatestReleaseBanner from "@/components/LatestReleaseBanner";
+import SixTranceBalladsPromo from "@/components/SixTranceBalladsPromo";
 import MusicLabSection from "@/components/MusicLabSection";
 import MusicLabBanner from "@/components/MusicLabBanner";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -149,6 +150,7 @@ export default function Home() {
       <TopBanner />
       <Navbar />
       <LatestReleaseBanner />
+      <SixTranceBalladsPromo />
 
       <ScrollReveal>
         <div className="relative overflow-clip">
