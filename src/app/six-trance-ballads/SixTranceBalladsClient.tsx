@@ -584,6 +584,7 @@ const GREEN = "#63B39A";
 
 function TrackCard({ track }: { track: Track }) {
   const [lyricsOpen, setLyricsOpen] = useState(false);
+  const [audioError, setAudioError] = useState(false);
   const isOut = new Date(track.releaseDate) <= new Date();
 
   return (
@@ -657,6 +658,7 @@ function TrackCard({ track }: { track: Track }) {
         <div className="mb-3">
           <audio
             controls
+            preload="none"
             className="w-full"
             style={{
               height: "32px",
@@ -665,10 +667,17 @@ function TrackCard({ track }: { track: Track }) {
               borderRadius: "6px",
               opacity: track.audioSrc ? 1 : 0.28,
             }}
+            onError={() => setAudioError(true)}
+            onPlay={() => setAudioError(false)}
           >
             {track.audioSrc && <source src={track.audioSrc} type="audio/wav" />}
             Your browser does not support the audio element.
           </audio>
+          {audioError && (
+            <p className="text-[10px] font-mono mt-1" style={{ color: "rgba(255,85,0,0.7)" }}>
+              Načítanie zlyhalo — skús znova kliknúť play
+            </p>
+          )}
           {!track.audioSrc && (
             <p className="text-[10px] font-mono mt-1" style={{ color: "rgba(255,255,255,0.18)" }}>
               Audio coming soon
