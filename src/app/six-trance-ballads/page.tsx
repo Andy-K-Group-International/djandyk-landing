@@ -32,6 +32,7 @@ const TRACKS = [
     status: "out" as const,
     date: "17.6.2026",
     coverUrl: "/releases/i-arrived-as-someone-else.png",
+    accent: "#7eedc4",
     soundcloudUrl: null as string | null,
     spotifyUrl: null as string | null,
   },
@@ -41,6 +42,8 @@ const TRACKS = [
     from: "From me, to someone I couldn't name.",
     line: "A letter unsent. A feeling without a name.",
     status: "soon" as const,
+    coverUrl: "/releases/a-letter-with-no-address.png",
+    accent: "#a78bfa",
   },
   {
     n: 3,
@@ -48,6 +51,8 @@ const TRACKS = [
     from: "From me, to you.",
     line: "A message for the one who needed to hear it today.",
     status: "soon" as const,
+    coverUrl: "/releases/if-this-finds-you.png",
+    accent: "#60a5fa",
   },
   {
     n: 4,
@@ -55,6 +60,8 @@ const TRACKS = [
     from: "From me, to God.",
     line: "I call it God. But whatever you believe, I hope it hears you too.",
     status: "soon" as const,
+    coverUrl: "/releases/whatever-you-believe.png",
+    accent: "#fbbf24",
   },
   {
     n: 5,
@@ -62,6 +69,8 @@ const TRACKS = [
     from: "From me, to the past.",
     line: "A voice I left behind, still calling through the dark.",
     status: "soon" as const,
+    coverUrl: "/releases/the-past-still-had-my-voice.png",
+    accent: "#f87171",
   },
   {
     n: 6,
@@ -69,6 +78,8 @@ const TRACKS = [
     from: "From me, to tomorrow.",
     line: "A door of light, waiting after the dark.",
     status: "soon" as const,
+    coverUrl: "/releases/if-tomorrow-lets-me-in.png",
+    accent: "#86efac",
   },
 ];
 
@@ -79,7 +90,7 @@ export default function SixTranceBalladsPage() {
       <div className="border-b px-6 py-4 flex items-center gap-4" style={{ borderColor: "#1e2939" }}>
         <Link
           href="/"
-          className="text-xs font-mono uppercase tracking-[0.2em] transition-colors"
+          className="text-xs font-mono uppercase tracking-[0.2em] transition-opacity hover:opacity-60"
           style={{ color: "#63B39A" }}
         >
           ← DJ Andy'K
@@ -91,7 +102,7 @@ export default function SixTranceBalladsPage() {
       </div>
 
       {/* Hero */}
-      <section className="px-6 pt-20 pb-16 max-w-[900px] mx-auto text-center">
+      <section className="px-6 pt-20 pb-16 max-w-[1100px] mx-auto text-center">
         <span
           className="inline-block text-[10px] font-mono uppercase tracking-[0.35em] mb-6 px-3 py-1 rounded-full border"
           style={{ color: "#63B39A", borderColor: "#63B39A33", background: "#63B39A0d" }}
@@ -124,7 +135,7 @@ export default function SixTranceBalladsPage() {
       </section>
 
       {/* SoundCloud early access badge */}
-      <div className="px-6 pb-16 max-w-[900px] mx-auto flex justify-center">
+      <div className="px-6 pb-16 max-w-[1100px] mx-auto flex justify-center">
         <div
           className="inline-flex items-start gap-3 px-5 py-4 rounded-xl border text-left max-w-[480px]"
           style={{ background: "#0f1923", borderColor: "#ff550066" }}
@@ -143,133 +154,130 @@ export default function SixTranceBalladsPage() {
         </div>
       </div>
 
-      {/* Track cards */}
-      <section className="px-6 pb-24 max-w-[900px] mx-auto">
-        <div className="grid gap-4">
+      {/* Track grid */}
+      <section className="px-6 pb-24 max-w-[1100px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {TRACKS.map((track) => (
             <div
               key={track.n}
-              className="rounded-xl p-6 border transition-all duration-300"
+              className="rounded-xl overflow-hidden border flex flex-col transition-all duration-300 hover:translate-y-[-2px]"
               style={{
-                background:
-                  track.status === "out"
-                    ? "linear-gradient(135deg, #0f1f18 0%, #0d1117 100%)"
-                    : "#0f1420",
-                borderColor: track.status === "out" ? "#63B39A55" : "#1e2939",
+                background: "#0c1119",
+                borderColor: "#1e2939",
+                borderTopColor: track.accent,
+                borderTopWidth: "2px",
+                boxShadow: `0 0 0 0 ${track.accent}00`,
               }}
             >
-              <div className="flex items-start gap-5">
-                {/* Track number / cover */}
-                <div className="shrink-0">
-                  {track.status === "out" && "coverUrl" in track && track.coverUrl ? (
-                    <div className="w-16 h-16 rounded-lg overflow-hidden">
-                      <img
-                        src={track.coverUrl}
-                        alt={track.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ) : (
-                    <div
-                      className="w-16 h-16 rounded-lg flex items-center justify-center text-xl font-bold font-mono"
-                      style={{ background: "#1a2535", color: "#2d3f52" }}
+              {/* Cover image */}
+              <div className="aspect-square w-full relative overflow-hidden">
+                <img
+                  src={track.coverUrl}
+                  alt={track.title}
+                  className="w-full h-full object-cover"
+                  style={{
+                    filter: track.status === "soon" ? "brightness(0.7) saturate(0.8)" : "none",
+                  }}
+                />
+                {/* Coming soon overlay */}
+                {track.status === "soon" && (
+                  <div
+                    className="absolute inset-0 flex items-end p-4"
+                    style={{ background: "linear-gradient(to top, #0c111988 40%, transparent)" }}
+                  >
+                    <span
+                      className="text-[9px] font-mono uppercase tracking-[0.3em] px-2 py-1 rounded border"
+                      style={{ color: track.accent, borderColor: `${track.accent}55`, background: "#0c111988" }}
                     >
-                      {String(track.n).padStart(2, "0")}
-                    </div>
-                  )}
+                      Coming Soon
+                    </span>
+                  </div>
+                )}
+                {track.status === "out" && (
+                  <div
+                    className="absolute inset-0 flex items-end p-4"
+                    style={{ background: "linear-gradient(to top, #0c111988 40%, transparent)" }}
+                  >
+                    <span
+                      className="text-[9px] font-mono uppercase tracking-[0.3em] px-2 py-1 rounded border"
+                      style={{ color: track.accent, borderColor: `${track.accent}55`, background: "#0c111988" }}
+                    >
+                      Out Now · {track.date}
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              {/* Track info */}
+              <div className="p-5 flex flex-col flex-1">
+                <div className="flex items-center gap-2 mb-2">
+                  <span
+                    className="text-[10px] font-mono font-bold"
+                    style={{ color: track.accent }}
+                  >
+                    {String(track.n).padStart(2, "0")}
+                  </span>
+                  <span className="text-[10px] font-mono" style={{ color: "#2d3f52" }}>/</span>
+                  <span className="text-[10px] font-mono uppercase tracking-widest" style={{ color: "#4a5568" }}>
+                    {track.from}
+                  </span>
                 </div>
 
-                {/* Content */}
-                <div className="flex-1 min-w-0">
-                  <div className="flex flex-wrap items-center gap-2 mb-1">
-                    <span
-                      className="text-[10px] font-mono uppercase tracking-[0.2em]"
-                      style={{ color: "#4a5568" }}
-                    >
-                      {String(track.n).padStart(2, "0")}
-                    </span>
-                    {track.status === "out" ? (
-                      <span
-                        className="text-[9px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border"
-                        style={{ color: "#7eedc4", borderColor: "#7eedc433", background: "#7eedc40d" }}
+                <h3
+                  className="text-base font-semibold tracking-tight mb-2 leading-snug"
+                  style={{ color: track.status === "out" ? "#f0f6fc" : "#94a3b8" }}
+                >
+                  {track.title}
+                </h3>
+
+                <p
+                  className="text-sm italic leading-relaxed mt-auto"
+                  style={{ color: "#4a5568", fontFamily: "var(--font-playfair, Georgia, serif)" }}
+                >
+                  "{track.line}"
+                </p>
+
+                {/* Links — out tracks only */}
+                {track.status === "out" && (
+                  <div className="flex gap-2 mt-4 flex-wrap">
+                    {"soundcloudUrl" in track && track.soundcloudUrl ? (
+                      <a
+                        href={track.soundcloudUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-mono uppercase tracking-widest px-3 py-1.5 rounded border transition-colors hover:opacity-80"
+                        style={{ color: "#ff5500", borderColor: "#ff550055" }}
                       >
-                        Out Now
-                      </span>
+                        SoundCloud
+                      </a>
                     ) : (
                       <span
-                        className="text-[9px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full border"
-                        style={{ color: "#4a5568", borderColor: "#1e2939" }}
+                        className="text-xs font-mono uppercase tracking-widest px-3 py-1.5 rounded border"
+                        style={{ color: "#2d3f52", borderColor: "#1e2939" }}
                       >
-                        Coming Soon
+                        SoundCloud — soon
                       </span>
                     )}
-                    {"date" in track && track.date && (
-                      <span className="text-[10px] font-mono" style={{ color: "#63B39A" }}>
-                        {track.date}
+                    {"spotifyUrl" in track && track.spotifyUrl ? (
+                      <a
+                        href={track.spotifyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-mono uppercase tracking-widest px-3 py-1.5 rounded border transition-colors hover:opacity-80"
+                        style={{ color: "#1db954", borderColor: "#1db95455" }}
+                      >
+                        Spotify
+                      </a>
+                    ) : (
+                      <span
+                        className="text-xs font-mono uppercase tracking-widest px-3 py-1.5 rounded border"
+                        style={{ color: "#2d3f52", borderColor: "#1e2939" }}
+                      >
+                        Streaming — soon
                       </span>
                     )}
                   </div>
-
-                  <h3
-                    className="text-lg font-semibold tracking-tight mb-0.5"
-                    style={{ color: track.status === "out" ? "#f0f6fc" : "#94a3b8" }}
-                  >
-                    {track.title}
-                  </h3>
-
-                  <p className="text-xs font-mono mb-2" style={{ color: "#63B39A99" }}>
-                    {track.from}
-                  </p>
-
-                  <p
-                    className="text-sm italic"
-                    style={{ color: "#64748b", fontFamily: "var(--font-playfair, Georgia, serif)" }}
-                  >
-                    "{track.line}"
-                  </p>
-
-                  {/* Links — only shown when out */}
-                  {track.status === "out" && (
-                    <div className="flex gap-3 mt-4">
-                      {"soundcloudUrl" in track && track.soundcloudUrl ? (
-                        <a
-                          href={track.soundcloudUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-xs font-mono uppercase tracking-widest px-3 py-1.5 rounded border transition-colors hover:bg-[#ff55000d]"
-                          style={{ color: "#ff5500", borderColor: "#ff550055" }}
-                        >
-                          SoundCloud
-                        </a>
-                      ) : (
-                        <span
-                          className="text-xs font-mono uppercase tracking-widest px-3 py-1.5 rounded border"
-                          style={{ color: "#2d3f52", borderColor: "#1e2939" }}
-                        >
-                          SoundCloud — soon
-                        </span>
-                      )}
-                      {"spotifyUrl" in track && track.spotifyUrl ? (
-                        <a
-                          href={track.spotifyUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-xs font-mono uppercase tracking-widest px-3 py-1.5 rounded border transition-colors hover:bg-[#1db9540d]"
-                          style={{ color: "#1db954", borderColor: "#1db95455" }}
-                        >
-                          Spotify
-                        </a>
-                      ) : (
-                        <span
-                          className="text-xs font-mono uppercase tracking-widest px-3 py-1.5 rounded border"
-                          style={{ color: "#2d3f52", borderColor: "#1e2939" }}
-                        >
-                          Streaming — soon
-                        </span>
-                      )}
-                    </div>
-                  )}
-                </div>
+                )}
               </div>
             </div>
           ))}
@@ -283,7 +291,7 @@ export default function SixTranceBalladsPage() {
         </p>
         <Link
           href="/"
-          className="text-xs font-mono transition-colors hover:opacity-80"
+          className="text-xs font-mono transition-opacity hover:opacity-60"
           style={{ color: "#63B39A" }}
         >
           djandykofficial.com
