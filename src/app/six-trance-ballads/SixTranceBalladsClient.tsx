@@ -14,7 +14,7 @@ const TRACKS = [
     date: "17.6.2026",
     accent: "#D2691E",
     coverUrl: "/releases/i-arrived-as-someone-else.png",
-    audioSrc: "",
+    audioSrc: "/audio/i-arrived-as-someone-else.wav",
     soundcloudUrl: null as string | null,
     spotifyUrl: null as string | null,
     lyrics: [
@@ -651,7 +651,6 @@ function TrackCard({ track }: { track: Track }) {
         <div className="mb-3">
           <audio
             controls
-            src={track.audioSrc || undefined}
             className="w-full"
             style={{
               height: "32px",
@@ -661,6 +660,7 @@ function TrackCard({ track }: { track: Track }) {
               opacity: track.audioSrc ? 1 : 0.28,
             }}
           >
+            {track.audioSrc && <source src={track.audioSrc} type="audio/wav" />}
             Your browser does not support the audio element.
           </audio>
           {!track.audioSrc && (
