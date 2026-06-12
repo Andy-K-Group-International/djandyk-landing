@@ -150,7 +150,6 @@ export default function Home() {
       <TopBanner />
       <Navbar />
       <LatestReleaseBanner />
-      <SixTranceBalladsPromo />
 
       <ScrollReveal>
         <div className="relative overflow-clip">
@@ -170,6 +169,8 @@ export default function Home() {
       <ScrollReveal>
         <FeaturedAlbums />
       </ScrollReveal>
+
+      <SixTranceBalladsPromo />
 
       <TronDivider />
 
