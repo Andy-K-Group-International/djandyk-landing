@@ -93,7 +93,7 @@ const TRACKS = [
     status: "soon" as const,
     accent: "#8B7355",
     coverUrl: "/releases/a-letter-with-no-address.png",
-    audioSrc: "",
+    audioSrc: "/audio/a-letter-with-no-address.wav",
     soundcloudUrl: null as string | null,
     spotifyUrl: null as string | null,
     lyrics: [
@@ -183,7 +183,7 @@ const TRACKS = [
     status: "soon" as const,
     accent: "#7EB8D4",
     coverUrl: "/releases/if-this-finds-you.png",
-    audioSrc: "",
+    audioSrc: "/audio/if-this-finds-you.wav",
     soundcloudUrl: null as string | null,
     spotifyUrl: null as string | null,
     lyrics: [
@@ -279,7 +279,7 @@ const TRACKS = [
     status: "soon" as const,
     accent: "#C9A84C",
     coverUrl: "/releases/whatever-you-believe.png",
-    audioSrc: "",
+    audioSrc: "/audio/whatever-you-believe.wav",
     soundcloudUrl: null as string | null,
     spotifyUrl: null as string | null,
     lyrics: [
@@ -385,7 +385,7 @@ const TRACKS = [
     status: "soon" as const,
     accent: "#C0392B",
     coverUrl: "/releases/the-past-still-had-my-voice.png",
-    audioSrc: "",
+    audioSrc: "/audio/the-past-still-had-my-voice.wav",
     soundcloudUrl: null as string | null,
     spotifyUrl: null as string | null,
     lyrics: [
@@ -481,7 +481,7 @@ const TRACKS = [
     status: "soon" as const,
     accent: "#C9A0DC",
     coverUrl: "/releases/if-tomorrow-lets-me-in.png",
-    audioSrc: "",
+    audioSrc: "/audio/if-tomorrow-lets-me-in.wav",
     soundcloudUrl: null as string | null,
     spotifyUrl: null as string | null,
     lyrics: [
