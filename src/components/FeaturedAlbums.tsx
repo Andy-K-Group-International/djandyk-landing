@@ -20,7 +20,7 @@ const FEATURED_RELEASES = [
     title: "Before I Forget",
     genre: "Trance / Progressive Trance",
     description: "Eight tracks of progressive trance — a journey through memory, emotion, and release.",
-    inProgressBadge: true,
+    completionDate: "2026-07-03",
     href: "https://soundcloud.com/djandykofficial",
     cover: "/releases/before-i-forget.png",
   },
@@ -174,10 +174,14 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
   return (
     <div className="glass-card rounded-xl p-6 flex flex-col transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:border-highlight/30">
       <style>{TRACK_DOT_STYLES}</style>
-      {/* In Progress badge — Before I Forget */}
-      {"inProgressBadge" in release && release.inProgressBadge && <InProgressBadge />}
+      {/* In Progress / Complete badge — date-driven */}
+      {"completionDate" in release && release.completionDate && (
+        new Date(release.completionDate as string) <= new Date()
+          ? <CompleteBadge />
+          : <InProgressBadge />
+      )}
 
-      {/* Complete badge — Human Stories */}
+      {/* Complete badge — static (Human Stories etc.) */}
       {"completeBadge" in release && release.completeBadge && <CompleteBadge />}
 
       {/* Available Now badge */}

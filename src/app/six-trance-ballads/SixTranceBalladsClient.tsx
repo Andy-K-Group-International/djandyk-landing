@@ -632,7 +632,7 @@ function TrackCard({ track }: { track: Track }) {
             {String(track.n).padStart(2, "0")}
           </span>
           <span className="text-xs font-mono" style={{ color: "rgba(255,255,255,0.12)" }}>/</span>
-          <span className="text-xs font-mono uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.3)" }}>
+          <span className="text-xs font-mono uppercase tracking-widest min-w-0 truncate" style={{ color: "rgba(255,255,255,0.3)" }}>
             {track.from}
           </span>
         </div>
@@ -679,7 +679,7 @@ function TrackCard({ track }: { track: Track }) {
         {/* Lyrics toggle */}
         <button
           onClick={() => setLyricsOpen((o) => !o)}
-          className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest mb-3 transition-opacity hover:opacity-70 w-fit"
+          className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest mb-3 py-1.5 transition-opacity hover:opacity-70 w-fit"
           style={{ color: track.accent }}
         >
           <svg
