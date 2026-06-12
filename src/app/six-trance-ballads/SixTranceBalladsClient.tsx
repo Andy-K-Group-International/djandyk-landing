@@ -818,9 +818,9 @@ export default function SixTranceBalladsClient() {
           </div>
         </div>
 
-        {/* Track list — single column */}
-        <section className="px-6 pb-24 max-w-[680px] mx-auto">
-          <div className="flex flex-col gap-4">
+        {/* Track list — 2-col on desktop */}
+        <section className="px-6 pb-24 max-w-[1100px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {TRACKS.map((track) => (
               <TrackCard key={track.n} track={track} />
             ))}
