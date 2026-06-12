@@ -40,8 +40,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Audio masters — large files, deployed via Vercel CLI directly
-/public/audio/
+# Audio masters (WAV) — too large for git
+/public/audio/*.wav
 
 # Playwright
 node_modules/

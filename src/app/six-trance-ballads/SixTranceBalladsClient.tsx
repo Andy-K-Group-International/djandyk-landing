@@ -14,7 +14,7 @@ const TRACKS = [
     date: "17.6.2026",
     accent: "#D2691E",
     coverUrl: "/releases/i-arrived-as-someone-else.png",
-    audioSrc: "/audio/i-arrived-as-someone-else.wav",
+    audioSrc: "/audio/i-arrived-as-someone-else.mp3",
     soundcloudUrl: "https://soundcloud.com/djandyk_2024/i-arrived-as-someone-else?in=djandyk_2024/sets/i-arrived-as-someone-else&si=b6dd920a9cc9444597975e4772ff84e2&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" as string | null,
     spotifyUrl: null as string | null,
     lyrics: [
@@ -94,7 +94,7 @@ const TRACKS = [
     date: "24.6.2026",
     accent: "#8B7355",
     coverUrl: "/releases/a-letter-with-no-address.png",
-    audioSrc: "/audio/a-letter-with-no-address.wav",
+    audioSrc: "/audio/a-letter-with-no-address.mp3",
     soundcloudUrl: "https://soundcloud.com/djandyk_2024/a-letter-with-no-address/s-hZWE6ZPP0n8?in=djandyk_2024/sets/i-arrived-as-someone-else&si=9cbe7c1273c2489daabbde09981d2e61&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" as string | null,
     spotifyUrl: null as string | null,
     lyrics: [
@@ -185,7 +185,7 @@ const TRACKS = [
     date: "1.7.2026",
     accent: "#7EB8D4",
     coverUrl: "/releases/if-this-finds-you.png",
-    audioSrc: "/audio/if-this-finds-you.wav",
+    audioSrc: "/audio/if-this-finds-you.mp3",
     soundcloudUrl: "https://soundcloud.com/djandyk_2024/if-this-finds-you/s-8xXlzZyJwko?in=djandyk_2024/sets/i-arrived-as-someone-else&si=0aad7416c19a4cbfb1dfe82031e12763&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" as string | null,
     spotifyUrl: null as string | null,
     lyrics: [
@@ -282,7 +282,7 @@ const TRACKS = [
     date: "8.7.2026",
     accent: "#C9A84C",
     coverUrl: "/releases/whatever-you-believe.png",
-    audioSrc: "/audio/whatever-you-believe.wav",
+    audioSrc: "/audio/whatever-you-believe.mp3",
     soundcloudUrl: "https://soundcloud.com/djandyk_2024/whatever-you-believe/s-sTXJyDOO0Q2?in=djandyk_2024/sets/i-arrived-as-someone-else&si=811b52822de84c25bab18316abb3e1d6&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" as string | null,
     spotifyUrl: null as string | null,
     lyrics: [
@@ -389,7 +389,7 @@ const TRACKS = [
     date: "15.7.2026",
     accent: "#C0392B",
     coverUrl: "/releases/the-past-still-had-my-voice.png",
-    audioSrc: "/audio/the-past-still-had-my-voice.wav",
+    audioSrc: "/audio/the-past-still-had-my-voice.mp3",
     soundcloudUrl: "https://soundcloud.com/djandyk_2024/the-past-still-had-my-voice/s-RaSyy9yYRUD?in=djandyk_2024/sets/i-arrived-as-someone-else&si=bab1537d0b034df8911fb85ead8c5a02&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" as string | null,
     spotifyUrl: null as string | null,
     lyrics: [
@@ -486,7 +486,7 @@ const TRACKS = [
     date: "22.7.2026",
     accent: "#C9A0DC",
     coverUrl: "/releases/if-tomorrow-lets-me-in.png",
-    audioSrc: "/audio/if-tomorrow-lets-me-in.wav",
+    audioSrc: "/audio/if-tomorrow-lets-me-in.mp3",
     soundcloudUrl: "https://soundcloud.com/djandyk_2024/if-tomorrow-lets-me-in/s-IdZMWJlDp3z?in=djandyk_2024/sets/i-arrived-as-someone-else&si=345caae084354dc5b5b9b84b285d2022&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" as string | null,
     spotifyUrl: null as string | null,
     lyrics: [
@@ -582,9 +582,9 @@ type Track = (typeof TRACKS)[number];
 
 const GREEN = "#63B39A";
 
+
 function TrackCard({ track }: { track: Track }) {
   const [lyricsOpen, setLyricsOpen] = useState(false);
-  const [audioError, setAudioError] = useState(false);
   const isOut = new Date(track.releaseDate) <= new Date();
 
   return (
@@ -656,32 +656,32 @@ function TrackCard({ track }: { track: Track }) {
 
         {/* Audio player */}
         <div className="mb-3">
-          <audio
-            controls
-            preload="none"
-            className="w-full"
-            style={{
-              height: "32px",
-              accentColor: track.accent,
-              colorScheme: "dark",
-              borderRadius: "6px",
-              opacity: track.audioSrc ? 1 : 0.28,
-            }}
-            onError={() => setAudioError(true)}
-            onPlay={() => setAudioError(false)}
-          >
-            {track.audioSrc && <source src={track.audioSrc} type="audio/wav" />}
-            Your browser does not support the audio element.
-          </audio>
-          {audioError && (
-            <p className="text-[10px] font-mono mt-1" style={{ color: "rgba(255,85,0,0.7)" }}>
-              Načítanie zlyhalo — skús znova kliknúť play
-            </p>
-          )}
-          {!track.audioSrc && (
-            <p className="text-[10px] font-mono mt-1" style={{ color: "rgba(255,255,255,0.18)" }}>
-              Audio coming soon
-            </p>
+          {isOut && track.audioSrc ? (
+            <audio
+              controls
+              preload="none"
+              className="w-full"
+              style={{
+                height: "32px",
+                accentColor: track.accent,
+                colorScheme: "dark",
+                borderRadius: "6px",
+              }}
+            >
+              <source src={track.audioSrc} type="audio/mpeg" />
+            </audio>
+          ) : (
+            <div
+              className="flex items-center justify-center rounded-md text-[10px] font-mono"
+              style={{
+                height: "32px",
+                background: "rgba(255,255,255,0.03)",
+                border: "1px solid rgba(255,255,255,0.06)",
+                color: "rgba(255,255,255,0.18)",
+              }}
+            >
+              Audio coming {track.date}
+            </div>
           )}
         </div>
 
