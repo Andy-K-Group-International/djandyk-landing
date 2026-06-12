@@ -12,22 +12,77 @@ const TRACKS = [
     line: "I did not come back. I arrived as someone else.",
     status: "out" as const,
     date: "17.6.2026",
+    accent: "#D2691E",
     coverUrl: "/releases/i-arrived-as-someone-else.png",
     audioSrc: "",
     soundcloudUrl: null as string | null,
     spotifyUrl: null as string | null,
     lyrics: [
-      "I knew this air before. But not with these lungs.",
-      "I knew these lights before. But not with these eyes.",
-      "I did not come back. I arrived as someone else.",
-      "The floor remembers footsteps that no longer belong to me.",
-      "The glass reflects a face I had to become carefully.",
-      "I carried no answers, only proof I survived the change.",
-      "Do not ask where I was. Some places never explain.",
-      "Do not call me by yesterday. I do not turn to that name.",
-      "I arrived as someone else, under lights that knew me before.",
-      "The streets kept all my shadows, but I don't live there anymore.",
-      "I did not come back broken. I came back passing through.",
+      [
+        "I knew this air before.",
+        "But not with these lungs.",
+        "I knew these lights before.",
+        "But not with these eyes.",
+        "I did not come back.",
+        "I arrived as someone else.",
+      ],
+      [
+        "The floor remembers footsteps",
+        "that no longer belong to me.",
+        "The glass reflects a face",
+        "I had to become carefully.",
+        "I carried no answers,",
+        "only proof I survived the change.",
+      ],
+      [
+        "Do not ask where I was.",
+        "Some places never explain.",
+        "Do not call me by yesterday.",
+        "I do not turn to that name.",
+      ],
+      [
+        "I arrived as someone else,",
+        "under lights that knew me before.",
+        "The streets kept all my shadows,",
+        "but I don't live there anymore.",
+        "I did not come back broken.",
+        "I came back passing through.",
+      ],
+      [
+        "I arrived...",
+        "as someone else...",
+        "Not back...",
+        "just through...",
+      ],
+      [
+        "The map was still open,",
+        "but it could not read my hands.",
+        "Every road looked familiar,",
+        "every corner changed its plans.",
+        "I saw the old windows",
+        "show me who I had been,",
+        "then disappear into the night.",
+      ],
+      [
+        "Somewhere between the gate and the ground,",
+        "I stopped looking for home.",
+        "Somewhere between the past and the sound,",
+        "I learned to stand alone.",
+      ],
+      [
+        "I arrived as someone else,",
+        "under lights that knew me before.",
+        "The streets kept all my shadows,",
+        "but I don't live there anymore.",
+        "I did not come back broken.",
+        "I came back passing through.",
+      ],
+      [
+        "I did not come back.",
+        "I arrived as someone else.",
+        "Not back.",
+        "Just through.",
+      ],
     ],
   },
   {
@@ -36,21 +91,88 @@ const TRACKS = [
     from: "From me, to someone I couldn't name.",
     line: "A letter unsent. A feeling without a name.",
     status: "soon" as const,
+    accent: "#8B7355",
     coverUrl: "/releases/a-letter-with-no-address.png",
     audioSrc: "",
     soundcloudUrl: null as string | null,
     spotifyUrl: null as string | null,
     lyrics: [
-      "I wrote your name in silence. But silence gave it back.",
-      "I folded every question and left the answer blank.",
-      "This was never sent. It had nowhere to go.",
-      "There is a page inside me I never learned to close.",
-      "A sentence with no ending, a place nobody knows.",
-      "I did not know your number. I did not know your name.",
-      "But something in the empty line kept writing you the same.",
-      "I wrote a letter with no address, to someone I could never name.",
-      "I left it open on the table, but the silence never came.",
-      "No address. No name. I wrote it anyway.",
+      [
+        "I wrote your name in silence.",
+        "But silence gave it back.",
+        "I folded every question",
+        "and left the answer blank.",
+        "This was never sent.",
+        "It had nowhere to go.",
+      ],
+      [
+        "There is a page inside me",
+        "I never learned to close.",
+        "A sentence with no ending,",
+        "a place nobody knows.",
+        "I kept it in a drawer",
+        "beneath the noise of every day,",
+        "waiting for a person",
+        "I could never find a way",
+        "to call.",
+      ],
+      [
+        "I did not know your number.",
+        "I did not know your name.",
+        "But something in the empty line",
+        "kept writing you the same.",
+      ],
+      [
+        "I wrote a letter with no address,",
+        "to someone I could never name.",
+        "I left it open on the table,",
+        "but the silence never came.",
+        "I wrote a letter with no address,",
+        "with every word I could not say.",
+        "Maybe it was meant for someone.",
+        "Maybe it was meant to stay.",
+      ],
+      [
+        "No address...",
+        "No name...",
+        "I wrote it...",
+        "Anyway...",
+      ],
+      [
+        "I tried to make it simple.",
+        "I tried to let it fade.",
+        "But some feelings have no country",
+        "and no house where they are safe.",
+        "They do not ask for answers.",
+        "They do not ask for proof.",
+        "They only keep on breathing",
+        "in the quiet part of you.",
+      ],
+      [
+        "If you were real, forgive me",
+        "for never finding where.",
+        "If you were only silence,",
+        "thank you for being there.",
+        "And if this was only something",
+        "I was never meant to send,",
+        "then let this be the envelope",
+        "around the final word.",
+      ],
+      [
+        "I wrote a letter with no address,",
+        "to someone I could never name.",
+        "I left it open on the table,",
+        "but the silence never came.",
+        "I wrote a letter with no address,",
+        "with every word I could not say.",
+        "Maybe it was meant for someone.",
+        "Maybe it was meant to stay.",
+      ],
+      [
+        "No address.",
+        "No name.",
+        "I wrote it anyway.",
+      ],
     ],
   },
   {
@@ -59,21 +181,94 @@ const TRACKS = [
     from: "From me, to you.",
     line: "A message for the one who needed to hear it today.",
     status: "soon" as const,
+    accent: "#7EB8D4",
     coverUrl: "/releases/if-this-finds-you.png",
     audioSrc: "",
     soundcloudUrl: null as string | null,
     spotifyUrl: null as string | null,
     lyrics: [
-      "If this finds you tired, you don't have to explain.",
-      "Let the room stay quiet. Let the night keep your name.",
-      "You made it this far. That is enough for now.",
-      "I don't know where you are listening. I don't know what today became.",
-      "Maybe you are holding everything and calling it by no name.",
-      "I won't tell you to be stronger. I won't tell you what to do.",
-      "I only made a little space and left it here for you.",
-      "If this finds you, let it stay beside you.",
-      "You don't have to become light just to make it through.",
-      "You are still here today.",
+      [
+        "If this finds you tired,",
+        "you don't have to explain.",
+        "Let the room stay quiet.",
+        "Let the night keep your name.",
+        "You made it this far.",
+        "That is enough for now.",
+      ],
+      [
+        "I don't know where you are listening.",
+        "I don't know what today became.",
+        "Maybe you are holding everything",
+        "and calling it by no name.",
+        "Maybe the world was too loud.",
+        "Maybe your body felt far.",
+        "Maybe you smiled for people",
+        "who never asked where you are.",
+      ],
+      [
+        "I won't tell you to be stronger.",
+        "I won't tell you what to do.",
+        "I only made a little space",
+        "and left it here for you.",
+      ],
+      [
+        "If this finds you,",
+        "let it stay beside you.",
+        "You don't have to become light",
+        "just to make it through.",
+        "If this finds you,",
+        "when the world feels far away,",
+        "take one breath inside the sound.",
+        "You are still here today.",
+      ],
+      [
+        "If this finds you...",
+        "stay beside you...",
+        "still here...",
+        "today...",
+      ],
+      [
+        "There are nights that ask for nothing",
+        "but a place to fall apart.",
+        "There are hours you keep surviving",
+        "without making it an art.",
+        "You do not need a reason",
+        "to be gentle with your mind.",
+        "Some doors open slowly.",
+        "Some healing takes its time.",
+      ],
+      [
+        "I won't make your sadness smaller.",
+        "I won't dress it up as grace.",
+        "But if the dark sits near you,",
+        "let this sound hold a place.",
+      ],
+      [
+        "If this finds you,",
+        "let it stay beside you.",
+        "You don't have to become light",
+        "just to make it through.",
+        "If this finds you,",
+        "when the world feels far away,",
+        "take one breath inside the sound.",
+        "You are still here today.",
+      ],
+      [
+        "You don't have to answer.",
+        "You don't have to rise.",
+        "You don't have to turn your hurting",
+        "into something wise.",
+        "Just let the room be quiet.",
+        "Let the pressure move away.",
+        "You are not behind your life.",
+        "You are still here today.",
+      ],
+      [
+        "If this finds you tired,",
+        "you don't have to explain.",
+        "From me,",
+        "to you.",
+      ],
     ],
   },
   {
@@ -82,20 +277,104 @@ const TRACKS = [
     from: "From me, to God.",
     line: "I call it God. But whatever you believe, I hope it hears you too.",
     status: "soon" as const,
+    accent: "#C9A84C",
     coverUrl: "/releases/whatever-you-believe.png",
     audioSrc: "",
     soundcloudUrl: null as string | null,
     spotifyUrl: null as string | null,
     lyrics: [
-      "I don't know what you call it when the night stops answering.",
-      "God. Mercy. Light. Nothing. I only know I was still speaking.",
-      "I have asked the ceiling questions it could never keep.",
-      "Not for heaven. Not for proof. Just for one quiet second where I did not have to carry everything alone.",
-      "I won't tell you what is holy. I won't tell you what is true.",
-      "Some people kneel in silence. Some just break in two.",
-      "Whatever you believe, I hope it finds you there.",
-      "When your voice has left your body and your name feels hard to wear.",
-      "I call it God. But whatever you believe, I hope it hears you too.",
+      [
+        "I don't know what you call it",
+        "when the night stops answering.",
+        "God.",
+        "Mercy.",
+        "Light.",
+        "Nothing.",
+        "I only know",
+        "I was still speaking.",
+      ],
+      [
+        "I have asked the ceiling",
+        "questions it could never keep.",
+        "I have put my hands together",
+        "without knowing what it means.",
+        "Not for heaven.",
+        "Not for proof.",
+        "Not for someone to explain me.",
+        "Just for one quiet second",
+        "where I did not have to carry",
+        "everything alone.",
+      ],
+      [
+        "I won't tell you what is holy.",
+        "I won't tell you what is true.",
+        "Some people kneel in silence.",
+        "Some just break in two.",
+      ],
+      [
+        "Whatever you believe,",
+        "I hope it finds you there.",
+        "When your voice has left your body",
+        "and your name feels hard to wear.",
+        "Whatever you believe,",
+        "let it hold what you can't show.",
+        "When you run out of words,",
+        "let the sound become the prayer.",
+      ],
+      [
+        "Whatever you believe...",
+        "finds you there...",
+        "No words left...",
+        "becomes the prayer...",
+      ],
+      [
+        "Some find it in a candle.",
+        "Some find it in the rain.",
+        "Some call a mother's picture",
+        "just to make it through the day.",
+        "Some whisper to a statue.",
+        "Some read the sky for signs.",
+        "Some draw a little circle",
+        "and step inside the line.",
+        "I don't laugh at any of them.",
+        "I know what fear can do.",
+        "When the floor leaves your body,",
+        "you will reach for something too.",
+      ],
+      [
+        "I won't ask you to believe me.",
+        "I won't ask you to agree.",
+        "But if something ever held you",
+        "when nobody could see —",
+        "then you know.",
+      ],
+      [
+        "Call it God",
+        "when you need a Father.",
+        "Call it Mary",
+        "when you need a Mother.",
+        "Call it Buddha",
+        "when you need the stillness.",
+        "Call it spirit",
+        "when you need the room to listen.",
+        "Call it energy.",
+        "Call it mercy.",
+        "Call it nothing",
+        "if the name hurts too much.",
+        "I don't need to know your language",
+        "to understand the reach.",
+        "Every human has a moment",
+        "where the mouth becomes a bridge.",
+      ],
+      [
+        "I don't know what you call it",
+        "when the night stops answering.",
+        "I call it God.",
+        "But whatever you believe,",
+        "I hope it hears you too.",
+        "From me,",
+        "to God.",
+      ],
     ],
   },
   {
@@ -104,20 +383,94 @@ const TRACKS = [
     from: "From me, to the past.",
     line: "A voice I left behind, still calling through the dark.",
     status: "soon" as const,
+    accent: "#C0392B",
     coverUrl: "/releases/the-past-still-had-my-voice.png",
     audioSrc: "",
     soundcloudUrl: null as string | null,
     spotifyUrl: null as string | null,
     lyrics: [
-      "I did not open the door to go back inside.",
-      "I only came to listen to what I left behind.",
-      "The past still had my voice. I came to take it back.",
-      "There were years I never answered, stacked like boxes in the dark.",
-      "I won't ask the past for mercy. I won't ask it to explain.",
-      "The past still had my voice, so I came to take it back.",
-      "Not the years, not the reason, not the road that turned to black.",
-      "I can hear the boy I was, without becoming him somehow.",
-      "The past still had my voice. Now it doesn't.",
+      [
+        "I did not open the door",
+        "to go back inside.",
+        "I only came to listen",
+        "to what I left behind.",
+        "The past still had my voice.",
+        "I came to take it back.",
+      ],
+      [
+        "There were years I never answered,",
+        "stacked like boxes in the dark.",
+        "I kept walking past the places",
+        "where my name had left a mark.",
+        "Not because I forgot them.",
+        "Not because I was free.",
+        "But some rooms keep speaking",
+        "with a younger sound of me.",
+      ],
+      [
+        "I won't ask the past for mercy.",
+        "I won't ask it to explain.",
+        "I only need the part of me",
+        "that learned to speak through pain.",
+      ],
+      [
+        "The past still had my voice,",
+        "so I came to take it back.",
+        "Not the years, not the reason,",
+        "not the road that turned to black.",
+        "The past still had my voice,",
+        "but it does not own me now.",
+        "I can hear the boy I was,",
+        "without becoming him somehow.",
+      ],
+      [
+        "Still had my voice...",
+        "take it back...",
+        "I can hear him...",
+        "not become him...",
+      ],
+      [
+        "I found words under the silence",
+        "that I never got to say.",
+        "They were not asking for forever.",
+        "They were only asking for a day.",
+        "Some apologies were empty.",
+        "Some goodbyes arrived too late.",
+        "Some memories kept knocking",
+        "after I stopped calling it fate.",
+      ],
+      [
+        "I won't rewrite what happened.",
+        "I won't clean the damage white.",
+        "But I can take my voice back",
+        "from the mouth of that night.",
+      ],
+      [
+        "The past still had my voice,",
+        "so I came to take it back.",
+        "Not the years, not the reason,",
+        "not the road that turned to black.",
+        "The past still had my voice,",
+        "but it does not own me now.",
+        "I can hear the boy I was,",
+        "without becoming him somehow.",
+      ],
+      [
+        "I am not here to forgive it",
+        "just because time moved on.",
+        "I am not here to bless the place",
+        "where I once disappeared from.",
+        "But if the past still speaks with me,",
+        "let it speak one final time.",
+        "Then I will leave with my own voice",
+        "and no longer call it mine.",
+      ],
+      [
+        "I did not open the door",
+        "to go back inside.",
+        "The past still had my voice.",
+        "Now it doesn't.",
+      ],
     ],
   },
   {
@@ -126,21 +479,96 @@ const TRACKS = [
     from: "From me, to tomorrow.",
     line: "A door of light, waiting after the dark.",
     status: "soon" as const,
+    accent: "#C9A0DC",
     coverUrl: "/releases/if-tomorrow-lets-me-in.png",
     audioSrc: "",
     soundcloudUrl: null as string | null,
     spotifyUrl: null as string | null,
     lyrics: [
-      "I don't know your face yet. I don't know your name.",
-      "But I have walked through enough night to know I am not the same.",
-      "If tomorrow lets me in, I won't arrive empty.",
-      "There are mornings I have not met, waiting somewhere out of view.",
-      "I am not asking for a promise. I am not asking for a sign.",
-      "I have carried what was heavy. I have buried what was gone.",
-      "If tomorrow lets me in, I will not arrive empty.",
-      "I will bring the nights I crossed and the voice they couldn't end in me.",
-      "I have lost enough of yesterday to walk in with my name.",
-      "From me, to tomorrow.",
+      [
+        "I don't know your face yet.",
+        "I don't know your name.",
+        "But I have walked through enough night",
+        "to know I am not the same.",
+        "If tomorrow lets me in,",
+        "I won't arrive empty.",
+      ],
+      [
+        "There are mornings I have not met,",
+        "waiting somewhere out of view.",
+        "There are versions of my life",
+        "I have not made it to.",
+        "I am not asking for a promise.",
+        "I am not asking for a sign.",
+        "I only ask the next door",
+        "not to close before its time.",
+      ],
+      [
+        "I have carried what was heavy.",
+        "I have buried what was gone.",
+        "Now I stand before the hours",
+        "that have not yet done me wrong.",
+      ],
+      [
+        "If tomorrow lets me in,",
+        "I will not arrive empty.",
+        "I will bring the nights I crossed",
+        "and the voice they couldn't end in me.",
+        "If tomorrow lets me in,",
+        "I won't ask to be the same.",
+        "I have lost enough of yesterday",
+        "to walk in with my name.",
+      ],
+      [
+        "If tomorrow...",
+        "lets me in...",
+        "Not empty...",
+        "not the same...",
+      ],
+      [
+        "I have seen the kind of silence",
+        "that makes people disappear.",
+        "I have learned to keep on breathing",
+        "when the road refused to clear.",
+        "So if there is a morning",
+        "that has kept a place for me,",
+        "I won't enter like a stranger.",
+        "I will enter honestly.",
+      ],
+      [
+        "I don't need a perfect future.",
+        "I don't need a golden door.",
+        "Just a little room to stand in",
+        "and become a little more.",
+      ],
+      [
+        "If tomorrow lets me in,",
+        "I will not arrive empty.",
+        "I will bring the nights I crossed",
+        "and the voice they couldn't end in me.",
+        "If tomorrow lets me in,",
+        "I won't ask to be the same.",
+        "I have lost enough of yesterday",
+        "to walk in with my name.",
+      ],
+      [
+        "Maybe I will still be learning.",
+        "Maybe I will still be late.",
+        "Maybe every open doorway",
+        "comes with something else to face.",
+        "But I am done waiting",
+        "to become someone allowed.",
+        "If tomorrow wants a witness,",
+        "I am still here now.",
+      ],
+      [
+        "I don't know your face yet.",
+        "I don't know your name.",
+        "But if tomorrow lets me in,",
+        "I won't arrive empty.",
+        "From me,",
+        "to tomorrow.",
+      ],
     ],
   },
 ];
@@ -160,7 +588,7 @@ function TrackCard({ track }: { track: Track }) {
         backdropFilter: "blur(12px)",
         WebkitBackdropFilter: "blur(12px)",
         border: "1px solid rgba(255,255,255,0.08)",
-        borderTop: `2px solid ${GREEN}`,
+        borderTop: `2px solid ${track.accent}`,
       }}
     >
       {/* Cover — full width square */}
@@ -174,14 +602,14 @@ function TrackCard({ track }: { track: Track }) {
           }}
         />
         <div
-          className="absolute inset-0 flex items-end p-4"
+          className="absolute inset-0 flex items-end p-3"
           style={{ background: "linear-gradient(to top, rgba(13,17,23,0.85) 20%, transparent)" }}
         >
           <span
             className="text-[9px] font-mono uppercase tracking-[0.3em] px-2.5 py-1 rounded-full border"
             style={{
-              color: track.status === "out" ? GREEN : "rgba(255,255,255,0.4)",
-              borderColor: track.status === "out" ? `${GREEN}55` : "rgba(255,255,255,0.15)",
+              color: track.status === "out" ? track.accent : "rgba(255,255,255,0.4)",
+              borderColor: track.status === "out" ? `${track.accent}66` : "rgba(255,255,255,0.15)",
               background: "rgba(13,17,23,0.7)",
             }}
           >
@@ -191,21 +619,21 @@ function TrackCard({ track }: { track: Track }) {
       </div>
 
       {/* Content */}
-      <div className="p-6">
+      <div className="p-4">
         {/* Number + address line */}
-        <div className="flex items-center gap-2 mb-3">
-          <span className="text-xs font-mono font-semibold" style={{ color: GREEN }}>
+        <div className="flex items-center gap-2 mb-2">
+          <span className="text-xs font-mono font-semibold" style={{ color: track.accent }}>
             {String(track.n).padStart(2, "0")}
           </span>
-          <span className="text-xs font-mono" style={{ color: "rgba(255,255,255,0.15)" }}>/</span>
-          <span className="text-xs font-mono uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.35)" }}>
+          <span className="text-xs font-mono" style={{ color: "rgba(255,255,255,0.12)" }}>/</span>
+          <span className="text-xs font-mono uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.3)" }}>
             {track.from}
           </span>
         </div>
 
         {/* Title */}
         <h3
-          className="text-xl font-bold tracking-tight mb-2 leading-snug font-sans"
+          className="text-lg font-bold tracking-tight mb-2 leading-snug font-sans"
           style={{ color: track.status === "out" ? "#f0f6fc" : "rgba(255,255,255,0.55)" }}
         >
           {track.title}
@@ -213,30 +641,30 @@ function TrackCard({ track }: { track: Track }) {
 
         {/* Core line */}
         <p
-          className="text-sm leading-relaxed mb-5 font-serif italic"
-          style={{ color: "rgba(255,255,255,0.3)" }}
+          className="text-sm leading-relaxed mb-3 font-serif italic"
+          style={{ color: "rgba(255,255,255,0.28)" }}
         >
           "{track.line}"
         </p>
 
         {/* Audio player */}
-        <div className="mb-4">
+        <div className="mb-3">
           <audio
             controls
             src={track.audioSrc || undefined}
             className="w-full"
             style={{
-              height: "36px",
-              accentColor: GREEN,
+              height: "32px",
+              accentColor: track.accent,
               colorScheme: "dark",
-              borderRadius: "8px",
-              opacity: track.audioSrc ? 1 : 0.3,
+              borderRadius: "6px",
+              opacity: track.audioSrc ? 1 : 0.28,
             }}
           >
             Your browser does not support the audio element.
           </audio>
           {!track.audioSrc && (
-            <p className="text-[10px] font-mono mt-1.5" style={{ color: "rgba(255,255,255,0.2)" }}>
+            <p className="text-[10px] font-mono mt-1" style={{ color: "rgba(255,255,255,0.18)" }}>
               Audio coming soon
             </p>
           )}
@@ -245,8 +673,8 @@ function TrackCard({ track }: { track: Track }) {
         {/* Lyrics toggle */}
         <button
           onClick={() => setLyricsOpen((o) => !o)}
-          className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest mb-4 transition-opacity hover:opacity-70 w-fit"
-          style={{ color: GREEN }}
+          className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest mb-3 transition-opacity hover:opacity-70 w-fit"
+          style={{ color: track.accent }}
         >
           <svg
             viewBox="0 0 16 16"
@@ -261,23 +689,24 @@ function TrackCard({ track }: { track: Track }) {
           {lyricsOpen ? "Hide lyrics" : "Read lyrics"}
         </button>
 
-        {/* Lyrics block */}
+        {/* Lyrics block — stanza format */}
         {lyricsOpen && (
           <div
-            className="rounded-xl p-5 mb-4"
+            className="rounded-xl p-4 mb-3"
             style={{ background: "rgba(0,0,0,0.35)", border: "1px solid rgba(255,255,255,0.06)" }}
           >
-            {track.lyrics.map((line, i) => (
-              <p
-                key={i}
-                className="text-sm leading-relaxed font-serif"
-                style={{
-                  color: "rgba(255,255,255,0.65)",
-                  marginBottom: i < track.lyrics.length - 1 ? "0.5rem" : 0,
-                }}
-              >
-                {line}
-              </p>
+            {track.lyrics.map((stanza, si) => (
+              <div key={si} style={{ marginBottom: si < track.lyrics.length - 1 ? "1rem" : 0 }}>
+                {stanza.map((line, li) => (
+                  <p
+                    key={li}
+                    className="text-sm leading-relaxed font-serif"
+                    style={{ color: "rgba(255,255,255,0.62)" }}
+                  >
+                    {line}
+                  </p>
+                ))}
+              </div>
             ))}
           </div>
         )}
@@ -333,7 +762,7 @@ export default function SixTranceBalladsClient() {
 
       <main className="pt-[60px] min-h-screen font-sans" style={{ background: "#0d1117" }}>
         {/* Hero */}
-        <section className="px-6 pt-20 pb-14 max-w-[680px] mx-auto text-center">
+        <section className="px-6 pt-20 pb-12 max-w-[680px] mx-auto text-center">
           <span
             className="inline-block text-[10px] font-mono uppercase tracking-[0.35em] mb-6 px-3 py-1 rounded-full border"
             style={{ color: GREEN, borderColor: `${GREEN}33`, background: `${GREEN}0d` }}
@@ -350,39 +779,39 @@ export default function SixTranceBalladsClient() {
           </h1>
 
           <p
-            className="text-lg font-light mb-5 font-mono uppercase tracking-[0.2em]"
+            className="text-lg font-light mb-4 font-mono uppercase tracking-[0.2em]"
             style={{ color: GREEN }}
           >
             Six Trance Ballads
           </p>
 
           <p
-            className="text-base italic font-light mb-4 font-serif"
+            className="text-base italic font-light mb-3 font-serif"
             style={{ color: "rgba(255,255,255,0.4)" }}
           >
             "I did not come back. I arrived as someone else."
           </p>
 
-          <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.3)" }}>
+          <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.28)" }}>
             Six emotional trance ballads written as personal letters. A cinematic trance project
             by DJ Andy'K.
           </p>
         </section>
 
         {/* SoundCloud early access */}
-        <div className="px-6 pb-14 max-w-[680px] mx-auto">
+        <div className="px-6 pb-12 max-w-[680px] mx-auto">
           <div
-            className="flex items-start gap-3 px-5 py-4 rounded-xl"
-            style={{ background: "rgba(255,85,0,0.06)", border: "1px solid rgba(255,85,0,0.25)" }}
+            className="flex items-start gap-3 px-4 py-3 rounded-xl"
+            style={{ background: "rgba(255,85,0,0.06)", border: "1px solid rgba(255,85,0,0.22)" }}
           >
-            <svg viewBox="0 0 24 24" className="w-5 h-5 shrink-0 mt-0.5" fill="#ff5500">
+            <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 mt-0.5" fill="#ff5500">
               <path d="M11.56 8.87V17h8.76c.96 0 1.68-.8 1.68-1.84 0-.76-.4-1.44-1.04-1.76l-.08-.04-.04-.08a2.87 2.87 0 0 0-2.8-3.52c-.12 0-.24 0-.36.04a4.63 4.63 0 0 0-4.56-3.92c-.64 0-1.28.12-1.56.99zM0 15.24C0 16.2.84 17 1.88 17H9V9.72c-.4-.48-.96-.76-1.56-.76-.92 0-1.72.64-1.92 1.52a2.4 2.4 0 0 0-1.24-.32C2.8 10.16 1.6 11.2 1.6 12.48c0 .2 0 .36.04.52C.68 13.24 0 14.16 0 15.24z" />
             </svg>
             <div>
-              <p className="text-xs font-mono uppercase tracking-widest mb-1" style={{ color: "#ff5500" }}>
+              <p className="text-[11px] font-mono uppercase tracking-widest mb-0.5" style={{ color: "#ff5500" }}>
                 SoundCloud Early Access
               </p>
-              <p className="text-sm" style={{ color: "rgba(255,255,255,0.45)" }}>
+              <p className="text-xs" style={{ color: "rgba(255,255,255,0.4)" }}>
                 Every release arrives on SoundCloud 5–7 days early. Because I still believe in it.
               </p>
             </div>
@@ -391,7 +820,7 @@ export default function SixTranceBalladsClient() {
 
         {/* Track list — single column */}
         <section className="px-6 pb-24 max-w-[680px] mx-auto">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4">
             {TRACKS.map((track) => (
               <TrackCard key={track.n} track={track} />
             ))}
