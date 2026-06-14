@@ -645,13 +645,14 @@ export default function SixTranceBalladsClient() {
         </div>
 
         {/* Track list — 2-col on desktop */}
-        <section className="px-6 pb-24 max-w-[1100px] mx-auto">
+        <section className="px-6 pb-12 max-w-[1100px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {TRACKS.map((track) => (
               <TrackCard key={track.n} track={track} />
             ))}
           </div>
         </section>
+
       </main>
 
       {/* Footer in white wrapper so site CSS vars render correctly */}
