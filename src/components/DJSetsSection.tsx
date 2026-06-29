@@ -6,6 +6,11 @@ import { COMPANY } from "@/lib/data";
 const DJ_SETS = [
   {
     year: "2026",
+    title: "The European Summer 2026",
+    url: "https://soundcloud.com/djandyk_2024/the-european-summer-2026",
+  },
+  {
+    year: "2026",
     title: "New Year House Signals (2026 Mix)",
     url: "https://soundcloud.com/djandyk_2024/new-year-house-signals-2026-mix",
   },
