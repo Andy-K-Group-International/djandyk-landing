@@ -329,9 +329,9 @@ function AlbumCard({ release }: { release: typeof FEATURED_RELEASES[0] }) {
                     </span>
                     {isTrackReleased(track) && (
                       track.spotifyUrl ? (
-                        <a href={track.spotifyUrl} target="_blank" rel="noopener noreferrer" className="text-[10px] font-mono text-highlight ml-auto shrink-0 hover:underline">{track.label ?? "Out now"}</a>
+                        <a href={track.spotifyUrl} target="_blank" rel="noopener noreferrer" className="text-[10px] font-mono text-highlight ml-auto shrink-0 hover:underline">Out now</a>
                       ) : (
-                        <span className="text-[10px] font-mono text-highlight ml-auto shrink-0">{track.label ?? "Out now"}</span>
+                        <span className="text-[10px] font-mono text-highlight ml-auto shrink-0">Out now</span>
                       )
                     )}
                     {(track.comingSoon || track.releaseDate) && !isTrackReleased(track) && (

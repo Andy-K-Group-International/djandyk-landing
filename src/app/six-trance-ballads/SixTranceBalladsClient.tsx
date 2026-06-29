@@ -435,7 +435,7 @@ function TrackCard({ track }: { track: Track }) {
               background: "rgba(0,0,0,0.6)",
             }}
           >
-            {isOut ? `Out Now · ${track.date}` : track.date}
+            {isOut ? "Out Now" : track.date}
           </span>
         </div>
       </div>
@@ -463,7 +463,7 @@ function TrackCard({ track }: { track: Track }) {
 
         {/* Release date */}
         <p className="text-[11px] font-mono uppercase tracking-widest mb-2" style={{ color: isOut ? track.accent : "rgba(255,255,255,0.25)" }}>
-          {isOut ? `Released · ${track.date}` : `Release · ${track.date}`}
+          {isOut ? "Released" : `Release · ${track.date}`}
         </p>
 
         {/* Core line */}
