@@ -17,6 +17,15 @@ const FEATURED_RELEASES = [
   },
   {
     kicker: "Album · 2026",
+    title: "Do Not Disturb",
+    genre: "Groovy House / Funky Tech House",
+    description: "A Concept Album — one unforgettable night, first drink to last confession, told in groovy house and funky tech house.",
+    completionDate: "2026-08-23",
+    href: "https://soundcloud.com/djandyk_2024/sets/do-not-disturb?si=58acd55f3e454217b5d57763b09a9515&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+    cover: "/releases/do-not-disturb-album-cover.png",
+  },
+  {
+    kicker: "Album · 2026",
     title: "Before I Forget",
     genre: "Trance / Progressive Trance",
     description: "Eight tracks of progressive trance — a journey through memory, emotion, and release.",

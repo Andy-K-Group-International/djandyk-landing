@@ -184,6 +184,14 @@ export const CASE_STUDIES = [
 // Discography — Albums 2026 (maps to DiscographySection tab 1)
 export const ALBUMS_2026 = [
   {
+    title: "Do Not Disturb",
+    genre: "Groovy House / Funky Tech House",
+    year: 2026,
+    status: "in-progress",
+    coverUrl: "/releases/do-not-disturb-album-cover.png",
+    spotifyUrl: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU",
+  },
+  {
     title: "Before I Forget",
     genre: "Trance / Progressive Trance",
     year: "2026",
@@ -432,6 +440,15 @@ export const ADAM_SHOWCASE = ADAM_ROADMAP;
 export type TracklistEntry = { num: string; title: string; released?: boolean; comingSoon?: boolean; spotifyUrl?: string; label?: string; isIntro?: boolean; releaseDate?: string };
 
 export const TRACKLISTS: Record<string, TracklistEntry[]> = {
+  "Do Not Disturb": [
+    { num: "01", title: "Blame The DJ (feat. Juliana Ritter)", releaseDate: "2026-07-12", label: "Out Now" },
+    { num: "02", title: "Put It On My Tab (feat. Adam Rooth)", releaseDate: "2026-07-19", label: "19.7.2026" },
+    { num: "03", title: "No Receipts (feat. Adam Rooth)", releaseDate: "2026-07-26", label: "26.7.2026" },
+    { num: "04", title: "Wrong Floor (feat. Lisa Manfled & Adam Rooth)", releaseDate: "2026-08-02", label: "2.8.2026" },
+    { num: "05", title: "Late Check-Out (feat. Lisa Manfled)", releaseDate: "2026-08-09", label: "9.8.2026" },
+    { num: "06", title: "I Left My Halo At The Bar (feat. Lisa Manfled)", releaseDate: "2026-08-16", label: "16.8.2026" },
+    { num: "07", title: "Too Pretty To Explain (feat. Juliana Ritter)", releaseDate: "2026-08-23", label: "23.8.2026" },
+  ],
   "THE ALBUM — From Me, To...": [
     { num: "01", title: "I Arrived As Someone Else", releaseDate: "2026-06-12", label: "Out Now" },
     { num: "02", title: "A Letter With No Address", releaseDate: "2026-06-19", label: "24.6.2026" },
