@@ -443,7 +443,7 @@ export const TRACKLISTS: Record<string, TracklistEntry[]> = {
   "Do Not Disturb": [
     { num: "01", title: "Blame The DJ (feat. Juliana Ritter)", releaseDate: "2026-07-12", label: "Out Now" },
     { num: "02", title: "Put It On My Tab (feat. Adam Rooth)", releaseDate: "2026-07-19", label: "19.7.2026" },
-    { num: "03", title: "No Receipts (feat. Adam Rooth)", releaseDate: "2026-07-26", label: "26.7.2026" },
+    { num: "03", title: "No Receipts (feat. Adam Rooth)", releaseDate: "2026-07-12", label: "Out Now" },
     { num: "04", title: "Wrong Floor (feat. Lisa Manfled & Adam Rooth)", releaseDate: "2026-08-02", label: "2.8.2026" },
     { num: "05", title: "Late Check-Out (feat. Lisa Manfled)", releaseDate: "2026-08-09", label: "9.8.2026" },
     { num: "06", title: "I Left My Halo At The Bar (feat. Lisa Manfled)", releaseDate: "2026-08-16", label: "16.8.2026" },
